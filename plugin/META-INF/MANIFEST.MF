@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Extra Syntax Highlighting
+Bundle-SymbolicName: de.sebthom.eclipse.extra-syntax-highlighting;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Sebastian Thomschke
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-ClassPath: .
+Require-Bundle: org.eclipse.tm4e.registry,
+ org.eclipse.ui.genericeditor

@@ -31,7 +31,7 @@ jobs:
 
         python plugin/update-syntaxes.py
 
-        updates=$(git status --porcelain plugin\syntaxes)
+        updates=$(git status --porcelain plugin/syntaxes)
         if [[ -z $updates ]]; then
           echo "::set-output name=updates::"
         else

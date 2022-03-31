@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+         id="exta-syntax-highlighting.base"
+         base-type="org.eclipse.core.runtime.text"
+         name="Extra Syntax Highlighting"
+         priority="high" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- TextMate                       -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="org.eclipse.core.runtime.xml" priority="high" id="exta-syntax-highlighting.textmate" name="Textmate Grammar File" file-extensions="tmLanguage,plist" />
+      <file-association content-type="exta-syntax-highlighting.textmate" file-extensions="tmLanguage,plist" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.textmate" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- C                              -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.c" name="C Source File" file-extensions="c,h" />
+      <file-association content-type="exta-syntax-highlighting.c" file-extensions="c,h" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.c" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/c.tmLanguage" scopeName="source.c" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.c" scopeName="source.c" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- C++                            -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.c++" name="C++ Source File" file-extensions="cpp,hpp" />
+      <file-association content-type="exta-syntax-highlighting.c++" file-extensions="cpp,hpp" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.c++" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/cpp.tmLanguage" scopeName="source.c++" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.c++" scopeName="source.c++" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- C#                             -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.csharp" name="C# Source File" file-extensions="cs" />
+      <file-association content-type="exta-syntax-highlighting.csharp" file-extensions="cs" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.csharp" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/csharp.tmLanguage" scopeName="source.csharp" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.csharp" scopeName="source.csharp" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- DOT (GraphViz)                 -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.dot" name="Graphviz DOT File" file-extensions="dot" />
+      <file-association content-type="exta-syntax-highlighting.dot" file-extensions="dot" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.dot" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/dot.tmLanguage" scopeName="source.dot" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.dot" scopeName="source.dot" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- GraphQL                        -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.graphql" name="GraphQL File" file-extensions="graphql" />
+      <file-association content-type="exta-syntax-highlighting.graphql" file-extensions="graphql" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.graphql" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/graphql.tmLanguage.json" scopeName="source.graphql" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.graphql" scopeName="source.graphql" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- HCL (HashiCorp                 -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.hcl" name="HCL Config File" file-extensions="hcl" />
+      <file-association content-type="exta-syntax-highlighting.hcl" file-extensions="hcl" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.hcl" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/hcl.tmLanguage.json" scopeName="source.hcl" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.hcl" scopeName="source.hcl" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- INI                            -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.ini" name="INI Config File" file-extensions="ini,url" />
+      <file-association content-type="exta-syntax-highlighting.ini" file-extensions="ini,url" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.ini" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/ini.tmLanguage" scopeName="source.ini" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.ini" scopeName="source.ini" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- LDIF                           -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.ldif" name="LDIF File" file-extensions="ldif" />
+      <file-association content-type="exta-syntax-highlighting.ldif" file-extensions="ldif" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.ldif" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/ldif.tmLanguage" scopeName="source.ldif" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.ldif" scopeName="source.ldif" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- Lua                            -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.lua" name="Lua Source File" file-extensions="lua" />
+      <file-association content-type="exta-syntax-highlighting.lua" file-extensions="lua" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.lua" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/lua.tmLanguage" scopeName="source.lua" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.lua" scopeName="source.lua" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- PHP                            -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.php" name="PHP Source File" file-extensions="php,php3,php4,php5,php6,php7,php8" />
+      <file-association content-type="exta-syntax-highlighting.php" file-extensions="php,php3,php4,php5,php6,php7,php8" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.php" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/php.tmLanguage" scopeName="source.php" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.php" scopeName="source.php" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- PlantUML                       -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.plantuml" name="PlantUML File" file-extensions="pu" />
+      <file-association content-type="exta-syntax-highlighting.plantuml" file-extensions="pu" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.plantuml" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/plantuml.tmLanguage" scopeName="source.plantuml" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.plantuml" scopeName="source.plantuml" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- Prisma                         -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.prisma" name="Prisma File" file-extensions="prisma" />
+      <file-association content-type="exta-syntax-highlighting.prisma" file-extensions="prisma" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.prisma" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/prisma.tmLanguage.json" scopeName="source.prisma" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.prisma" scopeName="source.prisma" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- Sentinel (HashiCorp)           -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.sentinel" name="Sentinel File" file-extensions="sentinel" />
+      <file-association content-type="exta-syntax-highlighting.sentinel" file-extensions="sentinel" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.sentinel" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/sentinel.tmLanguage.json" scopeName="source.sentinel" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.sentinel" scopeName="source.sentinel" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- Terraform (HashiCorp)          -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.terraform" name="Terraform File" file-extensions="tf" />
+      <file-association content-type="exta-syntax-highlighting.terraform" file-extensions="tf" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.terraform" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/terraform.tmLanguage.json" scopeName="source.terraform" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.terraform" scopeName="source.terraform" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- TOML                           -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.toml" name="TOML Config File" file-extensions="toml" />
+      <file-association content-type="exta-syntax-highlighting.toml" file-extensions="toml" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.toml" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/toml.tmLanguage" scopeName="source.toml" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.toml" scopeName="source.toml" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- VUE                            -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.vue" name="VUE Source File" file-extensions="vue" />
+      <file-association content-type="exta-syntax-highlighting.vue" file-extensions="vue" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.vue" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/vue.tmLanguage" scopeName="source.vue" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.vue" scopeName="source.vue" />
+   </extension>
+</plugin>

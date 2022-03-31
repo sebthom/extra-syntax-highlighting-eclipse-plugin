@@ -1,0 +1,59 @@
+# https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions
+name: Update Syntax Files
+
+on:
+  schedule:
+    # https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows
+    - cron: '0 5 * * *' # daily at 5 a.m.
+  workflow_dispatch:
+    # https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+
+  ###########################################################
+  update-python-deps:
+  ###########################################################
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Git Checkout
+      uses: actions/checkout@v3 # https://github.com/actions/checkout
+
+    - name: Update Syntax Files 
+      id: update_deps
+      run: |
+        set -euo pipefail
+
+        python plugin/update-syntaxes.py
+
+        updates=$(git status --porcelain plugin\syntaxes)
+        if [[ -z $changes} ]]; then
+          echo "::set-output name=updates::"
+        else
+          # see https://trstringer.com/github-actions-multiline-strings/
+          updates="${updates//'%'/'%25'}"
+          updates="${updates//$'\n'/'%0A'}"
+          updates="${updates//$'\r'/'%0D'}"
+
+          echo "::set-output name=updates::${updates}"
+        fi
+
+    - name: Create PR
+      id: create-pr
+      uses: peter-evans/create-pull-request@v3 # https://github.com/peter-evans/create-pull-request
+      if: "${{ steps.update_deps.outputs.updates != '' }}"
+      with:
+        title: "chore: Update Syntax Files"
+        author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+        committer: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+        commit-message: "chore: Update Syntax Files"
+        body: ${{ steps.update_deps.outputs.updates }}
+        add-paths: pdm.lock
+        branch: dependencies/pdm
+        delete-branch: true
+        token: ${{ secrets.GH_TOKEN }}

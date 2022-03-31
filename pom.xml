@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<!--
+   Copyright 2022 by Sebastian Thomschke and contributors.
+   SPDX-License-Identifier: EPL-2.0
+
+   @author Sebastian Thomschke
+-->
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+   <modelVersion>4.0.0</modelVersion>
+
+   <parent>
+      <groupId>com.vegardit.maven</groupId>
+      <artifactId>vegardit-maven-parent</artifactId>
+      <version>RELEASE</version>
+   </parent>
+
+   <name>extra-syntax-highlighting-eclipse</name>
+   <groupId>de.sebthom.eclipse.extra-syntax-highlighting</groupId>
+   <artifactId>de.sebthom.eclipse.extra-syntax-highlighting.parent</artifactId>
+   <version>1.0.0-SNAPSHOT</version>
+   <packaging>pom</packaging>
+   <inceptionYear>2021</inceptionYear>
+   <organization>
+      <!-- used as Specification/Implementation-Vendor in MANIFEST.MF -->
+      <name>Sebastian Thomschke</name>
+      <url>https://github.com/sebthom</url>
+   </organization>
+
+   <licenses>
+      <license>
+         <name>Eclipse Public License 2.0</name>
+         <distribution>repo</distribution>
+         <url>https://spdx.org/licenses/EPL-2.0.html</url>
+      </license>
+   </licenses>
+
+   <properties>
+      <java.version>11</java.version>
+      <tycho.version>2.7.0</tycho.version>
+
+      <!-- to prevent dozen of warnings like:
+      [WARNING] System artifact: p2.eclipse-plugin:org.eclipse.mylyn.commons.notifications.ui:jar:1.17.2.v20200813-0821:system has no file attached
+
+      Try downloading the file manually from the project website.
+      -->
+      <skip.enforcer.ban-duplicate-classes>true</skip.enforcer.ban-duplicate-classes>
+      <skip.enforcer.enforce-bytecode-version>true</skip.enforcer.enforce-bytecode-version>
+   </properties>
+
+   <modules>
+      <module>plugin</module>
+      <module>feature</module>
+      <module>updatesite</module>
+   </modules>
+
+   <build>
+      <pluginManagement>
+         <plugins>
+            <plugin>
+               <artifactId>maven-deploy-plugin</artifactId>
+               <configuration>
+                  <skip>true</skip>
+               </configuration>
+            </plugin>
+
+            <plugin>
+               <!-- https://www.eclipse.org/tycho/sitedocs/tycho-compiler-plugin/plugin-info.html -->
+               <groupId>org.eclipse.tycho</groupId>
+               <artifactId>tycho-compiler-plugin</artifactId>
+               <version>${tycho.version}</version>
+               <configuration>
+                  <optimize>true</optimize>
+               </configuration>
+            </plugin>
+            <plugin>
+               <!-- https://www.eclipse.org/tycho/sitedocs/tycho-packaging-plugin/plugin-info.html -->
+               <groupId>org.eclipse.tycho</groupId>
+               <artifactId>tycho-packaging-plugin</artifactId>
+               <version>${tycho.version}</version>
+               <configuration>
+                  <format>yyyyMMdd-HHmm</format>
+                  <!-- replace SNAPSHOT version in the final product configuration -->
+                  <finalName>${project.artifactId}_${unqualifiedVersion}.${buildQualifier}</finalName>
+               </configuration>
+            </plugin>
+            <plugin>
+               <!-- https://www.eclipse.org/tycho/sitedocs/tycho-p2/tycho-p2-plugin/plugin-info.html -->
+               <groupId>org.eclipse.tycho</groupId>
+               <artifactId>tycho-p2-plugin</artifactId>
+               <version>${tycho.version}</version>
+            </plugin>
+            <plugin>
+               <!-- https://www.eclipse.org/tycho/sitedocs/tycho-surefire-plugin/plugin-info.html -->
+               <groupId>org.eclipse.tycho</groupId>
+               <artifactId>tycho-surefire-plugin</artifactId>
+               <version>${tycho.version}</version>
+            </plugin>
+            <plugin>
+               <!--
+                 https://www.eclipse.org/tycho/sitedocs/tycho-release/tycho-versions-plugin/plugin-info.html
+                 mvn -Dtycho.mode=maven tycho-versions:update-eclipse-metadata
+               -->
+               <groupId>org.eclipse.tycho</groupId>
+               <artifactId>tycho-versions-plugin</artifactId>
+               <version>${tycho.version}</version>
+            </plugin>
+            <plugin>
+               <groupId>org.eclipse.tycho</groupId>
+               <artifactId>tycho-p2-director-plugin</artifactId>
+               <version>${tycho.version}</version>
+            </plugin>
+            <plugin>
+               <groupId>org.eclipse.tycho</groupId>
+               <artifactId>tycho-p2-publisher-plugin</artifactId>
+               <version>${tycho.version}</version>
+            </plugin>
+            <plugin>
+               <groupId>org.eclipse.tycho</groupId>
+               <artifactId>tycho-p2-repository-plugin</artifactId>
+               <version>${tycho.version}</version>
+            </plugin>
+
+            <!-- The following plugins are ignored in the m2e lifecycle mapping -->
+            <plugin>
+               <groupId>org.eclipse.m2e</groupId>
+               <artifactId>lifecycle-mapping</artifactId>
+               <version>1.0.0</version>
+               <configuration>
+                  <lifecycleMappingMetadata>
+                     <pluginExecutions>
+                        <pluginExecution>
+                           <pluginExecutionFilter>
+                              <groupId>org.apache.maven.plugins</groupId>
+                              <artifactId>maven-clean-plugin</artifactId>
+                              <versionRange>[1.0,)</versionRange>
+                              <goals>
+                                 <goal>clean</goal>
+                              </goals>
+                           </pluginExecutionFilter>
+                           <action>
+                              <ignore />
+                           </action>
+                        </pluginExecution>
+                        <pluginExecution>
+                           <pluginExecutionFilter>
+                              <groupId>org.eclipse.tycho</groupId>
+                              <artifactId>tycho-packaging-plugin</artifactId>
+                              <versionRange>[1.0,)</versionRange>
+                              <goals>
+                                 <goal>build-qualifier</goal>
+                                 <goal>build-qualifier-aggregator</goal>
+                                 <goal>validate-id</goal>
+                                 <goal>validate-version</goal>
+                              </goals>
+                           </pluginExecutionFilter>
+                           <action>
+                              <ignore />
+                           </action>
+                        </pluginExecution>
+                        <pluginExecution>
+                           <pluginExecutionFilter>
+                              <groupId>org.eclipse.tycho</groupId>
+                              <artifactId>tycho-compiler-plugin</artifactId>
+                              <versionRange>[1.0,)</versionRange>
+                              <goals>
+                                 <goal>compile</goal>
+                                 <goal>testCompile</goal>
+                              </goals>
+                           </pluginExecutionFilter>
+                           <action>
+                              <ignore />
+                           </action>
+                        </pluginExecution>
+                        <pluginExecution>
+                           <pluginExecutionFilter>
+                              <groupId>org.eclipse.tycho</groupId>
+                              <artifactId>target-platform-configuration</artifactId>
+                              <versionRange>[1.0,)</versionRange>
+                              <goals>
+                                 <goal>target-platform</goal>
+                              </goals>
+                           </pluginExecutionFilter>
+                           <action>
+                              <ignore />
+                           </action>
+                        </pluginExecution>
+                     </pluginExecutions>
+                  </lifecycleMappingMetadata>
+               </configuration>
+            </plugin>
+         </plugins>
+      </pluginManagement>
+
+      <plugins>
+         <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-maven-plugin</artifactId>
+            <version>${tycho.version}</version>
+            <extensions>true</extensions>
+         </plugin>
+         <plugin>
+            <!-- https://www.eclipse.org/tycho/sitedocs/target-platform-configuration/target-platform-configuration-mojo.html -->
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>target-platform-configuration</artifactId>
+            <version>${tycho.version}</version>
+            <configuration>
+               <pomDependencies>ignore</pomDependencies>
+
+               <executionEnvironment>JavaSE-${java.version}</executionEnvironment>
+
+               <target>
+                  <file>../build.target</file>
+               </target>
+               <environments>
+                  <environment>
+                     <os>linux</os>
+                     <ws>gtk</ws>
+                     <arch>x86_64</arch>
+                  </environment>
+                  <environment>
+                     <os>macosx</os>
+                     <ws>cocoa</ws>
+                     <arch>x86_64</arch>
+                  </environment>
+                  <environment>
+                     <os>win32</os>
+                     <ws>win32</ws>
+                     <arch>x86_64</arch>
+                  </environment>
+               </environments>
+            </configuration>
+         </plugin>
+         <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-source-plugin</artifactId>
+            <version>${tycho.version}</version>
+            <executions>
+               <execution>
+                  <id>attach-source</id>
+                  <goals>
+                     <goal>plugin-source</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
+</project>

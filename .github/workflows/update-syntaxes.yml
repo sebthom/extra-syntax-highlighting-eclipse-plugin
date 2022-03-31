@@ -32,7 +32,7 @@ jobs:
         python plugin/update-syntaxes.py
 
         updates=$(git status --porcelain plugin\syntaxes)
-        if [[ -z $changes} ]]; then
+        if [[ -z $updates ]]; then
           echo "::set-output name=updates::"
         else
           # see https://trstringer.com/github-actions-multiline-strings/

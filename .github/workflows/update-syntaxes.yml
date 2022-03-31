@@ -15,7 +15,7 @@ defaults:
 jobs:
 
   ###########################################################
-  update-python-deps:
+  update-syntax-files:
   ###########################################################
     runs-on: ubuntu-latest
 
@@ -25,7 +25,7 @@ jobs:
       uses: actions/checkout@v3 # https://github.com/actions/checkout
 
     - name: Update Syntax Files 
-      id: update_deps
+      id: update_syntaxes
       run: |
         set -euo pipefail
 
@@ -46,14 +46,14 @@ jobs:
     - name: Create PR
       id: create-pr
       uses: peter-evans/create-pull-request@v3 # https://github.com/peter-evans/create-pull-request
-      if: "${{ steps.update_deps.outputs.updates != '' }}"
+      if: "${{ steps.update_syntaxes.outputs.updates != '' }}"
       with:
         title: "chore: Update Syntax Files"
         author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
         committer: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
         commit-message: "chore: Update Syntax Files"
-        body: ${{ steps.update_deps.outputs.updates }}
-        add-paths: pdm.lock
-        branch: dependencies/pdm
+        body: ${{ steps.update_syntaxes.outputs.updates }}
+        add-paths: plugin/syntaxes
+        branch: dependencies/syntaxes
         delete-branch: true
         token: ${{ secrets.GH_TOKEN }}

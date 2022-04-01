@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright 2022 by Sebastian Thomschke and contributors
+   SPDX-License-Identifier: EPL-2.0
+
+   @author Sebastian Thomschke
+-->
+<feature
+      id="de.sebthom.eclipse.extra-syntax-highlighting.feature"
+      label="%name"
+      version="1.0.0.qualifier"
+      provider-name="Sebastian Thomschke"
+      plugin="de.sebthom.eclipse.extra-syntax-highlighting"
+      license-feature="org.eclipse.license"
+      license-feature-version="2.0.2.qualifier">
+
+   <description url="https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin">
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="Extra Syntax Highlighting - Latest" url="https://raw.githubusercontent.com/sebthom/extra-syntax-highlighting-eclipse-plugin/updatesite/"/>
+   </url>
+
+   <plugin
+         id="de.sebthom.eclipse.extra-syntax-highlighting"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>

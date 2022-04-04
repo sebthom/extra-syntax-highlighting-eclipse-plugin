@@ -28,6 +28,7 @@ This Eclipse plug-in adds syntax highlighting support for the following language
 - HashiCorp HCL (`*.hcl`) - https://github.com/hashicorp/hcl (e.g. used by HasiCorp Packer)
 - HashiCorp Sentinel (`*.sentinel`) - https://www.hashicorp.com/sentinel
 - HashiCorp Terraform (`*.tf`) - https://www.terraform.io/
+- INI - https://en.wikipedia.org/wiki/INI_file
 - LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 - Lua - https://www.lua.org/
 - PHP - https://www.php.net/

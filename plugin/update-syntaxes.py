@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-import os, platform, re, string, sys, urllib.error, urllib.request
+import json, os, platform, re, string, sys, urllib.error, urllib.request
+
+try:
+    import yaml
+except ImportError:
+    env.Execute("$PYTHONEXE -m pip install pyyaml")
+    import yaml
 
 URL_PREFIX = "https://raw.githubusercontent.com/"
 
@@ -55,14 +61,27 @@ for (lang_id, github_branch, syntax_uri, langcfg_uri, licence_uri)  in syntaxes:
     syntax_dir = os.path.join(DOWNLOAD_DIR, lang_id)
     os.makedirs(syntax_dir, exist_ok = True)
 
+    # download in JSON format
     if re.match(".*json.*", syntax_uri, re.IGNORECASE):
-        syntax_filepath = os.path.join(syntax_dir, f"{lang_id}.tmLanguage.json")
-    elif re.match(".*yaml.*", syntax_uri, re.IGNORECASE):
-        syntax_filepath = os.path.join(syntax_dir, f"{lang_id}.tmLanguage.yaml")
-    else:
-        syntax_filepath = os.path.join(syntax_dir, f"{lang_id}.tmLanguage.plist")
+        download(github_branch, syntax_uri, os.path.join(syntax_dir, f"{lang_id}.tmLanguage.json"))
 
-    download(github_branch, syntax_uri, syntax_filepath)
+    # download in YAML format and convert to JSON
+    elif re.match(".*yaml.*", syntax_uri, re.IGNORECASE):
+        yaml_file = os.path.join(syntax_dir, f"{lang_id}.tmLanguage.yaml")
+        json_file = os.path.join(syntax_dir, f"{lang_id}.tmLanguage.json")
+        download(github_branch, syntax_uri, os.path.join(syntax_dir, yaml_file))
+
+        with open(yaml_file) as infile:
+            yaml_content = yaml.load(infile, Loader = yaml.FullLoader)
+
+        with open(json_file, 'w') as outfile:
+             json.dump(yaml_content, outfile, indent = 4)
+
+        os.remove(yaml_file)
+
+    # download in PLIST/XML format
+    else:
+        download(github_branch, syntax_uri, os.path.join(syntax_dir, f"{lang_id}.tmLanguage.plist"))
 
     if langcfg_uri:
         print(f"Downloading [{lang_id}] Language Config...")

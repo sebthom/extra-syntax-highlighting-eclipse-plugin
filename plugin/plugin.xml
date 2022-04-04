@@ -31,8 +31,8 @@
       <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.apache-http" />
    </extension>
    <extension point="org.eclipse.tm4e.registry.grammars">
-      <grammar path="syntaxes/apache-http/apache-http.tmLanguage.plist" scopeName="source.apache-http" />
-      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.apache-http" scopeName="source.apache-http" />
+      <grammar path="syntaxes/apache-http/apache-http.tmLanguage.plist" scopeName="source.apacheconf" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.apache-http" scopeName="source.apacheconf" />
    </extension>
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.apache-http" path="syntaxes/apache-http/apache-http.langcfg.json" />
@@ -85,8 +85,8 @@
       <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.csharp" />
    </extension>
    <extension point="org.eclipse.tm4e.registry.grammars">
-      <grammar path="syntaxes/csharp/csharp.tmLanguage.json" scopeName="source.csharp" />
-      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.csharp" scopeName="source.csharp" />
+      <grammar path="syntaxes/csharp/csharp.tmLanguage.json" scopeName="source.cs" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.csharp" scopeName="source.cs" />
    </extension>
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.csharp" path="syntaxes/csharp/csharp.langcfg.json" />
@@ -187,8 +187,8 @@
       <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.ldif" />
    </extension>
    <extension point="org.eclipse.tm4e.registry.grammars">
-      <grammar path="syntaxes/ldif/ldif.tmLanguage.plist" scopeName="source.ldif" />
-      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.ldif" scopeName="source.ldif" />
+      <grammar path="syntaxes/ldif/ldif.tmLanguage.plist" scopeName="text.ldif" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.ldif" scopeName="text.ldif" />
    </extension>
 
    <!-- ============================== -->
@@ -231,15 +231,15 @@
    <!-- PlantUML                       -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.plantuml" name="PlantUML File" file-extensions="pu" />
-      <file-association content-type="exta-syntax-highlighting.plantuml" file-extensions="pu" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.plantuml" name="PlantUML File" file-extensions="wsd,iuml,pu,puml,plantuml" />
+      <file-association content-type="exta-syntax-highlighting.plantuml" file-extensions="wsd,iuml,pu,puml,plantuml" />
    </extension>
    <extension point="org.eclipse.ui.editors">
       <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.plantuml" />
    </extension>
    <extension point="org.eclipse.tm4e.registry.grammars">
-      <grammar path="syntaxes/plantuml/plantuml.tmLanguage.json" scopeName="source.plantuml" />
-      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.plantuml" scopeName="source.plantuml" />
+      <grammar path="syntaxes/plantuml/plantuml.tmLanguage.json" scopeName="source.wsd" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.plantuml" scopeName="source.wsd" />
    </extension>
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.plantuml" path="syntaxes/plantuml/plantuml.langcfg.json" />
@@ -292,7 +292,7 @@
       <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.svelte" />
    </extension>
    <extension point="org.eclipse.tm4e.registry.grammars">
-      <grammar path="syntaxes/svelte/svelte.tmLanguage.yaml" scopeName="source.svelte" />
+      <grammar path="syntaxes/svelte/svelte.tmLanguage.json" scopeName="source.svelte" />
       <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.svelte" scopeName="source.svelte" />
    </extension>
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
@@ -303,15 +303,15 @@
    <!-- Terraform (HashiCorp)          -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.terraform" name="Terraform File" file-extensions="tf" />
-      <file-association content-type="exta-syntax-highlighting.terraform" file-extensions="tf" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.terraform" name="Terraform File" file-extensions="tf,tfvars" />
+      <file-association content-type="exta-syntax-highlighting.terraform" file-extensions="tf,tfvars" />
    </extension>
    <extension point="org.eclipse.ui.editors">
       <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.terraform" />
    </extension>
    <extension point="org.eclipse.tm4e.registry.grammars">
-      <grammar path="syntaxes/terraform/terraform.tmLanguage.json" scopeName="source.terraform" />
-      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.terraform" scopeName="source.terraform" />
+      <grammar path="syntaxes/terraform/terraform.tmLanguage.json" scopeName="source.hcl.terraform" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.terraform" scopeName="source.hcl.terraform" />
    </extension>
 
    <!-- ============================== -->
@@ -343,8 +343,8 @@
       <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.vb" />
    </extension>
    <extension point="org.eclipse.tm4e.registry.grammars">
-      <grammar path="syntaxes/vb/vb.tmLanguage.json" scopeName="source.vb" />
-      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.vb" scopeName="source.vb" />
+      <grammar path="syntaxes/vb/vb.tmLanguage.json" scopeName="source.asp.vb.net" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.vb" scopeName="source.asp.vb.net" />
    </extension>
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.vb" path="syntaxes/vb/vb.langcfg.json" />
@@ -361,7 +361,7 @@
       <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.vue" />
    </extension>
    <extension point="org.eclipse.tm4e.registry.grammars">
-      <grammar path="syntaxes/vue/vue.tmLanguage.plist" scopeName="source.vue" />
-      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.vue" scopeName="source.vue" />
+      <grammar path="syntaxes/vue/vue.tmLanguage.plist" scopeName="text.html.vue" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.vue" scopeName="text.html.vue" />
    </extension>
 </plugin>

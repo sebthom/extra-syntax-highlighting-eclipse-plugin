@@ -45,7 +45,7 @@ jobs:
 
     - name: Create PR
       id: create-pr
-      uses: peter-evans/create-pull-request@v4.0.1 # https://github.com/peter-evans/create-pull-request
+      uses: peter-evans/create-pull-request@v4 # https://github.com/peter-evans/create-pull-request
       if: "${{ steps.update_syntaxes.outputs.updates != '' }}"
       with:
         title: "chore: Update Syntax Files"

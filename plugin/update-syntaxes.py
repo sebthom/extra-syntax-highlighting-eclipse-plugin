@@ -7,9 +7,9 @@ except ImportError:
     env.Execute("$PYTHONEXE -m pip install pyyaml")
     import yaml
 
-URL_PREFIX = "https://raw.githubusercontent.com/"
+THIS_FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-DOWNLOAD_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "syntaxes")
+URL_PREFIX = "https://raw.githubusercontent.com/"
 
 syntaxes = (
     ("apache-http", "mrmlnc/vscode-apache/master", "syntaxes/Apache.tmLanguage", "apache.configuration.json", "LICENSE"),
@@ -29,11 +29,14 @@ syntaxes = (
     ("sentinel", "hashicorp/syntax/main", "syntaxes/sentinel.tmGrammar.json", "", "LICENSE"),
     ("svelte", "sveltejs/language-tools/master", "packages/svelte-vscode/syntaxes/svelte.tmLanguage.src.yaml", "packages/svelte-vscode/language-configuration.json", "LICENSE"),
     ("terraform", "hashicorp/syntax/main", "syntaxes/terraform.tmGrammar.json", "", "LICENSE"),
-    ("toml", "tamasfe/taplo/master", "editors/vscode/toml.tmLanguage.json", "editors/vscode/language-configuration.json", "LICENSE.md"),
+    ("toml", "oovm/vscode-toml/master", "extension/toml.tmLanguage.json", "extension/toml.configuration.json", "License.md"),
+    # https://github.com/tamasfe/taplo/issues/245
+    # ("toml", "tamasfe/taplo/master", "editors/vscode/toml.tmLanguage.json", "editors/vscode/language-configuration.json", "LICENSE.md"),
     ("vb", "microsoft/vscode/main", "extensions/vb/syntaxes/asp-vb-net.tmlanguage.json", "extensions/vb/language-configuration.json", "LICENSE.txt"),
     ("vue", "vuejs/vue-syntax-highlight/master", "vue.tmLanguage", "", "LICENSE")
 )
 
+DOWNLOAD_DIR = os.path.join(THIS_FILE_DIR, "syntaxes")
 print(f"Download directory: {DOWNLOAD_DIR}")
 
 

@@ -277,9 +277,6 @@
       <grammar path="syntaxes/sentinel/sentinel.tmLanguage.json" scopeName="source.sentinel" />
       <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.sentinel" scopeName="source.sentinel" />
    </extension>
-   <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-      <languageConfiguration contentTypeId="exta-syntax-highlighting.sentinel" path="syntaxes/sentinel/sentinel.langcfg.json" />
-   </extension>
 
    <!-- ============================== -->
    <!-- Svelte                         -->

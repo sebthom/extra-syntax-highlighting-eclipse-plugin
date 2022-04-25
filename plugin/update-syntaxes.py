@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-import json, os, platform, re, string, sys, urllib.error, urllib.request
+import json, os, platform, re, string, subprocess, sys, urllib.error, urllib.request
 
 try:
     import yaml
 except ImportError:
-    env.Execute("$PYTHONEXE -m pip install pyyaml")
+    subprocess.run((sys.executable, "-m", "pip", "install", "pyyaml"))
     import yaml
 
 THIS_FILE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -16,6 +16,7 @@ syntaxes = (
     ("c", "microsoft/vscode/main", "extensions/cpp/syntaxes/c.tmLanguage.json", "extensions/cpp/language-configuration.json", "LICENSE.txt"),
     ("cpp", "microsoft/vscode/main", "extensions/cpp/syntaxes/cpp.tmLanguage.json", "extensions/cpp/language-configuration.json", "LICENSE.txt"),
     ("csharp", "microsoft/vscode/main", "extensions/csharp/syntaxes/csharp.tmLanguage.json", "extensions/csharp/language-configuration.json", "LICENSE.txt"),
+    ("dart", "microsoft/vscode/main", "extensions/dart/syntaxes/dart.tmLanguage.json", "extensions/dart/language-configuration.json", "LICENSE.txt"),
     ("dot", "textmate/graphviz.tmbundle/master", "Syntaxes/DOT.plist", "", ""),
     ("er", "mikkel-ol/vsc-er-syntax-highlighting/master", "syntaxes/er.tmLanguage.json", "language-configuration.json", "LICENSE"),
     ("graphql", "graphql/vscode-graphql/master", "grammars/graphql.json", "language/language-configuration.json", "LICENSE"),
@@ -23,6 +24,7 @@ syntaxes = (
     ("ini", "microsoft/vscode/main", "extensions/ini/syntaxes/ini.tmLanguage.json", "extensions/ini/ini.language-configuration.json", "LICENSE.txt"),
     ("ldif", "FlashSystems/LDIF-Syntax/master", "ldif.tmLanguage", "", "LICENSE"),
     ("lua", "microsoft/vscode/main", "extensions/lua/syntaxes/lua.tmLanguage.json", "extensions/lua/language-configuration.json", "LICENSE.txt"),
+    ("haxe", "vshaxe/haxe-TmLanguage/master", "haxe.tmLanguage", "../../vshaxe/master/configurations/haxe.language-configuration.json", "LICENSE.md"),
     ("php", "microsoft/vscode/main", "extensions/php/syntaxes/php.tmLanguage.json", "extensions/php/language-configuration.json", "LICENSE.txt"),
     ("plantuml", "qjebbs/vscode-plantuml/master", "syntaxes/plantuml.yaml-tmLanguage", "language-configuration.json", "LICENSE.txt"),
     ("prisma", "prisma/language-tools/main", "packages/vscode/syntaxes/prisma.tmLanguage.json", "packages/vscode/language-configuration.json", "LICENSE"),

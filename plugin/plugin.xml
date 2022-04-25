@@ -93,6 +93,24 @@
    </extension>
 
    <!-- ============================== -->
+   <!-- Dart                           -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.dart" name="Dart Source File" file-extensions="dart" />
+      <file-association content-type="exta-syntax-highlighting.dart" file-extensions="dart" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.dart" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/dart/dart.tmLanguage.json" scopeName="source.dart" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.dart" scopeName="source.dart" />
+   </extension>
+   <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+      <languageConfiguration contentTypeId="exta-syntax-highlighting.dart" path="syntaxes/dart/dart.langcfg.json" />
+   </extension>
+
+   <!-- ============================== -->
    <!-- DOT (GraphViz)                 -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
@@ -141,6 +159,24 @@
    </extension>
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.graphql" path="syntaxes/graphql/graphql.langcfg.json" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- Haxe                           -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.haxe" name="Haxe Source File" file-extensions="hx" />
+      <file-association content-type="exta-syntax-highlighting.haxe" file-extensions="hx" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.haxe" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/haxe/haxe.tmLanguage.plist" scopeName="source.hx" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.haxe" scopeName="source.hx" />
+   </extension>
+   <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+      <languageConfiguration contentTypeId="exta-syntax-highlighting.haxe" path="syntaxes/haxe/haxe.langcfg.json" />
    </extension>
 
    <!-- ============================== -->

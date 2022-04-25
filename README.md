@@ -20,6 +20,7 @@ This Eclipse plug-in adds syntax highlighting support for the following language
 - Apache HTTP configuration files - https://httpd.apache.org/docs/current/configuring.html
 - C / C++
 - C# (`*.cs`) - https://docs.microsoft.com/en-us/dotnet/csharp/
+- Dart - https://dart.dev
 - Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd
 - GraphQL - https://graphql.org/
 - Graphviz Dot  (`*.dot`) - https://graphviz.org/doc/info/lang.html
@@ -28,6 +29,7 @@ This Eclipse plug-in adds syntax highlighting support for the following language
 - HashiCorp HCL (`*.hcl`) - https://github.com/hashicorp/hcl (e.g. used by HasiCorp Packer)
 - HashiCorp Sentinel (`*.sentinel`) - https://www.hashicorp.com/sentinel
 - HashiCorp Terraform (`*.tf`) - https://www.terraform.io/
+- Haxe - https://haxe.org
 - INI - https://en.wikipedia.org/wiki/INI_file
 - LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 - Lua - https://www.lua.org/

@@ -13,7 +13,7 @@
    <parent>
       <groupId>com.vegardit.maven</groupId>
       <artifactId>vegardit-maven-parent</artifactId>
-      <version>RELEASE</version>
+      <version>3.0.1</version>
    </parent>
 
    <name>extra-syntax-highlighting-eclipse</name>

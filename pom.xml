@@ -37,7 +37,7 @@
    </licenses>
 
    <properties>
-      <java.version>11</java.version>
+      <java.version>17</java.version>
       <tycho.version>2.7.3</tycho.version>
 
       <!-- to prevent dozen of warnings like:

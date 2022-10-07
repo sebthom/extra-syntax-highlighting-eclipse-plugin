@@ -49,11 +49,13 @@
       <skip.enforcer.enforce-bytecode-version>true</skip.enforcer.enforce-bytecode-version>
    </properties>
 
+
    <modules>
       <module>plugin</module>
       <module>feature</module>
       <module>updatesite</module>
    </modules>
+
 
    <build>
       <pluginManagement>
@@ -66,19 +68,19 @@
             </plugin>
 
             <plugin>
-               <groupId>org.eclipse.tycho</groupId>
-               <artifactId>tycho-ds-plugin</artifactId>
-               <version>${tycho.version}</version>
-            </plugin>
-
-            <plugin>
-               <!-- https://www.eclipse.org/tycho/sitedocs/tycho-compiler-plugin/plugin-info.html -->
+               <!-- https://tycho.eclipseprojects.io/doc/3.0.0/tycho-compiler-plugin/plugin-info.html -->
                <groupId>org.eclipse.tycho</groupId>
                <artifactId>tycho-compiler-plugin</artifactId>
                <version>${tycho.version}</version>
                <configuration>
                   <optimize>true</optimize>
                </configuration>
+            </plugin>
+            <plugin>
+               <!-- https://github.com/eclipse-tycho/tycho/blob/master/RELEASE_NOTES.md#support-for-pde-declarative-component-annotation-processing -->
+               <groupId>org.eclipse.tycho</groupId>
+               <artifactId>tycho-ds-plugin</artifactId>
+               <version>${tycho.version}</version>
             </plugin>
             <plugin>
                <!-- https://www.eclipse.org/tycho/sitedocs/tycho-packaging-plugin/plugin-info.html -->

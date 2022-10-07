@@ -139,16 +139,16 @@ jobs:
         set -eux
 
         cd /tmp
-        github_repo_url="https://${{ github.actor }}:${{ github.token }}@github.com/sebthom/extra-syntax-highlighting-eclipse-plugin/"
+        github_repo_url="https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}"
         if curl --output /dev/null --silent --head --fail "$github_repo_url/tree/updatesite"; then
-          git clone https://${{ github.actor }}:${{ github.token }}@github.com/sebthom/extra-syntax-highlighting-eclipse-plugin/ --single-branch --branch updatesite updatesite
+          git clone $github_repo_url --single-branch --branch updatesite updatesite
           cd updatesite
           # https://github.community/t/github-actions-bot-email-address/17204
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git reset --hard HEAD^
         else
-          git clone https://${{ github.actor }}:${{ github.token }}@github.com/sebthom/extra-syntax-highlighting-eclipse-plugin/ updatesite
+          git clone $github_repo_url updatesite
           cd updatesite
           git checkout --orphan updatesite
           git rm -rf .
@@ -156,10 +156,10 @@ jobs:
             <!DOCTYPE html>
             <html>
             <head>
-              <title>extra-syntax-highlighting-eclipse-plugin - Update Site</title>
+              <title>${{ github.repository }} - Update Site</title>
             </head>
             <body>
-            <h1>extra-syntax-highlighting-eclipse-plugin - Update Site</h1>
+            <h1>${{ github.repository }} - Update Site</h1>
             </body>
             </html>
         EOF

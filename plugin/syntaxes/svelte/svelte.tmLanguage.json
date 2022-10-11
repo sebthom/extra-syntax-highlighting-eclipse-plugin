@@ -421,7 +421,7 @@
                             "end": "(?=})",
                             "patterns": [
                                 {
-                                    "include": "source.ts#variable-initializer"
+                                    "include": "source.ts"
                                 }
                             ]
                         }

@@ -24,8 +24,6 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd
 - GraphQL - https://graphql.org/
 - Graphviz Dot  (`*.dot`) - https://graphviz.org/doc/info/lang.html
-- PlantUML (`*.pu`) - https://plantuml.com/
-- Prisma - https://www.prisma.io/
 - HashiCorp HCL (`*.hcl`) - https://github.com/hashicorp/hcl (e.g. used by HasiCorp Packer)
 - HashiCorp Sentinel (`*.sentinel`) - https://www.hashicorp.com/sentinel
 - HashiCorp Terraform (`*.tf`) - https://www.terraform.io/
@@ -34,6 +32,9 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 - Lua - https://www.lua.org/
 - PHP - https://www.php.net/
+- PlantUML (`*.pu`) - https://plantuml.com/
+- PowerShell - https://github.com/PowerShell/PowerShell
+- Prisma - https://www.prisma.io/
 - Svelte - https://svelte.dev/
 - TOML - https://toml.io/en/
 - Visual Basic- https://docs.microsoft.com/en-us/dotnet/visual-basic/

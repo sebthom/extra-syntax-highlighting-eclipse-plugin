@@ -282,6 +282,24 @@
    </extension>
 
    <!-- ============================== -->
+   <!-- PowerShell                     -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.powershell" name="PowerShell File" file-extensions="ps1,psm1,psd1,pssc,psrc" />
+      <file-association content-type="exta-syntax-highlighting.powershell" file-extensions="ps1,psm1,psd1,pssc,psrc" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.powershell" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/powershell/powershell.tmLanguage.json" scopeName="source.powershell" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.powershell" scopeName="source.powershell" />
+   </extension>
+   <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+      <languageConfiguration contentTypeId="exta-syntax-highlighting.powershell" path="syntaxes/powershell/powershell.langcfg.json" />
+   </extension>
+
+   <!-- ============================== -->
    <!-- Prisma                         -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">

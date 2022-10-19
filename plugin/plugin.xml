@@ -13,7 +13,8 @@
    <!-- TextMate                       -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="org.eclipse.core.runtime.xml" priority="high" id="exta-syntax-highlighting.textmate" name="Textmate Grammar File" file-extensions="tmLanguage,plist" />
+      <content-type base-type="org.eclipse.core.runtime.xml" priority="high" id="exta-syntax-highlighting.textmate" name="Textmate Grammar File"
+                    file-extensions="tmLanguage,plist" />
       <file-association content-type="exta-syntax-highlighting.textmate" file-extensions="tmLanguage,plist" />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -24,7 +25,8 @@
    <!-- Apache HTTP Conf              -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.apache-http" name="Apache HTTP Config File" file-extensions="conf,envvars,htaccess,htgroups,htpasswd" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.apache-http" name="Apache HTTP Config File"
+                    file-extensions="conf,envvars,htaccess,htgroups,htpasswd" />
       <file-association content-type="exta-syntax-highlighting.c" file-extensions="conf,envvars,htaccess,htgroups,htpasswd"  />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -42,7 +44,8 @@
    <!-- C                              -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.c" name="C Source File" file-extensions="c,i" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.c" name="C Source File"
+                    file-extensions="c,i" />
       <file-association content-type="exta-syntax-highlighting.c" file-extensions="c,i" />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -60,7 +63,8 @@
    <!-- C++                            -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.cpp" name="C++ Source File" file-extensions="c++,cc,cpp,h,hpp" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.cpp" name="C++ Source File"
+                    file-extensions="c++,cc,cpp,h,hpp" />
       <file-association content-type="exta-syntax-highlighting.cpp" file-extensions="c++,cc,cpp,h,hpp" />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -78,7 +82,8 @@
    <!-- C#                             -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.csharp" name="C# Source File" file-extensions="cs,csx,cake" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.csharp" name="C# Source File"
+                    file-extensions="cs,csx,cake" />
       <file-association content-type="exta-syntax-highlighting.csharp" file-extensions="cs,csx,cake" />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -96,7 +101,8 @@
    <!-- Dart                           -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.dart" name="Dart Source File" file-extensions="dart" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.dart" name="Dart Source File"
+                    file-extensions="dart" />
       <file-association content-type="exta-syntax-highlighting.dart" file-extensions="dart" />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -114,7 +120,8 @@
    <!-- DOT (GraphViz)                 -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.dot" name="Graphviz DOT File" file-extensions="dot" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.dot" name="Graphviz DOT File"
+                    file-extensions="dot" />
       <file-association content-type="exta-syntax-highlighting.dot" file-extensions="dot" />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -129,7 +136,8 @@
    <!-- ER                             -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.er" name="ER File" file-extensions="er" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.er" name="ER File"
+                    file-extensions="er" />
       <file-association content-type="exta-syntax-highlighting.er" file-extensions="er" />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -147,7 +155,8 @@
    <!-- GraphQL                        -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.graphql" name="GraphQL File" file-extensions="graphql" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.graphql" name="GraphQL File"
+                    file-extensions="graphql" />
       <file-association content-type="exta-syntax-highlighting.graphql" file-extensions="graphql" />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -165,7 +174,8 @@
    <!-- Haxe                           -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.haxe" name="Haxe Source File" file-extensions="hx" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.haxe" name="Haxe Source File"
+                    file-extensions="hx" />
       <file-association content-type="exta-syntax-highlighting.haxe" file-extensions="hx" />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -183,7 +193,8 @@
    <!-- HCL (HashiCorp                 -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.hcl" name="HCL Config File" file-extensions="hcl" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.hcl" name="HCL Config File"
+                    file-extensions="hcl" />
       <file-association content-type="exta-syntax-highlighting.hcl" file-extensions="hcl" />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -198,7 +209,8 @@
    <!-- INI                            -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.ini" name="INI Config File" file-extensions="ini,url" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.ini" name="INI Config File"
+                    file-extensions="ini,url" />
       <file-association content-type="exta-syntax-highlighting.ini" file-extensions="ini,url" />
    </extension>
    <extension point="org.eclipse.ui.editors">
@@ -231,7 +243,8 @@
    <!-- Lua                            -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.lua" name="Lua Source File" file-extensions="lua,p8,rockspec" />
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.lua" name="Lua Source File"
+                    file-extensions="lua,p8,rockspec" />
       <file-association content-type="exta-syntax-highlighting.lua" file-extensions="lua,p8,rockspec" />
    </extension>
    <extension point="org.eclipse.ui.editors">

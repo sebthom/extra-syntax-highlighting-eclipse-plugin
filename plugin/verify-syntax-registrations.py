@@ -11,6 +11,7 @@ for ext in plugin_xml.findall("./extension[@point='org.eclipse.tm4e.registry.gra
     plugin_xml_grammar_path = ext.attrib["path"]
     plugin_xml_scope_name = ext.attrib["scopeName"]
 
+    print(f"Validating [{plugin_xml_grammar_path}]...")
     if not os.path.exists(os.path.join(THIS_FILE_DIR, plugin_xml_grammar_path)):
         raise AssertionError(f"plugin.xml: Declared grammar path {plugin_xml_grammar_path} does not exist.")
 

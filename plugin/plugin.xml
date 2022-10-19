@@ -246,6 +246,25 @@
    </extension>
 
    <!-- ============================== -->
+   <!-- Makefile                       -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.makefile" name="Makefile"
+                    file-extensions="mak,mk" file-names="Makefile,makefile" file-patterns="*Makefile" />
+      <file-association content-type="exta-syntax-highlighting.makefile" file-extensions="mak,mk" file-names="Makefile,makefile" file-patterns="*Makefile"/>
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.makefile" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/makefile/makefile.tmLanguage.json" scopeName="source.makefile" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.makefile" scopeName="source.makefile" />
+   </extension>
+   <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+      <languageConfiguration contentTypeId="exta-syntax-highlighting.makefile" path="syntaxes/makefile/makefile.langcfg.json" />
+   </extension>
+
+   <!-- ============================== -->
    <!-- PHP                            -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">

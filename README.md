@@ -31,6 +31,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - INI - https://en.wikipedia.org/wiki/INI_file
 - LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 - Lua - https://www.lua.org/
+- Make - https://www.gnu.org/software/make/
 - PHP - https://www.php.net/
 - PlantUML (`*.pu`) - https://plantuml.com/
 - PowerShell - https://github.com/PowerShell/PowerShell

@@ -25,6 +25,7 @@ syntaxes = (
     ("ldif", "FlashSystems/LDIF-Syntax/master", "ldif.tmLanguage", "", "LICENSE"),
     ("lua", "microsoft/vscode/main", "extensions/lua/syntaxes/lua.tmLanguage.json", "extensions/lua/language-configuration.json", "LICENSE.txt"),
     ("haxe", "vshaxe/haxe-TmLanguage/master", "haxe.tmLanguage", "../../vshaxe/master/configurations/haxe.language-configuration.json", "LICENSE.md"),
+    ("makefile", "microsoft/vscode/main", "extensions/make/syntaxes/make.tmLanguage.json", "extensions/make/language-configuration.json", "LICENSE.txt"),
     ("php", "microsoft/vscode/main", "extensions/php/syntaxes/php.tmLanguage.json", "extensions/php/language-configuration.json", "LICENSE.txt"),
     ("plantuml", "qjebbs/vscode-plantuml/master", "syntaxes/plantuml.yaml-tmLanguage", "language-configuration.json", "LICENSE.txt"),
     ("powershell", "microsoft/vscode/main", "extensions/powershell/syntaxes/powershell.tmLanguage.json", "extensions/powershell/language-configuration.json", "LICENSE.txt"),

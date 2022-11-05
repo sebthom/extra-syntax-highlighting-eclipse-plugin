@@ -58,7 +58,7 @@ jobs:
           ${{ runner.os }}-mvnrepo-
 
     - name: Set up Maven
-      uses: stCarolas/setup-maven@v4.4 # https://github.com/stCarolas/setup-maven
+      uses: stCarolas/setup-maven@v4.5 # https://github.com/stCarolas/setup-maven
       with:
         maven-version: 3.8.6
 

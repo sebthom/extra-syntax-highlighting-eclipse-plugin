@@ -383,6 +383,25 @@
    </extension>
 
    <!-- ============================== -->
+   <!-- Swift                          -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.swift" name="Swift Source File"
+                    file-extensions="swift" />
+      <file-association content-type="exta-syntax-highlighting.swift" file-extensions="swift" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.swift" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/swift/swift.tmLanguage.json" scopeName="source.swift" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.swift" scopeName="source.swift" />
+   </extension>
+   <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+      <languageConfiguration contentTypeId="exta-syntax-highlighting.swift" path="syntaxes/swift/swift.langcfg.json" />
+   </extension>
+
+   <!-- ============================== -->
    <!-- Terraform (HashiCorp)          -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">

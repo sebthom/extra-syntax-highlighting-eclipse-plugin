@@ -32,6 +32,7 @@ syntaxes = (
     ("prisma", "prisma/language-tools/main", "packages/vscode/syntaxes/prisma.tmLanguage.json", "packages/vscode/language-configuration.json", "LICENSE"),
     ("sentinel", "hashicorp/syntax/main", "syntaxes/sentinel.tmGrammar.json", "", "LICENSE"),
     ("svelte", "sveltejs/language-tools/master", "packages/svelte-vscode/syntaxes/svelte.tmLanguage.src.yaml", "packages/svelte-vscode/language-configuration.json", "LICENSE"),
+    ("swift", "microsoft/vscode/main", "extensions/swift/syntaxes/swift.tmLanguage.json", "extensions/swift/language-configuration.json", "LICENSE.txt"),
     ("terraform", "hashicorp/syntax/main", "syntaxes/terraform.tmGrammar.json", "", "LICENSE"),
     ("toml", "oovm/vscode-toml/master", "extension/toml.tmLanguage.json", "extension/toml.configuration.json", "License.md"),
     # https://github.com/tamasfe/taplo/issues/245

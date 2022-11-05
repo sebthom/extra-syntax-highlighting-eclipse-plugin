@@ -37,6 +37,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - PowerShell - https://github.com/PowerShell/PowerShell
 - Prisma - https://www.prisma.io/
 - Svelte - https://svelte.dev/
+- Swift - https://developer.apple.com/swift/
 - TOML - https://toml.io/en/
 - Visual Basic- https://docs.microsoft.com/en-us/dotnet/visual-basic/
 - Vue.js - https://vuejs.org/

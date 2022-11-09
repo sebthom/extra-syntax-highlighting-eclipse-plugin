@@ -29,6 +29,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - HashiCorp Terraform (`*.tf`) - https://www.terraform.io/
 - Haxe - https://haxe.org
 - INI - https://en.wikipedia.org/wiki/INI_file
+- Kotlin - https://kotlinlang.org/
 - LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 - Lua - https://www.lua.org/
 - Make - https://www.gnu.org/software/make/

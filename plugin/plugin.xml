@@ -225,6 +225,25 @@
    </extension>
 
    <!-- ============================== -->
+   <!-- Kotlin                         -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.kotlin" name="Kotlin Source File"
+                    file-extensions="kt,kts" />
+      <file-association content-type="exta-syntax-highlighting.kotlin" file-extensions="kt,kts" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.kotlin" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/kotlin/kotlin.tmLanguage.json" scopeName="source.kotlin" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.kotlin" scopeName="source.kotlin" />
+   </extension>
+   <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+      <languageConfiguration contentTypeId="exta-syntax-highlighting.kotlin" path="syntaxes/kotlin/kotlin.langcfg.json" />
+   </extension>
+
+   <!-- ============================== -->
    <!-- LDIF                           -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">

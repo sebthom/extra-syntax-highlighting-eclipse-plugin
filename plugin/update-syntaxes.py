@@ -22,6 +22,7 @@ syntaxes = (
     ("graphql", "graphql/vscode-graphql/master", "grammars/graphql.json", "language/language-configuration.json", "LICENSE"),
     ("hcl", "hashicorp/syntax/main", "syntaxes/hcl.tmGrammar.json", "", "LICENSE"),
     ("ini", "microsoft/vscode/main", "extensions/ini/syntaxes/ini.tmLanguage.json", "extensions/ini/ini.language-configuration.json", "LICENSE.txt"),
+    ("kotlin", "fwcd/kotlin-language-server/main", "grammars/Kotlin.tmLanguage.json", "grammars/kotlin.configuration.json", "LICENSE.txt"),
     ("ldif", "FlashSystems/LDIF-Syntax/master", "ldif.tmLanguage", "", "LICENSE"),
     ("lua", "microsoft/vscode/main", "extensions/lua/syntaxes/lua.tmLanguage.json", "extensions/lua/language-configuration.json", "LICENSE.txt"),
     ("haxe", "vshaxe/haxe-TmLanguage/master", "haxe.tmLanguage", "../../vshaxe/master/configurations/haxe.language-configuration.json", "LICENSE.md"),

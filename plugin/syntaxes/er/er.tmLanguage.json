@@ -1,156 +1,156 @@
 {
-	"name": "Entity Relationship",
-	"scopeName": "source.er",
-	"patterns": [
-		{
-			"include": "#value"
-		}
-	],
-	"repository": {
-		"entity": {
-			"begin": "\\[",
-			"end": "\\]",
-			"name": "markup.bold",
-			"patterns": [
-				{
-					"match": "[^\\s\\]]",
-					"name": "entity.name"
-				}
-			]
-		},
-		"primaryKey": {
-			"begin": "^\\s*\\*",
-			"end": "([^\\s]+)",
-			"name": "punctuation.definition.italic.markdown"
-		},
-		"relationship": {
-			"match": ".+\\s([\\*\\+\\?]|[10](\\.\\.\\*)?)--([\\*\\+\\?]|(1(\\.\\.\\*)?)|(0(\\.\\.(1|\\*))?))\\s+\\w+",
-			"name": "entity.name.function"
-		},
-		"string-double": {
-			"name": "string.quoted.double.er",
-			"begin": "\"",
-			"end": "\""
-		},
-		"string-single": {
-			"name": "string.quoted.single.er",
-			"begin": "\\'",
-			"end": "\\'"
-		},
-		"comment": {
-			"patterns": [
-				{
-					"name": "comment.line",
-					"match": "#.*"
-				}
-			]
-		},
-		"object": {
-			"begin": "\\{",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.dictionary.begin.json"
-				}
-			},
-			"end": "\\}",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.dictionary.end.json"
-				}
-			},
-			"name": "meta.structure.dictionary.json",
-			"patterns": [
-				{
-					"comment": "the JSON object key",
-					"include": "#objectkey"
-				},
-				{
-					"begin": ":",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.separator.dictionary.key-value.json"
-						}
-					},
-					"end": "(,)|(?=\\})",
-					"endCaptures": {
-						"1": {
-							"name": "punctuation.separator.dictionary.pair.json"
-						}
-					},
-					"name": "meta.structure.dictionary.value.json",
-					"patterns": [
-						{
-							"comment": "the JSON object value",
-							"include": "#value"
-						},
-						{
-							"match": "[^\\s,]",
-							"name": "entity.other.attribute-name"
-						}
-					]
-				},
-				{
-					"match": "[^\\s\\}]",
-					"name": "entity.other.attribute-name"
-				}
-			]
-		},
-		"objectkey": {
-			"begin": "\"",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.support.type.property-name.begin.json"
-				}
-			},
-			"end": "\"",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.support.type.property-name.end.json"
-				}
-			},
-			"name": "entity.other.attribute-name",
-			"patterns": [
-				{
-					"include": "#stringcontent"
-				}
-			]
-		},
-		"stringcontent": {
-			"patterns": [
-				{
-					"match": "(?x)                # turn on extended mode\n  \\\\                # a literal backslash\n  (?:               # ...followed by...\n    [\"\\\\/bfnrt]     # one of these characters\n    |               # ...or...\n    u               # a u\n    [0-9a-fA-F]{4}) # and four hex digits",
-					"name": "constant.character.escape.json"
-				},
-				{
-					"match": "\\\\.",
-					"name": "invalid.illegal.unrecognized-string-escape.json"
-				}
-			]
-		},
-		"value": {
-			"patterns": [
-				{
-					"include": "#comment"
-				},
-				{
-					"include": "#entity"
-				},
-				{
-					"include": "#relationship"
-				},
-				{
-					"include": "#primaryKey"
-				},
-				{
-					"include": "#string-single"
-				},
-				{
-					"include": "#string-double"
-				},
-				{
-					"include": "#object"
-				}
-			]
-		}
-	}
+  "name": "Entity Relationship",
+  "scopeName": "source.er",
+  "patterns": [
+    {
+      "include": "#value"
+    }
+  ],
+  "repository": {
+    "entity": {
+      "begin": "\\[",
+      "end": "\\]",
+      "name": "markup.bold",
+      "patterns": [
+        {
+          "match": "[^\\s\\]]",
+          "name": "entity.name"
+        }
+      ]
+    },
+    "primaryKey": {
+      "begin": "^\\s*\\*",
+      "end": "([^\\s]+)",
+      "name": "punctuation.definition.italic.markdown"
+    },
+    "relationship": {
+      "match": ".+\\s([\\*\\+\\?]|[10](\\.\\.\\*)?)--([\\*\\+\\?]|(1(\\.\\.\\*)?)|(0(\\.\\.(1|\\*))?))\\s+\\w+",
+      "name": "entity.name.function"
+    },
+    "string-double": {
+      "name": "string.quoted.double.er",
+      "begin": "\"",
+      "end": "\""
+    },
+    "string-single": {
+      "name": "string.quoted.single.er",
+      "begin": "\\'",
+      "end": "\\'"
+    },
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line",
+          "match": "#.*"
+        }
+      ]
+    },
+    "object": {
+      "begin": "\\{",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.dictionary.begin.json"
+        }
+      },
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.dictionary.end.json"
+        }
+      },
+      "name": "meta.structure.dictionary.json",
+      "patterns": [
+        {
+          "comment": "the JSON object key",
+          "include": "#objectkey"
+        },
+        {
+          "begin": ":",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.separator.dictionary.key-value.json"
+            }
+          },
+          "end": "(,)|(?=\\})",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.separator.dictionary.pair.json"
+            }
+          },
+          "name": "meta.structure.dictionary.value.json",
+          "patterns": [
+            {
+              "comment": "the JSON object value",
+              "include": "#value"
+            },
+            {
+              "match": "[^\\s,]",
+              "name": "entity.other.attribute-name"
+            }
+          ]
+        },
+        {
+          "match": "[^\\s\\}]",
+          "name": "entity.other.attribute-name"
+        }
+      ]
+    },
+    "objectkey": {
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.support.type.property-name.begin.json"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.support.type.property-name.end.json"
+        }
+      },
+      "name": "entity.other.attribute-name",
+      "patterns": [
+        {
+          "include": "#stringcontent"
+        }
+      ]
+    },
+    "stringcontent": {
+      "patterns": [
+        {
+          "match": "(?x)                # turn on extended mode\n  \\\\                # a literal backslash\n  (?:               # ...followed by...\n    [\"\\\\/bfnrt]     # one of these characters\n    |               # ...or...\n    u               # a u\n    [0-9a-fA-F]{4}) # and four hex digits",
+          "name": "constant.character.escape.json"
+        },
+        {
+          "match": "\\\\.",
+          "name": "invalid.illegal.unrecognized-string-escape.json"
+        }
+      ]
+    },
+    "value": {
+      "patterns": [
+        {
+          "include": "#comment"
+        },
+        {
+          "include": "#entity"
+        },
+        {
+          "include": "#relationship"
+        },
+        {
+          "include": "#primaryKey"
+        },
+        {
+          "include": "#string-single"
+        },
+        {
+          "include": "#string-double"
+        },
+        {
+          "include": "#object"
+        }
+      ]
+    }
+  }
 }

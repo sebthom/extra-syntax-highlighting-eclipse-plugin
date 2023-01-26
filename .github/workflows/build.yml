@@ -8,6 +8,7 @@ on:
     tags-ignore:
     - '**'
     paths-ignore:
+    - '**/*.adoc'
     - '**/*.md'
     - '.github/*.yml'
   pull_request:
@@ -31,34 +32,53 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Show environment variables
+      run: env | sort
+
     - name: Git Checkout
       uses: actions/checkout@v3 #https://github.com/actions/checkout
 
-    - name: Verify grammar registrations
-      run: |
-        python plugin/verify-syntax-registrations.py
 
-    - name: Set up JDK ${{ env.JAVA_VERSION }}
+    - name: Configure APT
+      run: |
+        # Workaround to avoid sporadic connectivity issues "Could not connect to azure.archive.ubuntu.com:80"
+        # see https://github.com/actions/virtual-environments/issues/675
+        echo 'APT::Acquire::Retries "3";' | sudo tee /etc/apt/apt.conf.d/80-acquire-retries
+        if ! curl --max-time 3 --output /dev/null --silent --head --fail "http://azure.archive.ubuntu.com/ubuntu/dists/"; then
+          sudo sed -i 's/azure\.//' /etc/apt/sources.list
+        fi
+
+        echo 'APT::Install-Recommends "0";'  | sudo tee /etc/apt/apt.conf.d/01-norecommends
+        echo 'APT::Install-Suggests "0";' | sudo tee -a /etc/apt/apt.conf.d/01-norecommends
+
+        # avoid potential 404 see https://github.com/actions/runner-images/issues/592
+        sudo apt-get update 
+
+
+    - name: "Install: xvfb"
+      run: sudo apt-get install -y xvfb
+
+
+    - name: "Install: JDK ${{ env.JAVA_VERSION }}"
       uses: actions/setup-java@v3 # https://github.com/actions/setup-java
       with:
-        distribution: 'zulu'
+        distribution: temurin
         java-version: ${{ env.JAVA_VERSION }}
 
-    - name: Install xvfb
-      run: sudo apt-get install -o Acquire::Retries=3 --no-install-recommends -y xvfb
 
-    - name: "Cache: Local Maven Repository"
-      uses: actions/cache@v3
+    - name: "Cache: Restore"
+      id: cache-restore
+      if: ${{ !env.ACT }} # https://github.com/nektos/act#skipping-steps
+      uses: actions/cache/restore@v3
       with:
         path: |
           ~/.m2/repository
-          !~/.m2/**/*SNAPSHOT*
-          !~/.m2/**/.cache/tycho/https/raw.githubusercontent.com
-        key: ${{ runner.os }}-mvnrepo-${{ hashFiles('**/pom.xml') }}-${{ hashFiles('build.target') }}
-        restore-keys: |
-          ${{ runner.os }}-mvnrepo-
+          !~/.m2/repository/.cache/tycho/https/raw.githubusercontent.com
+          !~/.m2/repository/*SNAPSHOT*
+        key: ${{ runner.os }}-${{ hashFiles('build.target') }}-${{ hashFiles('**/pom.xml') }}
 
-    - name: Set up Maven
+
+    - name: "Install: Maven"
       uses: stCarolas/setup-maven@v4.5 # https://github.com/stCarolas/setup-maven
       with:
         maven-version: 3.8.6
@@ -99,29 +119,31 @@ jobs:
 
 
     - name: "Delete previous 'latest' release"
-      if: github.ref == 'refs/heads/main'
+      if: ${{ github.ref == 'refs/heads/main' && !env.ACT }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         set -eu
 
         api_base_url="$GITHUB_API_URL/repos/$GITHUB_REPOSITORY"
 
         # delete 'latest' github release
-        release_id=$(curl -fsL -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/$GITHUB_REPOSITORY/releases | jq -r '.[] | select(.name == "latest") | .id')
+        release_id=$(curl -fsL -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/$GITHUB_REPOSITORY/releases | jq -r '.[] | select(.name == "latest") | .id')
         if [[ -n $release_id ]]; then
            echo "Deleting release [$api_base_url/releases/$release_id]..."
-           curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -fsSL -X DELETE "$api_base_url/releases/$release_id"
+           curl -H "Authorization: token $GITHUB_TOKEN" -fsSL -X DELETE "$api_base_url/releases/$release_id"
         fi
 
         # delete 'latest' git tag
         tag_url="$api_base_url/git/refs/tags/latest"
-        if curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -fsLo /dev/null --head "$tag_url"; then
+        if curl -H "Authorization: token $GITHUB_TOKEN" -fsLo /dev/null --head "$tag_url"; then
            echo "Deleting tag [$tag_url]..."
-           curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -fsSL -X DELETE "$tag_url"
+           curl -H "Authorization: token $GITHUB_TOKEN" -fsSL -X DELETE "$tag_url"
         fi
 
 
     - name: "Create 'latest' release"
-      if: github.ref == 'refs/heads/main'
+      if: ${{ github.ref == 'refs/heads/main' && !env.ACT }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
@@ -135,7 +157,7 @@ jobs:
 
 
     - name: Deploy p2 update site
-      if: github.ref == 'refs/heads/main'
+      if: ${{ github.ref == 'refs/heads/main' && !env.ACT }}
       run: |
         set -eux
 
@@ -177,8 +199,24 @@ jobs:
         git push origin updatesite --force
 
 
-    - name: "Delete intermediate build artifacts"
-      uses: geekyeggo/delete-artifact@v2 # https://github.com/GeekyEggo/delete-artifact/
+    ##################################################
+    # Cache Update
+    # See https://github.com/actions/cache/issues/342
+    ##################################################
+    - name: "Cache: Delete Previous"
+      if: ${{ steps.cache-restore.outputs.cache-hit && !env.ACT }}
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        gh extension install actions/gh-actions-cache
+        gh actions-cache delete ${{ steps.cache-restore.outputs.cache-primary-key }} --confirm
+
+    - name: "Cache: Update"
+      uses: actions/cache/save@v3
+      if: ${{ always() && !env.ACT }} # save cache even fails
       with:
-        name: "*"
-        failOnError: false
+        path: |
+          ~/.m2/repository
+          !~/.m2/repository/.cache/tycho/https/raw.githubusercontent.com
+          !~/.m2/repository/*SNAPSHOT*
+        key: ${{ steps.cache-restore.outputs.cache-primary-key }}

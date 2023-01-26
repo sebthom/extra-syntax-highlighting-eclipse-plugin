@@ -33,14 +33,14 @@ jobs:
 
         updates=$(git status --porcelain plugin/syntaxes)
         if [[ -z $updates ]]; then
-          echo "::set-output name=updates::"
+          echo "updates=" >> $GITHUB_OUTPUT
         else
           # see https://trstringer.com/github-actions-multiline-strings/
           updates="${updates//'%'/'%25'}"
           updates="${updates//$'\n'/'%0A'}"
           updates="${updates//$'\r'/'%0D'}"
 
-          echo "::set-output name=updates::${updates}"
+          echo "updates=${updates}" >> $GITHUB_OUTPUT
         fi
 
     - name: Create PR

@@ -213,7 +213,7 @@ jobs:
 
     - name: "Cache: Update"
       uses: actions/cache/save@v3
-      if: ${{ always() && !env.ACT }} # save cache even fails
+      if: ${{ always() && !cancelled() && !env.ACT }} # save cache even fails
       with:
         path: |
           ~/.m2/repository

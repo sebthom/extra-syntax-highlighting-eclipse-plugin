@@ -115,7 +115,7 @@ jobs:
           ${{ github.event.inputs.additional_maven_args }} \
           clean verify
 
-        mv updatesite/target/de.sebthom.eclipse.extra-syntax-highlighting.updatesite-*.zip updatesite/target/de.sebthom.eclipse.extra-syntax-highlighting.updatesite.zip
+        mv updatesite/target/de.sebthom.eclipse.extra_syntax_highlighting.updatesite-*.zip updatesite/target/de.sebthom.eclipse.extra_syntax_highlighting.updatesite.zip
 
 
     - name: "Delete previous 'latest' release"
@@ -152,7 +152,7 @@ jobs:
         # https://hub.github.com/hub-release.1.html
         hub release create "latest" \
           --message "latest" \
-          --attach "updatesite/target/de.sebthom.eclipse.extra-syntax-highlighting.updatesite.zip" \
+          --attach "updatesite/target/de.sebthom.eclipse.extra_syntax_highlighting.updatesite.zip" \
           --prerelease
 
 

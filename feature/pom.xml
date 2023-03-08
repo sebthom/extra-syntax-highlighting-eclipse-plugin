@@ -11,12 +11,12 @@
    <modelVersion>4.0.0</modelVersion>
 
    <parent>
-      <groupId>de.sebthom.eclipse.extra-syntax-highlighting</groupId>
-      <artifactId>de.sebthom.eclipse.extra-syntax-highlighting.parent</artifactId>
+      <groupId>de.sebthom.eclipse.extra_syntax_highlighting</groupId>
+      <artifactId>de.sebthom.eclipse.extra_syntax_highlighting.parent</artifactId>
       <version>1.0.0-SNAPSHOT</version>
    </parent>
 
    <name>extra-syntax-highlighting-feature</name>
-   <artifactId>de.sebthom.eclipse.extra-syntax-highlighting.feature</artifactId>
+   <artifactId>de.sebthom.eclipse.extra_syntax_highlighting.feature</artifactId>
    <packaging>eclipse-feature</packaging>
 </project>

@@ -6,11 +6,11 @@
    @author Sebastian Thomschke
 -->
 <feature
-      id="de.sebthom.eclipse.extra-syntax-highlighting.feature"
+      id="de.sebthom.eclipse.extra_syntax_highlighting.feature"
       label="%name"
       version="1.0.0.qualifier"
       provider-name="Sebastian Thomschke"
-      plugin="de.sebthom.eclipse.extra-syntax-highlighting"
+      plugin="de.sebthom.eclipse.extra_syntax_highlighting"
       license-feature="org.eclipse.license"
       license-feature-version="2.0.2.qualifier">
 
@@ -31,7 +31,7 @@
    </url>
 
    <plugin
-         id="de.sebthom.eclipse.extra-syntax-highlighting"
+         id="de.sebthom.eclipse.extra_syntax_highlighting"
          download-size="0"
          install-size="0"
          version="0.0.0"/>

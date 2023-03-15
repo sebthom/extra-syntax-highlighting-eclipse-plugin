@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
+# SPDX-FileContributor: Sebastian Thomschke
+# SPDX-License-Identifier: EPL-2.0
+# SPDX-ArtifactOfProjectHomePage: https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin
 import json, os, platform, re, string, subprocess, sys, urllib.error, urllib.request
 
 try:

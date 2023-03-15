@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!--
-   Copyright 2022 by Sebastian Thomschke and contributors
+   SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
+   SPDX-FileContributor: Sebastian Thomschke
    SPDX-License-Identifier: EPL-2.0
-
-   @author Sebastian Thomschke
+   SPDX-ArtifactOfProjectHomePage: https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin
 -->
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

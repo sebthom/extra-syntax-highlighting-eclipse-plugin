@@ -21,6 +21,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - C / C++
 - C# (`*.cs`) - https://docs.microsoft.com/en-us/dotnet/csharp/
 - Dart - https://dart.dev
+- Eclipse External null Annotations (`*.eea`) - https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations#File_format
 - Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd
 - GraphQL - https://graphql.org/
 - Graphviz Dot  (`*.dot`) - https://graphviz.org/doc/info/lang.html

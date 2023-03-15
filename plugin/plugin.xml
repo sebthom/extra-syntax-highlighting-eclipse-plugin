@@ -133,6 +133,22 @@
    </extension>
 
    <!-- ============================== -->
+   <!-- EEA                            -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.eea" name="EEA File"
+                    file-extensions="eea" />
+      <file-association content-type="exta-syntax-highlighting.eea" file-extensions="eea" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.eea" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/eea/eea.tmLanguage.plist" scopeName="source.eea" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.eea" scopeName="source.eea" />
+   </extension>
+
+   <!-- ============================== -->
    <!-- ER                             -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">

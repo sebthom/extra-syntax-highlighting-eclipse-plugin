@@ -19,6 +19,7 @@
             <unit id="org.eclipse.test.feature.group" version="0.0.0"/>
         </location>
 
+        <!-- compatible with 2021-06 see https://download.eclipse.org/tools/orbit/downloads -->
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <unit id="org.apache.batik.css" version="0.0.0"/>
             <unit id="org.yaml.snakeyaml" version="0.0.0"/>

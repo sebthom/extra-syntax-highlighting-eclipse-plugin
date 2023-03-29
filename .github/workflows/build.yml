@@ -117,6 +117,7 @@ jobs:
           --no-transfer-progress \
           -s .ci/maven-settings.xml \
           -t .ci/maven-toolchains.xml \
+          -Dtycho.disableP2Mirrors=true \
           ${{ github.event.inputs.additional_maven_args }} \
           clean verify
 

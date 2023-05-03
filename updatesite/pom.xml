@@ -5,7 +5,9 @@
    SPDX-License-Identifier: EPL-2.0
    SPDX-ArtifactOfProjectHomePage: https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin
 -->
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+<project
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+   xmlns="http://maven.apache.org/POM/4.0.0"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
    <modelVersion>4.0.0</modelVersion>
@@ -19,5 +21,91 @@
    <name>extra_syntax_highlighting-updatesite</name>
    <artifactId>de.sebthom.eclipse.extra_syntax_highlighting.updatesite</artifactId>
    <packaging>eclipse-repository</packaging>
-</project>
 
+   <properties>
+      <jarsigner.keystore.alias>sebthom.github.io</jarsigner.keystore.alias>
+      <!-- using a TimeStamp Authority allows signed jars to be used even after expiration of the signing certificates
+           which is esp. important when short living certs (like letsencrypt) are used -->
+      <jarsigner.timestamp.url>http://timestamp.digicert.com?alg=sha256</jarsigner.timestamp.url>
+      <!-- properties to be specified via the CLI: -->
+      <!-- * jarsigner.keystore.path -->
+      <!-- * jarsigner.keystore.password -->
+   </properties>
+
+   <profiles>
+      <profile>
+         <activation>
+            <property>
+               <name>jarsigner.keystore.path</name>
+            </property>
+         </activation>
+         <build>
+            <plugins>
+               <plugin>
+                  <!--
+                  https://maven.apache.org/plugins/maven-jarsigner-plugin/sign-mojo.html -->
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-jarsigner-plugin</artifactId>
+                  <version>3.0.0</version>
+                  <executions>
+                     <execution>
+                        <id>sign</id>
+                        <goals>
+                           <goal>sign</goal>
+                        </goals>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                           <tsa>${jarsigner.timestamp.url}</tsa>
+                        </configuration>
+                     </execution>
+                     <execution>
+                        <id>verify</id>
+                        <goals>
+                           <goal>verify</goal>
+                        </goals>
+                        <phase>verify</phase>
+                        <configuration>
+                           <certs>true</certs>
+                        </configuration>
+                     </execution>
+                  </executions>
+                  <configuration>
+                     <alias>${jarsigner.keystore.alias}</alias>
+                     <keystore>${jarsigner.keystore.path}</keystore>
+                     <storepass>${jarsigner.keystore.password}</storepass>
+                     <keypass>${jarsigner.keystore.password}</keypass>
+
+                     <archiveDirectory>${project.build.directory}/repository/</archiveDirectory>
+                     <includes>
+                        <include>features/${project.groupId}*</include>
+                        <include>plugins/${project.groupId}*</include>
+                     </includes>
+
+                     <processAttachedArtifacts>false</processAttachedArtifacts>
+                     <processMainArtifact>false</processMainArtifact>
+                  </configuration>
+               </plugin>
+               <plugin>
+                  <groupId>org.eclipse.tycho</groupId>
+                  <artifactId>tycho-p2-repository-plugin</artifactId>
+                  <executions>
+                     <execution>
+                        <!-- to prevent "SHA-512 hash is not as expected." during plugin installation -->
+                        <id>update</id>
+                        <goals>
+                           <goal>fix-artifacts-metadata</goal>
+                        </goals>
+                     </execution>
+                     <execution>
+                        <id>verify</id>
+                        <goals>
+                           <goal>verify-repository</goal>
+                        </goals>
+                     </execution>
+                  </executions>
+               </plugin>
+            </plugins>
+         </build>
+      </profile>
+   </profiles>
+</project>

@@ -33,14 +33,13 @@ jobs:
 
         updates=$(git status --porcelain plugin/syntaxes)
         if [[ -z $updates ]]; then
-          echo "updates=" >> $GITHUB_OUTPUT
+          echo "updates=" >> "$GITHUB_OUTPUT"
         else
-          # see https://trstringer.com/github-actions-multiline-strings/
-          updates="${updates//'%'/'%25'}"
-          updates="${updates//$'\n'/'%0A'}"
-          updates="${updates//$'\r'/'%0D'}"
-
-          echo "updates=${updates}" >> $GITHUB_OUTPUT
+          # https://github.com/orgs/community/discussions/26288#discussioncomment-3876281
+          delimiter="$(openssl rand -hex 8)"
+          echo "updates<<${delimiter}" >> "${GITHUB_OUTPUT}"
+          echo "${updates}" >> "${GITHUB_OUTPUT}"
+          echo "${delimiter}" >> "${GITHUB_OUTPUT}"
         fi
 
     - name: Create PR

@@ -43,6 +43,8 @@ defaults:
 
 env:
   JAVA_VERSION: 17
+  KEYSTORE_PATH: /tmp/sebthom.github.io.p12
+  KEYSTORE_PW: whatever
 
 jobs:
   build:
@@ -94,15 +96,14 @@ jobs:
         CERTDB: ${{ secrets.CERTDB }} # populated by https://github.com/sebthom/sebthom.github.io/actions/workflows/renew-cert.yml
       run: |
         echo "$CERTDB" | base64 --decode | tar xvz -C /tmp
-        export KEYSTORE_PW=whatever
         (set -x; openssl pkcs12 -export \
           -inkey /tmp/etc/letsencrypt/live/sebthom.github.io/privkey.pem \
           -in /tmp/etc/letsencrypt/live/sebthom.github.io/fullchain.pem \
           -name sebthom.github.io \
           -password env:KEYSTORE_PW \
-          -out /tmp/sebthom.github.io.p12)
+          -out $KEYSTORE_PATH)
 
-        (set -x; keytool -keypass:env KEYSTORE_PW -storepass:env KEYSTORE_PW -list -keystore /tmp/sebthom.github.io.p12)
+        (set -x; keytool -keypass:env KEYSTORE_PW -storepass:env KEYSTORE_PW -list -keystore $KEYSTORE_PATH)
 
 
     - name: Build with Maven
@@ -135,8 +136,7 @@ jobs:
           -s .ci/maven-settings.xml \
           -t .ci/maven-toolchains.xml \
           -Dtycho.disableP2Mirrors=true \
-          -Djarsigner.keystore.path=/tmp/sebthom.github.io.p12 \
-          -Djarsigner.keystore.password=whatever \
+          $([[ -f $KEYSTORE_PATH ]] && echo "-Djarsigner.keystore.path=$KEYSTORE_PATH -Djarsigner.keystore.password=$KEYSTORE_PW" || true) \
           ${{ github.event.inputs.additional_maven_args }} \
           clean verify
 

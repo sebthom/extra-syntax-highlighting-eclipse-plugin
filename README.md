@@ -23,6 +23,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - Dart - https://dart.dev
 - Eclipse External null Annotations (`*.eea`) - https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations#File_format
 - Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd
+- GLSL (OpenGL Shading Language) - https://registry.khronos.org/OpenGL/index_gl.php#apispecs
 - GraphQL - https://graphql.org/
 - Graphviz Dot  (`*.dot`) - https://graphviz.org/doc/info/lang.html
 - HashiCorp HCL (`*.hcl`) - https://github.com/hashicorp/hcl (e.g. used by HasiCorp Packer)

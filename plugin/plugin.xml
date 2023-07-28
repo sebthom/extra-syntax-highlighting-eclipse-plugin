@@ -187,6 +187,28 @@
    </extension>
 
    <!-- ============================== -->
+   <!-- GLSL (OpenGL Shading Language) -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.glsl" name="GLSL File"
+                    file-extensions="glsl" />
+      <file-association content-type="exta-syntax-highlighting.glsl" file-extensions="glsl" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.glsl" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/glsl/glsl.tmLanguage.json" scopeName="source.glsl" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.glsl" scopeName="source.glsl" />
+   </extension>
+   <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+      <languageConfiguration contentTypeId="exta-syntax-highlighting.glsl" path="syntaxes/glsl/glsl.langcfg.json" />
+   </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="GLSL Sample" path="syntaxes/glsl/glsl.sample.glsl" scopeName="source.glsl" />
+   </extension>
+
+   <!-- ============================== -->
    <!-- Haxe                           -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">

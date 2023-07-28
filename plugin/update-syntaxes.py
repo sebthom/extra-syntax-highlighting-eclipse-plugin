@@ -24,7 +24,7 @@ syntaxes = (
     ("dot", "textmate/graphviz.tmbundle/master", "Syntaxes/DOT.plist", "", "", ""),
     ("er", "mikkel-ol/vsc-er-syntax-highlighting/master", "syntaxes/er.tmLanguage.json", "language-configuration.json", "LICENSE", ""),
     ("glsl", "GeForceLegend/vscode-glsl/master", "syntaxes/glsl.tmLanguage.json", "language-configuration.json", "LICENSE", "sample/test.glsl"),
-    ("graphql", "graphql/vscode-graphql/master", "grammars/graphql.json", "language/language-configuration.json", "LICENSE", ""),
+    ("graphql", "graphql/graphiql/main/packages", "vscode-graphql-syntax/grammars/graphql.json", "vscode-graphql-syntax/language/language-configuration.json", "../LICENSE", "graphql-language-service/benchmark/fixtures/kitchen-sink.graphql"),
     ("hcl", "hashicorp/syntax/main", "syntaxes/hcl.tmGrammar.json", "", "LICENSE", ""),
     ("ini", "microsoft/vscode/main", "extensions/ini/syntaxes/ini.tmLanguage.json", "extensions/ini/ini.language-configuration.json", "LICENSE.txt", ""),
     ("kotlin", "fwcd/kotlin-language-server/main", "grammars/Kotlin.tmLanguage.json", "grammars/kotlin.configuration.json", "LICENSE.txt", ""),

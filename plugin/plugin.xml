@@ -172,8 +172,8 @@
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
       <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.graphql" name="GraphQL File"
-                    file-extensions="graphql" />
-      <file-association content-type="exta-syntax-highlighting.graphql" file-extensions="graphql" />
+                    file-extensions="graphql,gql" />
+      <file-association content-type="exta-syntax-highlighting.graphql" file-extensions="graphql,gql" />
    </extension>
    <extension point="org.eclipse.ui.editors">
       <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.graphql" />
@@ -184,6 +184,9 @@
    </extension>
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.graphql" path="syntaxes/graphql/graphql.langcfg.json" />
+   </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="GraphQL Sample" path="syntaxes/graphql/graphql.sample.graphql" scopeName="source.graphql" />
    </extension>
 
    <!-- ============================== -->

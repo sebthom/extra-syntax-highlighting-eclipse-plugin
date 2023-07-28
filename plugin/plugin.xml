@@ -166,6 +166,9 @@
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.er" path="syntaxes/er/er.langcfg.json" />
    </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="ER Sample" path="syntaxes/er/er.sample.er" scopeName="source.er" />
+   </extension>
 
    <!-- ============================== -->
    <!-- GraphQL                        -->
@@ -229,6 +232,9 @@
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.haxe" path="syntaxes/haxe/haxe.langcfg.json" />
    </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="Haxe Sample" path="syntaxes/haxe/haxe.sample.hx" scopeName="source.hx" />
+   </extension>
 
    <!-- ============================== -->
    <!-- HCL (HashiCorp                 -->
@@ -244,6 +250,9 @@
    <extension point="org.eclipse.tm4e.registry.grammars">
       <grammar path="syntaxes/hcl/hcl.tmLanguage.json" scopeName="source.hcl" />
       <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.hcl" scopeName="source.hcl" />
+   </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="HCL Sample" path="syntaxes/hcl/hcl.sample.hcl" scopeName="source.hcl" />
    </extension>
 
    <!-- ============================== -->
@@ -372,6 +381,9 @@
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.plantuml" path="syntaxes/plantuml/plantuml.langcfg.json" />
    </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="PlantUML Sample" path="syntaxes/plantuml/plantuml.sample.puml" scopeName="source.plantuml" />
+   </extension>
 
    <!-- ============================== -->
    <!-- PowerShell                     -->
@@ -408,6 +420,9 @@
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.prisma" path="syntaxes/prisma/prisma.langcfg.json" />
    </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="Prisma Sample" path="syntaxes/prisma/prisma.sample.prisma" scopeName="source.prisma" />
+   </extension>
 
    <!-- ============================== -->
    <!-- Sentinel (HashiCorp)           -->
@@ -422,6 +437,9 @@
    <extension point="org.eclipse.tm4e.registry.grammars">
       <grammar path="syntaxes/sentinel/sentinel.tmLanguage.json" scopeName="source.sentinel" />
       <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.sentinel" scopeName="source.sentinel" />
+   </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="Sentinel Sample" path="syntaxes/sentinel/sentinel.sample.sentinel" scopeName="source.sentinel" />
    </extension>
 
    <!-- ============================== -->
@@ -440,6 +458,9 @@
    </extension>
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.svelte" path="syntaxes/svelte/svelte.langcfg.json" />
+   </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="Svelte Sample" path="syntaxes/svelte/svelte.sample.svelte" scopeName="source.svelte" />
    </extension>
 
    <!-- ============================== -->
@@ -475,6 +496,9 @@
       <grammar path="syntaxes/terraform/terraform.tmLanguage.json" scopeName="source.hcl.terraform" />
       <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.terraform" scopeName="source.hcl.terraform" />
    </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="Terraform Sample" path="syntaxes/terraform/terraform.sample.tf" scopeName="source.hcl.terraform" />
+   </extension>
 
    <!-- ============================== -->
    <!-- TOML                           -->
@@ -492,6 +516,9 @@
    </extension>
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.toml" path="syntaxes/toml/toml.langcfg.json" />
+   </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="TOML Sample" path="syntaxes/toml/toml.sample.toml" scopeName="source.toml" />
    </extension>
 
    <!-- ============================== -->
@@ -525,5 +552,8 @@
    <extension point="org.eclipse.tm4e.registry.grammars">
       <grammar path="syntaxes/vue/vue.tmLanguage.plist" scopeName="text.html.vue" />
       <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.vue" scopeName="text.html.vue" />
+   </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="VUE Sample" path="syntaxes/vue/vue.sample.vue" scopeName="text.html.vue" />
    </extension>
 </plugin>

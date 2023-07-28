@@ -22,10 +22,10 @@ syntaxes = (
     ("csharp", "microsoft/vscode/main", "extensions/csharp/syntaxes/csharp.tmLanguage.json", "extensions/csharp/language-configuration.json", "LICENSE.txt", ""),
     ("dart", "microsoft/vscode/main", "extensions/dart/syntaxes/dart.tmLanguage.json", "extensions/dart/language-configuration.json", "LICENSE.txt", ""),
     ("dot", "textmate/graphviz.tmbundle/master", "Syntaxes/DOT.plist", "", "", ""),
-    ("er", "mikkel-ol/vsc-er-syntax-highlighting/master", "syntaxes/er.tmLanguage.json", "language-configuration.json", "LICENSE", ""),
+    ("er", "mikkel-ol/vsc-er-syntax-highlighting/master", "syntaxes/er.tmLanguage.json", "language-configuration.json", "LICENSE", "example.er"),
     ("glsl", "GeForceLegend/vscode-glsl/master", "syntaxes/glsl.tmLanguage.json", "language-configuration.json", "LICENSE", "sample/test.glsl"),
     ("graphql", "graphql/graphiql/main/packages", "vscode-graphql-syntax/grammars/graphql.json", "vscode-graphql-syntax/language/language-configuration.json", "../LICENSE", "graphql-language-service/benchmark/fixtures/kitchen-sink.graphql"),
-    ("hcl", "hashicorp/syntax/main", "syntaxes/hcl.tmGrammar.json", "", "LICENSE", ""),
+    ("hcl", "hashicorp/syntax/main", "syntaxes/hcl.tmGrammar.json", "", "LICENSE", "tests/snapshot/hcl/basic.hcl"),
     ("ini", "microsoft/vscode/main", "extensions/ini/syntaxes/ini.tmLanguage.json", "extensions/ini/ini.language-configuration.json", "LICENSE.txt", ""),
     ("kotlin", "fwcd/kotlin-language-server/main", "grammars/Kotlin.tmLanguage.json", "grammars/kotlin.configuration.json", "LICENSE.txt", ""),
     ("ldif", "FlashSystems/LDIF-Syntax/master", "ldif.tmLanguage", "", "LICENSE", ""),
@@ -33,18 +33,18 @@ syntaxes = (
     ("haxe", "vshaxe/haxe-TmLanguage/master", "haxe.tmLanguage", "../../vshaxe/master/configurations/haxe.language-configuration.json", "LICENSE.md", ""),
     ("makefile", "microsoft/vscode/main", "extensions/make/syntaxes/make.tmLanguage.json", "extensions/make/language-configuration.json", "LICENSE.txt", ""),
     ("php", "microsoft/vscode/main", "extensions/php/syntaxes/php.tmLanguage.json", "extensions/php/language-configuration.json", "LICENSE.txt", ""),
-    ("plantuml", "qjebbs/vscode-plantuml/master", "syntaxes/plantuml.yaml-tmLanguage", "language-configuration.json", "LICENSE.txt", ""),
+    ("plantuml", "qjebbs/vscode-plantuml/master", "syntaxes/plantuml.yaml-tmLanguage", "language-configuration.json", "LICENSE.txt", "test/testFixture/macros.puml"),
     ("powershell", "microsoft/vscode/main", "extensions/powershell/syntaxes/powershell.tmLanguage.json", "extensions/powershell/language-configuration.json", "LICENSE.txt", ""),
-    ("prisma", "prisma/language-tools/main", "packages/vscode/syntaxes/prisma.tmLanguage.json", "packages/vscode/language-configuration.json", "LICENSE", ""),
-    ("sentinel", "hashicorp/syntax/main", "syntaxes/sentinel.tmGrammar.json", "", "LICENSE", ""),
-    ("svelte", "sveltejs/language-tools/master", "packages/svelte-vscode/syntaxes/svelte.tmLanguage.src.yaml", "packages/svelte-vscode/language-configuration.json", "LICENSE", ""),
+    ("prisma", "prisma/language-tools/main/packages", "vscode/syntaxes/prisma.tmLanguage.json", "vscode/language-configuration.json", "../LICENSE", "language-server/test/fixtures/correct_mongodb.prisma"),
+    ("sentinel", "hashicorp/syntax/main", "syntaxes/sentinel.tmGrammar.json", "", "LICENSE", "tests/snapshot/sentinel/basic.sentinel"),
+    ("svelte", "sveltejs/language-tools/master/packages", "svelte-vscode/syntaxes/svelte.tmLanguage.src.yaml", "svelte-vscode/language-configuration.json", "../LICENSE", "svelte2tsx/test/emitDts/samples/svelte3/src/TestJs.svelte"),
     ("swift", "microsoft/vscode/main", "extensions/swift/syntaxes/swift.tmLanguage.json", "extensions/swift/language-configuration.json", "LICENSE.txt", ""),
-    ("terraform", "hashicorp/syntax/main", "syntaxes/terraform.tmGrammar.json", "", "LICENSE", ""),
-    ("toml", "oovm/vscode-toml/master", "extension/toml.tmLanguage.json", "extension/toml.configuration.json", "License.md", ""),
+    ("terraform", "hashicorp/syntax/main", "syntaxes/terraform.tmGrammar.json", "", "LICENSE", "tests/snapshot/terraform/basic.tf"),
+    ("toml", "oovm/vscode-toml/master", "extension/toml.tmLanguage.json", "extension/toml.configuration.json", "License.md", "test/showtime.toml"),
     # https://github.com/tamasfe/taplo/issues/245
     # ("toml", "tamasfe/taplo/master", "editors/vscode/toml.tmLanguage.json", "editors/vscode/language-configuration.json", "LICENSE.md", ""),
     ("vb", "microsoft/vscode/main", "extensions/vb/syntaxes/asp-vb-net.tmlanguage.json", "extensions/vb/language-configuration.json", "LICENSE.txt", ""),
-    ("vue", "vuejs/vue-syntax-highlight/master", "vue.tmLanguage", "", "LICENSE", "")
+    ("vue", "vuejs/vue-syntax-highlight/master", "vue.tmLanguage", "", "LICENSE", "samples/basic.vue")
 )
 
 DOWNLOAD_DIR = os.path.join(THIS_FILE_DIR, "syntaxes")

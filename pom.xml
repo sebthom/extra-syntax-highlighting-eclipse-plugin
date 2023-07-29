@@ -73,7 +73,7 @@
                <version>${tycho.version}</version>
             </plugin>
             <plugin>
-               <!-- https://tycho.eclipseprojects.io/doc/3.0.0/tycho-compiler-plugin/plugin-info.html -->
+               <!-- https://tycho.eclipseprojects.io/doc/latest/tycho-compiler-plugin/plugin-info.html -->
                <groupId>org.eclipse.tycho</groupId>
                <artifactId>tycho-compiler-plugin</artifactId>
                <version>${tycho.version}</version>
@@ -162,7 +162,6 @@
                               <artifactId>tycho-packaging-plugin</artifactId>
                               <versionRange>[1.0,)</versionRange>
                               <goals>
-                                 <goal>build-qualifier</goal>
                                  <goal>build-qualifier-aggregator</goal>
                                  <goal>validate-id</goal>
                                  <goal>validate-version</goal>

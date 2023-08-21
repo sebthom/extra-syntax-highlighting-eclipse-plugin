@@ -17,6 +17,7 @@ URL_PREFIX = "https://raw.githubusercontent.com/"
 
 syntaxes = (
     ("apache-http", "mrmlnc/vscode-apache/master", "syntaxes/Apache.tmLanguage", "apache.configuration.json", "LICENSE", ""),
+    ("astro", "withastro/language-tools/main/packages/vscode", "syntaxes/astro.tmLanguage.json", "languages/astro-language-configuration.json", "LICENSE", "../../../../astro/main/examples/basics/src/pages/index.astro"),
     ("c", "microsoft/vscode/main", "extensions/cpp/syntaxes/c.tmLanguage.json", "extensions/cpp/language-configuration.json", "LICENSE.txt", ""),
     ("cpp", "microsoft/vscode/main", "extensions/cpp/syntaxes/cpp.tmLanguage.json", "extensions/cpp/language-configuration.json", "LICENSE.txt", ""),
     ("csharp", "microsoft/vscode/main", "extensions/csharp/syntaxes/csharp.tmLanguage.json", "extensions/csharp/language-configuration.json", "LICENSE.txt", ""),
@@ -71,7 +72,7 @@ def download(github_branch, github_file, target_file):
 
 
 for (lang_id, github_branch, syntax_path, langcfg_path, license_path, sample_path)  in syntaxes:
-    print(f"Downloading [{lang_id}] Grammar...")
+    print(f"Downloading [{lang_id}] Grammar [{syntax_path}]...")
     syntax_dir = os.path.join(DOWNLOAD_DIR, lang_id)
     os.makedirs(syntax_dir, exist_ok = True)
 
@@ -98,15 +99,15 @@ for (lang_id, github_branch, syntax_path, langcfg_path, license_path, sample_pat
         download(github_branch, syntax_path, os.path.join(syntax_dir, f"{lang_id}.tmLanguage.plist"))
 
     if langcfg_path:
-        print(f"Downloading [{lang_id}] Language Config...")
+        print(f"Downloading [{lang_id}] Language Config [{langcfg_path}]...")
         download(github_branch, langcfg_path, os.path.join(syntax_dir, f"{lang_id}.langcfg.json"))
 
     if license_path:
-        print(f"Downloading [{lang_id}] License...")
+        print(f"Downloading [{lang_id}] License [{license_path}]...")
         download(github_branch, license_path, os.path.join(syntax_dir, "LICENSE.txt"))
 
     if sample_path:
-        print(f"Downloading [{lang_id}] Sample file...")
+        print(f"Downloading [{lang_id}] Sample file [{sample_path}]...")
         download(github_branch, sample_path, os.path.join(syntax_dir, f"{lang_id}.sample{os.path.splitext(sample_path)[1]}"))
 
 print("**DONE**")

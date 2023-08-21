@@ -18,6 +18,7 @@
 
 This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support for the following languages/file formats utilizing [TM4E](https://github.com/eclipse/tm4e):
 - Apache HTTP configuration files - https://httpd.apache.org/docs/current/configuring.html
+- Astro - https://astro.build/
 - C / C++
 - C# (`*.cs`) - https://docs.microsoft.com/en-us/dotnet/csharp/
 - Dart - https://dart.dev

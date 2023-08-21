@@ -22,12 +22,12 @@
    </extension>
 
    <!-- ============================== -->
-   <!-- Apache HTTP Conf              -->
+   <!-- Apache HTTP Conf               -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">
       <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.apache-http" name="Apache HTTP Config File"
                     file-extensions="conf,envvars,htaccess,htgroups,htpasswd" />
-      <file-association content-type="exta-syntax-highlighting.c" file-extensions="conf,envvars,htaccess,htgroups,htpasswd"  />
+      <file-association content-type="exta-syntax-highlighting.apache-http" file-extensions="conf,envvars,htaccess,htgroups,htpasswd"  />
    </extension>
    <extension point="org.eclipse.ui.editors">
       <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.apache-http" />
@@ -38,6 +38,28 @@
    </extension>
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.apache-http" path="syntaxes/apache-http/apache-http.langcfg.json" />
+   </extension>
+
+   <!-- ============================== -->
+   <!-- Astro                          -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.astro" name="Astro Source File"
+                    file-extensions="astro" />
+      <file-association content-type="exta-syntax-highlighting.astro" file-extensions="astro"  />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.astro" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/astro/astro.tmLanguage.json" scopeName="source.astro" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.astro" scopeName="source.astro" />
+   </extension>
+   <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+      <languageConfiguration contentTypeId="exta-syntax-highlighting.astro" path="syntaxes/astro/astro.langcfg.json" />
+   </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="Astro Sample" path="syntaxes/astro/astro.sample.astro" scopeName="source.astro" />
    </extension>
 
    <!-- ============================== -->

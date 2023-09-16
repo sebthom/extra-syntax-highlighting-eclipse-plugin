@@ -33,6 +33,7 @@ syntaxes = (
     ("lua", "microsoft/vscode/main", "extensions/lua/syntaxes/lua.tmLanguage.json", "extensions/lua/language-configuration.json", "LICENSE.txt", ""),
     ("haxe", "vshaxe/haxe-TmLanguage/master", "haxe.tmLanguage", "../../vshaxe/master/configurations/haxe.language-configuration.json", "LICENSE.md", ""),
     ("makefile", "microsoft/vscode/main", "extensions/make/syntaxes/make.tmLanguage.json", "extensions/make/language-configuration.json", "LICENSE.txt", ""),
+    ("nushell", "nushell/vscode-nushell-lang/main", "syntaxes/nushell.tmLanguage.json", "language-configuration.json", "LICENSE", "example.nu"),
     ("php", "microsoft/vscode/main", "extensions/php/syntaxes/php.tmLanguage.json", "extensions/php/language-configuration.json", "LICENSE.txt", ""),
     ("plantuml", "qjebbs/vscode-plantuml/master", "syntaxes/plantuml.yaml-tmLanguage", "language-configuration.json", "LICENSE.txt", "test/testFixture/macros.puml"),
     ("powershell", "microsoft/vscode/main", "extensions/powershell/syntaxes/powershell.tmLanguage.json", "extensions/powershell/language-configuration.json", "LICENSE.txt", ""),

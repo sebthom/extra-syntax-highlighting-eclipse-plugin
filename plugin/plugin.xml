@@ -369,6 +369,28 @@
    </extension>
 
    <!-- ============================== -->
+   <!-- Nushell                        -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.nushell" name="Nushell Source File"
+                    file-extensions="nu" />
+      <file-association content-type="exta-syntax-highlighting.nushell" file-extensions="nu"  />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.nushell" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/nushell/nushell.tmLanguage.json" scopeName="source.nushell" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.nushell" scopeName="source.nushell" />
+   </extension>
+   <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+      <languageConfiguration contentTypeId="exta-syntax-highlighting.nushell" path="syntaxes/nushell/nushell.langcfg.json" />
+   </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="Nushell Sample" path="syntaxes/nushell/nushell.sample.nu" scopeName="source.nushell" />
+   </extension>
+
+   <!-- ============================== -->
    <!-- PHP                            -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">

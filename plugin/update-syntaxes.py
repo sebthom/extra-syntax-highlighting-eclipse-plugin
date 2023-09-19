@@ -45,8 +45,7 @@ syntaxes = (
     ("toml", "oovm/vscode-toml/master", "extension/toml.tmLanguage.json", "extension/toml.configuration.json", "License.md", "test/showtime.toml"),
     # https://github.com/tamasfe/taplo/issues/245
     # ("toml", "tamasfe/taplo/master", "editors/vscode/toml.tmLanguage.json", "editors/vscode/language-configuration.json", "LICENSE.md", ""),
-    ("vb", "microsoft/vscode/main", "extensions/vb/syntaxes/asp-vb-net.tmlanguage.json", "extensions/vb/language-configuration.json", "LICENSE.txt", ""),
-    ("vue", "vuejs/vue-syntax-highlight/master", "vue.tmLanguage", "", "LICENSE", "samples/basic.vue")
+    ("vb", "microsoft/vscode/main", "extensions/vb/syntaxes/asp-vb-net.tmlanguage.json", "extensions/vb/language-configuration.json", "LICENSE.txt", "")
 )
 
 DOWNLOAD_DIR = os.path.join(THIS_FILE_DIR, "syntaxes")

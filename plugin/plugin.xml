@@ -582,22 +582,4 @@
    <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
       <languageConfiguration contentTypeId="exta-syntax-highlighting.vb" path="syntaxes/vb/vb.langcfg.json" />
    </extension>
-
-   <!-- ============================== -->
-   <!-- VUE                            -->
-   <!-- ============================== -->
-   <extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.vue" name="VUE Source File" file-extensions="vue" />
-      <file-association content-type="exta-syntax-highlighting.vue" file-extensions="vue" />
-   </extension>
-   <extension point="org.eclipse.ui.editors">
-      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.vue" />
-   </extension>
-   <extension point="org.eclipse.tm4e.registry.grammars">
-      <grammar path="syntaxes/vue/vue.tmLanguage.plist" scopeName="text.html.vue" />
-      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.vue" scopeName="text.html.vue" />
-   </extension>
-   <extension point="org.eclipse.tm4e.ui.snippets">
-      <snippet name="VUE Sample" path="syntaxes/vue/vue.sample.vue" scopeName="text.html.vue" />
-   </extension>
 </plugin>

@@ -1,11 +1,11 @@
-# https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
 name: Build
 
 on:
   push:
-    branches:    # build all branches
-    - '**'
-    tags-ignore: # but don't build tags
+    branches-ignore: # build all branches except:
+    - 'dependabot/**' # prevent GHA triggered twice (once for commit to the branch and once for opening/syncing the PR)
+    tags-ignore: # don't build tags
     - '**'
     paths-ignore:
     - '**/*.adoc'
@@ -28,7 +28,7 @@ on:
         required: false
         default: ''
       debug-with-ssh:
-        description: "Start an SSH session for debugging purposes after tests ran:"
+        description: "Start an SSH session for debugging purposes at the end of the build:"
         default: never
         type: choice
         options: [ always, on_failure, on_failure_or_cancelled, never ]
@@ -47,14 +47,18 @@ env:
   KEYSTORE_PW: whatever
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
+    concurrency: ci-${{ github.ref }}
+
     steps:
     - name: Show environment variables
       run: env | sort
 
+
     - name: Git Checkout
-      uses: actions/checkout@v4 #https://github.com/actions/checkout
+      uses: actions/checkout@v4 # https://github.com/actions/checkout
 
 
     - name: Configure fast APT repository mirror
@@ -148,26 +152,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         RELEASE_NAME: latest
+      # https://cli.github.com/manual/gh_release_delete
       run: |
-        set -eu
-
-        function gh_api() {
-          (set -x; curl -H "Authorization: token $GITHUB_TOKEN" -fsSL "${@:1:$#-1}" "$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/${!#}")
-        }
-
-        # delete github release
-        release_id=$(gh_api releases | jq -r ".[] | select(.name == \"$RELEASE_NAME\") | .id")
-        if [[ -n $release_id ]]; then
-           echo "Deleting release [releases/$release_id]..."
-           gh_api -X DELETE releases/$release_id
-        fi
-
-        # delete release git tag
-        tag_path="git/refs/tags/$RELEASE_NAME"
-        if gh_api -o /dev/null --head "$tag_path"; then
-           echo "Deleting tag [$tag_path]..."
-           gh_api -X DELETE "$tag_path"
-        fi
+        GH_DEBUG=1 gh release delete "$RELEASE_NAME" --yes --cleanup-tag || true
 
 
     - name: "Create 'latest' release"
@@ -175,15 +162,14 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         RELEASE_NAME: latest
+      # https://cli.github.com/manual/gh_release_create
       run: |
-        set -eux
-
-        # https://hub.github.com/hub-release.1.html
-        hub release create "$RELEASE_NAME" \
-          -t "${{ github.sha }}" \
-          --message "$RELEASE_NAME" \
-          --attach "updatesite/target/de.sebthom.eclipse.extra_syntax_highlighting.updatesite.zip" \
-          --prerelease
+        GH_DEBUG=1 gh release create "$RELEASE_NAME" \
+          --prerelease \
+          --latest \
+          --notes "${{ github.event.head_commit.message }}" \
+          --target "${{ github.sha }}" \
+          updatesite/target/de.sebthom.eclipse.extra_syntax_highlighting.updatesite.zip
 
 
     - name: Deploy p2 update site
@@ -260,7 +246,6 @@ jobs:
     - name: "SSH session for debugging: check"
       id: DEBUG_SSH_SESSSION_CHECK
       if: always()
-      shell: bash
       run: |
         set -eu
 

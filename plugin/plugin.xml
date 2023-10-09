@@ -426,7 +426,7 @@
       <languageConfiguration contentTypeId="exta-syntax-highlighting.plantuml" path="syntaxes/plantuml/plantuml.langcfg.json" />
    </extension>
    <extension point="org.eclipse.tm4e.ui.snippets">
-      <snippet name="PlantUML Sample" path="syntaxes/plantuml/plantuml.sample.puml" scopeName="source.plantuml" />
+      <snippet name="PlantUML Sample" path="syntaxes/plantuml/plantuml.sample.puml" scopeName="source.wsd" />
    </extension>
 
    <!-- ============================== -->

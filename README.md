@@ -36,6 +36,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 - Lua - https://www.lua.org/
 - Make - https://www.gnu.org/software/make/
+- Mako Templates (`*.mako`) - https://www.makotemplates.org/
 - Nushell (`*.nu`) - https://github.com/nushell/nushell
 - PHP - https://www.php.net/
 - PlantUML (`*.pu`) - https://plantuml.com/

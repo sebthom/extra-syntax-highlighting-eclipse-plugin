@@ -369,6 +369,25 @@
    </extension>
 
    <!-- ============================== -->
+   <!-- Mako                           -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.mako" name="Mako Template"
+                    file-extensions="mako" />
+      <file-association content-type="exta-syntax-highlighting.mako" file-extensions="mako" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.mako" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/mako/mako.tmLanguage.plist" scopeName="text.html.mako" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.mako" scopeName="text.html.mako" />
+   </extension>
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="Mako Template Sample" path="syntaxes/mako/mako.sample.mako" scopeName="text.html.mako" />
+   </extension>
+
+   <!-- ============================== -->
    <!-- Nushell                        -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">

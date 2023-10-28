@@ -33,6 +33,7 @@ syntaxes = (
     ("lua", "microsoft/vscode/main", "extensions/lua/syntaxes/lua.tmLanguage.json", "extensions/lua/language-configuration.json", "LICENSE.txt", ""),
     ("haxe", "vshaxe/haxe-TmLanguage/master", "haxe.tmLanguage", "../../vshaxe/master/configurations/haxe.language-configuration.json", "LICENSE.md", ""),
     ("makefile", "microsoft/vscode/main", "extensions/make/syntaxes/make.tmLanguage.json", "extensions/make/language-configuration.json", "LICENSE.txt", ""),
+    ("mako", "marconi/mako-tmbundle/master", "Syntaxes/HTML%20(Mako).tmLanguage", "", "LICENSE", ""),
     ("nushell", "nushell/vscode-nushell-lang/main", "syntaxes/nushell.tmLanguage.json", "language-configuration.json", "LICENSE", "example.nu"),
     ("php", "microsoft/vscode/main", "extensions/php/syntaxes/php.tmLanguage.json", "extensions/php/language-configuration.json", "LICENSE.txt", ""),
     ("plantuml", "qjebbs/vscode-plantuml/master", "syntaxes/plantuml.yaml-tmLanguage", "language-configuration.json", "LICENSE.txt", "test/testFixture/macros.puml"),
@@ -72,6 +73,8 @@ def download(github_branch, github_file, target_file):
 
 
 for (lang_id, github_branch, syntax_path, langcfg_path, license_path, sample_path)  in syntaxes:
+    if len(sys.argv) > 1 and sys.argv[1] != lang_id:
+        continue
     print(f"Downloading [{lang_id}] Grammar [{syntax_path}]...")
     syntax_dir = os.path.join(DOWNLOAD_DIR, lang_id)
     os.makedirs(syntax_dir, exist_ok = True)

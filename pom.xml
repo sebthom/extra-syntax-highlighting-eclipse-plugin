@@ -38,7 +38,7 @@
 
    <properties>
       <java.version>17</java.version>
-      <tycho.version>4.0.3</tycho.version>
+      <tycho.version>4.0.4</tycho.version>
 
       <!-- to prevent dozen of warnings like:
       [WARNING] System artifact: p2.eclipse-plugin:org.eclipse.mylyn.commons.notifications.ui:jar:1.17.2.v20200813-0821:system has no file attached

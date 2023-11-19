@@ -31,7 +31,8 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - HashiCorp Sentinel (`*.sentinel`) - https://www.hashicorp.com/sentinel
 - HashiCorp Terraform (`*.tf`) - https://www.terraform.io/
 - Haxe - https://haxe.org
-- INI - https://en.wikipedia.org/wiki/INI_file
+- INI Files - https://en.wikipedia.org/wiki/INI_file
+- Jinja Templates - https://jinja.palletsprojects.com/
 - Kotlin - https://kotlinlang.org/
 - LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 - Lua - https://www.lua.org/

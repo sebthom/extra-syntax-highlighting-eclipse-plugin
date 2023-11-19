@@ -1,0 +1,14 @@
+{
+  "name": "jinja-ruby",
+  "scopeName": "text.ruby.jinja",
+  "comment": "Jinja Ruby Templates",
+  "firstLineMatch": "^{% extends [\"'][^\"']+[\"'] %}",
+  "patterns": [
+    {
+      "include": "source.jinja"
+    },
+    {
+      "include": "source.ruby"
+    }
+  ]
+}

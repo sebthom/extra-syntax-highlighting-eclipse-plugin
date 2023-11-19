@@ -1,0 +1,13 @@
+{
+  "name": "jinja-properties",
+  "scopeName": "source.ini.jinja",
+  "comment": "Jinja properties/ini/conf Templates",
+  "patterns": [
+    {
+      "include": "source.jinja"
+    },
+    {
+      "include": "source.ini"
+    }
+  ]
+}

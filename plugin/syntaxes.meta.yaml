@@ -1,0 +1,666 @@
+# AUTO-GENERATED FILE - Do not edit manually; changes will be lost.
+meta:
+  apache-http:
+    languages:
+      apacheconf:
+        file_extensions: [conf, .conf, htaccess, .htaccess, htgroups, .htgroups, htpasswd,
+          .htpasswd]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/mrmlnc/vscode-apache/master/syntaxes/Apache.tmLanguage
+        label: Apache HTTP Config
+        langcfg_url: 
+          https://raw.githubusercontent.com/mrmlnc/vscode-apache/master/apache.configuration.json
+        scope_name: source.apacheconf
+    license_url: https://raw.githubusercontent.com/mrmlnc/vscode-apache/master/LICENSE
+  astro:
+    languages:
+      astro:
+        example_url: 
+          https://raw.githubusercontent.com/withastro/astro/main/examples/basics/src/pages/index.astro
+        file_extensions: [.astro]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/withastro/language-tools/main/packages/vscode/syntaxes/astro.tmLanguage.json
+        label: Astro
+        langcfg_url: 
+          https://raw.githubusercontent.com/withastro/language-tools/main/packages/vscode/languages/astro-language-configuration.json
+        scope_name: source.astro
+    license_url: 
+      https://raw.githubusercontent.com/withastro/language-tools/main/packages/vscode/LICENSE
+  cpp:
+    languages:
+      c:
+        file_extensions: [.c, .i]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/cpp/syntaxes/c.tmLanguage.json
+        label: C
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/cpp/language-configuration.json
+        scope_name: source.c
+      cpp:
+        file_extensions: [.cpp, .cc, .cxx, .c++, .hpp, .hh, .hxx, .h++, .h, .ii, .ino,
+          .inl, .ipp, .ixx, .tpp, .txx, .hpp.in, .h.in]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/cpp/syntaxes/cpp.tmLanguage.json
+        label: C++
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/cpp/language-configuration.json
+        scope_name: source.cpp
+      cuda-cpp:
+        file_extensions: [.cu, .cuh]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/cpp/syntaxes/cuda-cpp.tmLanguage.json
+        label: CUDA C++
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/cpp/language-configuration.json
+        scope_name: source.cuda-cpp
+    license_url: https://raw.githubusercontent.com/microsoft/vscode/main/LICENSE.txt
+  csharp:
+    languages:
+      csharp:
+        file_extensions: [.cs, .csx, .cake]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/csharp/syntaxes/csharp.tmLanguage.json
+        label: C#
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/csharp/language-configuration.json
+        scope_name: source.cs
+    license_url: https://raw.githubusercontent.com/microsoft/vscode/main/LICENSE.txt
+  dart:
+    languages:
+      dart:
+        file_extensions: [.dart]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/dart/syntaxes/dart.tmLanguage.json
+        label: Dart
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/dart/language-configuration.json
+        scope_name: source.dart
+    license_url: https://raw.githubusercontent.com/microsoft/vscode/main/LICENSE.txt
+  dot:
+    languages:
+      dot:
+        file_extensions: [.dot]
+        file_names: null
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/textmate/graphviz.tmbundle/master/Syntaxes/DOT.plist
+        label: GraphViz DOT File
+        scope_name: source.dot
+  er:
+    languages:
+      er:
+        example_url: 
+          https://raw.githubusercontent.com/mikkel-ol/vsc-er-syntax-highlighting/master/example.er
+        file_extensions: [.er]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/mikkel-ol/vsc-er-syntax-highlighting/master/syntaxes/er.tmLanguage.json
+        label: Entity Relationship
+        langcfg_url: 
+          https://raw.githubusercontent.com/mikkel-ol/vsc-er-syntax-highlighting/master/language-configuration.json
+        scope_name: source.er
+    license_url: 
+      https://raw.githubusercontent.com/mikkel-ol/vsc-er-syntax-highlighting/master/LICENSE
+  glsl:
+    languages:
+      glsl:
+        example_url: 
+          https://raw.githubusercontent.com/GeForceLegend/vscode-glsl/master/sample/test.glsl
+        file_extensions: [.vs, .fs, .gs, .vsh, .fsh, .gsh, .csh, .vshader, .fshader,
+          .gshader, .vert, .frag, .geom, .tesc, .tese, .comp, .glsl, .mesh, .task,
+          .rgen, .rint, .rahit, .rchit, .rmiss, .rcall]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/GeForceLegend/vscode-glsl/master/syntaxes/glsl.tmLanguage.json
+        label: OpenGL Shading Language
+        langcfg_url: 
+          https://raw.githubusercontent.com/GeForceLegend/vscode-glsl/master/language-configuration.json
+        scope_name: source.glsl
+    license_url: https://raw.githubusercontent.com/GeForceLegend/vscode-glsl/master/LICENSE
+  graphql:
+    languages:
+      graphql:
+        example_url: 
+          https://raw.githubusercontent.com/graphql/graphiql/main/packages/graphql-language-service/benchmark/fixtures/kitchen-sink.graphql
+        file_extensions: [.gql, .graphql, .graphqls]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/graphql/graphiql/main/packages/vscode-graphql-syntax/grammars/graphql.json
+        label: GraphQL
+        langcfg_url: 
+          https://raw.githubusercontent.com/graphql/graphiql/main/packages/vscode-graphql-syntax/language/language-configuration.json
+        scope_name: source.graphql
+    license_url: 
+      https://raw.githubusercontent.com/graphql/graphiql/main/packages/vscode-graphql-syntax/LICENSE
+  haxe:
+    languages:
+      haxe:
+        file_extensions: [.hx]
+        file_names: null
+        file_patterns: []
+        grammar_url: https://raw.githubusercontent.com/vshaxe/haxe-TmLanguage/master/haxe.tmLanguage
+        label: Haxe Source File
+        langcfg_url: 
+          https://raw.githubusercontent.com/vshaxe/vshaxe/master/configurations/haxe.language-configuration.json
+        scope_name: source.hx
+    license_url: https://raw.githubusercontent.com/vshaxe/haxe-TmLanguage/master/LICENSE.md
+  hcl:
+    languages:
+      hcl:
+        example_url: 
+          https://raw.githubusercontent.com/hashicorp/syntax/main/tests/snapshot/hcl/basic.hcl
+        file_extensions: [.hcl]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/hashicorp/syntax/main/syntaxes/hcl.tmGrammar.json
+        label: HCL Config File
+        scope_name: source.hcl
+      sentinel:
+        example_url: 
+          https://raw.githubusercontent.com/hashicorp/syntax/main/tests/snapshot/sentinel/basic.sentinel
+        file_extensions: [.sentinel]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/hashicorp/syntax/main/syntaxes/sentinel.tmGrammar.json
+        label: HashiCorp Sentinel
+        scope_name: source.sentinel
+      terraform:
+        example_url: 
+          https://raw.githubusercontent.com/hashicorp/syntax/main/tests/snapshot/terraform/basic.tf
+        file_extensions: [.tf, .tfvars]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/hashicorp/syntax/main/syntaxes/terraform.tmGrammar.json
+        label: HashiCorp Terraform
+        scope_name: source.hcl.terraform
+    license_url: https://raw.githubusercontent.com/hashicorp/syntax/main/LICENSE
+  ini:
+    languages:
+      ini:
+        file_extensions: [.ini]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/ini/syntaxes/ini.tmLanguage.json
+        label: INI Config File
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/ini/ini.language-configuration.json
+        scope_name: source.ini
+    license_url: https://raw.githubusercontent.com/microsoft/vscode/main/LICENSE.txt
+  jinja:
+    languages:
+      jinja-cisco:
+        file_extensions: [.ios.j2, .ios.jinja, .ios.jinja2, .cisco.j2, .cisco.jinja,
+          .cisco.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-cisco.tmLanguage.json
+        label: Jinja Cisco Config
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.cisco.jinja
+      jinja-cpp:
+        file_extensions: [.c.j2, .c.jinja, .c.jinja2, .cpp.j2, .cpp.jinja, .cpp.jinja2,
+          .h.j2, .h.jinja, .h.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-cpp.tmLanguage.json
+        label: Jinja C++
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.cpp.jinja
+      jinja-css:
+        file_extensions: [.css.j2, .css.jinja, .css.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-css.tmLanguage.json
+        label: Jinja CSS
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: text.css.jinja
+      jinja-cy:
+        file_extensions: [pyx.j2, pyx.jinja, pyx.jinja2, pxd.j2, pxd.jinja, pxd.jinja2,
+          pxi.j2, pxi.jinja, pxi.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-cython.tmLanguage.json
+        label: Jinja Cython
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.cython.jinja
+      jinja-dockerfile:
+        example_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/examples/Dockerfile.j2
+        file_extensions: [.dockerfile.j2, .dockerfile.jinja, .dockerfile.jinja2]
+        file_names: [Dockerfile.j2, Dockerfile.jinja, Dockerfile.jinja2]
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-dockerfile.tmLanguage.json
+        label: Jinja Dockerfile
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.dockerfile.jinja
+      jinja-groovy:
+        file_extensions: [.groovy.j2, .groovy.jinja, .groovy.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-groovy.tmLanguage.json
+        label: Jinja Groovy
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.groovy.jinja
+      jinja-html:
+        example_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/examples/testing.jinja
+        file_extensions: [.jinja, .jinja2, .j2, .html.j2]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-html.tmLanguage.json
+        label: Jinja HTML
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: text.html.jinja
+      jinja-java:
+        file_extensions: [.java.j2, .java.jinja, .java.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-java.tmLanguage.json
+        label: Jinja Java
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.java.jinja
+      jinja-js:
+        example_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/examples/testing.js.j2
+        file_extensions: [js.j2, js.jinja2]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-js.tmLanguage.json
+        label: Jinja JavaScript
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.js.jinja
+      jinja-json:
+        file_extensions: [.json.j2, .json.jinja, .json.jinja2, .code-workspace.j2,
+          .code-workspace.jinja, .code-workspace.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-json.tmLanguage.json
+        label: Jinja JSON
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: text.json.jinja
+      jinja-latex:
+        file_extensions: [.latex.j2, .tex.j2, .latex.jinja2, .tex.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-latex.tmLanguage.json
+        label: Jinja LaTeX
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration-latex.json
+        scope_name: text.latex.jinja
+      jinja-lua:
+        file_extensions: [.lua.j2, .lua.jinja2, .lua.jinja]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-lua.tmLanguage.json
+        label: Jinja Lua
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: text.lua.jinja
+      jinja-md:
+        example_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/examples/testing.md.j2
+        file_extensions: [.md.jinja, .md.jinja2, .md.j2]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-md.tmLanguage.json
+        label: Jinja Markdown
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: text.html.markdown.jinja
+      jinja-nginx:
+        file_extensions: [.conf.j2, .conf.jinja, .conf.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-nginx.tmLanguage.json
+        label: Jinja Nginx
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.nginx.jinja
+      jinja-php:
+        file_extensions: [.php.j2, .php.jinja, .php.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-php.tmLanguage.json
+        label: Jinja PHP
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.php.jinja
+      jinja-properties:
+        file_extensions: [.properties.j2, .cfg.j2, .conf.j2, .desktop.j2, .directory.j2,
+          .ini.j2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-properties.tmLanguage.json
+        label: Jinja Properties/ini/Conf
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.ini.jinja
+      jinja-py:
+        example_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/examples/testing.py.j2
+        file_extensions: [py.j2, py.jinja, py.jinja2, pyi.j2, pyi.jinja, pyi.jinja2]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-python.tmLanguage.json
+        label: Jinja Python
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.python.jinja
+      jinja-rb:
+        file_extensions: [rb.j2, rbw.j2, rb.jinja2, rbw.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-ruby.tmLanguage.json
+        label: Jinja Ruby
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: text.ruby.jinja
+      jinja-rust:
+        file_extensions: [.rs.j2, .rs.jinja, .rs.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-rust.tmLanguage.json
+        label: Jinja Rust
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.rust.jinja
+      jinja-shell:
+        file_extensions: [.sh.j2, .bash.j2, .bashrc.j2, .bash_aliases.j2, .bash_profile.j2,
+          .bash_login.j2, .ebuild.j2, .install.j2, .profile.j2, .bash_logout.j2, .zsh.j2,
+          .zshrc.j2, .zprofile.j2, .zlogin.j2, .zlogout.j2, .zshenv.j2, .zsh-theme.j2,
+          .ksh.j2, .env.jinja, .env.j2, .env.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-shell.tmLanguage.json
+        label: Jinja Shell Script
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.shell.jinja
+      jinja-sql:
+        example_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/examples/testing.sql.j2
+        file_extensions: [.sql.j2, .sql.jinja, .sql.jinja2]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-sql.tmLanguage.json
+        label: Jinja SQL
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.sql.jinja
+      jinja-systemd:
+        example_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/examples/testing.service.j2
+        file_extensions: [.link.j2, .link.jinja, .link.jinja2, .netdev.j2, .netdev.jinja,
+          .netdev.jinja2, .network.j2, .network.jinja, .network.jinja2, .service.j2,
+          .service.jinja, .service.jinja2, .socket.j2, .socket.jinja, .socket.jinja2,
+          .device.j2, .device.jinja, .device.jinja2, .mount.j2, .mount.jinja, .mount.jinja2,
+          .automount.j2, .automount.jinja, .automount.jinja2, .swap.j2, .swap.jinja,
+          .swap.jinja2, .target.j2, .target.jinja, .target.jinja2, .path.j2, .path.jinja,
+          .path.jinja2, .timer.j2, .timer.jinja, .timer.jinja2, .snapshot.j2, .snapshot.jinja,
+          .snapshot.jinja2, .slice.j2, .slice.jinja, .slice.jinja2, .scope.j2, .scope.jinja,
+          .scope.jinja2]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-systemd.tmLanguage.json
+        label: Jinja Systemd Unit File
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.systemd.jinja
+      jinja-terraform:
+        file_extensions: [.tf.j2, .tf.jinja, .tf.jinja2, .tfvars.j2, .tfvars.jinja,
+          .tfvars.jinja2, .hcl.j2, .hcl.jinja, .hcl.jinja2]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-terraform.tmLanguage.json
+        label: Jinja Terraform
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: source.terraform.jinja
+      jinja-toml:
+        file_extensions: [.toml.j2, .toml.jinja2, .toml.jinja]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-toml.tmLanguage.json
+        label: Jinja TOML
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: text.toml.jinja
+      jinja-xml:
+        example_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/examples/testing.xml.j2
+        file_extensions: [.xml.j2, .xml.jinja, .xml.jinja2]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-xml.tmLanguage.json
+        label: Jinja XML
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: text.xml.jinja
+      jinja-yaml:
+        example_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/examples/testing.yaml.j2
+        file_extensions: [.yml.j2, .yaml.j2, .yml.jinja2, .yaml.jinja2, .yml.jinja,
+          .yaml.jinja, .sls]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/syntaxes/jinja-yaml.tmLanguage.json
+        label: Jinja YAML
+        langcfg_url: 
+          https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/language-configuration.json
+        scope_name: text.yaml.jinja
+    license_url: https://raw.githubusercontent.com/samuelcolvin/jinjahtml-vscode/main/LICENSE
+  kotlin:
+    languages:
+      kotlin:
+        file_extensions: [.kt, .kts]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/fwcd/vscode-kotlin/main/syntaxes/kotlin.tmLanguage.json
+        label: Kotlin
+        langcfg_url: 
+          https://raw.githubusercontent.com/fwcd/vscode-kotlin/main/language-configuration.json
+        scope_name: source.kotlin
+    license_url: https://raw.githubusercontent.com/fwcd/vscode-kotlin/main/LICENSE
+  ldif:
+    languages:
+      ldif:
+        file_extensions: [.ldif]
+        file_names: null
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/FlashSystems/LDIF-Syntax/master/ldif.tmLanguage
+        label: LDIF File
+        scope_name: text.ldif
+    license_url: https://raw.githubusercontent.com/FlashSystems/LDIF-Syntax/master/LICENSE
+  lua:
+    languages:
+      lua:
+        file_extensions: [.lua]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/lua/syntaxes/lua.tmLanguage.json
+        label: Lua
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/lua/language-configuration.json
+        scope_name: source.lua
+    license_url: https://raw.githubusercontent.com/microsoft/vscode/main/LICENSE.txt
+  makefile:
+    languages:
+      makefile:
+        file_extensions: [.mak, .mk]
+        file_names: [Makefile, makefile, GNUmakefile, OCamlMakefile]
+        file_patterns: ['*Makefile']
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/make/syntaxes/make.tmLanguage.json
+        label: Makefile
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/make/language-configuration.json
+        scope_name: source.makefile
+    license_url: https://raw.githubusercontent.com/microsoft/vscode/main/LICENSE.txt
+  mako:
+    languages:
+      mako:
+        file_extensions: [.mako]
+        file_names: null
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/marconi/mako-tmbundle/master/Syntaxes/HTML%20(Mako).tmLanguage
+        label: Mako Template
+        scope_name: text.html.mako
+    license_url: https://raw.githubusercontent.com/marconi/mako-tmbundle/master/LICENSE
+  nushell:
+    languages:
+      nushell:
+        example_url: https://raw.githubusercontent.com/nushell/vscode-nushell-lang/main/example.nu
+        file_extensions: [.nu]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/nushell/vscode-nushell-lang/main/syntaxes/nushell.tmLanguage.json
+        label: nushell
+        langcfg_url: 
+          https://raw.githubusercontent.com/nushell/vscode-nushell-lang/main/language-configuration.json
+        scope_name: source.nushell
+    license_url: https://raw.githubusercontent.com/nushell/vscode-nushell-lang/main/LICENSE
+  php:
+    languages:
+      php:
+        file_extensions: [.php, .php4, .php5, .phtml, .ctp]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/php/syntaxes/html.tmLanguage.json
+        label: PHP
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/php/language-configuration.json
+        scope_name: text.html.php
+    license_url: https://raw.githubusercontent.com/microsoft/vscode/main/LICENSE.txt
+  plantuml:
+    languages:
+      plantuml:
+        example_url: 
+          https://raw.githubusercontent.com/qjebbs/vscode-plantuml/master/test/testFixture/macros.puml
+        file_extensions: [.wsd, .pu, .puml, .plantuml, .iuml]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/qjebbs/vscode-plantuml/master/syntaxes/plantuml.yaml-tmLanguage
+        label: PlantUML
+        langcfg_url: 
+          https://raw.githubusercontent.com/qjebbs/vscode-plantuml/master/language-configuration.json
+        scope_name: source.wsd
+    license_url: https://raw.githubusercontent.com/qjebbs/vscode-plantuml/master/LICENSE.txt
+  powershell:
+    languages:
+      powershell:
+        file_extensions: [.ps1, .psm1, .psd1, .pssc, .psrc]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/powershell/syntaxes/powershell.tmLanguage.json
+        label: PowerShell
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/powershell/language-configuration.json
+        scope_name: source.powershell
+    license_url: https://raw.githubusercontent.com/microsoft/vscode/main/LICENSE.txt
+  prisma:
+    languages:
+      prisma:
+        example_url: 
+          https://raw.githubusercontent.com/prisma/language-tools/main/packages/language-server/test/fixtures/correct_mongodb.prisma
+        file_extensions: [.prisma]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/prisma/language-tools/main/packages/vscode/syntaxes/prisma.tmLanguage.json
+        label: Prisma
+        langcfg_url: 
+          https://raw.githubusercontent.com/prisma/language-tools/main/packages/vscode/language-configuration.json
+        scope_name: source.prisma
+    license_url: 
+      https://raw.githubusercontent.com/prisma/language-tools/main/packages/vscode/LICENSE
+  svelte:
+    languages:
+      svelte:
+        example_url: 
+          https://raw.githubusercontent.com/sveltejs/language-tools/master/packages/svelte2tsx/test/emitDts/samples/svelte3/src/TestJs.svelte
+        file_extensions: [.svelte]
+        file_names: []
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/sveltejs/language-tools/master/packages/svelte-vscode/syntaxes/svelte.tmLanguage.src.yaml
+        label: Svelte
+        langcfg_url: 
+          https://raw.githubusercontent.com/sveltejs/language-tools/master/packages/svelte-vscode/language-configuration.json
+        scope_name: source.svelte
+    license_url: https://raw.githubusercontent.com/sveltejs/language-tools/master/LICENSE
+  swift:
+    languages:
+      swift:
+        file_extensions: [.swift]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/swift/syntaxes/swift.tmLanguage.json
+        label: Swift
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/swift/language-configuration.json
+        scope_name: source.swift
+    license_url: https://raw.githubusercontent.com/microsoft/vscode/main/LICENSE.txt
+  toml:
+    languages:
+      toml:
+        file_extensions: [.toml]
+        file_names: [Cargo.lock]
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/tamasfe/taplo/master/editors/vscode/toml.tmLanguage.json
+        label: TOML Config File
+        langcfg_url: 
+          https://raw.githubusercontent.com/tamasfe/taplo/master/editors/vscode/language-configuration.json
+        scope_name: source.toml
+    license_url: https://raw.githubusercontent.com/tamasfe/taplo/master/editors/vscode/LICENSE.md
+  vb:
+    languages:
+      vb:
+        file_extensions: [.vb, .brs, .vbs, .bas, .vba]
+        file_names: []
+        grammar_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/vb/syntaxes/asp-vb-net.tmlanguage.json
+        label: Visual Basic
+        langcfg_url: 
+          https://raw.githubusercontent.com/microsoft/vscode/main/extensions/vb/language-configuration.json
+        scope_name: source.asp.vb.net
+    license_url: https://raw.githubusercontent.com/microsoft/vscode/main/LICENSE.txt

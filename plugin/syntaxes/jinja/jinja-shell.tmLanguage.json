@@ -1,0 +1,13 @@
+{
+  "name": "jinja-shell",
+  "scopeName": "source.shell.jinja",
+  "comment": "Jinja Shell Templates",
+  "patterns": [
+    {
+      "include": "source.jinja"
+    },
+    {
+      "include": "source.shell"
+    }
+  ]
+}

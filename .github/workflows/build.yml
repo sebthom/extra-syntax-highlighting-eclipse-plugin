@@ -60,6 +60,12 @@ jobs:
     - name: Git Checkout
       uses: actions/checkout@v4 # https://github.com/actions/checkout
 
+    - name: Verify Syntax Registration
+      run: |
+        set -euo pipefail
+
+        pip install ruamel.yaml
+        python plugin/verify-syntax-registrations.py
 
     - name: Configure fast APT repository mirror
       uses: vegardit/fast-apt-mirror.sh@v1

@@ -1031,6 +1031,26 @@
    </extension>
 
    <!-- ============================== -->
+   <!-- markdown/markdown: Markdown    -->
+   <!-- ============================== -->
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type base-type="exta-syntax-highlighting.base" priority="normal" id="exta-syntax-highlighting.markdown" name="Markdown"
+                    file-extensions="livemd,markdown,md,mdown,mdwn,mkd,mkdn,mkdown,ronn,scd,workbook" />
+      <file-association content-type="exta-syntax-highlighting.markdown" file-extensions="livemd,markdown,md,mdown,mdwn,mkd,mkdn,mkdown,ronn,scd,workbook" />
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="exta-syntax-highlighting.markdown" />
+   </extension>
+   <extension point="org.eclipse.tm4e.registry.grammars">
+      <grammar path="syntaxes/markdown/markdown.tmLanguage.plist" scopeName="text.md" />
+      <scopeNameContentTypeBinding contentTypeId="exta-syntax-highlighting.markdown" scopeName="text.md" />
+   </extension>
+
+   <extension point="org.eclipse.tm4e.ui.snippets">
+      <snippet name="Markdown Example" path="syntaxes/markdown/markdown.example.md" scopeName="text.md" />
+   </extension>
+
+   <!-- ============================== -->
    <!-- nushell/nushell: nushell       -->
    <!-- ============================== -->
    <extension point="org.eclipse.core.contenttype.contentTypes">

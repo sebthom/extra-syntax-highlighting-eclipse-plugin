@@ -38,6 +38,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - Lua - https://www.lua.org/
 - Make - https://www.gnu.org/software/make/
 - Mako Templates (`*.mako`) - https://www.makotemplates.org/
+- Markdown (`*.md`) - https://daringfireball.net/projects/markdown/
 - Nushell (`*.nu`) - https://github.com/nushell/nushell
 - PHP - https://www.php.net/
 - PlantUML (`*.pu`) - https://plantuml.com/

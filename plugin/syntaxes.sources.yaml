@@ -113,6 +113,7 @@ sources:
         example: examples/testing.yaml.j2
   kotlin:
     github:
+      # repo: nishtahir/language-kotlin
       repo: fwcd/vscode-kotlin
   ldif:
     github:
@@ -150,6 +151,26 @@ sources:
         scope_name: text.html.mako
         file_extensions:
         - .mako
+  markdown:
+    github:
+      repo: wooorm/markdown-tm-language
+    languages:
+      markdown:
+        label: Markdown
+        scope_name: text.md
+        grammar: text.md.tmLanguage
+        file_extensions:
+        - md
+        - livemd
+        - markdown
+        - mdown
+        - mdwn
+        - mkd
+        - mkdn
+        - mkdown
+        - ronn
+        - scd
+        - workbook
   nushell:
     github:
       repo: nushell/vscode-nushell-lang

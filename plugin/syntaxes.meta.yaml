@@ -543,6 +543,18 @@ meta:
         label: Mako Template
         scope_name: text.html.mako
     license_url: https://raw.githubusercontent.com/marconi/mako-tmbundle/master/LICENSE
+  markdown:
+    languages:
+      markdown:
+        file_extensions: [md, livemd, markdown, mdown, mdwn, mkd, mkdn, mkdown, ronn,
+          scd, workbook]
+        file_names: null
+        file_patterns: []
+        grammar_url: 
+          https://raw.githubusercontent.com/wooorm/markdown-tm-language/main/text.md.tmLanguage
+        label: Markdown
+        scope_name: text.md
+    license_url: https://raw.githubusercontent.com/wooorm/markdown-tm-language/main/license
   nushell:
     languages:
       nushell:

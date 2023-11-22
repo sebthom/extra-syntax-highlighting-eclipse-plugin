@@ -1,4 +1,20 @@
 sources:
+  # source entry format:
+  # <reo-id>:
+  #   github: # required
+  #     repo: # required
+  #     path: # optional
+  #   languages: # optional, only required if repo contains no package.json
+  #     <language-id>: # existing id as defined in package.json to override values or a new language id to add languages not defined in a package.json
+  #       ignore: <true|false>        # optional, default is false
+  #       example: <path_in_repo|url> # optional
+  #       grammar: <path_in_repo>     # required if not defined in package.json
+  #       langcfg: <path_in_repo|url> # optional
+  #       label:                      # required if not defined in package.json
+  #       scope_name:                 # required if not defined in package.json
+  #       file_extensions: []         # optional
+  #       file_patterns: []           # optional
+
   apache-http:
     github:
       repo: mrmlnc/vscode-apache

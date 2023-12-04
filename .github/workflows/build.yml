@@ -76,7 +76,7 @@ jobs:
 
 
     - name: "Install: JDK ${{ env.JAVA_VERSION }}"
-      uses: actions/setup-java@v3 # https://github.com/actions/setup-java
+      uses: actions/setup-java@v4 # https://github.com/actions/setup-java
       with:
         distribution: temurin
         java-version: ${{ env.JAVA_VERSION }}
@@ -171,7 +171,7 @@ jobs:
       # https://cli.github.com/manual/gh_release_create
       run: |
         GH_DEBUG=1 gh release create "$RELEASE_NAME" \
-          --prerelease \
+          --title "latest" \
           --latest \
           --notes "${{ github.event.head_commit.message }}" \
           --target "${{ github.sha }}" \

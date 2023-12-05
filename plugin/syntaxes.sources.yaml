@@ -1,17 +1,17 @@
 sources:
   # source entry format:
-  # <reo-id>:
+  # <repo-id>: # used for the target path at syntaxes/<repo-id>/...
   #   github: # required
   #     repo: # required
   #     path: # optional
   #   languages: # optional, only required if repo contains no package.json
-  #     <language-id>: # existing id as defined in package.json to override values or a new language id to add languages not defined in a package.json
+  #     <language-id>: # existing id as defined in package.json to override values OR a new language id to add a language not defined in a package.json
   #       ignore: <true|false>        # optional, default is false
   #       example: <path_in_repo|url> # optional
-  #       grammar: <path_in_repo>     # required if not defined in package.json
+  #       grammar: <path_in_repo>     # required if <language-id> is not defined in package.json
   #       langcfg: <path_in_repo|url> # optional
-  #       label:                      # required if not defined in package.json
-  #       scope_name:                 # required if not defined in package.json
+  #       label:                      # required if <language-id> is not defined in package.json
+  #       scope_name:                 # required if <language-id> is not defined in package.json
   #       file_extensions: []         # optional
   #       file_patterns: []           # optional
 
@@ -21,6 +21,7 @@ sources:
     languages:
       apacheconf:
         label: Apache HTTP Config
+
   astro:
     github:
       repo: withastro/language-tools
@@ -28,18 +29,22 @@ sources:
     languages:
       astro:
         example: https://raw.githubusercontent.com/withastro/astro/main/examples/basics/src/pages/index.astro
+
   cpp:
     github:
       repo: microsoft/vscode
       path: extensions/cpp
+
   csharp:
     github:
       repo: microsoft/vscode
       path: extensions/csharp
+
   dart:
     github:
       repo: microsoft/vscode
       path: extensions/dart
+
   dot:
     github:
       repo: textmate/graphviz.tmbundle
@@ -51,18 +56,21 @@ sources:
         file_extensions:
         - .dot
     license-download: false
+
   er:
     github:
       repo: mikkel-ol/vsc-er-syntax-highlighting
     languages:
       er:
         example: example.er
+
   glsl:
     github:
       repo: GeForceLegend/vscode-glsl
     languages:
       glsl:
         example: sample/test.glsl
+
   graphql:
     github:
       repo: graphql/graphiql
@@ -70,6 +78,7 @@ sources:
     languages:
       graphql:
         example: ../graphql-language-service/benchmark/fixtures/kitchen-sink.graphql
+
   haxe:
     github:
       repo: vshaxe/haxe-TmLanguage
@@ -81,6 +90,7 @@ sources:
         scope_name: source.hx
         file_extensions:
         - .hx
+
   hcl:
     github:
       repo: hashicorp/syntax
@@ -94,6 +104,7 @@ sources:
       terraform:
         label: HashiCorp Terraform
         example: tests/snapshot/terraform/basic.tf
+
   ini:
     github:
       repo: microsoft/vscode
@@ -103,6 +114,7 @@ sources:
         label: INI Config File
       properties:
         ignore: true
+
   jinja:
     github:
       repo: samuelcolvin/jinjahtml-vscode
@@ -127,10 +139,12 @@ sources:
         example: examples/testing.xml.j2
       jinja-yaml:
         example: examples/testing.yaml.j2
+
   kotlin:
     github:
       # repo: nishtahir/language-kotlin
       repo: fwcd/vscode-kotlin
+
   ldif:
     github:
       repo: FlashSystems/LDIF-Syntax
@@ -141,6 +155,7 @@ sources:
         grammar: ldif.tmLanguage
         file_extensions:
         - .ldif
+
   lua:
     github:
       repo: microsoft/vscode
@@ -149,6 +164,7 @@ sources:
       file_extensions:
       - .lua
       - .rockspec
+
   makefile:
     github:
       repo: microsoft/vscode
@@ -157,6 +173,7 @@ sources:
       makefile:
         file_patterns:
         - "*Makefile"
+
   mako:
     github:
       repo: marconi/mako-tmbundle
@@ -167,6 +184,7 @@ sources:
         scope_name: text.html.mako
         file_extensions:
         - .mako
+
   markdown:
     github:
       repo: wooorm/markdown-tm-language
@@ -187,16 +205,19 @@ sources:
         - ronn
         - scd
         - workbook
+
   nushell:
     github:
       repo: nushell/vscode-nushell-lang
     languages:
       nushell:
         example: example.nu
+
   php:
     github:
       repo: microsoft/vscode
       path: extensions/php
+
   plantuml:
     github:
       repo: qjebbs/vscode-plantuml
@@ -204,10 +225,12 @@ sources:
       plantuml:
         grammar: syntaxes/plantuml.yaml-tmLanguage
         example: test/testFixture/macros.puml
+
   powershell:
     github:
       repo: microsoft/vscode
       path: extensions/powershell
+
   prisma:
     github:
       repo: prisma/language-tools
@@ -215,6 +238,7 @@ sources:
     languages:
       prisma:
         example: ../language-server/test/fixtures/correct_mongodb.prisma
+
   svelte:
     github:
       repo: sveltejs/language-tools
@@ -225,10 +249,12 @@ sources:
       svelte:
         grammar: syntaxes/svelte.tmLanguage.src.yaml
         example: ../svelte2tsx/test/emitDts/samples/svelte3/src/TestJs.svelte
+
   swift:
     github:
       repo: microsoft/vscode
       path: extensions/swift
+
   toml:
     github:
       #repo: oovm/vscode-toml
@@ -237,6 +263,7 @@ sources:
     languages:
       toml:
         label: TOML Config File
+
   vb:
     github:
       repo: microsoft/vscode

@@ -40,18 +40,20 @@ class ANSI:
     GRAY = '\033[90m'
 
 
-def log_header(msg:str):
+def log_header(msg:str) -> None:
+    color = ANSI.BOLD + ANSI.CYAN
     msg = msg.replace("[", "[" + ANSI.BOLD + ANSI.MAGENTA)
-    msg = msg.replace("]", ANSI.BOLD + ANSI.CYAN + "]")
-    print(ANSI.BOLD + ANSI.CYAN + "========================================================")
+    msg = msg.replace("]", color + "]")
+    print(color + "========================================================")
     print(msg)
     print("========================================================" + ANSI.RESET)
 
 
-def log_info(msg:str, end = "\n"):
+def log_info(msg:str, end:str = "\n") -> None:
+    color = ANSI.RESET + ANSI.WHITE
     msg = msg.replace("[", "[" + ANSI.BOLD + ANSI.MAGENTA)
-    msg = msg.replace("]", ANSI.RESET + ANSI.WHITE + "]")
-    print(ANSI.WHITE + msg + ANSI.RESET, end = end, flush = True)
+    msg = msg.replace("]", color + "]")
+    print(color + msg + ANSI.RESET, end = end, flush = True)
 
 ##############################
 # main

@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: EPL-2.0
 # SPDX-ArtifactOfProjectHomePage: https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin
 
+# USAGE: python update-syntaxes.py [REPO-ID]
+# if [REPO-ID] is not specified, updates from all repos defined in syntaxes.sources.yaml are downloaded
+
 import sys
 MIN_PYTHON_VERSION = (3, 10)
 if sys.version_info < MIN_PYTHON_VERSION:
@@ -11,9 +14,7 @@ if sys.version_info < MIN_PYTHON_VERSION:
     sys.exit(1)
 
 import json, os, subprocess, urllib.request, urllib.parse, glob, re
-from pprint import pprint
 from typing import Any
-from builtins import str
 
 ##############################
 # initialize YAML support
@@ -42,27 +43,30 @@ class ANSI:
     GRAY = '\033[90m'
 
 
-def log_header(msg:str):
+def log_header(msg:str) -> None:
+    color = ANSI.BOLD + ANSI.CYAN
     msg = msg.replace("[", "[" + ANSI.BOLD + ANSI.MAGENTA)
-    msg = msg.replace("]", ANSI.BOLD + ANSI.CYAN + "]")
-    print(ANSI.BOLD + ANSI.CYAN + "========================================================")
+    msg = msg.replace("]", color + "]")
+    print(color + "========================================================")
     print(msg)
     print("========================================================" + ANSI.RESET)
 
 
-def log_info(msg:str, end = "\n"):
+def log_info(msg:str, end:str = "\n") -> None:
+    color = ANSI.RESET + ANSI.WHITE
     msg = msg.replace("[", "[" + ANSI.BOLD + ANSI.MAGENTA)
-    msg = msg.replace("]", ANSI.RESET + ANSI.WHITE + "]")
-    print(ANSI.WHITE + msg + ANSI.RESET, end = end, flush = True)
+    msg = msg.replace("]", color + "]")
+    print(color + msg + ANSI.RESET, end = end, flush = True)
 
 
-def log_debug(msg:str, end = "\n"):
+def log_debug(msg:str, end:str = "\n") -> None:
+    color = ANSI.RESET + ANSI.GRAY
     msg = msg.replace("[", "[" + ANSI.BOLD + ANSI.BLUE)
-    msg = msg.replace("]", ANSI.RESET + ANSI.GRAY + "]")
-    print(" " + ANSI.GRAY + msg + ANSI.RESET, end = end, flush = True)
+    msg = msg.replace("]", color + "]")
+    print(color + " " + msg + ANSI.RESET, end = end, flush = True)
 
 
-def is_url(url: str) -> bool:
+def is_url(url:str) -> bool:
     try:
         parts = urllib.parse.urlparse(url)
         return all([parts.scheme, parts.netloc])
@@ -70,7 +74,7 @@ def is_url(url: str) -> bool:
         return False
 
 
-def normalize_url(url:str):
+def normalize_url(url:str) -> str:
     scheme, netloc, path, query, fragment = urllib.parse.urlsplit(url)
     normalized_path = os.path.normpath(path).replace(os.path.sep, "/")
     return urllib.parse.urlunsplit((scheme, netloc, normalized_path, query, fragment))
@@ -94,6 +98,11 @@ def http_get_json(url:str, bearer_token:str = None) -> dict[str, Any] | list:
 
 def gh_api_get(resource_path:str) -> dict[str, Any] | list:
     return http_get_json(f"https://api.github.com/{resource_path}", GITHUB_TOKEN)
+
+
+def gh_contents_api_get(repo_name:str, *repo_path:str) -> dict[str, Any] | list:
+    path = tuple(["repos", repo_name, "contents"]) + repo_path
+    return gh_api_get(re.sub("/+", "/", "/".join(path)))
 
 
 def get_at(obj:dict[str, Any], property_path:str, default:Any = None) -> Any:
@@ -136,41 +145,27 @@ def set_at(obj:dict[str, Any], property_path:str, value:Any) -> Any:
     return value
 
 
-def remove_at(obj:dict[str, Any], property_path:str) -> None:
-    path = property_path.split("/")
-    for key in path[:-1]:
-        if isinstance(obj, dict):
-            if key.isdigit() and int(key) in obj:
-                obj = obj[int(key)]
-            else:
-                if key not in obj:
-                    return  # nothing to do
-                obj = obj[key]
-        elif isinstance(obj, (list, tuple)):
-            if int(key) == len(obj):
-                return  # nothing to do
-            obj = obj[int(key)]
-        else:
-            if not hasattr(obj, key):
-                return  # nothing to do
-            obj = getattr(obj, key)
-    if path[-1] in obj:
-        del obj[path[-1]]
-
-
-def read_text(file_path:str):
+def read_text(file_path:str) -> str:
     file_path = os.path.normpath(file_path)
     log_debug(f"Loading [{os.path.relpath(file_path, os.getcwd())}]...")
     with open(file_path, "rt", encoding = 'utf-8') as fh:
         return fh.read()
 
 
-def write_text(file_path:str, content:str):
+def write_text(file_path:str, content:str) -> None:
     file_path = os.path.normpath(file_path)
     log_debug(f"Writing [{os.path.relpath(file_path, os.getcwd())}] with {len(content)} bytes...")
     os.makedirs(os.path.dirname(file_path), exist_ok = True)
     with open(file_path, "wt", encoding = 'utf-8') as fh:
         fh.write(content)
+
+
+def replace_between(searchIn:str, start_tag:str, end_tag:str, replace_with:str) -> str:
+    return re.sub(
+        re.compile(f'{re.escape(start_tag)}(.*?){re.escape(end_tag)}', re.DOTALL),
+        f'{start_tag}{replace_with}{end_tag}',
+        searchIn
+    )
 
 ##############################
 # main
@@ -183,8 +178,7 @@ GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
 
 log_info("Loading [syntaxes.sources.yaml]...")
 with open(f"{THIS_FILE_DIR}/syntaxes.sources.yaml") as fh:
-    syntaxes_sources_root = yaml.load(fh)
-    syntaxes_sources:dict[str, Any] = syntaxes_sources_root["sources"]
+    syntaxes_sources:dict[str, Any] = yaml.load(fh)["sources"]
 
 log_info("Loading [syntaxes.meta.yaml]...")
 with open(f"{THIS_FILE_DIR}/syntaxes.meta.yaml") as fh:
@@ -198,27 +192,29 @@ log_info(f"Download directory: [{DOWNLOAD_DIR}]")
 #
 # downloading meta info and syntax files
 #
-for index, (source_id, source_cfg) in enumerate(syntaxes_sources.items()):
+index:int = 0
+repo_id:str = None
+repo_cfg:dict[str, Any] = None
+for index, (repo_id, repo_cfg) in enumerate(syntaxes_sources.items()):
     if len(sys.argv) > 1:
-        if sys.argv[1] == source_id:
-            log_header(f"[1/1] Updating [{source_id}]...")
+        if sys.argv[1] == repo_id:
+            log_header(f"[1/1] Updating [{repo_id}]...")
         else:
             continue  # skip this source
     else:
-        log_header(f"[{index+1}/{len(syntaxes_sources)}] Updating [{source_id}]...")
+        log_header(f"[{index+1}/{len(syntaxes_sources)}] Updating [{repo_id}]...")
 
-    gh_repo_name = get_at(source_cfg, 'github/repo')
-    gh_repo_path = get_at(source_cfg, 'github/path', '')
-    gh_repo_path_contents_api = f"repos/{gh_repo_name}/contents/{gh_repo_path}"
+    gh_repo_name:str = get_at(repo_cfg, 'github/repo')
+    gh_repo_path:str = get_at(repo_cfg, 'github/path', '')
 
     log_info("Downloading meta info...")
-    collected_repo_meta = set_at(syntaxes_meta, f"{source_id}", {})
+    collected_repo_meta = set_at(syntaxes_meta, f"{repo_id}", {})
 
     #
     # locate package.json and LICENSE file
     #
     package_json_url:str = None
-    for gh_file_meta in gh_api_get(gh_repo_path_contents_api):
+    for gh_file_meta in gh_contents_api_get(gh_repo_name, gh_repo_path):
         if get_at(gh_file_meta, "type") == "file":
             match get_at(gh_file_meta, "name", "").casefold():
                 case "license" | "license.md" | "license.txt":
@@ -226,16 +222,16 @@ for index, (source_id, source_cfg) in enumerate(syntaxes_sources.items()):
                 case "package.json":
                     package_json_url = gh_file_meta["download_url"]
 
-    if get_at(source_cfg, "license-download", True):
+    if get_at(repo_cfg, "license-download", True):
         if not get_at(collected_repo_meta, "license_url"):
             if gh_repo_path:
                 # look for license file in repo root
-                for gh_file_meta in gh_api_get(f"repos/{gh_repo_name}/contents/"):
+                for gh_file_meta in gh_contents_api_get(gh_repo_name):
                     if get_at(gh_file_meta, "type") == "file":
                         match get_at(gh_file_meta, "name").casefold():
                             case "license" | "license.md" | "license.txt":
                                 collected_repo_meta["license_url"] = gh_file_meta["download_url"]
-            assert get_at(collected_repo_meta, "license_url"), f"ERROR: License file not found for [{source_id}]"
+            assert get_at(collected_repo_meta, "license_url"), f"ERROR: License file not found for [{repo_id}]"
 
     #
     # collect meta info
@@ -246,33 +242,33 @@ for index, (source_id, source_cfg) in enumerate(syntaxes_sources.items()):
         log_info(f"Collecting language meta...")
         for lang_info in get_at(package_json, "contributes/languages", {}):
             lang_id = lang_info["id"]
-            if get_at(source_cfg, f"languages/{lang_id}/ignore", False):
+            if get_at(repo_cfg, f"languages/{lang_id}/ignore", False):
                 log_debug(f"Ignoring language [{lang_id}]")
                 continue
             collected_lang_meta = set_at(collected_repo_meta, f"languages/{lang_id}", {})
             collected_lang_meta["label"] = get_at(lang_info, "aliases/0", f"{lang_id} File")
             collected_lang_meta["file_extensions"] = get_at(lang_info, "extensions", [])
             collected_lang_meta["file_names"] = get_at(lang_info, "filenames", [])
-            if get_at(lang_info, "configuration") and not get_at(source_cfg, f"languages/{lang_id}/langcfg"):
-                collected_lang_meta["langcfg_url"] = gh_api_get(f"{gh_repo_path_contents_api}/{lang_info['configuration']}")["download_url"]
+            if get_at(lang_info, "configuration") and not get_at(repo_cfg, f"languages/{lang_id}/langcfg"):
+                collected_lang_meta["langcfg_url"] = gh_contents_api_get(gh_repo_name, gh_repo_path, lang_info['configuration'])["download_url"]
 
         log_info(f"Collecting grammar meta...")
         for grammar_info in get_at(package_json, "contributes/grammars", {}):
             lang_id = get_at(grammar_info, "language")
-            if get_at(source_cfg, f"languages/{lang_id}/ignore", False):
+            if get_at(repo_cfg, f"languages/{lang_id}/ignore", False):
                 log_debug(f"Ignoring grammar [{lang_id}]")
                 continue
             if lang_id:
                 collected_lang_meta = collected_repo_meta["languages"][lang_id]
                 collected_lang_meta["scope_name"] = grammar_info["scopeName"]
-                if not get_at(source_cfg, f"languages/{lang_id}/grammar"):
-                    collected_lang_meta["grammar_url"] = gh_api_get(f"{gh_repo_path_contents_api}/{grammar_info['path']}")["download_url"]
-    elif not get_at(source_cfg, "languages"):
+                if not get_at(repo_cfg, f"languages/{lang_id}/grammar"):
+                    collected_lang_meta["grammar_url"] = gh_contents_api_get(gh_repo_name, gh_repo_path, grammar_info['path'])["download_url"]
+    elif not get_at(repo_cfg, "languages"):
         raise "package.json not found!"
 
-    if get_at(source_cfg, "languages"):
+    if get_at(repo_cfg, "languages"):
         log_info(f"Collecting language meta...")
-        for lang_id, lang_info in get_at(source_cfg, "languages").items():
+        for lang_id, lang_info in get_at(repo_cfg, "languages").items():
             if get_at(lang_info, "ignore", False):
                 continue
 
@@ -283,7 +279,7 @@ for index, (source_id, source_cfg) in enumerate(syntaxes_sources.items()):
                 collected_lang_meta["label"] = get_at(lang_info, "label", collected_lang_meta["label"])
                 collected_lang_meta["scope_name"] = get_at(lang_info, "scope_name", collected_lang_meta["scope_name"])
                 if get_at(lang_info, 'grammar'):
-                    collected_lang_meta["grammar_url"] = gh_api_get(f"{gh_repo_path_contents_api}/{lang_info['grammar']}")["download_url"]
+                    collected_lang_meta["grammar_url"] = gh_contents_api_get(gh_repo_name, gh_repo_path, lang_info['grammar'])["download_url"]
                 collected_lang_meta["file_extensions"] = get_at(lang_info, "file_extensions", collected_lang_meta["file_extensions"])
                 collected_lang_meta["file_names"] = get_at(lang_info, "file_names", collected_lang_meta["file_names"])
                 collected_lang_meta["file_patterns"] = get_at(lang_info, "file_patterns", [])
@@ -291,7 +287,7 @@ for index, (source_id, source_cfg) in enumerate(syntaxes_sources.items()):
                 collected_lang_meta = set_at(collected_repo_meta, f"languages/{lang_id}", {})
                 collected_lang_meta["label"] = lang_info["label"]
                 collected_lang_meta["scope_name"] = lang_info["scope_name"]
-                collected_lang_meta["grammar_url"] = gh_api_get(f"{gh_repo_path_contents_api}/{lang_info['grammar']}")["download_url"]
+                collected_lang_meta["grammar_url"] = gh_contents_api_get(gh_repo_name, gh_repo_path, lang_info['grammar'])["download_url"]
                 collected_lang_meta["file_extensions"] = get_at(lang_info, "file_extensions")
                 collected_lang_meta["file_names"] = get_at(lang_info, "file_names")
                 collected_lang_meta["file_patterns"] = get_at(lang_info, "file_patterns", [])
@@ -301,19 +297,19 @@ for index, (source_id, source_cfg) in enumerate(syntaxes_sources.items()):
                 if is_url(lang_cfg_file):
                     collected_lang_meta["langcfg_url"] = lang_cfg_file
                 else:
-                    collected_lang_meta["langcfg_url"] = gh_api_get(f"{gh_repo_path_contents_api}/{lang_info['langcfg']}")["download_url"]
+                    collected_lang_meta["langcfg_url"] = gh_contents_api_get(gh_repo_name, gh_repo_path, lang_info['langcfg'])["download_url"]
 
             example_file:str = get_at(lang_info, "example")
             if example_file:
                 if is_url(example_file):
                     collected_lang_meta["example_url"] = example_file
                 else:
-                    collected_lang_meta["example_url"] = gh_api_get(f"{gh_repo_path_contents_api}/{lang_info['example']}")["download_url"]
+                    collected_lang_meta["example_url"] = gh_contents_api_get(gh_repo_name, gh_repo_path, lang_info['example'])["download_url"]
 
     #
     # download files
     #
-    syntax_dir = os.path.join(DOWNLOAD_DIR, source_id)
+    syntax_dir = os.path.join(DOWNLOAD_DIR, repo_id)
 
     # download LICENSE file
     license_url = get_at(collected_repo_meta, "license_url")
@@ -354,15 +350,6 @@ for index, (source_id, source_cfg) in enumerate(syntaxes_sources.items()):
     with open(f"{THIS_FILE_DIR}/syntaxes.meta.yaml", 'w') as fh:
         fh.write("# AUTO-GENERATED FILE - Do not edit manually; changes will be lost.\n")
         yaml.dump(syntaxes_meta_root, fh)
-
-
-def replace_between(searchIn:str, start_tag:str, end_tag:str, replace_with:str):
-    return re.sub(
-        re.compile(f'{re.escape(start_tag)}(.*?){re.escape(end_tag)}', re.DOTALL),
-        f'{start_tag}{replace_with}{end_tag}',
-        searchIn
-    )
-
 
 #
 # updating plugin.xml

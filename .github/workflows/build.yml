@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
+# SPDX-FileContributor: Sebastian Thomschke
+# SPDX-License-Identifier: EPL-2.0
+# SPDX-ArtifactOfProjectHomePage: https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin
+#
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
 name: Build
 
@@ -60,12 +65,14 @@ jobs:
     - name: Git Checkout
       uses: actions/checkout@v4 # https://github.com/actions/checkout
 
+
     - name: Verify Syntax Registration
       run: |
         set -euo pipefail
 
         pip install ruamel.yaml
         python plugin/verify-syntax-registrations.py
+
 
     - name: Configure fast APT repository mirror
       uses: vegardit/fast-apt-mirror.sh@v1
@@ -97,7 +104,7 @@ jobs:
     - name: "Install: Maven"
       uses: stCarolas/setup-maven@v4.5 # https://github.com/stCarolas/setup-maven
       with:
-        maven-version: 3.9.5
+        maven-version: 3.9.6
 
 
     - name: Get Signing Certificate
@@ -233,6 +240,7 @@ jobs:
         GH_TOKEN: ${{ github.token }}
       run: |
         gh extension install actions/gh-actions-cache
+        # "|| true" is to avoid "Error: Resource not accessible by integration" from failing the job 
         gh actions-cache delete ${{ steps.cache-restore.outputs.cache-primary-key }} --confirm || true
 
     - name: "Cache: Update"

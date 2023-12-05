@@ -12,6 +12,7 @@ updates:
       prefix-development: chore
       include: scope
     labels:
+      - pinned
       - dependencies
       - gha
   - package-ecosystem: maven
@@ -25,5 +26,6 @@ updates:
       prefix-development: chore
       include: scope
     labels:
+      - pinned
       - dependencies
       - mvn

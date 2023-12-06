@@ -105,7 +105,7 @@ def gh_contents_api_get(repo_name:str, *repo_path:str) -> dict[str, Any] | list:
     return gh_api_get(re.sub("/+", "/", "/".join(path)))
 
 
-def get_at(obj:dict[str, Any], property_path:str, default:Any = None) -> Any:
+def get_at(obj:object | dict[str, Any], property_path:str, default:Any = None) -> Any:
     for key in property_path.split("/"):
         if isinstance(obj, dict):
             if key.isdigit() and int(key) in obj:
@@ -123,7 +123,7 @@ def get_at(obj:dict[str, Any], property_path:str, default:Any = None) -> Any:
     return obj
 
 
-def set_at(obj:dict[str, Any], property_path:str, value:Any) -> Any:
+def set_at(obj:object | dict[str, Any], property_path:str, value:Any) -> Any:
     path = property_path.split("/")
     for key in path[:-1]:
         if isinstance(obj, dict):

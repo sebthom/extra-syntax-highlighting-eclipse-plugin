@@ -1,0 +1,11 @@
+# Entry for a person
+dn: cn=John Doe,ou=People,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: John Doe
+sn: Doe
+givenName: John
+mail: john.doe@example.com
+telephoneNumber: +1 123-4567

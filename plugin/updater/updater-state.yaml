@@ -1,0 +1,729 @@
+# AUTO-GENERATED FILE - Do not edit manually; changes will be lost.
+extensions:
+  apache-http:
+    github:
+      repo: mrmlnc/vscode-apache
+      ref: master
+      commit: 0585b0bb3d390fc541aa27cfcfb83b3204156be3
+    languages:
+      apacheconf:
+        label: Apache HTTP Config
+        scope-name: source.apacheconf
+        file-extensions:
+        - .conf
+        - .htaccess
+        - .htgroups
+        - .htpasswd
+        - conf
+        - htaccess
+        - htgroups
+        - htpasswd
+  astro:
+    github:
+      repo: withastro/language-tools
+      path: packages/vscode
+      ref: main
+      commit: 7de75d39e7a03368bf0e1429dbbd98b9ab6d0c36
+    languages:
+      astro:
+        label: Astro
+        scope-name: source.astro
+        file-extensions:
+        - .astro
+  cpp:
+    github:
+      repo: microsoft/vscode
+      path: extensions/cpp
+      ref: main
+      commit: 86d1a94cca007f64e442c1aa0b6af60a40c1ceea
+    languages:
+      c:
+        label: C
+        scope-name: source.c
+        upstream-url: https://github.com/jeff-hykin/better-c-syntax/commit/34712a6106a4ffb0a04d2fa836fd28ff6c5849a4
+        file-extensions:
+        - .c
+        - .i
+      cpp:
+        label: C++
+        scope-name: source.cpp
+        upstream-url: https://github.com/jeff-hykin/better-cpp-syntax/commit/f1d127a8af2b184db570345f0bb179503c47fdf6
+        file-extensions:
+        - .c++
+        - .cc
+        - .cpp
+        - .cxx
+        - .h
+        - .h++
+        - .h.in
+        - .hh
+        - .hpp
+        - .hpp.in
+        - .hxx
+        - .ii
+        - .inl
+        - .ino
+        - .ipp
+        - .ixx
+        - .tpp
+        - .txx
+      cuda-cpp:
+        label: CUDA C++
+        scope-name: source.cuda-cpp
+        upstream-url: https://github.com/NVIDIA/cuda-cpp-grammar/commit/81e88eaec5170aa8585736c63627c73e3589998c
+        file-extensions:
+        - .cu
+        - .cuh
+  csharp:
+    github:
+      repo: microsoft/vscode
+      path: extensions/csharp
+      ref: main
+      commit: 86d1a94cca007f64e442c1aa0b6af60a40c1ceea
+    languages:
+      csharp:
+        label: C#
+        scope-name: source.cs
+        upstream-url: https://github.com/dotnet/csharp-tmLanguage/commit/7bf5709ac1a713e340a618d1b41f44a043e393c6
+        file-extensions:
+        - .cake
+        - .cs
+        - .csx
+  dart:
+    github:
+      repo: microsoft/vscode
+      path: extensions/dart
+      ref: main
+      commit: 86d1a94cca007f64e442c1aa0b6af60a40c1ceea
+    languages:
+      dart:
+        label: Dart
+        scope-name: source.dart
+        upstream-url: https://github.com/dart-lang/dart-syntax-highlight/commit/0a6648177bdbb91a4e1a38c16e57ede0ccba4f18
+        file-extensions:
+        - .dart
+  dot:
+    github:
+      repo: textmate/graphviz.tmbundle
+      path: Syntaxes
+      ref: master
+      commit: d1d489f893a0e6ef5d9021bf7dc1ffd08b3f9b90
+    languages:
+      dot:
+        label: GraphViz DOT File
+        scope-name: source.dot
+        file-extensions:
+        - .dot
+  er:
+    github:
+      repo: mikkel-ol/vsc-er-syntax-highlighting
+      ref: master
+      commit: 160f6061a525858e4a17df97a4e3b51d0ff9c1bd
+    languages:
+      er:
+        label: Entity Relationship
+        scope-name: source.er
+        file-extensions:
+        - .er
+  glsl:
+    github:
+      repo: GeForceLegend/vscode-glsl
+      ref: master
+      commit: 717034785b6128d7a8ca85f507bddf33eba4c3e7
+    languages:
+      glsl:
+        label: OpenGL Shading Language
+        scope-name: source.glsl
+        file-extensions:
+        - .comp
+        - .csh
+        - .frag
+        - .fs
+        - .fsh
+        - .fshader
+        - .geom
+        - .glsl
+        - .gs
+        - .gsh
+        - .gshader
+        - .mesh
+        - .rahit
+        - .rcall
+        - .rchit
+        - .rgen
+        - .rint
+        - .rmiss
+        - .task
+        - .tesc
+        - .tese
+        - .vert
+        - .vs
+        - .vsh
+        - .vshader
+  graphql:
+    github:
+      repo: graphql/graphiql
+      path: packages/vscode-graphql-syntax
+      ref: main
+      commit: a80801970e095e493eb0fda7687766f103bf701e
+    languages:
+      graphql:
+        label: GraphQL
+        scope-name: source.graphql
+        file-extensions:
+        - .gql
+        - .graphql
+        - .graphqls
+  haxe:
+    github:
+      repo: vshaxe/haxe-TmLanguage
+      ref: master
+      commit: b3cb0d3a6835938603d006fce402205fa16c11dd
+    languages:
+      haxe:
+        label: Haxe Source File
+        scope-name: source.hx
+        file-extensions:
+        - .hx
+  hcl:
+    github:
+      repo: hashicorp/syntax
+      ref: main
+      commit: c98e6521755f840c5171f43682518465b691f392
+    languages:
+      hcl:
+        label: HCL Config File
+        scope-name: source.hcl
+        file-extensions:
+        - .hcl
+      sentinel:
+        label: HashiCorp Sentinel
+        scope-name: source.sentinel
+        file-extensions:
+        - .sentinel
+      terraform:
+        label: HashiCorp Terraform
+        scope-name: source.hcl.terraform
+        file-extensions:
+        - .tf
+        - .tfvars
+  ini:
+    github:
+      repo: microsoft/vscode
+      path: extensions/ini
+      ref: main
+      commit: 86d1a94cca007f64e442c1aa0b6af60a40c1ceea
+    languages:
+      ini:
+        label: INI Config File
+        scope-name: source.ini
+        upstream-url: https://github.com/textmate/ini.tmbundle/commit/2af0cbb0704940f967152616f2f1ff0aae6287a6
+        file-extensions:
+        - .ini
+  jinja:
+    github:
+      repo: samuelcolvin/jinjahtml-vscode
+      ref: main
+      commit: 28e422433581d92f72252f1af1f67eeaab07c812
+    languages:
+      jinja-cisco:
+        label: Jinja Cisco Config
+        scope-name: source.cisco.jinja
+        file-extensions:
+        - .cisco.j2
+        - .cisco.jinja
+        - .cisco.jinja2
+        - .ios.j2
+        - .ios.jinja
+        - .ios.jinja2
+      jinja-cpp:
+        label: Jinja C++
+        scope-name: source.cpp.jinja
+        file-extensions:
+        - .c.j2
+        - .c.jinja
+        - .c.jinja2
+        - .cpp.j2
+        - .cpp.jinja
+        - .cpp.jinja2
+        - .h.j2
+        - .h.jinja
+        - .h.jinja2
+      jinja-css:
+        label: Jinja CSS
+        scope-name: text.css.jinja
+        file-extensions:
+        - .css.j2
+        - .css.jinja
+        - .css.jinja2
+      jinja-cy:
+        label: Jinja Cython
+        scope-name: source.cython.jinja
+        file-extensions:
+        - pxd.j2
+        - pxd.jinja
+        - pxd.jinja2
+        - pxi.j2
+        - pxi.jinja
+        - pxi.jinja2
+        - pyx.j2
+        - pyx.jinja
+        - pyx.jinja2
+      jinja-dockerfile:
+        label: Jinja Dockerfile
+        scope-name: source.dockerfile.jinja
+        file-extensions:
+        - .dockerfile.j2
+        - .dockerfile.jinja
+        - .dockerfile.jinja2
+        file-names:
+        - Dockerfile.j2
+        - Dockerfile.jinja
+        - Dockerfile.jinja2
+      jinja-groovy:
+        label: Jinja Groovy
+        scope-name: source.groovy.jinja
+        file-extensions:
+        - .groovy.j2
+        - .groovy.jinja
+        - .groovy.jinja2
+      jinja-html:
+        label: Jinja HTML
+        scope-name: text.html.jinja
+        file-extensions:
+        - .html.j2
+        - .j2
+        - .jinja
+        - .jinja2
+      jinja-java:
+        label: Jinja Java
+        scope-name: source.java.jinja
+        file-extensions:
+        - .java.j2
+        - .java.jinja
+        - .java.jinja2
+      jinja-js:
+        label: Jinja JavaScript
+        scope-name: source.js.jinja
+        file-extensions:
+        - js.j2
+        - js.jinja2
+      jinja-json:
+        label: Jinja JSON
+        scope-name: text.json.jinja
+        file-extensions:
+        - .code-workspace.j2
+        - .code-workspace.jinja
+        - .code-workspace.jinja2
+        - .json.j2
+        - .json.jinja
+        - .json.jinja2
+      jinja-latex:
+        label: Jinja LaTeX
+        scope-name: text.latex.jinja
+        file-extensions:
+        - .latex.j2
+        - .latex.jinja2
+        - .tex.j2
+        - .tex.jinja2
+      jinja-lua:
+        label: Jinja Lua
+        scope-name: text.lua.jinja
+        file-extensions:
+        - .lua.j2
+        - .lua.jinja
+        - .lua.jinja2
+      jinja-md:
+        label: Jinja Markdown
+        scope-name: text.html.markdown.jinja
+        file-extensions:
+        - .md.j2
+        - .md.jinja
+        - .md.jinja2
+      jinja-nginx:
+        label: Jinja Nginx
+        scope-name: source.nginx.jinja
+        file-extensions:
+        - .conf.j2
+        - .conf.jinja
+        - .conf.jinja2
+      jinja-php:
+        label: Jinja PHP
+        scope-name: source.php.jinja
+        file-extensions:
+        - .php.j2
+        - .php.jinja
+        - .php.jinja2
+      jinja-properties:
+        label: Jinja Properties/ini/Conf
+        scope-name: source.ini.jinja
+        file-extensions:
+        - .cfg.j2
+        - .conf.j2
+        - .desktop.j2
+        - .directory.j2
+        - .ini.j2
+        - .properties.j2
+      jinja-py:
+        label: Jinja Python
+        scope-name: source.python.jinja
+        file-extensions:
+        - py.j2
+        - py.jinja
+        - py.jinja2
+        - pyi.j2
+        - pyi.jinja
+        - pyi.jinja2
+      jinja-rb:
+        label: Jinja Ruby
+        scope-name: text.ruby.jinja
+        file-extensions:
+        - rb.j2
+        - rb.jinja2
+        - rbw.j2
+        - rbw.jinja2
+      jinja-rust:
+        label: Jinja Rust
+        scope-name: source.rust.jinja
+        file-extensions:
+        - .rs.j2
+        - .rs.jinja
+        - .rs.jinja2
+      jinja-shell:
+        label: Jinja Shell Script
+        scope-name: source.shell.jinja
+        file-extensions:
+        - .bash.j2
+        - .bash_aliases.j2
+        - .bash_login.j2
+        - .bash_logout.j2
+        - .bash_profile.j2
+        - .bashrc.j2
+        - .ebuild.j2
+        - .env.j2
+        - .env.jinja
+        - .env.jinja2
+        - .install.j2
+        - .ksh.j2
+        - .profile.j2
+        - .sh.j2
+        - .zlogin.j2
+        - .zlogout.j2
+        - .zprofile.j2
+        - .zsh-theme.j2
+        - .zsh.j2
+        - .zshenv.j2
+        - .zshrc.j2
+      jinja-sql:
+        label: Jinja SQL
+        scope-name: source.sql.jinja
+        file-extensions:
+        - .sql.j2
+        - .sql.jinja
+        - .sql.jinja2
+      jinja-systemd:
+        label: Jinja Systemd Unit File
+        scope-name: source.systemd.jinja
+        file-extensions:
+        - .automount.j2
+        - .automount.jinja
+        - .automount.jinja2
+        - .device.j2
+        - .device.jinja
+        - .device.jinja2
+        - .link.j2
+        - .link.jinja
+        - .link.jinja2
+        - .mount.j2
+        - .mount.jinja
+        - .mount.jinja2
+        - .netdev.j2
+        - .netdev.jinja
+        - .netdev.jinja2
+        - .network.j2
+        - .network.jinja
+        - .network.jinja2
+        - .path.j2
+        - .path.jinja
+        - .path.jinja2
+        - .scope.j2
+        - .scope.jinja
+        - .scope.jinja2
+        - .service.j2
+        - .service.jinja
+        - .service.jinja2
+        - .slice.j2
+        - .slice.jinja
+        - .slice.jinja2
+        - .snapshot.j2
+        - .snapshot.jinja
+        - .snapshot.jinja2
+        - .socket.j2
+        - .socket.jinja
+        - .socket.jinja2
+        - .swap.j2
+        - .swap.jinja
+        - .swap.jinja2
+        - .target.j2
+        - .target.jinja
+        - .target.jinja2
+        - .timer.j2
+        - .timer.jinja
+        - .timer.jinja2
+      jinja-terraform:
+        label: Jinja Terraform
+        scope-name: source.terraform.jinja
+        file-extensions:
+        - .hcl.j2
+        - .hcl.jinja
+        - .hcl.jinja2
+        - .tf.j2
+        - .tf.jinja
+        - .tf.jinja2
+        - .tfvars.j2
+        - .tfvars.jinja
+        - .tfvars.jinja2
+      jinja-toml:
+        label: Jinja TOML
+        scope-name: text.toml.jinja
+        file-extensions:
+        - .toml.j2
+        - .toml.jinja
+        - .toml.jinja2
+      jinja-xml:
+        label: Jinja XML
+        scope-name: text.xml.jinja
+        file-extensions:
+        - .xml.j2
+        - .xml.jinja
+        - .xml.jinja2
+      jinja-yaml:
+        label: Jinja YAML
+        scope-name: text.yaml.jinja
+        file-extensions:
+        - .sls
+        - .yaml.j2
+        - .yaml.jinja
+        - .yaml.jinja2
+        - .yml.j2
+        - .yml.jinja
+        - .yml.jinja2
+  kotlin:
+    github:
+      repo: fwcd/vscode-kotlin
+      ref: main
+      commit: c1371a435aedf8690d3c9cbbe4c42a215915630d
+    languages:
+      kotlin:
+        label: Kotlin
+        scope-name: source.kotlin
+        file-extensions:
+        - .kt
+        - .kts
+  ldif:
+    github:
+      repo: FlashSystems/LDIF-Syntax
+      ref: master
+      commit: f00c21eb1cc5fe5966cf6ef158e854a65449a9fa
+    languages:
+      ldif:
+        label: LDIF File
+        scope-name: text.ldif
+        file-extensions:
+        - .ldif
+  lua:
+    github:
+      repo: microsoft/vscode
+      path: extensions/lua
+      ref: main
+      commit: 86d1a94cca007f64e442c1aa0b6af60a40c1ceea
+    languages:
+      lua:
+        label: Lua
+        scope-name: source.lua
+        upstream-url: https://github.com/sumneko/lua.tmbundle/commit/94ce82cc4d45f82641a5252d7a7fd9e28c875adc
+        file-extensions:
+        - .lua
+        - .rockspec
+  make:
+    github:
+      repo: microsoft/vscode
+      path: extensions/make
+      ref: main
+      commit: 86d1a94cca007f64e442c1aa0b6af60a40c1ceea
+    languages:
+      makefile:
+        label: Makefile
+        scope-name: source.makefile
+        upstream-url: https://github.com/fadeevab/make.tmbundle/commit/1d4c0b541959995db098df751ffc129da39a294b
+        file-extensions:
+        - .mak
+        - .mk
+        file-names:
+        - GNUmakefile
+        - Makefile
+        - OCamlMakefile
+        - makefile
+        file-patterns:
+        - '*Makefile'
+  mako:
+    github:
+      repo: marconi/mako-tmbundle
+      path: Syntaxes
+      ref: master
+      commit: 45037e4e98f0c215b55b194d303811d43b85407c
+    languages:
+      mako:
+        label: Mako Template
+        scope-name: text.html.mako
+        file-extensions:
+        - .mako
+  markdown:
+    github:
+      repo: wooorm/markdown-tm-language
+      ref: main
+      commit: 11eeefed6b5b13f0bfda019972ab96405a10a8fd
+    languages:
+      markdown:
+        label: Markdown
+        scope-name: text.md
+        file-extensions:
+        - livemd
+        - markdown
+        - md
+        - mdown
+        - mdwn
+        - mkd
+        - mkdn
+        - mkdown
+        - ronn
+        - scd
+        - workbook
+  nushell:
+    github:
+      repo: nushell/vscode-nushell-lang
+      ref: main
+      commit: 25e39a9b01e12aff0fac319fce05ba1d1a60edcc
+    languages:
+      nushell:
+        label: nushell
+        scope-name: source.nushell
+        file-extensions:
+        - .nu
+  php:
+    github:
+      repo: microsoft/vscode
+      path: extensions/php
+      ref: main
+      commit: 86d1a94cca007f64e442c1aa0b6af60a40c1ceea
+    languages:
+      php:
+        label: PHP
+        scope-name: text.html.php
+        upstream-url: https://github.com/KapitanOczywisty/language-php/commit/ff64523c94c014d68f5dec189b05557649c5872a
+        file-extensions:
+        - .ctp
+        - .php
+        - .php4
+        - .php5
+        - .phtml
+  plantuml:
+    github:
+      repo: qjebbs/vscode-plantuml
+      ref: master
+      commit: 107e4fa397a6f06c8debad3be41b4c6117e49c6b
+    languages:
+      plantuml:
+        label: PlantUML
+        scope-name: source.wsd
+        file-extensions:
+        - .iuml
+        - .plantuml
+        - .pu
+        - .puml
+        - .wsd
+  powershell:
+    github:
+      repo: microsoft/vscode
+      path: extensions/powershell
+      ref: main
+      commit: 86d1a94cca007f64e442c1aa0b6af60a40c1ceea
+    languages:
+      powershell:
+        label: PowerShell
+        scope-name: source.powershell
+        upstream-url: https://github.com/PowerShell/EditorSyntax/commit/742f0b5d4b60f5930c0b47fcc1f646860521296e
+        file-extensions:
+        - .ps1
+        - .psd1
+        - .psm1
+        - .psrc
+        - .pssc
+  prisma:
+    github:
+      repo: prisma/language-tools
+      path: packages/vscode
+      ref: main
+      commit: 6d1684c2b78b7d03d102d08767466c21f70ef1f0
+    languages:
+      prisma:
+        label: Prisma
+        scope-name: source.prisma
+        file-extensions:
+        - .prisma
+  svelte:
+    github:
+      repo: sveltejs/language-tools
+      path: packages/svelte-vscode
+      ref: master
+      commit: bc820642a151975f19090cfc5f0c2bd0cd928f1a
+    languages:
+      svelte:
+        label: Svelte
+        scope-name: source.svelte
+        file-extensions:
+        - .svelte
+  swift:
+    github:
+      repo: microsoft/vscode
+      path: extensions/swift
+      ref: main
+      commit: 86d1a94cca007f64e442c1aa0b6af60a40c1ceea
+    languages:
+      swift:
+        label: Swift
+        scope-name: source.swift
+        upstream-url: https://github.com/jtbandes/swift-tmlanguage/commit/ab893c684dd7eeb7c249139e29e931334316fda7
+        file-extensions:
+        - .swift
+  toml:
+    github:
+      repo: tamasfe/taplo
+      path: editors/vscode
+      ref: master
+      commit: 079d7a91fea64ff9da7abfda5f0ca7bbf9dfb1c0
+    languages:
+      toml:
+        label: TOML Config File
+        scope-name: source.toml
+        file-extensions:
+        - .toml
+        file-names:
+        - Cargo.lock
+  vb:
+    github:
+      repo: microsoft/vscode
+      path: extensions/vb
+      ref: main
+      commit: 86d1a94cca007f64e442c1aa0b6af60a40c1ceea
+    languages:
+      vb:
+        label: Visual Basic
+        scope-name: source.asp.vb.net
+        upstream-url: https://github.com/textmate/asp.vb.net.tmbundle/commit/72d44550b3286d0382d7be0624140cf97857ff69
+        file-extensions:
+        - .bas
+        - .brs
+        - .vb
+        - .vba
+        - .vbs

@@ -12,6 +12,9 @@ defaults:
   run:
     shell: bash
 
+env:
+  JAVA_VERSION: 17
+
 jobs:
 
   ###########################################################
@@ -24,6 +27,17 @@ jobs:
     - name: Git Checkout
       uses: actions/checkout@v4 # https://github.com/actions/checkout
 
+    - name: "Install: JDK ${{ env.JAVA_VERSION }}"
+      uses: actions/setup-java@v4 # https://github.com/actions/setup-java
+      with:
+        distribution: temurin
+        java-version: ${{ env.JAVA_VERSION }}
+
+    - name: "Install: Maven"
+      uses: stCarolas/setup-maven@v4.5 # https://github.com/stCarolas/setup-maven
+      with:
+        maven-version: 3.9.6
+
     - name: Update Syntax Files 
       id: update_syntaxes
       env:
@@ -31,8 +45,7 @@ jobs:
       run: |
         set -euo pipefail
 
-        pip install ruamel.yaml
-        python plugin/update-syntaxes.py
+        bash plugin/updater/run.sh
 
         updates=$(git status --porcelain plugin/syntaxes)
         if [[ -z $updates ]]; then

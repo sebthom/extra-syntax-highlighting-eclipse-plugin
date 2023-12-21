@@ -1,0 +1,340 @@
+content-type-prefix: extra-syntax-highlighting
+content-type-priority: normal # low|normal|high
+
+targets:
+  state-file: updater-state.yaml
+  source-repos-cache-dir: "{TEMP_DIR}/syntax-repos"
+  readme-md: ../../README.md
+  plugin-xml: ../plugin.xml
+  syntaxes-dir: ../syntaxes
+
+sources:
+  # entry format for none-vscode-extension repo:
+  #   <source-id>:  # used for the download path at grammars/<source-id>/...
+  #     type: custom
+  #     github:  # REQUIRED
+  #       repo: <repo-name>             # REQUIRED
+  #       path: <folderpath_in_repo>    # optional
+  #       ref:  <branch_name>|<tag>     # optional
+  #     license-download: <true|false>  # optional. defaults to true
+  #     languages:  # REQUIRED
+  #       <language-id>:  # REQUIRED, id of then language to register
+  #         label:        # REQUIRED
+  #         scope-name:   # REQUIRED, textmate grammar scope name
+  #         grammar: <filepath_in_repo|url>  # REQUIRED
+  #         update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+  #         langcfg: <filepath_in_repo|url>  # optional
+  #         example: <filepath_in_repo|url>  # optional
+  #         file-extensions: []              # optional
+  #         file-names:      []              # optional
+  #         file_patterns:   []              # optional
+  #     inline-grammars: # optional
+  #       <scope-name>:
+  #         grammar: <filepath_in_repo>      # REQUIRED
+  #         update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+
+  # entry format for repo with single VSCode extension:
+  # <source-id>:  # used for the download path at grammars/<source-id>/...
+  #     type: vscode-extension
+  #     github:  # REQUIRED
+  #       repo: <repo-name>             # REQUIRED
+  #       path: <folderpath_in_repo>    # optional
+  #       ref:  <branch_name>|<tag>     # optional
+  #     license-download: <true|false>  # optional. defaults to true
+  #     languages:  # optional
+  #       <language-id>:       # existing id as defined in package.json to override values
+  #         ignored: <reason>  # optional. if set, this language is ignored
+  #         label:             # optional
+  #         scope-name:        # optional
+  #         grammar: <filepath_in_repo|url>  # optional
+  #         update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+  #         langcfg: <filepath_in_repo|url>  # optional
+  #         example: <filepath_in_repo|url>  # optional
+  #         file-extensions: []              # optional
+  #         file-names:      []              # optional
+  #         file_patterns:   []              # optional
+  #     inline-grammars: # optional
+  #       <scope-name>:   # existing scope-name as defined in package.json to override values
+  #         ignored: <reason>                # optional. if set, this language is ignored
+  #         grammar: <filepath_in_repo>      # optional
+  #         update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+
+  # entry format for repo with multiple VSCode extensions:
+  # <source-id>:
+  #     type: vscode-extensions
+  #     github:  # REQUIRED
+  #       repo: <repo-name>             # REQUIRED
+  #       path: <folderpath_in_repo>    # optional
+  #       ref:  <branch_name>|<tag>     # optional
+  #     license-download: <true|false>  # optional. defaults to true
+  #     include-all-by-default: <true|false> # optional, specifies if all extensions shall be installed or only the explicitly listed once. defaults to true
+  #     extensions:  # optional
+  #       <exension-id>:  # name as defined in package.json, used for the download path at grammars/<exension-id>/...
+  #         ignored: <reason>  # optional. if set, this extension is ignored
+  #         languages:         # optional
+  #           <language-id>:       # existing id as defined in package.json to override values
+  #             ignored: <reason>  # optional. if set, this language is ignored
+  #             label:             # optional
+  #             scope-name:        # optional
+  #             grammar: <filepath_in_repo|url>  # optional
+  #             update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+  #             langcfg: <filepath_in_repo|url>  # optional
+  #             example: <filepath_in_repo|url>  # optional
+  #             file-extensions: []              # optional
+  #             file-names:      []              # optional
+  #             file_patterns:   []              # optional
+  #         inline-grammars: # optional
+  #           <scope-name>:   # existing scope-name as defined in package.json to override values
+  #             ignored: <reason>                # optional. if set, this language is ignored
+  #             grammar: <filepath_in_repo>      # optional
+  #             update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+
+  apache-http:
+    type: vscode-extension
+    github:
+      repo: mrmlnc/vscode-apache
+    languages:
+      apacheconf:
+        label: Apache HTTP Config
+
+  astro:
+    type: vscode-extension
+    github:
+      repo: withastro/language-tools
+      path: packages/vscode
+    languages:
+      astro:
+        example: https://raw.githubusercontent.com/withastro/astro/main/examples/basics/src/pages/index.astro
+
+  dot:
+    type: custom
+    github:
+      repo: textmate/graphviz.tmbundle
+      path: Syntaxes
+    languages:
+      dot:
+        label: GraphViz DOT File
+        grammar: DOT.plist
+        scope-name: source.dot
+        file-extensions:
+        - .dot
+    license-download: false
+
+  er:
+    type: vscode-extension
+    github:
+      repo: mikkel-ol/vsc-er-syntax-highlighting
+    languages:
+      er:
+        example: example.er
+
+  glsl:
+    type: vscode-extension
+    github:
+      repo: GeForceLegend/vscode-glsl
+    languages:
+      glsl:
+        example: sample/test.glsl
+
+  graphql:
+    type: vscode-extension
+    github:
+      repo: graphql/graphiql
+      path: packages/vscode-graphql-syntax
+    languages:
+      graphql:
+        example: https://raw.githubusercontent.com/ropensci/graphql/master/tests/testthat/kitchen-sink.graphql
+
+  haxe:
+    type: custom
+    github:
+      repo: vshaxe/haxe-TmLanguage
+    languages:
+      haxe:
+        label: Haxe Source File
+        grammar: haxe.tmLanguage
+        langcfg: https://raw.githubusercontent.com/vshaxe/vshaxe/master/configurations/haxe.language-configuration.json
+        scope-name: source.hx
+        file-extensions:
+        - .hx
+
+  hcl:
+    type: vscode-extension
+    github:
+      repo: hashicorp/syntax
+    languages:
+      hcl:
+        label: HCL Config File
+        example: tests/snapshot/hcl/basic.hcl
+      sentinel:
+        label: HashiCorp Sentinel
+        example: tests/snapshot/sentinel/basic.sentinel
+      terraform:
+        label: HashiCorp Terraform
+        example: tests/snapshot/terraform/basic.tf
+
+  jinja:
+    type: vscode-extension
+    github:
+      repo: samuelcolvin/jinjahtml-vscode
+    languages:
+      jinja:
+        ignored: true
+      jinja-dockerfile:
+        example: examples/Dockerfile.j2
+      jinja-html:
+        example: examples/testing.jinja
+      jinja-js:
+        example: examples/testing.js.j2
+      jinja-md:
+        example: examples/testing.md.j2
+      jinja-py:
+        example: examples/testing.py.j2
+      jinja-systemd:
+        example: examples/testing.service.j2
+      jinja-sql:
+        example: examples/testing.sql.j2
+      jinja-xml:
+        example: examples/testing.xml.j2
+      jinja-yaml:
+        example: examples/testing.yaml.j2
+
+  kotlin:
+    type: vscode-extension
+    github:
+      # repo: nishtahir/language-kotlin
+      repo: fwcd/vscode-kotlin
+
+  ldif:
+    type: custom
+    github:
+      repo: FlashSystems/LDIF-Syntax
+    languages:
+      ldif:
+        label: LDIF File
+        scope-name: text.ldif
+        grammar: ldif.tmLanguage
+        file-extensions:
+        - .ldif
+
+  mako:
+    type: custom
+    github:
+      repo: marconi/mako-tmbundle
+      path: Syntaxes
+    languages:
+      mako:
+        label: Mako Template
+        grammar: "HTML (Mako).tmLanguage"
+        scope-name: text.html.mako
+        file-extensions:
+        - .mako
+
+  markdown:
+    type: custom
+    github:
+      repo: wooorm/markdown-tm-language
+    languages:
+      markdown:
+        label: Markdown
+        scope-name: text.md
+        grammar: text.md.tmLanguage
+        file-extensions:
+        - md
+        - livemd
+        - markdown
+        - mdown
+        - mdwn
+        - mkd
+        - mkdn
+        - mkdown
+        - ronn
+        - scd
+        - workbook
+
+  nushell:
+    type: vscode-extension
+    github:
+      repo: nushell/vscode-nushell-lang
+    languages:
+      nushell:
+        example: example.nu
+
+  plantuml:
+    type: vscode-extension
+    github:
+      repo: qjebbs/vscode-plantuml
+    languages:
+      plantuml:
+        grammar: syntaxes/plantuml.yaml-tmLanguage
+        example: test/testFixture/macros.puml
+
+  prisma:
+    type: vscode-extension
+    github:
+      repo: prisma/language-tools
+      path: packages/vscode
+    languages:
+      prisma:
+        example: https://raw.githubusercontent.com/prisma/language-tools/main/packages/language-server/test/fixtures/correct_mongodb.prisma
+
+  svelte:
+    type: vscode-extension
+    github:
+      repo: sveltejs/language-tools
+      path: packages/svelte-vscode
+    languages:
+      json:
+        ignored: true
+      svelte:
+        grammar: syntaxes/svelte.tmLanguage.src.yaml
+        example: https://raw.githubusercontent.com/sveltejs/language-tools/master/packages/svelte2tsx/test/emitDts/samples/svelte3/src/TestJs.svelte
+    inline-grammars:
+      source.css.postcss:
+        grammar: ./syntaxes/postcss.src.yaml
+
+  toml:
+    type: vscode-extension
+    github:
+      #repo: oovm/vscode-toml
+      repo: tamasfe/taplo
+      path: editors/vscode
+    languages:
+      toml:
+        label: TOML Config File
+
+  vscode-extensions:
+    type: vscode-extensions
+    github:
+      repo: microsoft/vscode
+      path: extensions
+    include-all-by-default: false
+    extensions:
+      cpp: {}
+      csharp: {}
+      dart: {}
+
+      ini:
+        languages:
+          ini:
+            label: INI Config File
+          properties:
+            ignored: true
+
+      lua:
+        languages:
+          lua:
+            file-extensions:
+            - .lua
+            - .rockspec
+
+      make:
+       languages:
+         makefile:
+           file-patterns:
+           - "*Makefile"
+
+      php: {}
+      powershell: {}
+      swift: {}
+      vb: {}

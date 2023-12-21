@@ -1,0 +1,22 @@
+digraph ExampleGraph {
+    // Nodes
+    A [label="Node A"]
+    B [label="Node B"]
+    C [label="Node C"]
+    D [label="Node D"]
+
+    // Edges
+    A -> B
+    B -> C
+    C -> D
+    D -> A [label="Circular Edge"]
+
+    // Graph properties
+    graph [rankdir=LR, splines=polyline]
+
+    // Node properties
+    node [shape=box, style=filled, fillcolor=lightblue]
+
+    // Edge properties
+    edge [color=darkgreen, style=dashed, arrowhead=vee]
+}

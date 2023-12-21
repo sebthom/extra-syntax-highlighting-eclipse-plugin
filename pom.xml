@@ -259,4 +259,30 @@
          </plugin>
       </plugins>
    </build>
+
+   <profiles>
+      <profile>
+         <id>disable-tycho-packaging-plugin-if-executed-in-eclipse</id>
+         <activation>
+            <property>
+               <name>eclipse.application</name>
+            </property>
+         </activation>
+         <build>
+            <plugins>
+               <plugin>
+                  <!-- disable building of a new jar on each file change from within Eclipse -->
+                  <groupId>org.eclipse.tycho</groupId>
+                  <artifactId>tycho-packaging-plugin</artifactId>
+                  <executions>
+                     <execution>
+                        <id>default-package-plugin</id>
+                        <phase>none</phase>
+                     </execution>
+                  </executions>
+               </plugin>
+            </plugins>
+         </build>
+      </profile>
+   </profiles>
 </project>

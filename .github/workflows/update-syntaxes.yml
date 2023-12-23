@@ -68,7 +68,10 @@ jobs:
         committer: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
         commit-message: "chore: Update Syntax Files"
         body: ${{ steps.update_syntaxes.outputs.updates }}
-        add-paths: plugin/syntaxes
+        add-paths: |
+          plugin/updater/updater-state.yaml
+          plugin/syntaxes
+          README.md
         branch: dependencies/syntaxes
         delete-branch: true
         token: ${{ secrets.GH_TOKEN }}

@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 7de75d39e7a03368bf0e1429dbbd98b9ab6d0c36
+      commit: 271d99dac1482d66463406bdd7ab100bea309384
     languages:
       astro:
         label: Astro
@@ -37,7 +37,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/cpp
       ref: main
-      commit: 30b777312745e84972956d4361465d4d38aa0f78
+      commit: 860d67064a9c1ef8ce0c8de35a78bea01033f76c
     languages:
       c:
         label: C
@@ -83,7 +83,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/csharp
       ref: main
-      commit: 30b777312745e84972956d4361465d4d38aa0f78
+      commit: 860d67064a9c1ef8ce0c8de35a78bea01033f76c
     languages:
       csharp:
         label: C#
@@ -98,7 +98,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/dart
       ref: main
-      commit: 30b777312745e84972956d4361465d4d38aa0f78
+      commit: 860d67064a9c1ef8ce0c8de35a78bea01033f76c
     languages:
       dart:
         label: Dart
@@ -228,7 +228,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/ini
       ref: main
-      commit: 30b777312745e84972956d4361465d4d38aa0f78
+      commit: 860d67064a9c1ef8ce0c8de35a78bea01033f76c
     languages:
       ini:
         label: INI Config File
@@ -554,7 +554,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/lua
       ref: main
-      commit: 30b777312745e84972956d4361465d4d38aa0f78
+      commit: 860d67064a9c1ef8ce0c8de35a78bea01033f76c
     languages:
       lua:
         label: Lua
@@ -568,7 +568,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/make
       ref: main
-      commit: 30b777312745e84972956d4361465d4d38aa0f78
+      commit: 860d67064a9c1ef8ce0c8de35a78bea01033f76c
     languages:
       makefile:
         label: Makefile
@@ -633,7 +633,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/php
       ref: main
-      commit: 30b777312745e84972956d4361465d4d38aa0f78
+      commit: 860d67064a9c1ef8ce0c8de35a78bea01033f76c
     languages:
       php:
         label: PHP
@@ -667,7 +667,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/powershell
       ref: main
-      commit: 30b777312745e84972956d4361465d4d38aa0f78
+      commit: 860d67064a9c1ef8ce0c8de35a78bea01033f76c
     languages:
       powershell:
         label: PowerShell
@@ -684,7 +684,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 6d1684c2b78b7d03d102d08767466c21f70ef1f0
+      commit: 4077c97b1d8d28aeead2133c18b6f1cbc0d54a4b
     languages:
       prisma:
         label: Prisma
@@ -720,7 +720,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/swift
       ref: main
-      commit: 30b777312745e84972956d4361465d4d38aa0f78
+      commit: 860d67064a9c1ef8ce0c8de35a78bea01033f76c
     languages:
       swift:
         label: Swift
@@ -750,7 +750,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/vb
       ref: main
-      commit: 30b777312745e84972956d4361465d4d38aa0f78
+      commit: 860d67064a9c1ef8ce0c8de35a78bea01033f76c
     languages:
       vb:
         label: Visual Basic

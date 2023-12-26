@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
    SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
    SPDX-FileContributor: Sebastian Thomschke
@@ -13,28 +13,59 @@
    <parent>
       <groupId>com.vegardit.maven</groupId>
       <artifactId>vegardit-maven-parent</artifactId>
-      <version>3.0.18</version>
+      <version>RELEASE</version>
    </parent>
 
-   <name>extra-syntax-highlighting-parent</name>
    <groupId>de.sebthom.eclipse.extra_syntax_highlighting</groupId>
    <artifactId>de.sebthom.eclipse.extra_syntax_highlighting.parent</artifactId>
    <version>1.0.0-SNAPSHOT</version>
    <packaging>pom</packaging>
+
+   <name>extra-syntax-highlighting-parent</name>
+   <description>Eclipse plugin that provides syntax highlighing support for additional languages</description>
+   <url>https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin</url>
    <inceptionYear>2022</inceptionYear>
    <organization>
       <!-- used as Specification/Implementation-Vendor in MANIFEST.MF -->
       <name>Sebastian Thomschke</name>
       <url>https://github.com/sebthom</url>
    </organization>
-
    <licenses>
       <license>
          <name>Eclipse Public License 2.0</name>
          <distribution>repo</distribution>
-         <url>https://spdx.org/licenses/EPL-2.0.html</url>
+         <url>https://spdx.org/licenses/EPL-2.0</url>
       </license>
    </licenses>
+
+
+   <modules>
+      <module>plugin</module>
+      <module>feature</module>
+      <module>updatesite</module>
+   </modules>
+
+
+   <scm>
+      <!-- https://maven.apache.org/scm/git.html -->
+      <url>https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin</url>
+      <connection>scm:git:https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin.git</connection>
+      <developerConnection>scm:git:https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin.git</developerConnection>
+      <tag>HEAD</tag>
+   </scm>
+
+
+   <issueManagement>
+      <system>github.com</system>
+      <url>https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin/issues</url>
+   </issueManagement>
+
+
+   <ciManagement>
+      <system>github.com</system>
+      <url>https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin/actions</url>
+   </ciManagement>
+
 
    <properties>
       <java.version>17</java.version>
@@ -48,13 +79,6 @@
       <skip.enforcer.ban-duplicate-classes>true</skip.enforcer.ban-duplicate-classes>
       <skip.enforcer.enforce-bytecode-version>true</skip.enforcer.enforce-bytecode-version>
    </properties>
-
-
-   <modules>
-      <module>plugin</module>
-      <module>feature</module>
-      <module>updatesite</module>
-   </modules>
 
 
    <build>
@@ -88,7 +112,7 @@
                <version>${tycho.version}</version>
             </plugin>
             <plugin>
-               <!-- https://www.eclipse.org/tycho/sitedocs/tycho-packaging-plugin/plugin-info.html -->
+               <!-- https://tycho.eclipseprojects.io/doc/latest/tycho-packaging-plugin/plugin-info.html -->
                <groupId>org.eclipse.tycho</groupId>
                <artifactId>tycho-packaging-plugin</artifactId>
                <version>${tycho.version}</version>
@@ -99,20 +123,20 @@
                </configuration>
             </plugin>
             <plugin>
-               <!-- https://www.eclipse.org/tycho/sitedocs/tycho-p2/tycho-p2-plugin/plugin-info.html -->
+               <!-- https://tycho.eclipseprojects.io/doc/latest/tycho-p2-plugin/plugin-info.html -->
                <groupId>org.eclipse.tycho</groupId>
                <artifactId>tycho-p2-plugin</artifactId>
                <version>${tycho.version}</version>
             </plugin>
             <plugin>
-               <!-- https://www.eclipse.org/tycho/sitedocs/tycho-surefire-plugin/plugin-info.html -->
+               <!-- https://tycho.eclipseprojects.io/doc/latest/tycho-surefire-plugin/plugin-info.html -->
                <groupId>org.eclipse.tycho</groupId>
                <artifactId>tycho-surefire-plugin</artifactId>
                <version>${tycho.version}</version>
             </plugin>
             <plugin>
                <!--
-                 https://www.eclipse.org/tycho/sitedocs/tycho-release/tycho-versions-plugin/plugin-info.html
+                 https://tycho.eclipseprojects.io/doc/latest/tycho-versions-plugin/plugin-info.html
                  mvn -Dtycho.mode=maven tycho-versions:update-eclipse-metadata
                -->
                <groupId>org.eclipse.tycho</groupId>
@@ -144,17 +168,17 @@
                   <lifecycleMappingMetadata>
                      <pluginExecutions>
                         <pluginExecution>
-                           <pluginExecutionFilter>
-                              <groupId>org.apache.maven.plugins</groupId>
-                              <artifactId>maven-clean-plugin</artifactId>
-                              <versionRange>[1.0,)</versionRange>
-                              <goals>
-                                 <goal>clean</goal>
-                              </goals>
-                           </pluginExecutionFilter>
-                           <action>
-                              <ignore />
-                           </action>
+                            <pluginExecutionFilter>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-clean-plugin</artifactId>
+                                <versionRange>[1.0,)</versionRange>
+                                <goals>
+                                    <goal>clean</goal>
+                                </goals>
+                            </pluginExecutionFilter>
+                            <action>
+                                <ignore />
+                            </action>
                         </pluginExecution>
                         <pluginExecution>
                            <pluginExecutionFilter>
@@ -213,7 +237,7 @@
             <extensions>true</extensions>
          </plugin>
          <plugin>
-            <!-- https://www.eclipse.org/tycho/sitedocs/target-platform-configuration/target-platform-configuration-mojo.html -->
+            <!-- https://tycho.eclipseprojects.io/doc/latest/target-platform-configuration/target-platform-mojo.html -->
             <groupId>org.eclipse.tycho</groupId>
             <artifactId>target-platform-configuration</artifactId>
             <version>${tycho.version}</version>

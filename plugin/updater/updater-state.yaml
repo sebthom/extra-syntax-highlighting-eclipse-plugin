@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 37434ab5ee2149dd74a7c1e800d8c279a0617912
+      commit: dab6801b344ca935127e1b3fca6bd62f686cd312
     languages:
       astro:
         label: Astro
@@ -37,7 +37,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/cpp
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: f88bce8fe6a6d2ccd27cbd64bb26853cd8779afa
     languages:
       c:
         label: C
@@ -83,7 +83,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/csharp
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: f88bce8fe6a6d2ccd27cbd64bb26853cd8779afa
     languages:
       csharp:
         label: C#
@@ -98,7 +98,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/dart
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: f88bce8fe6a6d2ccd27cbd64bb26853cd8779afa
     languages:
       dart:
         label: Dart
@@ -173,7 +173,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: a80801970e095e493eb0fda7687766f103bf701e
+      commit: eb8ce037d1c85317bc2309631ab9b703746ac79e
     languages:
       graphql:
         label: GraphQL
@@ -228,7 +228,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/ini
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: f88bce8fe6a6d2ccd27cbd64bb26853cd8779afa
     languages:
       ini:
         label: INI Config File
@@ -554,7 +554,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/lua
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: f88bce8fe6a6d2ccd27cbd64bb26853cd8779afa
     languages:
       lua:
         label: Lua
@@ -568,7 +568,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/make
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: f88bce8fe6a6d2ccd27cbd64bb26853cd8779afa
     languages:
       makefile:
         label: Makefile
@@ -633,7 +633,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/php
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: f88bce8fe6a6d2ccd27cbd64bb26853cd8779afa
     languages:
       php:
         label: PHP
@@ -667,7 +667,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/powershell
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: f88bce8fe6a6d2ccd27cbd64bb26853cd8779afa
     languages:
       powershell:
         label: PowerShell
@@ -684,7 +684,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 5ce0019b5d9d5c4f3ace74b35d70ffa49ed987a7
+      commit: 85d690677533c4239527f1415e8d67b49bb6e044
     languages:
       prisma:
         label: Prisma
@@ -700,7 +700,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: bc820642a151975f19090cfc5f0c2bd0cd928f1a
+      commit: 6ba86d2be3588d3cd374c7e4d1e46860d2218bec
     languages:
       svelte:
         label: Svelte
@@ -720,7 +720,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/swift
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: f88bce8fe6a6d2ccd27cbd64bb26853cd8779afa
     languages:
       swift:
         label: Swift
@@ -733,7 +733,7 @@ extensions:
       repo: tamasfe/taplo
       path: editors/vscode
       ref: master
-      commit: ae2d951bf117f6fd706cc4d24cb8b347fe96088b
+      commit: 268c8b1de41c105324b8c667460aeb5e23b0b6da
     languages:
       toml:
         label: TOML Config File
@@ -750,7 +750,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/vb
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: f88bce8fe6a6d2ccd27cbd64bb26853cd8779afa
     languages:
       vb:
         label: Visual Basic

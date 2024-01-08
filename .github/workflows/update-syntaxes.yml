@@ -47,7 +47,7 @@ jobs:
 
         bash plugin/updater/run.sh
 
-        updates=$(git status --porcelain plugin/syntaxes)
+        updates=$(git status --porcelain plugin/syntaxes | { grep -v LICENSE.txt || test $? = 1; })
         if [[ -z $updates ]]; then
           echo "updates=" >> "$GITHUB_OUTPUT"
         else

@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 37434ab5ee2149dd74a7c1e800d8c279a0617912
+      commit: 782176228cbf051a7be9a2e930141daf1c946afb
     languages:
       astro:
         label: Astro
@@ -37,7 +37,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/cpp
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: 4d2d0582c600c81a6afec20f9d0605c62f2115a3
     languages:
       c:
         label: C
@@ -83,7 +83,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/csharp
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: 4d2d0582c600c81a6afec20f9d0605c62f2115a3
     languages:
       csharp:
         label: C#
@@ -98,7 +98,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/dart
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: 4d2d0582c600c81a6afec20f9d0605c62f2115a3
     languages:
       dart:
         label: Dart
@@ -173,7 +173,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: a80801970e095e493eb0fda7687766f103bf701e
+      commit: b8268e46ac9a0bcd3a9d6030be2b4649d7d35d7c
     languages:
       graphql:
         label: GraphQL
@@ -184,12 +184,13 @@ extensions:
         - .graphqls
     inline-grammars:
     - inline.graphql
+    - inline.graphql.markdown.codeblock
     - inline.graphql.php
     - inline.graphql.python
+    - inline.graphql.rb
     - inline.graphql.re
     - inline.graphql.res
     - inline.graphql.scala
-    - markdown.graphql.codeblock
   haxe:
     github:
       repo: vshaxe/haxe-TmLanguage
@@ -205,7 +206,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: c98e6521755f840c5171f43682518465b691f392
+      commit: 994cc0dbe4b386d02f0bda2b9e1c65e462fab027
     languages:
       hcl:
         label: HCL Config File
@@ -228,7 +229,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/ini
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: 4d2d0582c600c81a6afec20f9d0605c62f2115a3
     languages:
       ini:
         label: INI Config File
@@ -554,7 +555,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/lua
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: 4d2d0582c600c81a6afec20f9d0605c62f2115a3
     languages:
       lua:
         label: Lua
@@ -568,7 +569,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/make
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: 4d2d0582c600c81a6afec20f9d0605c62f2115a3
     languages:
       makefile:
         label: Makefile
@@ -600,7 +601,7 @@ extensions:
     github:
       repo: wooorm/markdown-tm-language
       ref: main
-      commit: 11eeefed6b5b13f0bfda019972ab96405a10a8fd
+      commit: 371d61df9ddc3850e12aabe61b602d02e259e8a4
     languages:
       markdown:
         label: Markdown
@@ -621,7 +622,7 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: 25e39a9b01e12aff0fac319fce05ba1d1a60edcc
+      commit: bd9d19fd83a010af6b007def456d59138d44a59f
     languages:
       nushell:
         label: nushell
@@ -633,7 +634,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/php
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: 4d2d0582c600c81a6afec20f9d0605c62f2115a3
     languages:
       php:
         label: PHP
@@ -667,7 +668,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/powershell
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: 4d2d0582c600c81a6afec20f9d0605c62f2115a3
     languages:
       powershell:
         label: PowerShell
@@ -684,7 +685,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 5ce0019b5d9d5c4f3ace74b35d70ffa49ed987a7
+      commit: c7d67b41f99eca830d96676bb70e01ec7d082c59
     languages:
       prisma:
         label: Prisma
@@ -700,7 +701,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: bc820642a151975f19090cfc5f0c2bd0cd928f1a
+      commit: e1eaccedeb6af82427c76f90443d7eed9dfd53a7
     languages:
       svelte:
         label: Svelte
@@ -720,7 +721,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/swift
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: 4d2d0582c600c81a6afec20f9d0605c62f2115a3
     languages:
       swift:
         label: Swift
@@ -733,7 +734,7 @@ extensions:
       repo: tamasfe/taplo
       path: editors/vscode
       ref: master
-      commit: ae2d951bf117f6fd706cc4d24cb8b347fe96088b
+      commit: 268c8b1de41c105324b8c667460aeb5e23b0b6da
     languages:
       toml:
         label: TOML Config File
@@ -750,7 +751,7 @@ extensions:
       repo: microsoft/vscode
       path: extensions/vb
       ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
+      commit: 4d2d0582c600c81a6afec20f9d0605c62f2115a3
     languages:
       vb:
         label: Visual Basic

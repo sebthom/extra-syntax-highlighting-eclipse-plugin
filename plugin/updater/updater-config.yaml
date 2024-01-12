@@ -302,39 +302,3 @@ sources:
     languages:
       toml:
         label: TOML Config File
-
-  vscode-extensions:
-    type: vscode-extensions
-    github:
-      repo: microsoft/vscode
-      path: extensions
-    include-all-by-default: false
-    extensions:
-      cpp: {}
-      csharp: {}
-      dart: {}
-
-      ini:
-        languages:
-          ini:
-            label: INI Config File
-          properties:
-            ignored: true
-
-      lua:
-        languages:
-          lua:
-            file-extensions:
-            - .lua
-            - .rockspec
-
-      make:
-       languages:
-         makefile:
-           file-patterns:
-           - "*Makefile"
-
-      php: {}
-      powershell: {}
-      swift: {}
-      vb: {}

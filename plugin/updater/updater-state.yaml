@@ -32,80 +32,6 @@ extensions:
         - .astro
     inline-grammars:
     - text.html.markdown.astro
-  cpp:
-    github:
-      repo: microsoft/vscode
-      path: extensions/cpp
-      ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
-    languages:
-      c:
-        label: C
-        scope-name: source.c
-        upstream-url: https://github.com/jeff-hykin/better-c-syntax/commit/34712a6106a4ffb0a04d2fa836fd28ff6c5849a4
-        file-extensions:
-        - .c
-        - .i
-      cpp:
-        label: C++
-        scope-name: source.cpp
-        upstream-url: https://github.com/jeff-hykin/better-cpp-syntax/commit/f1d127a8af2b184db570345f0bb179503c47fdf6
-        file-extensions:
-        - .c++
-        - .cc
-        - .cpp
-        - .cxx
-        - .h
-        - .h++
-        - .h.in
-        - .hh
-        - .hpp
-        - .hpp.in
-        - .hxx
-        - .ii
-        - .inl
-        - .ino
-        - .ipp
-        - .ixx
-        - .tpp
-        - .txx
-      cuda-cpp:
-        label: CUDA C++
-        scope-name: source.cuda-cpp
-        upstream-url: https://github.com/NVIDIA/cuda-cpp-grammar/commit/81e88eaec5170aa8585736c63627c73e3589998c
-        file-extensions:
-        - .cu
-        - .cuh
-    inline-grammars:
-    - source.c.platform
-  csharp:
-    github:
-      repo: microsoft/vscode
-      path: extensions/csharp
-      ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
-    languages:
-      csharp:
-        label: C#
-        scope-name: source.cs
-        upstream-url: https://github.com/dotnet/csharp-tmLanguage/commit/7bf5709ac1a713e340a618d1b41f44a043e393c6
-        file-extensions:
-        - .cake
-        - .cs
-        - .csx
-  dart:
-    github:
-      repo: microsoft/vscode
-      path: extensions/dart
-      ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
-    languages:
-      dart:
-        label: Dart
-        scope-name: source.dart
-        upstream-url: https://github.com/dart-lang/dart-syntax-highlight/commit/0a6648177bdbb91a4e1a38c16e57ede0ccba4f18
-        file-extensions:
-        - .dart
   dot:
     github:
       repo: textmate/graphviz.tmbundle
@@ -223,19 +149,6 @@ extensions:
         file-extensions:
         - .tf
         - .tfvars
-  ini:
-    github:
-      repo: microsoft/vscode
-      path: extensions/ini
-      ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
-    languages:
-      ini:
-        label: INI Config File
-        scope-name: source.ini
-        upstream-url: https://github.com/textmate/ini.tmbundle/commit/2af0cbb0704940f967152616f2f1ff0aae6287a6
-        file-extensions:
-        - .ini
   jinja:
     github:
       repo: samuelcolvin/jinjahtml-vscode
@@ -549,41 +462,6 @@ extensions:
         scope-name: text.ldif
         file-extensions:
         - .ldif
-  lua:
-    github:
-      repo: microsoft/vscode
-      path: extensions/lua
-      ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
-    languages:
-      lua:
-        label: Lua
-        scope-name: source.lua
-        upstream-url: https://github.com/sumneko/lua.tmbundle/commit/94ce82cc4d45f82641a5252d7a7fd9e28c875adc
-        file-extensions:
-        - .lua
-        - .rockspec
-  make:
-    github:
-      repo: microsoft/vscode
-      path: extensions/make
-      ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
-    languages:
-      makefile:
-        label: Makefile
-        scope-name: source.makefile
-        upstream-url: https://github.com/fadeevab/make.tmbundle/commit/1d4c0b541959995db098df751ffc129da39a294b
-        file-extensions:
-        - .mak
-        - .mk
-        file-names:
-        - GNUmakefile
-        - Makefile
-        - OCamlMakefile
-        - makefile
-        file-patterns:
-        - '*Makefile'
   mako:
     github:
       repo: marconi/mako-tmbundle
@@ -628,23 +506,6 @@ extensions:
         scope-name: source.nushell
         file-extensions:
         - .nu
-  php:
-    github:
-      repo: microsoft/vscode
-      path: extensions/php
-      ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
-    languages:
-      php:
-        label: PHP
-        scope-name: text.html.php
-        upstream-url: https://github.com/KapitanOczywisty/language-php/commit/ff64523c94c014d68f5dec189b05557649c5872a
-        file-extensions:
-        - .ctp
-        - .php
-        - .php4
-        - .php5
-        - .phtml
   plantuml:
     github:
       repo: qjebbs/vscode-plantuml
@@ -662,23 +523,6 @@ extensions:
         - .wsd
     inline-grammars:
     - markdown.plantuml.codeblock
-  powershell:
-    github:
-      repo: microsoft/vscode
-      path: extensions/powershell
-      ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
-    languages:
-      powershell:
-        label: PowerShell
-        scope-name: source.powershell
-        upstream-url: https://github.com/PowerShell/EditorSyntax/commit/742f0b5d4b60f5930c0b47fcc1f646860521296e
-        file-extensions:
-        - .ps1
-        - .psd1
-        - .psm1
-        - .psrc
-        - .pssc
   prisma:
     github:
       repo: prisma/language-tools
@@ -715,19 +559,6 @@ extensions:
     - svelte.pug
     - svelte.pug.dotblock
     - svelte.pug.tags
-  swift:
-    github:
-      repo: microsoft/vscode
-      path: extensions/swift
-      ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
-    languages:
-      swift:
-        label: Swift
-        scope-name: source.swift
-        upstream-url: https://github.com/jtbandes/swift-tmlanguage/commit/ab893c684dd7eeb7c249139e29e931334316fda7
-        file-extensions:
-        - .swift
   toml:
     github:
       repo: tamasfe/taplo
@@ -745,20 +576,3 @@ extensions:
     inline-grammars:
     - markdown.toml.codeblock
     - markdown.toml.frontmatter.codeblock
-  vb:
-    github:
-      repo: microsoft/vscode
-      path: extensions/vb
-      ref: main
-      commit: 14d01569e5907e43d0966806af8c4c593a109f5c
-    languages:
-      vb:
-        label: Visual Basic
-        scope-name: source.asp.vb.net
-        upstream-url: https://github.com/textmate/asp.vb.net.tmbundle/commit/72d44550b3286d0382d7be0624140cf97857ff69
-        file-extensions:
-        - .bas
-        - .brs
-        - .vb
-        - .vba
-        - .vbs

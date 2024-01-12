@@ -95,97 +95,6 @@
   </extension>
 
   <!-- ======================================== -->
-  <!-- cpp/c: C -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.c" name="C" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="c,i" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.c" path="syntaxes/cpp/c.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.c" contentTypeId="extra-syntax-highlighting.c" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.c" path="syntaxes/cpp/c.language-configuration.json" />
-  </extension>
-
-  <!-- ======================================== -->
-  <!-- cpp/cpp: C++ -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.cpp" name="C++" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="c++,cc,cpp,cxx,h,h++,h.in,hh,hpp,hpp.in,hxx,ii,inl,ino,ipp,ixx,tpp,txx" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.cpp" path="syntaxes/cpp/cpp.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.cpp" contentTypeId="extra-syntax-highlighting.cpp" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.cpp" path="syntaxes/cpp/cpp.language-configuration.json" />
-  </extension>
-
-  <!-- ======================================== -->
-  <!-- cpp/cuda-cpp: CUDA C++ -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.cuda-cpp" name="CUDA C++" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="cu,cuh" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.cuda-cpp" path="syntaxes/cpp/cuda-cpp.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.cuda-cpp" contentTypeId="extra-syntax-highlighting.cuda-cpp" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.cuda-cpp" path="syntaxes/cpp/cuda-cpp.language-configuration.json" />
-  </extension>
-
-  <!-- ======================================== -->
-  <!-- cpp: Inline Grammars -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.c.platform" path="syntaxes/cpp/source.c.platform.tmLanguage.json" />
-  </extension>
-
-  <!-- ======================================== -->
-  <!-- csharp/csharp: C# -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.csharp" name="C#" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="cake,cs,csx" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.cs" path="syntaxes/csharp/csharp.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.cs" contentTypeId="extra-syntax-highlighting.csharp" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.csharp" path="syntaxes/csharp/csharp.language-configuration.json" />
-  </extension>
-
-  <!-- ======================================== -->
-  <!-- dart/dart: Dart -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.dart" name="Dart" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="dart" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.dart" path="syntaxes/dart/dart.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.dart" contentTypeId="extra-syntax-highlighting.dart" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.dart" path="syntaxes/dart/dart.language-configuration.json" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.ui.snippets">
-    <snippet name="Dart Example" path="syntaxes/dart/dart.example.dart" scopeName="source.dart" />
-  </extension>
-
-  <!-- ======================================== -->
   <!-- dot/dot: GraphViz DOT File -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
@@ -366,26 +275,6 @@
 
   <extension point="org.eclipse.tm4e.ui.snippets">
     <snippet name="HashiCorp Terraform Example" path="syntaxes/hcl/terraform.example.tf" scopeName="source.hcl.terraform" />
-  </extension>
-
-  <!-- ======================================== -->
-  <!-- ini/ini: INI Config File -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.ini" name="INI Config File" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="ini" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.ini" path="syntaxes/ini/ini.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.ini" contentTypeId="extra-syntax-highlighting.ini" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.ini" path="syntaxes/ini/ini.language-configuration.json" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.ui.snippets">
-    <snippet name="INI Config File Example" path="syntaxes/ini/ini.example.ini" scopeName="source.ini" />
   </extension>
 
   <!-- ======================================== -->
@@ -992,46 +881,6 @@
   </extension>
 
   <!-- ======================================== -->
-  <!-- lua/lua: Lua -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.lua" name="Lua" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="lua,rockspec" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.lua" path="syntaxes/lua/lua.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.lua" contentTypeId="extra-syntax-highlighting.lua" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.lua" path="syntaxes/lua/lua.language-configuration.json" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.ui.snippets">
-    <snippet name="Lua Example" path="syntaxes/lua/lua.example.lua" scopeName="source.lua" />
-  </extension>
-
-  <!-- ======================================== -->
-  <!-- make/makefile: Makefile -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.makefile" name="Makefile" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="mak,mk" file-names="GNUmakefile,Makefile,OCamlMakefile,makefile" file-patterns="*Makefile" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.makefile" path="syntaxes/make/makefile.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.makefile" contentTypeId="extra-syntax-highlighting.makefile" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.makefile" path="syntaxes/make/makefile.language-configuration.json" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.ui.snippets">
-    <snippet name="Makefile Example" path="syntaxes/make/makefile.example.Makefile" scopeName="source.makefile" />
-  </extension>
-
-  <!-- ======================================== -->
   <!-- mako/mako: Mako Template -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
@@ -1088,26 +937,6 @@
   </extension>
 
   <!-- ======================================== -->
-  <!-- php/php: PHP -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.php" name="PHP" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="ctp,php,php4,php5,phtml" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="text.html.php" path="syntaxes/php/php.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="text.html.php" contentTypeId="extra-syntax-highlighting.php" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.php" path="syntaxes/php/php.language-configuration.json" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.ui.snippets">
-    <snippet name="PHP Example" path="syntaxes/php/php.example.php" scopeName="text.html.php" />
-  </extension>
-
-  <!-- ======================================== -->
   <!-- plantuml/plantuml: PlantUML -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
@@ -1136,26 +965,6 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.plantuml.codeblock" path="syntaxes/plantuml/markdown.plantuml.codeblock.tmLanguage.json" />
-  </extension>
-
-  <!-- ======================================== -->
-  <!-- powershell/powershell: PowerShell -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.powershell" name="PowerShell" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="ps1,psd1,psm1,psrc,pssc" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.powershell" path="syntaxes/powershell/powershell.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.powershell" contentTypeId="extra-syntax-highlighting.powershell" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.powershell" path="syntaxes/powershell/powershell.language-configuration.json" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.ui.snippets">
-    <snippet name="PowerShell Example" path="syntaxes/powershell/powershell.example.ps1" scopeName="source.powershell" />
   </extension>
 
   <!-- ======================================== -->
@@ -1229,26 +1038,6 @@
   </extension>
 
   <!-- ======================================== -->
-  <!-- swift/swift: Swift -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.swift" name="Swift" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="swift" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.swift" path="syntaxes/swift/swift.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.swift" contentTypeId="extra-syntax-highlighting.swift" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.swift" path="syntaxes/swift/swift.language-configuration.json" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.ui.snippets">
-    <snippet name="Swift Example" path="syntaxes/swift/swift.example.swift" scopeName="source.swift" />
-  </extension>
-
-  <!-- ======================================== -->
   <!-- toml/toml: TOML Config File -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
@@ -1279,26 +1068,5 @@
     <grammar scopeName="markdown.toml.codeblock" path="syntaxes/toml/markdown.toml.codeblock.tmLanguage.json" />
     <grammar scopeName="markdown.toml.frontmatter.codeblock" path="syntaxes/toml/markdown.toml.frontmatter.codeblock.tmLanguage.json" />
   </extension>
-
-  <!-- ======================================== -->
-  <!-- vb/vb: Visual Basic -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.vb" name="Visual Basic" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="bas,brs,vb,vba,vbs" />
-  </extension>
-  <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.asp.vb.net" path="syntaxes/vb/vb.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.asp.vb.net" contentTypeId="extra-syntax-highlighting.vb" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-    <languageConfiguration contentTypeId="extra-syntax-highlighting.vb" path="syntaxes/vb/vb.language-configuration.json" />
-  </extension>
-
-  <extension point="org.eclipse.tm4e.ui.snippets">
-    <snippet name="Visual Basic Example" path="syntaxes/vb/vb.example.vba" scopeName="source.asp.vb.net" />
-  </extension>
-
   <!-- END-GENERATED -->
 </plugin>

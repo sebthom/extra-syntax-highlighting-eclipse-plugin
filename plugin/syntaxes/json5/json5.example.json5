@@ -1,0 +1,43 @@
+{
+  // Comments
+  /* This is a multi-line comment */
+  // This is a single-line comment
+
+  // Keys can be unquoted if they are valid JavaScript identifiers
+  key1: "value1",
+  key2: "value2",
+
+  // Keys can also be single-quoted
+  'key3': "value3",
+
+  // Strings can be single-quoted or double-quoted
+  "key4": 'value4',
+
+  // Numbers can have leading decimal points
+  key5: .123,
+
+  // Numbers can have a positive sign
+  key6: +1,
+
+  // Arrays can have trailing commas
+  array: [
+    "item1",
+    "item2",
+  ],
+
+  // Objects can have trailing commas
+  object: {
+    prop1: "value1",
+    prop2: "value2",
+  },
+
+  // Hexadecimal numbers are supported
+  hex: 0xdecaf,
+
+  // Line breaks can be escaped
+  lineBreak: "This is a line \
+  break",
+
+  // JSON compatibility
+  "backwardsCompatible": "with JSON"
+}

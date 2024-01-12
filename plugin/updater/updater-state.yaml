@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 37434ab5ee2149dd74a7c1e800d8c279a0617912
+      commit: d37334dcdb4d6fc66ee7bc757f58cc6bd6ba10c1
     languages:
       astro:
         label: Astro
@@ -99,7 +99,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: a80801970e095e493eb0fda7687766f103bf701e
+      commit: b8268e46ac9a0bcd3a9d6030be2b4649d7d35d7c
     languages:
       graphql:
         label: GraphQL
@@ -110,12 +110,13 @@ extensions:
         - .graphqls
     inline-grammars:
     - inline.graphql
+    - inline.graphql.markdown.codeblock
     - inline.graphql.php
     - inline.graphql.python
+    - inline.graphql.rb
     - inline.graphql.re
     - inline.graphql.res
     - inline.graphql.scala
-    - markdown.graphql.codeblock
   haxe:
     github:
       repo: vshaxe/haxe-TmLanguage
@@ -131,7 +132,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: c98e6521755f840c5171f43682518465b691f392
+      commit: 994cc0dbe4b386d02f0bda2b9e1c65e462fab027
     languages:
       hcl:
         label: HCL Config File
@@ -437,6 +438,17 @@ extensions:
         - .yml.j2
         - .yml.jinja
         - .yml.jinja2
+  json5:
+    github:
+      repo: katjanakosic/vscode-json5
+      ref: master
+      commit: 4bf68072f00ee0cc3cd0e82c4b27364c888fcb12
+    languages:
+      json5:
+        label: JSON5
+        scope-name: source.json5
+        file-extensions:
+        - .json5
   kotlin:
     github:
       repo: fwcd/vscode-kotlin
@@ -478,7 +490,7 @@ extensions:
     github:
       repo: wooorm/markdown-tm-language
       ref: main
-      commit: 11eeefed6b5b13f0bfda019972ab96405a10a8fd
+      commit: 371d61df9ddc3850e12aabe61b602d02e259e8a4
     languages:
       markdown:
         label: Markdown
@@ -499,7 +511,7 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: 25e39a9b01e12aff0fac319fce05ba1d1a60edcc
+      commit: bd9d19fd83a010af6b007def456d59138d44a59f
     languages:
       nushell:
         label: nushell
@@ -528,7 +540,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 5ce0019b5d9d5c4f3ace74b35d70ffa49ed987a7
+      commit: 1f24dd795e21e482f24381069bb77b784c73722f
     languages:
       prisma:
         label: Prisma
@@ -544,7 +556,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: bc820642a151975f19090cfc5f0c2bd0cd928f1a
+      commit: 57a548c215d276ab2ffcd2184a5ddf9558ca47b2
     languages:
       svelte:
         label: Svelte
@@ -564,7 +576,7 @@ extensions:
       repo: tamasfe/taplo
       path: editors/vscode
       ref: master
-      commit: ae2d951bf117f6fd706cc4d24cb8b347fe96088b
+      commit: 268c8b1de41c105324b8c667460aeb5e23b0b6da
     languages:
       toml:
         label: TOML Config File

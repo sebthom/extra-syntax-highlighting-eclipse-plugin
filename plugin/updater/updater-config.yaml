@@ -199,6 +199,11 @@ sources:
       jinja-yaml:
         example: examples/testing.yaml.j2
 
+  json5:
+    type: vscode-extension
+    github:
+      repo: katjanakosic/vscode-json5
+
   kotlin:
     type: vscode-extension
     github:

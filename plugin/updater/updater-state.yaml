@@ -99,7 +99,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: b8268e46ac9a0bcd3a9d6030be2b4649d7d35d7c
+      commit: 88ae24321dbf7b5810ffdb1943efde44f6b114be
     languages:
       graphql:
         label: GraphQL
@@ -453,7 +453,7 @@ extensions:
     github:
       repo: fwcd/vscode-kotlin
       ref: main
-      commit: c1371a435aedf8690d3c9cbbe4c42a215915630d
+      commit: 531f35e458ac74b84c1ca7b0c3a790cf1c5d9e5b
     languages:
       kotlin:
         label: Kotlin
@@ -540,7 +540,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 1f24dd795e21e482f24381069bb77b784c73722f
+      commit: 6fe0de937b237fc24497b11c3fe6edfa3842f30d
     languages:
       prisma:
         label: Prisma
@@ -556,7 +556,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 57a548c215d276ab2ffcd2184a5ddf9558ca47b2
+      commit: 7d4f8a73227beb6ed26031f9d426bd21e8c2da3f
     languages:
       svelte:
         label: Svelte

@@ -173,6 +173,11 @@ sources:
         label: HashiCorp Terraform
         example: tests/snapshot/terraform/basic.tf
 
+  helm:
+    type: vscode-extension
+    github:
+      repo: vscode-kubernetes-tools/vscode-kubernetes-tools
+
   jinja:
     type: vscode-extension
     github:

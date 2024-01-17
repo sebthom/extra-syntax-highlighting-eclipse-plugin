@@ -279,6 +279,26 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- helm/helm: helm-template -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.helm" name="helm-template" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-patterns="**/templates/**/*.tpl,**/templates/**/*.yaml,**/templates/**/*.yml,**/templates/*.tpl,**/templates/*.yaml,**/templates/*.yml" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.helm" path="syntaxes/helm/helm.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.helm" contentTypeId="extra-syntax-highlighting.helm" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.helm" path="syntaxes/helm/helm.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.helm" icon="syntaxes/helm/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
   <!-- jinja/jinja-cisco: Jinja Cisco Config -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
@@ -848,6 +868,10 @@
 
   <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
     <languageConfiguration contentTypeId="extra-syntax-highlighting.json5" path="syntaxes/json5/json5.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="JSON5 Example" path="syntaxes/json5/json5.example.json5" scopeName="source.json5" />
   </extension>
 
   <!-- ======================================== -->

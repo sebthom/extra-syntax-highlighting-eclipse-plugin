@@ -150,6 +150,22 @@ extensions:
         file-extensions:
         - .tf
         - .tfvars
+  helm:
+    github:
+      repo: vscode-kubernetes-tools/vscode-kubernetes-tools
+      ref: master
+      commit: 7e5c5f6082112314d189a4a88dc5173a8303a5e4
+    languages:
+      helm:
+        label: helm-template
+        scope-name: source.helm
+        file-patterns:
+        - '**/templates/**/*.tpl'
+        - '**/templates/**/*.yaml'
+        - '**/templates/**/*.yml'
+        - '**/templates/*.tpl'
+        - '**/templates/*.yaml'
+        - '**/templates/*.yml'
   jinja:
     github:
       repo: samuelcolvin/jinjahtml-vscode

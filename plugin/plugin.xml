@@ -95,6 +95,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- bazel/starlark: Starlark -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.starlark" name="Starlark" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="BUILD,WORKSPACE,bazel,bzl,bzlmod,sky,star" file-names="BUILD,WORKSPACE" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.starlark" path="syntaxes/bazel/starlark.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.starlark" contentTypeId="extra-syntax-highlighting.starlark" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.starlark" path="syntaxes/bazel/starlark.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.starlark" icon="syntaxes/bazel/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Starlark Example" path="syntaxes/bazel/starlark.example.bzl" scopeName="source.starlark" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- dot/dot: GraphViz DOT File -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

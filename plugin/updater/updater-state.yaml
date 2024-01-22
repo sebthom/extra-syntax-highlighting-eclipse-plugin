@@ -32,6 +32,26 @@ extensions:
         - .astro
     inline-grammars:
     - text.html.markdown.astro
+  bazel:
+    github:
+      repo: bazelbuild/vscode-bazel
+      ref: master
+      commit: cfc931cc88681774e832669c684bda2b65e9b90f
+    languages:
+      starlark:
+        label: Starlark
+        scope-name: source.starlark
+        file-extensions:
+        - .BUILD
+        - .WORKSPACE
+        - .bazel
+        - .bzl
+        - .bzlmod
+        - .sky
+        - .star
+        file-names:
+        - BUILD
+        - WORKSPACE
   dot:
     github:
       repo: textmate/graphviz.tmbundle

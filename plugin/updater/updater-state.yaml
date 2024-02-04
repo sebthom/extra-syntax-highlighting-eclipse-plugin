@@ -36,7 +36,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: cfc931cc88681774e832669c684bda2b65e9b90f
+      commit: 0f04c1194e22d477222373a78a8885ceabba95dc
     languages:
       starlark:
         label: Starlark
@@ -119,7 +119,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 88ae24321dbf7b5810ffdb1943efde44f6b114be
+      commit: dfe083ad6f529c2492a1d5781641fea7f418942f
     languages:
       graphql:
         label: GraphQL
@@ -190,7 +190,7 @@ extensions:
     github:
       repo: samuelcolvin/jinjahtml-vscode
       ref: main
-      commit: 28e422433581d92f72252f1af1f67eeaab07c812
+      commit: d8daf5fd43941deec8803be2335b35922e3e1eeb
     languages:
       jinja-cisco:
         label: Jinja Cisco Config
@@ -456,6 +456,12 @@ extensions:
         - .toml.j2
         - .toml.jinja
         - .toml.jinja2
+      jinja-ts:
+        label: Jinja TypeScript
+        scope-name: source.ts.jinja
+        file-extensions:
+        - ts.j2
+        - ts.jinja2
       jinja-xml:
         label: Jinja XML
         scope-name: text.xml.jinja
@@ -576,7 +582,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 6fe0de937b237fc24497b11c3fe6edfa3842f30d
+      commit: a1066505f3d6274e8b9ee138ddc36118aad442e3
     languages:
       prisma:
         label: Prisma
@@ -592,7 +598,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 7d4f8a73227beb6ed26031f9d426bd21e8c2da3f
+      commit: 38f448d2eceab6b8eb9523ff49885ace5fe354ab
     languages:
       svelte:
         label: Svelte
@@ -612,7 +618,7 @@ extensions:
       repo: tamasfe/taplo
       path: editors/vscode
       ref: master
-      commit: 268c8b1de41c105324b8c667460aeb5e23b0b6da
+      commit: e1938a8c6c472a3aab99d3c5204768cd9c7008fb
     languages:
       toml:
         label: TOML Config File

@@ -71,6 +71,7 @@ jobs:
         add-paths: |
           plugin/updater/updater-state.yaml
           plugin/syntaxes
+          plugin/plugin.xml
           README.md
         branch: dependencies/syntaxes
         delete-branch: true

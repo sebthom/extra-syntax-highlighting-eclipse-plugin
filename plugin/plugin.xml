@@ -831,6 +831,26 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- jinja/jinja-ts: Jinja TypeScript -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.jinja-ts" name="Jinja TypeScript" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="ts.j2,ts.jinja2" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.ts.jinja" path="syntaxes/jinja/jinja-ts.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.ts.jinja" contentTypeId="extra-syntax-highlighting.jinja-ts" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.jinja-ts" path="syntaxes/jinja/jinja-ts.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.jinja-ts" icon="syntaxes/jinja/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
   <!-- jinja/jinja-xml: Jinja XML -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

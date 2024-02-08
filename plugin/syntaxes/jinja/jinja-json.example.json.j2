@@ -1,0 +1,31 @@
+{
+  "name": "{{ user.name }}",
+  "age": {{ user.age }},
+  "is_adult": {% if user.age >= 18 %}true{% else %}false{% endif %},
+  "address": {
+    "city": "{{ user.address.city }}",
+    "country": "{{ user.address.country }}"
+  },
+  "interests": [
+    {% for interest in user.interests %}
+      "{{ interest }}"{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ],
+  {% if user.email %}
+  "email": "{{ user.email }}",
+  {% endif %}
+  {% if user.phone %}
+  "phone": "{{ user.phone }}",
+  {% endif %}
+  "social_links": {
+    {% if user.social_links.twitter %}
+    "twitter": "{{ user.social_links.twitter }}",
+    {% endif %}
+    {% if user.social_links.facebook %}
+    "facebook": "{{ user.social_links.facebook }}",
+    {% endif %}
+    {% if user.social_links.linkedin %}
+    "linkedin": "{{ user.social_links.linkedin }}",
+    {% endif %}
+  }
+}

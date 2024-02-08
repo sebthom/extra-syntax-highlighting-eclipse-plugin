@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: d37334dcdb4d6fc66ee7bc757f58cc6bd6ba10c1
+      commit: ada26ac41f19a1c44f0316b103c01113bc2913dd
     languages:
       astro:
         label: Astro
@@ -36,7 +36,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 0f04c1194e22d477222373a78a8885ceabba95dc
+      commit: 66aeb5c96c07fbc5f4d6b5c12dc69788ed935414
     languages:
       starlark:
         label: Starlark
@@ -152,7 +152,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: 994cc0dbe4b386d02f0bda2b9e1c65e462fab027
+      commit: 7641cb0c8093f4955f03f35520090e5a33ba5c91
     languages:
       hcl:
         label: HCL Config File
@@ -192,6 +192,9 @@ extensions:
       ref: main
       commit: d8daf5fd43941deec8803be2335b35922e3e1eeb
     languages:
+      jinja:
+        label: Jinja Raw
+        scope-name: source.jinja
       jinja-cisco:
         label: Jinja Cisco Config
         scope-name: source.cisco.jinja
@@ -582,7 +585,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: a1066505f3d6274e8b9ee138ddc36118aad442e3
+      commit: d038c8602a184c9e5947c6a64d90b5f2eccfb986
     languages:
       prisma:
         label: Prisma
@@ -598,7 +601,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 38f448d2eceab6b8eb9523ff49885ace5fe354ab
+      commit: efe8463e8d853cb726e9d0502ac4f42ed394ebf5
     languages:
       svelte:
         label: Svelte
@@ -618,7 +621,7 @@ extensions:
       repo: tamasfe/taplo
       path: editors/vscode
       ref: master
-      commit: e1938a8c6c472a3aab99d3c5204768cd9c7008fb
+      commit: 1aed562babc114643af6d46bb2c4a0513f78f0a4
     languages:
       toml:
         label: TOML Config File

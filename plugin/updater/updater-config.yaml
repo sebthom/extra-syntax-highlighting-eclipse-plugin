@@ -188,8 +188,6 @@ sources:
     github:
       repo: samuelcolvin/jinjahtml-vscode
     languages:
-      jinja:
-        ignored: true
       jinja-dockerfile:
         example: examples/Dockerfile.j2
       jinja-html:

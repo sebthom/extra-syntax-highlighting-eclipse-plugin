@@ -323,6 +323,26 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- jinja/jinja: Jinja Raw -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.jinja" name="Jinja Raw" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                   />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.jinja" path="syntaxes/jinja/jinja.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.jinja" contentTypeId="extra-syntax-highlighting.jinja" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.jinja" path="syntaxes/jinja/jinja.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.jinja" icon="syntaxes/jinja/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
   <!-- jinja/jinja-cisco: Jinja Cisco Config -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
@@ -532,6 +552,10 @@
 
   <extension point="org.eclipse.ui.genericeditor.icons">
     <icon contentType="extra-syntax-highlighting.jinja-json" icon="syntaxes/jinja/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Jinja JSON Example" path="syntaxes/jinja/jinja-json.example.json.j2" scopeName="text.json.jinja" />
   </extension>
 
   <!-- ======================================== -->

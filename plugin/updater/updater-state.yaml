@@ -552,6 +552,25 @@ extensions:
         - ronn
         - scd
         - workbook
+  nginx:
+    github:
+      repo: ahmadalli/vscode-nginx-conf
+      ref: main
+      commit: d56090db4dd9d2385be1a24e2230a5c88521cec6
+    languages:
+      nginx:
+        label: NGINX Conf
+        scope-name: source.nginx
+        file-extensions:
+        - .conf
+        - .conf.default
+        - .conf.template
+        - .nginx
+        - fastcgi_params
+        - mime.types
+        - nginx.conf
+        - scgi_params
+        - uwsgi_params
   nushell:
     github:
       repo: nushell/vscode-nushell-lang

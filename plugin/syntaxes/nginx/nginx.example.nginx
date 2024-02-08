@@ -1,0 +1,65 @@
+# Global settings
+user nginx;
+worker_processes auto;
+pid /run/nginx.pid;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    # Basic settings
+    include            mime.types;
+    default_type       application/octet-stream;
+    sendfile           on;
+    keepalive_timeout  65;
+
+    # Logging
+    access_log  /var/log/nginx/access.log;
+    error_log  /var/log/nginx/error.log;
+
+    # Virtual Host Configurations
+    server {
+        listen       80;
+        server_name  example.com www.example.com;
+
+        # Location Configurations
+        location / {
+            root   /usr/share/nginx/html;
+            index  index.html index.htm;
+        }
+
+        # Proxy Configurations
+        location /api {
+            proxy_pass http://backend_server;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        # SSL Configuration
+        listen 443 ssl;
+        ssl_certificate /etc/nginx/ssl/server.crt;
+        ssl_certificate_key /etc/nginx/ssl/server.key;
+
+        # Security Headers
+        add_header X-Content-Type-Options nosniff;
+        add_header X-Frame-Options SAMEORIGIN;
+        add_header X-XSS-Protection "1; mode=block";
+
+        # Gzip Compression
+        gzip on;
+        gzip_disable "msie6";
+        gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+
+        # Load Balancer
+        upstream backend_server {
+            server backend1.example.com;
+            server backend2.example.com;
+        }
+    }
+
+    # Include additional configuration files
+    include /etc/nginx/conf.d/*.conf;
+}

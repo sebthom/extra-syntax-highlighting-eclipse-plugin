@@ -265,6 +265,11 @@ sources:
         - scd
         - workbook
 
+  nginx:
+    type: vscode-extension
+    github:
+      repo: ahmadalli/vscode-nginx-conf
+
   nushell:
     type: vscode-extension
     github:

@@ -1022,6 +1022,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- nginx/nginx: NGINX Conf -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.nginx" name="NGINX Conf" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="conf,conf.default,conf.template,fastcgi_params,mime.types,nginx,nginx.conf,scgi_params,uwsgi_params" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.nginx" path="syntaxes/nginx/nginx.tmLanguage.plist" />
+    <scopeNameContentTypeBinding scopeName="source.nginx" contentTypeId="extra-syntax-highlighting.nginx" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.nginx" path="syntaxes/nginx/nginx.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.nginx" icon="syntaxes/nginx/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="NGINX Conf Example" path="syntaxes/nginx/nginx.example.nginx" scopeName="source.nginx" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- nushell/nushell: nushell -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

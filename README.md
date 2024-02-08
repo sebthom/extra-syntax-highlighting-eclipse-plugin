@@ -37,6 +37,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 - Mako Templates (`*.mako`) - https://www.makotemplates.org/
 - Markdown (`*.md`) - https://daringfireball.net/projects/markdown/
+- NginX (`nginx.conf`) - https://www.nginx.com/
 - Nushell (`*.nu`) - https://github.com/nushell/nushell
 - PlantUML (`*.pu`) - https://plantuml.com/
 - Prisma - https://www.prisma.io/
@@ -121,6 +122,7 @@ To install the plugin into an existing Eclipse installation do:
 | LDIF File | file-extensions="ldif" | [master@FlashSystems/LDIF-Syntax](https://github.com/FlashSystems/LDIF-Syntax/tree/f00c21eb1cc5fe5966cf6ef158e854a65449a9fa/)
 | Mako Template | file-extensions="mako" | [master@marconi/mako-tmbundle](https://github.com/marconi/mako-tmbundle/tree/45037e4e98f0c215b55b194d303811d43b85407c/Syntaxes)
 | Markdown | file-extensions="livemd, markdown, md, mdown, mdwn, mkd, mkdn, mkdown, ronn, scd, workbook" | [main@wooorm/markdown-tm-language](https://github.com/wooorm/markdown-tm-language/tree/371d61df9ddc3850e12aabe61b602d02e259e8a4/)
+| NGINX Conf <img src="plugin/syntaxes/nginx/icon.png" width=16/> | file-extensions="conf, conf.default, conf.template, fastcgi_params, mime.types, nginx, nginx.conf, scgi_params, uwsgi_params" | [main@ahmadalli/vscode-nginx-conf](https://github.com/ahmadalli/vscode-nginx-conf/tree/d56090db4dd9d2385be1a24e2230a5c88521cec6/)
 | nushell <img src="plugin/syntaxes/nushell/nushell.png" width=16/> | file-extensions="nu" | [main@nushell/vscode-nushell-lang](https://github.com/nushell/vscode-nushell-lang/tree/bd9d19fd83a010af6b007def456d59138d44a59f/)
 | OpenGL Shading Language <img src="plugin/syntaxes/glsl/icon.png" width=16/> | file-extensions="comp, csh, frag, fs, fsh, fshader, geom, glsl, gs, gsh, gshader, mesh, rahit, rcall, rchit, rgen, rint, rmiss, task, tesc, tese, vert, vs, vsh, vshader" | [master@GeForceLegend/vscode-glsl](https://github.com/GeForceLegend/vscode-glsl/tree/717034785b6128d7a8ca85f507bddf33eba4c3e7/)
 | PlantUML <img src="plugin/syntaxes/plantuml/icon.png" width=16/> | file-extensions="iuml, plantuml, pu, puml, wsd" | [master@qjebbs/vscode-plantuml](https://github.com/qjebbs/vscode-plantuml/tree/107e4fa397a6f06c8debad3be41b4c6117e49c6b/)

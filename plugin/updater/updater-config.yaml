@@ -192,6 +192,14 @@ sources:
         example: examples/Dockerfile.j2
       jinja-html:
         example: examples/testing.jinja
+        file-extensions:
+        - htm.j2
+        - htm.jinja
+        - htm.jinja2
+        file-patterns:
+        - "*html.j2"
+        - "*html.jinja"
+        - "*html.jinja2"
       jinja-js:
         example: examples/testing.js.j2
       jinja-md:

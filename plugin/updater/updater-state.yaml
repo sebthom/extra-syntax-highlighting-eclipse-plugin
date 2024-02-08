@@ -260,10 +260,13 @@ extensions:
         label: Jinja HTML
         scope-name: text.html.jinja
         file-extensions:
-        - .html.j2
-        - .j2
-        - .jinja
-        - .jinja2
+        - htm.j2
+        - htm.jinja
+        - htm.jinja2
+        file-patterns:
+        - '*html.j2'
+        - '*html.jinja'
+        - '*html.jinja2'
       jinja-java:
         label: Jinja Java
         scope-name: source.java.jinja

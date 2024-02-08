@@ -347,7 +347,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-cisco" name="Jinja Cisco Config" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="cisco.j2,cisco.jinja,cisco.jinja2,ios.j2,ios.jinja,ios.jinja2" />
+                  file-patterns="*.cisco.j2,*.cisco.jinja,*.cisco.jinja2,*.ios.j2,*.ios.jinja,*.ios.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.cisco.jinja" path="syntaxes/jinja/jinja-cisco.tmLanguage.json" />
@@ -367,7 +367,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-cpp" name="Jinja C++" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="c.j2,c.jinja,c.jinja2,cpp.j2,cpp.jinja,cpp.jinja2,h.j2,h.jinja,h.jinja2" />
+                  file-patterns="*.c.j2,*.c.jinja,*.c.jinja2,*.cpp.j2,*.cpp.jinja,*.cpp.jinja2,*.h.j2,*.h.jinja,*.h.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.cpp.jinja" path="syntaxes/jinja/jinja-cpp.tmLanguage.json" />
@@ -387,7 +387,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-css" name="Jinja CSS" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="css.j2,css.jinja,css.jinja2" />
+                  file-patterns="*.css.j2,*.css.jinja,*.css.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.css.jinja" path="syntaxes/jinja/jinja-css.tmLanguage.json" />
@@ -407,7 +407,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-cy" name="Jinja Cython" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="pxd.j2,pxd.jinja,pxd.jinja2,pxi.j2,pxi.jinja,pxi.jinja2,pyx.j2,pyx.jinja,pyx.jinja2" />
+                  file-patterns="*.pxd.j2,*.pxd.jinja,*.pxd.jinja2,*.pxi.j2,*.pxi.jinja,*.pxi.jinja2,*.pyx.j2,*.pyx.jinja,*.pyx.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.cython.jinja" path="syntaxes/jinja/jinja-cy.tmLanguage.json" />
@@ -427,7 +427,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-dockerfile" name="Jinja Dockerfile" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="dockerfile.j2,dockerfile.jinja,dockerfile.jinja2" file-names="Dockerfile.j2,Dockerfile.jinja,Dockerfile.jinja2" />
+                  file-names="Dockerfile.j2,Dockerfile.jinja,Dockerfile.jinja2" file-patterns="*.dockerfile.j2,*.dockerfile.jinja,*.dockerfile.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.dockerfile.jinja" path="syntaxes/jinja/jinja-dockerfile.tmLanguage.json" />
@@ -451,7 +451,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-groovy" name="Jinja Groovy" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="groovy.j2,groovy.jinja,groovy.jinja2" />
+                  file-patterns="*.groovy.j2,*.groovy.jinja,*.groovy.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.groovy.jinja" path="syntaxes/jinja/jinja-groovy.tmLanguage.json" />
@@ -471,7 +471,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-html" name="Jinja HTML" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="html.j2,j2,jinja,jinja2" />
+                  file-patterns="*.htm.j2,*.htm.jinja,*.htm.jinja2,*html.j2,*html.jinja,*html.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.html.jinja" path="syntaxes/jinja/jinja-html.tmLanguage.json" />
@@ -495,7 +495,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-java" name="Jinja Java" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="java.j2,java.jinja,java.jinja2" />
+                  file-patterns="*.java.j2,*.java.jinja,*.java.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.java.jinja" path="syntaxes/jinja/jinja-java.tmLanguage.json" />
@@ -515,7 +515,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-js" name="Jinja JavaScript" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="js.j2,js.jinja2" />
+                  file-patterns="*.js.j2,*.js.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.js.jinja" path="syntaxes/jinja/jinja-js.tmLanguage.json" />
@@ -539,7 +539,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-json" name="Jinja JSON" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="code-workspace.j2,code-workspace.jinja,code-workspace.jinja2,json.j2,json.jinja,json.jinja2" />
+                  file-patterns="*.code-workspace.j2,*.code-workspace.jinja,*.code-workspace.jinja2,*.json.j2,*.json.jinja,*.json.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.json.jinja" path="syntaxes/jinja/jinja-json.tmLanguage.json" />
@@ -563,7 +563,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-latex" name="Jinja LaTeX" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="latex.j2,latex.jinja2,tex.j2,tex.jinja2" />
+                  file-patterns="*.latex.j2,*.latex.jinja2,*.tex.j2,*.tex.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.latex.jinja" path="syntaxes/jinja/jinja-latex.tmLanguage.json" />
@@ -583,7 +583,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-lua" name="Jinja Lua" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="lua.j2,lua.jinja,lua.jinja2" />
+                  file-patterns="*.lua.j2,*.lua.jinja,*.lua.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.lua.jinja" path="syntaxes/jinja/jinja-lua.tmLanguage.json" />
@@ -603,7 +603,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-md" name="Jinja Markdown" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="md.j2,md.jinja,md.jinja2" />
+                  file-patterns="*.md.j2,*.md.jinja,*.md.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.html.markdown.jinja" path="syntaxes/jinja/jinja-md.tmLanguage.json" />
@@ -627,7 +627,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-nginx" name="Jinja Nginx" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="conf.j2,conf.jinja,conf.jinja2" />
+                  file-patterns="*.conf.j2,*.conf.jinja,*.conf.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.nginx.jinja" path="syntaxes/jinja/jinja-nginx.tmLanguage.json" />
@@ -647,7 +647,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-php" name="Jinja PHP" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="php.j2,php.jinja,php.jinja2" />
+                  file-patterns="*.php.j2,*.php.jinja,*.php.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.php.jinja" path="syntaxes/jinja/jinja-php.tmLanguage.json" />
@@ -667,7 +667,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-properties" name="Jinja Properties/ini/Conf" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="cfg.j2,conf.j2,desktop.j2,directory.j2,ini.j2,properties.j2" />
+                  file-patterns="*.cfg.j2,*.conf.j2,*.desktop.j2,*.directory.j2,*.ini.j2,*.properties.j2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.ini.jinja" path="syntaxes/jinja/jinja-properties.tmLanguage.json" />
@@ -687,7 +687,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-py" name="Jinja Python" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="py.j2,py.jinja,py.jinja2,pyi.j2,pyi.jinja,pyi.jinja2" />
+                  file-patterns="*.py.j2,*.py.jinja,*.py.jinja2,*.pyi.j2,*.pyi.jinja,*.pyi.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.python.jinja" path="syntaxes/jinja/jinja-py.tmLanguage.json" />
@@ -711,7 +711,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-rb" name="Jinja Ruby" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="rb.j2,rb.jinja2,rbw.j2,rbw.jinja2" />
+                  file-patterns="*.rb.j2,*.rb.jinja2,*.rbw.j2,*.rbw.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.ruby.jinja" path="syntaxes/jinja/jinja-rb.tmLanguage.json" />
@@ -731,7 +731,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-rust" name="Jinja Rust" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="rs.j2,rs.jinja,rs.jinja2" />
+                  file-patterns="*.rs.j2,*.rs.jinja,*.rs.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.rust.jinja" path="syntaxes/jinja/jinja-rust.tmLanguage.json" />
@@ -751,7 +751,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-shell" name="Jinja Shell Script" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="bash.j2,bash_aliases.j2,bash_login.j2,bash_logout.j2,bash_profile.j2,bashrc.j2,ebuild.j2,env.j2,env.jinja,env.jinja2,install.j2,ksh.j2,profile.j2,sh.j2,zlogin.j2,zlogout.j2,zprofile.j2,zsh-theme.j2,zsh.j2,zshenv.j2,zshrc.j2" />
+                  file-patterns="*.bash.j2,*.bash_aliases.j2,*.bash_login.j2,*.bash_logout.j2,*.bash_profile.j2,*.bashrc.j2,*.ebuild.j2,*.env.j2,*.env.jinja,*.env.jinja2,*.install.j2,*.ksh.j2,*.profile.j2,*.sh.j2,*.zlogin.j2,*.zlogout.j2,*.zprofile.j2,*.zsh-theme.j2,*.zsh.j2,*.zshenv.j2,*.zshrc.j2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.shell.jinja" path="syntaxes/jinja/jinja-shell.tmLanguage.json" />
@@ -771,7 +771,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-sql" name="Jinja SQL" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="sql.j2,sql.jinja,sql.jinja2" />
+                  file-patterns="*.sql.j2,*.sql.jinja,*.sql.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.sql.jinja" path="syntaxes/jinja/jinja-sql.tmLanguage.json" />
@@ -795,7 +795,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-systemd" name="Jinja Systemd Unit File" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="automount.j2,automount.jinja,automount.jinja2,device.j2,device.jinja,device.jinja2,link.j2,link.jinja,link.jinja2,mount.j2,mount.jinja,mount.jinja2,netdev.j2,netdev.jinja,netdev.jinja2,network.j2,network.jinja,network.jinja2,path.j2,path.jinja,path.jinja2,scope.j2,scope.jinja,scope.jinja2,service.j2,service.jinja,service.jinja2,slice.j2,slice.jinja,slice.jinja2,snapshot.j2,snapshot.jinja,snapshot.jinja2,socket.j2,socket.jinja,socket.jinja2,swap.j2,swap.jinja,swap.jinja2,target.j2,target.jinja,target.jinja2,timer.j2,timer.jinja,timer.jinja2" />
+                  file-patterns="*.automount.j2,*.automount.jinja,*.automount.jinja2,*.device.j2,*.device.jinja,*.device.jinja2,*.link.j2,*.link.jinja,*.link.jinja2,*.mount.j2,*.mount.jinja,*.mount.jinja2,*.netdev.j2,*.netdev.jinja,*.netdev.jinja2,*.network.j2,*.network.jinja,*.network.jinja2,*.path.j2,*.path.jinja,*.path.jinja2,*.scope.j2,*.scope.jinja,*.scope.jinja2,*.service.j2,*.service.jinja,*.service.jinja2,*.slice.j2,*.slice.jinja,*.slice.jinja2,*.snapshot.j2,*.snapshot.jinja,*.snapshot.jinja2,*.socket.j2,*.socket.jinja,*.socket.jinja2,*.swap.j2,*.swap.jinja,*.swap.jinja2,*.target.j2,*.target.jinja,*.target.jinja2,*.timer.j2,*.timer.jinja,*.timer.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.systemd.jinja" path="syntaxes/jinja/jinja-systemd.tmLanguage.json" />
@@ -819,7 +819,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-terraform" name="Jinja Terraform" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="hcl.j2,hcl.jinja,hcl.jinja2,tf.j2,tf.jinja,tf.jinja2,tfvars.j2,tfvars.jinja,tfvars.jinja2" />
+                  file-patterns="*.hcl.j2,*.hcl.jinja,*.hcl.jinja2,*.tf.j2,*.tf.jinja,*.tf.jinja2,*.tfvars.j2,*.tfvars.jinja,*.tfvars.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.terraform.jinja" path="syntaxes/jinja/jinja-terraform.tmLanguage.json" />
@@ -839,7 +839,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-toml" name="Jinja TOML" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="toml.j2,toml.jinja,toml.jinja2" />
+                  file-patterns="*.toml.j2,*.toml.jinja,*.toml.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.toml.jinja" path="syntaxes/jinja/jinja-toml.tmLanguage.json" />
@@ -859,7 +859,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-ts" name="Jinja TypeScript" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="ts.j2,ts.jinja2" />
+                  file-patterns="*.ts.j2,*.ts.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.ts.jinja" path="syntaxes/jinja/jinja-ts.tmLanguage.json" />
@@ -879,7 +879,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-xml" name="Jinja XML" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="xml.j2,xml.jinja,xml.jinja2" />
+                  file-patterns="*.xml.j2,*.xml.jinja,*.xml.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.xml.jinja" path="syntaxes/jinja/jinja-xml.tmLanguage.json" />
@@ -903,7 +903,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja-yaml" name="Jinja YAML" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="sls,yaml.j2,yaml.jinja,yaml.jinja2,yml.j2,yml.jinja,yml.jinja2" />
+                  file-extensions="sls" file-patterns="*.yaml.j2,*.yaml.jinja,*.yaml.jinja2,*.yml.j2,*.yml.jinja,*.yml.jinja2" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.yaml.jinja" path="syntaxes/jinja/jinja-yaml.tmLanguage.json" />
@@ -1026,7 +1026,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.nginx" name="NGINX Conf" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="conf,conf.default,conf.template,fastcgi_params,mime.types,nginx,nginx.conf,scgi_params,uwsgi_params" />
+                  file-extensions="conf,fastcgi_params,nginx,scgi_params,uwsgi_params" file-patterns="*.conf.default,*.conf.template,*.mime.types,*.nginx.conf" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.nginx" path="syntaxes/nginx/nginx.tmLanguage.plist" />

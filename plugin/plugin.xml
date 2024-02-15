@@ -5,7 +5,8 @@
   <!-- Extra Syntax Highlighting - Base Type    -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.basetype" name="Extra Syntax Highlighting" base-type="org.eclipse.core.runtime.text" priority="normal" />
+    <content-type id="extra-syntax-highlighting.basetype" name="Extra Syntax Highlighting" base-type="org.eclipse.core.runtime.text" priority="normal"
+                  file-patterns="PREVENT_FILE_ASSOCIATION_INHERITANCE" />
   </extension>
   <extension point="org.eclipse.ui.editors">
     <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="extra-syntax-highlighting.basetype" />
@@ -327,7 +328,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.jinja" name="Jinja Raw" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                   />
+                  file-names="PREVENT_FILE_ASSOCIATION_INHERITANCE" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.jinja" path="syntaxes/jinja/jinja.tmLanguage.json" />

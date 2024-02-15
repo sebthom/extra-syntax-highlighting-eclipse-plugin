@@ -334,12 +334,14 @@ public class Updater {
             fileExtensions = fileExtensions.stream().distinct().sorted().toList();
             fileNames = fileNames.stream().distinct().sorted().toList();
             filePatterns = filePatterns.stream().distinct().sorted().toList();
-
-            templateVars.put("file_associations", Arrays.asList( //
+            final String fileAssociations = Arrays.asList( //
                fileExtensions.isEmpty() ? null : "file-extensions=\"" + join(fileExtensions, ",") + "\"", //
                fileNames.isEmpty() ? null : "file-names=\"" + join(fileNames, ",") + "\"", //
                filePatterns.isEmpty() ? null : "file-patterns=\"" + join(filePatterns, ",") + "\"" //
-            ).stream().filter(Objects::nonNull).collect(Collectors.joining(" ")));
+            ).stream().filter(Objects::nonNull).collect(Collectors.joining(" "));
+
+            templateVars.put("file_associations", fileAssociations.isBlank() ? "file-names=\"PREVENT_FILE_ASSOCIATION_INHERITANCE\""
+               : fileAssociations);
 
             pluginLines.append(render(
                """

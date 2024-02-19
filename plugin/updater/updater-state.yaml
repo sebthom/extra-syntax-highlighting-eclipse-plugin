@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: ada26ac41f19a1c44f0316b103c01113bc2913dd
+      commit: 1436e6e0de87c8387eeb93fbc26ce91ce571fdfe
     languages:
       astro:
         label: Astro
@@ -152,7 +152,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: 7641cb0c8093f4955f03f35520090e5a33ba5c91
+      commit: 4105e32a9eab647c31a597e806e6f3ffc24626eb
     languages:
       hcl:
         label: HCL Config File
@@ -607,7 +607,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: d038c8602a184c9e5947c6a64d90b5f2eccfb986
+      commit: d203db9ad10fd8448ae0237ce4bcafd90dc4bade
     languages:
       prisma:
         label: Prisma
@@ -643,7 +643,7 @@ extensions:
       repo: tamasfe/taplo
       path: editors/vscode
       ref: master
-      commit: 1aed562babc114643af6d46bb2c4a0513f78f0a4
+      commit: fe594e9cb1a1a1b0291e0dfb336b034870c7606b
     languages:
       toml:
         label: TOML Config File

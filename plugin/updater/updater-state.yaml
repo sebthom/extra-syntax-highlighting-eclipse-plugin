@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 1436e6e0de87c8387eeb93fbc26ce91ce571fdfe
+      commit: af052d0455ec511598e89a6e973e94d25cf1cea9
     languages:
       astro:
         label: Astro
@@ -36,7 +36,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 66aeb5c96c07fbc5f4d6b5c12dc69788ed935414
+      commit: f2426e4e29c88e04cb1589f518c169804deda70f
     languages:
       starlark:
         label: Starlark
@@ -119,7 +119,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: dfe083ad6f529c2492a1d5781641fea7f418942f
+      commit: ece99f63f5d8d01057b735e90a6957edea3e42b9
     languages:
       graphql:
         label: GraphQL
@@ -152,7 +152,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: 4105e32a9eab647c31a597e806e6f3ffc24626eb
+      commit: 9cd1ca7d32ac060ed04c984ca438be50f1c0d3dc
     languages:
       hcl:
         label: HCL Config File
@@ -578,7 +578,7 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: bd9d19fd83a010af6b007def456d59138d44a59f
+      commit: ad9472e1aa923dbd75071fa3505bb0dbd26a6d06
     languages:
       nushell:
         label: nushell
@@ -607,7 +607,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: d203db9ad10fd8448ae0237ce4bcafd90dc4bade
+      commit: ebc0fdc545adf1926a8bba8d7e7838115de45c3e
     languages:
       prisma:
         label: Prisma
@@ -623,7 +623,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: efe8463e8d853cb726e9d0502ac4f42ed394ebf5
+      commit: 4bd1424d80ab2c659644b7ce1346dfaaa640628e
     languages:
       svelte:
         label: Svelte
@@ -643,7 +643,7 @@ extensions:
       repo: tamasfe/taplo
       path: editors/vscode
       ref: master
-      commit: fe594e9cb1a1a1b0291e0dfb336b034870c7606b
+      commit: 7cf40445ba93b81c99183bf3f91629ee7bcf78bb
     languages:
       toml:
         label: TOML Config File

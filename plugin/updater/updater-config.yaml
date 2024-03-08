@@ -323,8 +323,19 @@ sources:
     type: vscode-extension
     github:
       #repo: oovm/vscode-toml
-      repo: tamasfe/taplo
-      path: editors/vscode
+
+      # repo: tamasfe/taplo
+      # path: editors/vscode
+      # -> has severe performance issues when rendering pyproject.toml files containing lines like: "requires-python = ">=3.10,<3.13"
+
+      repo: juggernautjp/less-toml
+
     languages:
       toml:
         label: TOML Config File
+        file-extensions:
+        - .toml
+        file-names:
+        - Cargo.lock
+        - pdm.lock
+        - Pipfile

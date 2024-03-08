@@ -640,18 +640,19 @@ extensions:
     - svelte.pug.tags
   toml:
     github:
-      repo: tamasfe/taplo
-      path: editors/vscode
+      repo: juggernautjp/less-toml
       ref: master
-      commit: 7cf40445ba93b81c99183bf3f91629ee7bcf78bb
+      commit: 13eb891232e98c4a9c595bf8c657893c84edf3a9
     languages:
       toml:
         label: TOML Config File
         scope-name: source.toml
+        upstream-url: https://github.com/textmate/toml.tmbundle/commit/e82b64c1e86396220786846201e9aa3f0a2d9ca2
         file-extensions:
         - .toml
         file-names:
         - Cargo.lock
+        - Pipfile
+        - pdm.lock
     inline-grammars:
     - markdown.toml.codeblock
-    - markdown.toml.frontmatter.codeblock

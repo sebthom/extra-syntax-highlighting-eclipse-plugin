@@ -1176,7 +1176,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
     <content-type id="extra-syntax-highlighting.toml" name="TOML Config File" base-type="extra-syntax-highlighting.basetype" priority="normal"
-                  file-extensions="toml" file-names="Cargo.lock" />
+                  file-extensions="toml" file-names="Cargo.lock,Pipfile,pdm.lock" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.toml" path="syntaxes/toml/toml.tmLanguage.json" />
@@ -1200,7 +1200,6 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.toml.codeblock" path="syntaxes/toml/markdown.toml.codeblock.tmLanguage.json" />
-    <grammar scopeName="markdown.toml.frontmatter.codeblock" path="syntaxes/toml/markdown.toml.frontmatter.codeblock.tmLanguage.json" />
   </extension>
 
   <!-- END-GENERATED -->

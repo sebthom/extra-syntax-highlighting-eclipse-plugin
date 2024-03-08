@@ -3,12 +3,32 @@
   "injectionSelector": "L:text.html.markdown",
   "patterns": [
     {
-      "include": "#tomlCodeBlock"
+      "include": "#frontmatter_toml"
+    },
+    {
+      "include": "#block"
     }
   ],
   "repository": {
-    "tomlCodeBlock": {
-      "begin": "(^|\\G)(\\s*)(\\`{3,}|~{3,})\\s*(?i:(toml)(\\s+[^`~]*)?$)",
+    "frontmatter_toml": {
+      "begin": "\\A\\+{3}\\s*$",
+      "end": "(^|\\G)(?=\\s*[\\+~]{3,}\\s*$)",
+      "contentName": "meta.embedded.block.toml.frontmatter",
+      "patterns": [
+        {
+          "include": "source.toml"
+        }
+      ]
+    },
+    "block": {
+      "patterns": [
+        {
+          "include": "#fenced_code_block"
+        }
+      ]
+    },
+    "fenced_code_block_toml": {
+      "begin": "(^|\\G)(\\s*)(`{3,}|~{3,})\\s*(?i:(toml)((\\s+|:|,|\\{|\\?)[^`~]*)?$)",
       "name": "markup.fenced_code.block.markdown",
       "end": "(^|\\G)(\\2|\\s{0,3})(\\3)\\s*$",
       "beginCaptures": {
@@ -37,6 +57,13 @@
               "include": "source.toml"
             }
           ]
+        }
+      ]
+    },
+    "fenced_code_block": {
+      "patterns": [
+        {
+          "include": "#fenced_code_block_toml"
         }
       ]
     }

@@ -11,6 +11,12 @@
   <extension point="org.eclipse.ui.editors">
     <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="extra-syntax-highlighting.basetype" />
   </extension>
+  <extension point="org.eclipse.compare.contentViewers">
+    <contentTypeBinding contentTypeId="extra-syntax-highlighting.basetype" contentViewerId="org.eclipse.ui.genericeditor.compareViewer" />
+  </extension>
+  <extension point="org.eclipse.compare.contentMergeViewers">
+    <contentTypeBinding contentTypeId="extra-syntax-highlighting.basetype" contentMergeViewerId="org.eclipse.ui.genericeditor.compareViewer" />
+  </extension>
 
   <!-- ======================================== -->
   <!-- EEA                                      -->

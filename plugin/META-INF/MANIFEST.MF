@@ -6,5 +6,10 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Sebastian Thomschke
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ClassPath: .
-Require-Bundle: org.eclipse.tm4e.registry,
- org.eclipse.ui.genericeditor
+Require-Bundle: org.eclipse.compare;resolution:=optional,
+ org.eclipse.core.contenttype,
+ org.eclipse.ui.editors,
+ org.eclipse.ui.genericeditor,
+ org.eclipse.tm4e.registry,
+ org.eclipse.tm4e.languageconfiguration,
+ org.eclipse.tm4e.ui

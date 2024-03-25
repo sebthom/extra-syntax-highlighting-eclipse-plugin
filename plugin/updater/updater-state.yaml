@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 6fd9314b22b12a19ec104f19ce4ad5e3856a2ece
+      commit: 8e55c37cbcf134dedf0068781245da5a9d46d081
     languages:
       astro:
         label: Astro
@@ -152,7 +152,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: aa2c94baeea2856835f87bd206237c550197e97f
+      commit: b9d424769d0162012c6c4c88c5b5046d902abd91
     languages:
       hcl:
         label: HCL Config File
@@ -559,7 +559,7 @@ extensions:
     github:
       repo: ahmadalli/vscode-nginx-conf
       ref: main
-      commit: d56090db4dd9d2385be1a24e2230a5c88521cec6
+      commit: 10414d948cc5e52fbf2a8207629427d4ae3bc8c4
     languages:
       nginx:
         label: NGINX Conf
@@ -607,7 +607,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: a39c4068d9036ed60b93195a52f53dcc35c7c81c
+      commit: c2a6333861ed6eb2c4405a28ef0078c38b572d79
     languages:
       prisma:
         label: Prisma
@@ -623,7 +623,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: ceb4f7065e4471d75fac7c0191ec7ad67446e81f
+      commit: 4abe9b3bae4dda1b5885f82483f1d69177869333
     languages:
       svelte:
         label: Svelte

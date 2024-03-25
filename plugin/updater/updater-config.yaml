@@ -277,6 +277,9 @@ sources:
     type: vscode-extension
     github:
       repo: ahmadalli/vscode-nginx-conf
+    languages:
+      nginx:
+        grammar: src/syntax/nginx.tmLanguage
 
   nushell:
     type: vscode-extension

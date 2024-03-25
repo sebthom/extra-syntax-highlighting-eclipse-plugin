@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 8e55c37cbcf134dedf0068781245da5a9d46d081
+      commit: 0503392b80765c8a1292ddc9c063a1187425c187
     languages:
       astro:
         label: Astro
@@ -152,7 +152,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: b9d424769d0162012c6c4c88c5b5046d902abd91
+      commit: fc0270594ec0c55531f2388f331b6feaca187298
     languages:
       hcl:
         label: HCL Config File
@@ -607,7 +607,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: c2a6333861ed6eb2c4405a28ef0078c38b572d79
+      commit: 9605acad5ad96ad0e36a60039d7c14617b570710
     languages:
       prisma:
         label: Prisma

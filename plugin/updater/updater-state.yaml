@@ -36,7 +36,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: a7bb6ff2ea7f0d5f0564d4ac96a93f1b510464ba
+      commit: afc3aeddfce0821a10a0b1fa889855a2a12a2433
     languages:
       starlark:
         label: Starlark
@@ -119,7 +119,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 7e86dc461044c0584cf9b21c509c8ed2a1134985
+      commit: fc7de5a75f4b23dd62dd630b705895b5fa5d0a03
     languages:
       graphql:
         label: GraphQL
@@ -152,7 +152,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: fc0270594ec0c55531f2388f331b6feaca187298
+      commit: ab4a9e8aa653ad018248b3afdb1e9b07152cc3a6
     languages:
       hcl:
         label: HCL Config File
@@ -174,7 +174,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 7e5c5f6082112314d189a4a88dc5173a8303a5e4
+      commit: 14ed5ac64e0c444f17bfb3ab75593ef679975ccf
     languages:
       helm:
         label: helm-template
@@ -578,7 +578,7 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: ad9472e1aa923dbd75071fa3505bb0dbd26a6d06
+      commit: 92faaf74f87bcdff8eb70e0aab7c9118e64189f4
     languages:
       nushell:
         label: nushell
@@ -589,7 +589,7 @@ extensions:
     github:
       repo: qjebbs/vscode-plantuml
       ref: master
-      commit: 107e4fa397a6f06c8debad3be41b4c6117e49c6b
+      commit: 8df1df99859952c58f96c2b695d453bf84d4a1c9
     languages:
       plantuml:
         label: PlantUML
@@ -607,7 +607,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 9605acad5ad96ad0e36a60039d7c14617b570710
+      commit: e42cf3511d23401237ef43ebc130b93e0064c0a9
     languages:
       prisma:
         label: Prisma

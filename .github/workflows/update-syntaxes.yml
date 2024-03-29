@@ -15,6 +15,7 @@ defaults:
 env:
   JAVA_VERSION: 17
 
+
 jobs:
 
   ###########################################################
@@ -23,9 +24,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Show environment variables
+      run: env | sort
+
 
     - name: Git Checkout
       uses: actions/checkout@v4 # https://github.com/actions/checkout
+
 
     - name: "Install: JDK ${{ env.JAVA_VERSION }}"
       uses: actions/setup-java@v4 # https://github.com/actions/setup-java
@@ -33,10 +38,12 @@ jobs:
         distribution: temurin
         java-version: ${{ env.JAVA_VERSION }}
 
+
     - name: "Install: Maven"
-      uses: stCarolas/setup-maven@v4.5 # https://github.com/stCarolas/setup-maven
+      uses: stCarolas/setup-maven@v5 # https://github.com/stCarolas/setup-maven
       with:
         maven-version: 3.9.6
+
 
     - name: Update Syntax Files 
       id: update_syntaxes
@@ -57,6 +64,7 @@ jobs:
           echo "${updates}" >> "${GITHUB_OUTPUT}"
           echo "${delimiter}" >> "${GITHUB_OUTPUT}"
         fi
+
 
     - name: Create PR
       id: create-pr

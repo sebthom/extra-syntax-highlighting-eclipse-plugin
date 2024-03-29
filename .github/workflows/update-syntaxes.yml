@@ -52,6 +52,9 @@ jobs:
       run: |
         set -euo pipefail
 
+        # workaround for https://github.com/qjebbs/vscode-plantuml
+        sudo git config --system core.symlinks false
+
         bash plugin/updater/run.sh
 
         updates=$(git status --porcelain plugin/syntaxes | { grep -v LICENSE.txt || test $? = 1; })

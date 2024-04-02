@@ -1,13 +1,9 @@
-# SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
-# SPDX-License-Identifier: EPL-2.0
-# SPDX-ArtifactOfProjectHomePage: https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin
-#
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
 name: Stale issues
 
 on:
   schedule:
-    - cron: '0 16 * * 2'
+    - cron: '0 16 * * 1'
   workflow_dispatch:
     # https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/
 

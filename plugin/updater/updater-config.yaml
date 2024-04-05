@@ -156,7 +156,7 @@ sources:
       repo: vshaxe/haxe-TmLanguage
     languages:
       haxe:
-        label: Haxe Source File
+        label: Haxe
         grammar: haxe.tmLanguage
         langcfg: https://raw.githubusercontent.com/vshaxe/vshaxe/master/configurations/haxe.language-configuration.json
         scope-name: source.hx
@@ -288,6 +288,31 @@ sources:
     languages:
       nushell:
         example: example.nu
+
+  pascal:
+    # not working:
+    # type: vscode-extension
+    # github:
+    #  repo: alefragnani/vscode-language-pascal
+    type: custom
+    github:
+      repo: textmate/pascal.tmbundle
+      path: Syntaxes
+    languages:
+      pascal:
+        label: Pascal
+        grammar: Pascal.plist
+        scope-name: source.pascal
+        file-extensions:
+        - .dfm
+        - .dpk
+        - .dpr
+        - .fmx
+        - .lfm
+        - .lpr
+        - .p
+        - .pas
+    license-download: false
 
   plantuml:
     type: vscode-extension

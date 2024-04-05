@@ -242,10 +242,10 @@
   </extension>
 
   <!-- ======================================== -->
-  <!-- haxe/haxe: Haxe Source File -->
+  <!-- haxe/haxe: Haxe -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.haxe" name="Haxe Source File" base-type="extra-syntax-highlighting.basetype" priority="normal"
+    <content-type id="extra-syntax-highlighting.haxe" name="Haxe" base-type="extra-syntax-highlighting.basetype" priority="normal"
                   file-extensions="hx" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
@@ -258,7 +258,7 @@
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
-    <snippet name="Haxe Source File Example" path="syntaxes/haxe/haxe.example.hx" scopeName="source.hx" />
+    <snippet name="Haxe Example" path="syntaxes/haxe/haxe.example.hx" scopeName="source.hx" />
   </extension>
 
   <!-- ======================================== -->
@@ -1074,6 +1074,26 @@
 
   <extension point="org.eclipse.tm4e.ui.snippets">
     <snippet name="nushell Example" path="syntaxes/nushell/nushell.example.nu" scopeName="source.nushell" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- pascal/pascal: Pascal -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.pascal" name="Pascal" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="dfm,dpk,dpr,fmx,lfm,lpr,p,pas" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.pascal" path="syntaxes/pascal/pascal.tmLanguage.plist" />
+    <scopeNameContentTypeBinding scopeName="source.pascal" contentTypeId="extra-syntax-highlighting.pascal" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.pascal" path="syntaxes/pascal/pascal.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Pascal Example" path="syntaxes/pascal/pascal.example.pas" scopeName="source.pascal" />
   </extension>
 
   <!-- ======================================== -->

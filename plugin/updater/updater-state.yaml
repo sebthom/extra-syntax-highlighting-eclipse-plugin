@@ -152,7 +152,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: ab4a9e8aa653ad018248b3afdb1e9b07152cc3a6
+      commit: 0fd4ee6911c847a7e7d0bad3f0f728d0e58414bc
     languages:
       hcl:
         label: HCL Config File

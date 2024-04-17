@@ -110,6 +110,9 @@ sources:
     type: vscode-extension
     github:
       repo: bazelbuild/vscode-bazel
+    languages:
+      bazelrc:
+        grammar: syntaxes/bazelrc.tmLanguage.yaml
 
   dot:
     type: custom

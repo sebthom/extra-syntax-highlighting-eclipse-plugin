@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 0503392b80765c8a1292ddc9c063a1187425c187
+      commit: 7ff9cf5299eaa4b1398068c195ab5964145ac9fb
     languages:
       astro:
         label: Astro
@@ -36,7 +36,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 2aea27e45cca43e7f20b673f331b3c994c195e99
+      commit: 8972b0eb8270efe471245f5846efb335fd760fda
     languages:
       bazelrc:
         label: bazelrc
@@ -127,7 +127,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 29e99a86c69457490801d97bb9139499a9fef755
+      commit: 9d42a25c97d722fd165f97ec806754d792a3de81
     languages:
       graphql:
         label: GraphQL
@@ -141,7 +141,6 @@ extensions:
     - inline.graphql.markdown.codeblock
     - inline.graphql.php
     - inline.graphql.python
-    - inline.graphql.rb
     - inline.graphql.re
     - inline.graphql.res
     - inline.graphql.scala
@@ -149,7 +148,7 @@ extensions:
     github:
       repo: vshaxe/haxe-TmLanguage
       ref: master
-      commit: b3cb0d3a6835938603d006fce402205fa16c11dd
+      commit: ddad8b4c6d0781ac20be0481174ec1be772c5da5
     languages:
       haxe:
         label: Haxe
@@ -160,7 +159,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: 0fd4ee6911c847a7e7d0bad3f0f728d0e58414bc
+      commit: a9c365d210a5190e0cbd7492be607aa96da940d6
     languages:
       hcl:
         label: HCL Config File
@@ -182,7 +181,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 14ed5ac64e0c444f17bfb3ab75593ef679975ccf
+      commit: 294cc0e6dac52e530a1a0d898dbeb08ef2eddd2c
     languages:
       helm:
         label: helm-template
@@ -586,7 +585,7 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: 92faaf74f87bcdff8eb70e0aab7c9118e64189f4
+      commit: 359e3a69c516c996e5bcd7161290f78feaebbbfb
     languages:
       nushell:
         label: nushell
@@ -634,7 +633,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 278c09c6b25f7ac3b2f27772c5f72b47f4410fc8
+      commit: 9e653f67e8d8761cedd4d3276f140737d97e94e0
     languages:
       prisma:
         label: Prisma
@@ -650,7 +649,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 4c8c0db10455367c486a3e03555da5290050bf48
+      commit: 6cfb0d23df2c60d88ed1064b1127d7eb1767c303
     languages:
       svelte:
         label: Svelte

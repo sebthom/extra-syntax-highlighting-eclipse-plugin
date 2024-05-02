@@ -255,7 +255,6 @@
     <grammar scopeName="inline.graphql.markdown.codeblock" path="syntaxes/graphql/inline.graphql.markdown.codeblock.tmLanguage.json" />
     <grammar scopeName="inline.graphql.php" path="syntaxes/graphql/inline.graphql.php.tmLanguage.json" />
     <grammar scopeName="inline.graphql.python" path="syntaxes/graphql/inline.graphql.python.tmLanguage.json" />
-    <grammar scopeName="inline.graphql.rb" path="syntaxes/graphql/inline.graphql.rb.tmLanguage.json" />
     <grammar scopeName="inline.graphql.re" path="syntaxes/graphql/inline.graphql.re.tmLanguage.json" />
     <grammar scopeName="inline.graphql.res" path="syntaxes/graphql/inline.graphql.res.tmLanguage.json" />
     <grammar scopeName="inline.graphql.scala" path="syntaxes/graphql/inline.graphql.scala.tmLanguage.json" />

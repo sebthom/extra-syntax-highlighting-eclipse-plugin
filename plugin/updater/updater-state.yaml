@@ -36,7 +36,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 8972b0eb8270efe471245f5846efb335fd760fda
+      commit: 60051c54854332f9a00891ebd6fa46ac08a4c577
     languages:
       bazelrc:
         label: bazelrc
@@ -159,7 +159,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: a9c365d210a5190e0cbd7492be607aa96da940d6
+      commit: ab1d9da794f06ae91afa06a590727cbf836939b0
     languages:
       hcl:
         label: HCL Config File
@@ -633,7 +633,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 9e653f67e8d8761cedd4d3276f140737d97e94e0
+      commit: 0125bb8732cfef649889ffd9ab539ae8780f75d1
     languages:
       prisma:
         label: Prisma
@@ -649,7 +649,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 6cfb0d23df2c60d88ed1064b1127d7eb1767c303
+      commit: 9d7907ef8b65efeda2698f61490b964d2f1a7069
     languages:
       svelte:
         label: Svelte

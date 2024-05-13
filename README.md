@@ -44,6 +44,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - Prisma - https://www.prisma.io/
 - Svelte - https://svelte.dev/
 - TOML - https://toml.io/en/
+- Zig - https://ziglang.org/
 
 For a lot more formats install the TM4E **Language Pack** from the TM4E update site https://download.eclipse.org/tm4e/releases/latest/
 
@@ -133,6 +134,7 @@ To install the plugin into an existing Eclipse installation do:
 | Starlark <img src="plugin/syntaxes/bazel/icon.png" width=16/> | file-extensions="BUILD, WORKSPACE, bazel, bzl, bzlmod, sky, star"<br />file-names="BUILD, WORKSPACE" | [master@bazelbuild/vscode-bazel](https://github.com/bazelbuild/vscode-bazel/tree/60051c54854332f9a00891ebd6fa46ac08a4c577/)
 | Svelte <img src="plugin/syntaxes/svelte/icon.png" width=16/> | file-extensions="svelte" | [master@sveltejs/language-tools](https://github.com/sveltejs/language-tools/tree/9d7907ef8b65efeda2698f61490b964d2f1a7069/packages/svelte-vscode)
 | TOML Config File <img src="plugin/syntaxes/toml/icon.png" width=16/> | file-extensions="toml"<br />file-names="Cargo.lock, Pipfile, pdm.lock" | [master@juggernautjp/less-toml](https://github.com/juggernautjp/less-toml/tree/13eb891232e98c4a9c595bf8c657893c84edf3a9/) [[upstream]](https://github.com/textmate/toml.tmbundle/commit/e82b64c1e86396220786846201e9aa3f0a2d9ca2)
+| Zig <img src="plugin/syntaxes/zig/icon.png" width=16/> | file-extensions="zig, zon" | [master@ziglang/vscode-zig](https://github.com/ziglang/vscode-zig/tree/ed1ad075696eb5a9ba0a98c96c3c8d9626eb78ee/)
 
 <!-- END-GENERATED -->
 

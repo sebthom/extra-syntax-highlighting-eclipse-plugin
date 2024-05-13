@@ -1247,5 +1247,29 @@
     <grammar scopeName="markdown.toml.codeblock" path="syntaxes/toml/markdown.toml.codeblock.tmLanguage.json" />
   </extension>
 
+  <!-- ======================================== -->
+  <!-- zig/zig: Zig -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.zig" name="Zig" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="zig,zon" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.zig" path="syntaxes/zig/zig.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.zig" contentTypeId="extra-syntax-highlighting.zig" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.zig" path="syntaxes/zig/zig.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.zig" icon="syntaxes/zig/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Zig Example" path="syntaxes/zig/zig.example.zig" scopeName="source.zig" />
+  </extension>
+
   <!-- END-GENERATED -->
 </plugin>

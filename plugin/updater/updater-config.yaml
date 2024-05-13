@@ -370,3 +370,11 @@ sources:
         - Cargo.lock
         - pdm.lock
         - Pipfile
+
+  zig:
+    type: vscode-extension
+    github:
+      repo: ziglang/vscode-zig
+    languages:
+      zig:
+        label: Zig

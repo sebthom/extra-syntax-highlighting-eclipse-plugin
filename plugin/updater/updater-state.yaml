@@ -682,3 +682,15 @@ extensions:
         - pdm.lock
     inline-grammars:
     - markdown.toml.codeblock
+  zig:
+    github:
+      repo: ziglang/vscode-zig
+      ref: master
+      commit: ed1ad075696eb5a9ba0a98c96c3c8d9626eb78ee
+    languages:
+      zig:
+        label: Zig
+        scope-name: source.zig
+        file-extensions:
+        - .zig
+        - .zon

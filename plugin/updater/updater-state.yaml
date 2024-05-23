@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 7ff9cf5299eaa4b1398068c195ab5964145ac9fb
+      commit: eb7215cc0ab3a8f614455528cd71b81ea994cf68
     languages:
       astro:
         label: Astro
@@ -36,7 +36,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 60051c54854332f9a00891ebd6fa46ac08a4c577
+      commit: 3f91d2d8f2b475ee27078134a726b3b37192bf03
     languages:
       bazelrc:
         label: bazelrc
@@ -127,7 +127,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 9d42a25c97d722fd165f97ec806754d792a3de81
+      commit: 03ab3a6b76378591ef79a828d80cc69b0b8f2842
     languages:
       graphql:
         label: GraphQL
@@ -159,7 +159,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: ab1d9da794f06ae91afa06a590727cbf836939b0
+      commit: 1a4cfa8a89578897e5425b7809939553b2c490bd
     languages:
       hcl:
         label: HCL Config File
@@ -633,7 +633,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 0125bb8732cfef649889ffd9ab539ae8780f75d1
+      commit: 37d6b5d5feb6140458b97f2798722c00207d8df0
     languages:
       prisma:
         label: Prisma
@@ -649,7 +649,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 9d7907ef8b65efeda2698f61490b964d2f1a7069
+      commit: 6e57bcef67d5d94c194a4eeaf4acd7fdd60b02fb
     languages:
       svelte:
         label: Svelte
@@ -686,7 +686,7 @@ extensions:
     github:
       repo: ziglang/vscode-zig
       ref: master
-      commit: ed1ad075696eb5a9ba0a98c96c3c8d9626eb78ee
+      commit: 8ba9f01e5d7fdce08704ea8b5cbe9efed4afb4ef
     languages:
       zig:
         label: Zig

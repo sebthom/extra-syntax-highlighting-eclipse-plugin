@@ -22,15 +22,18 @@
   <!-- EEA                                      -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.eea" name="EEA File" priority="normal" base-type="extra-syntax-highlighting.basetype"
+    <content-type id="extra-syntax-highlighting.eea" name="Eclipse External null Annotations" priority="normal" base-type="extra-syntax-highlighting.basetype"
                   file-extensions="eea" />
   </extension>
   <extension point="org.eclipse.ui.editors">
     <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="extra-syntax-highlighting.eea" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar path="syntaxes/eea/eea.tmLanguage.plist" scopeName="source.eea" />
+    <grammar path="syntaxes/eea/eea.tmLanguage.yaml" scopeName="source.eea" />
     <scopeNameContentTypeBinding contentTypeId="extra-syntax-highlighting.eea" scopeName="source.eea" />
+  </extension>
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="EEA Example" path="syntaxes/eea/eea.example.eea" scopeName="source.eea" />
   </extension>
 
   <!-- ======================================== -->

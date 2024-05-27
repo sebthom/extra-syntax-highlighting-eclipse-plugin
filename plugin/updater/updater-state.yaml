@@ -36,7 +36,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 3f91d2d8f2b475ee27078134a726b3b37192bf03
+      commit: 2614f1985f9ea4ba0a16418f338cfcd736067f2a
     languages:
       bazelrc:
         label: bazelrc
@@ -159,7 +159,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: 1a4cfa8a89578897e5425b7809939553b2c490bd
+      commit: 63ed7813ebc65a04d7fdbe1748c3b8802410e4c8
     languages:
       hcl:
         label: HCL Config File
@@ -633,7 +633,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 37d6b5d5feb6140458b97f2798722c00207d8df0
+      commit: 53e70077abbcf26c03c8aabb416521dba248804b
     languages:
       prisma:
         label: Prisma

@@ -1099,6 +1099,135 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- ocaml/ocaml: OCaml -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.ocaml" name="OCaml" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="eliom,ml,ocamlinit" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.ocaml" path="syntaxes/ocaml/ocaml.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.ocaml" contentTypeId="extra-syntax-highlighting.ocaml" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.ocaml" path="syntaxes/ocaml/ocaml.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.ocaml" icon="syntaxes/ocaml/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="OCaml Example" path="syntaxes/ocaml/ocaml.example.ml" scopeName="source.ocaml" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- ocaml/ocaml.interface: OCaml Interface -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.ocaml.interface" name="OCaml Interface" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="eliomi,mli" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.ocaml.interface" path="syntaxes/ocaml/ocaml.interface.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.ocaml.interface" contentTypeId="extra-syntax-highlighting.ocaml.interface" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.ocaml.interface" path="syntaxes/ocaml/ocaml.interface.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.ocaml.interface" icon="syntaxes/ocaml/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="OCaml Interface Example" path="syntaxes/ocaml/ocaml.interface.example.mli" scopeName="source.ocaml.interface" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- ocaml/ocaml.ocamlformat: OCamlFormat -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.ocaml.ocamlformat" name="OCamlFormat" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="ocamlformat" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.ocaml.ocamlformat" path="syntaxes/ocaml/ocaml.ocamlformat.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.ocaml.ocamlformat" contentTypeId="extra-syntax-highlighting.ocaml.ocamlformat" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.ocaml.ocamlformat" path="syntaxes/ocaml/ocaml.ocamlformat.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.ocaml.ocamlformat" icon="syntaxes/ocaml/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="OCamlFormat Example" path="syntaxes/ocaml/ocaml.ocamlformat.example.ocamlformat" scopeName="source.ocaml.ocamlformat" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- ocaml/ocaml.opam: opam -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.ocaml.opam" name="opam" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="opam" file-names="opam" file-patterns="*.opam.locked,*.opam.template" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.ocaml.opam" path="syntaxes/ocaml/ocaml.opam.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.ocaml.opam" contentTypeId="extra-syntax-highlighting.ocaml.opam" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.ocaml.opam" path="syntaxes/ocaml/ocaml.opam.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.ocaml.opam" icon="syntaxes/ocaml/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="opam Example" path="syntaxes/ocaml/ocaml.opam.example.opam" scopeName="source.ocaml.opam" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- ocaml/reason: Reason -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.reason" name="Reason" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="re,rei" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.reason" path="syntaxes/ocaml/reason.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.reason" contentTypeId="extra-syntax-highlighting.reason" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.reason" path="syntaxes/ocaml/reason.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.reason" icon="syntaxes/ocaml/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Reason Example" path="syntaxes/ocaml/reason.example.re" scopeName="source.reason" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- ocaml: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.ocaml.codeblock" path="syntaxes/ocaml/markdown.ocaml.codeblock.tmLanguage.json" />
+    <grammar scopeName="markdown.reason.codeblock" path="syntaxes/ocaml/markdown.reason.codeblock.tmLanguage.json" />
+    <grammar scopeName="source.action.menhir" path="syntaxes/ocaml/source.action.menhir.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- pascal/pascal: Pascal -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

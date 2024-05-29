@@ -292,6 +292,38 @@ sources:
       nushell:
         example: example.nu
 
+  ocaml:
+    type: vscode-extension
+    github:
+      repo: ocamllabs/vscode-ocaml-platform
+    languages:
+      atd:
+        ignored: true
+      cram:
+        ignored: true
+      dune:
+        ignored: true
+      dune-project:
+        ignored: true
+      dune-workspace:
+        ignored: true
+      ocaml.ocamlbuild:
+        ignored: true
+      ocaml.ocamldoc:
+        ignored: true
+      ocaml.ocamllex:
+        ignored: true
+      ocaml.oasis:
+        ignored: true
+      ocaml.menhir:
+        ignored: true
+      ocaml.merlin:
+        ignored: true
+      ocaml.META:
+        ignored: true
+      ocaml.opam-install:
+        ignored: true
+
   pascal:
     # not working:
     # type: vscode-extension

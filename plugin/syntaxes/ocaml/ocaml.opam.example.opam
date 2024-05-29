@@ -1,0 +1,29 @@
+opam-version: "2.0"
+name: "my_project"
+version: "1.0.0"
+maintainer: "Your Name <your.email@example.com>"
+authors: ["Your Name <your.email@example.com>"]
+license: "MIT"
+homepage: "https://github.com/yourusername/my_project"
+dev-repo: "git+https://github.com/yourusername/my_project.git"
+
+depends: [
+  "ocaml" {>= "4.08.0"}
+  "lwt" {>= "4.3.0"}
+  "core" {>= "v0.14.0"}
+  "yojson" {>= "1.7.0"}
+]
+
+synopsis: "A brief description of your project."
+
+description: """
+A longer description of your project, explaining what it does and how it works. You can use markdown here.
+
+For example:
+
+This is a sample OPAM file for an OCaml project. It specifies the project's metadata, dependencies, and other important information required for package management.
+
+Feel free to customize it to fit your project's needs.
+"""
+
+tags: ["ocaml", "example", "project"]

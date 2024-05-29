@@ -39,9 +39,11 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - Markdown (`*.md`) - https://daringfireball.net/projects/markdown/
 - NginX (`nginx.conf`) - https://www.nginx.com/
 - Nushell (`*.nu`) - https://github.com/nushell/nushell
+- OCaml (`*.ml`) - https://ocaml.org/
 - PlantUML (`*.pu`) - https://plantuml.com/
 - Pascal (`*.pas`) - https://en.wikipedia.org/wiki/Pascal_(programming_language)
 - Prisma - https://www.prisma.io/
+- Reason (`*.re`) - https://reasonml.github.io/
 - Svelte - https://svelte.dev/
 - TOML - https://toml.io/en/
 - Zig - https://ziglang.org/
@@ -127,10 +129,15 @@ To install the plugin into an existing Eclipse installation do:
 | Markdown | file-extensions="livemd, markdown, md, mdown, mdwn, mkd, mkdn, mkdown, ronn, scd, workbook" | [main@wooorm/markdown-tm-language](https://github.com/wooorm/markdown-tm-language/tree/371d61df9ddc3850e12aabe61b602d02e259e8a4/)
 | NGINX Conf <img src="plugin/syntaxes/nginx/icon.png" width=16/> | file-extensions="conf, conf.default, conf.template, fastcgi_params, mime.types, nginx, nginx.conf, scgi_params, uwsgi_params" | [main@ahmadalli/vscode-nginx-conf](https://github.com/ahmadalli/vscode-nginx-conf/tree/10414d948cc5e52fbf2a8207629427d4ae3bc8c4/)
 | nushell <img src="plugin/syntaxes/nushell/nushell.png" width=16/> | file-extensions="nu" | [main@nushell/vscode-nushell-lang](https://github.com/nushell/vscode-nushell-lang/tree/359e3a69c516c996e5bcd7161290f78feaebbbfb/)
+| OCaml <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="eliom, ml, ocamlinit" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/c585f581565837940e0d15a3e0baaf6fbf59e012/)
+| OCaml Interface <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="eliomi, mli" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/c585f581565837940e0d15a3e0baaf6fbf59e012/)
+| OCamlFormat <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="ocamlformat" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/c585f581565837940e0d15a3e0baaf6fbf59e012/)
+| opam <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="opam, opam.locked, opam.template"<br />file-names="opam" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/c585f581565837940e0d15a3e0baaf6fbf59e012/)
 | OpenGL Shading Language <img src="plugin/syntaxes/glsl/icon.png" width=16/> | file-extensions="comp, csh, frag, fs, fsh, fshader, geom, glsl, gs, gsh, gshader, mesh, rahit, rcall, rchit, rgen, rint, rmiss, task, tesc, tese, vert, vs, vsh, vshader" | [master@GeForceLegend/vscode-glsl](https://github.com/GeForceLegend/vscode-glsl/tree/717034785b6128d7a8ca85f507bddf33eba4c3e7/)
 | Pascal | file-extensions="dfm, dpk, dpr, fmx, lfm, lpr, p, pas" | [master@textmate/pascal.tmbundle](https://github.com/textmate/pascal.tmbundle/tree/3b11b782368065e55acce0423f385722771d28b0/Syntaxes)
 | PlantUML <img src="plugin/syntaxes/plantuml/icon.png" width=16/> | file-extensions="iuml, plantuml, pu, puml, wsd" | [master@qjebbs/vscode-plantuml](https://github.com/qjebbs/vscode-plantuml/tree/7bc1758ed73dc269f5721d78c6c6c01f461d7cb0/)
 | Prisma <img src="plugin/syntaxes/prisma/prisma.png" width=16/> | file-extensions="prisma" | [main@prisma/language-tools](https://github.com/prisma/language-tools/tree/53e70077abbcf26c03c8aabb416521dba248804b/packages/vscode)
+| Reason <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="re, rei" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/c585f581565837940e0d15a3e0baaf6fbf59e012/)
 | Starlark <img src="plugin/syntaxes/bazel/icon.png" width=16/> | file-extensions="BUILD, WORKSPACE, bazel, bzl, bzlmod, sky, star"<br />file-names="BUILD, WORKSPACE" | [master@bazelbuild/vscode-bazel](https://github.com/bazelbuild/vscode-bazel/tree/2614f1985f9ea4ba0a16418f338cfcd736067f2a/)
 | Svelte <img src="plugin/syntaxes/svelte/icon.png" width=16/> | file-extensions="svelte" | [master@sveltejs/language-tools](https://github.com/sveltejs/language-tools/tree/6e57bcef67d5d94c194a4eeaf4acd7fdd60b02fb/packages/svelte-vscode)
 | TOML Config File <img src="plugin/syntaxes/toml/icon.png" width=16/> | file-extensions="toml"<br />file-names="Cargo.lock, Pipfile, pdm.lock" | [master@juggernautjp/less-toml](https://github.com/juggernautjp/less-toml/tree/13eb891232e98c4a9c595bf8c657893c84edf3a9/) [[upstream]](https://github.com/textmate/toml.tmbundle/commit/e82b64c1e86396220786846201e9aa3f0a2d9ca2)

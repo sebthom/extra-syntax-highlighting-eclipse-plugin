@@ -592,6 +592,49 @@ extensions:
         scope-name: source.nushell
         file-extensions:
         - .nu
+  ocaml:
+    github:
+      repo: ocamllabs/vscode-ocaml-platform
+      ref: master
+      commit: c585f581565837940e0d15a3e0baaf6fbf59e012
+    languages:
+      ocaml:
+        label: OCaml
+        scope-name: source.ocaml
+        file-extensions:
+        - .eliom
+        - .ml
+        - .ocamlinit
+      ocaml.interface:
+        label: OCaml Interface
+        scope-name: source.ocaml.interface
+        file-extensions:
+        - .eliomi
+        - .mli
+      ocaml.ocamlformat:
+        label: OCamlFormat
+        scope-name: source.ocaml.ocamlformat
+        file-extensions:
+        - .ocamlformat
+      ocaml.opam:
+        label: opam
+        scope-name: source.ocaml.opam
+        file-extensions:
+        - .opam
+        - .opam.locked
+        - .opam.template
+        file-names:
+        - opam
+      reason:
+        label: Reason
+        scope-name: source.reason
+        file-extensions:
+        - .re
+        - .rei
+    inline-grammars:
+    - markdown.ocaml.codeblock
+    - markdown.reason.codeblock
+    - source.action.menhir
   pascal:
     github:
       repo: textmate/pascal.tmbundle

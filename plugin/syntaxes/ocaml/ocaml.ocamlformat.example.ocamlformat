@@ -1,0 +1,73 @@
+# .ocamlformat configuration file
+
+version=0.24.1
+
+# Basic options
+profile=default
+margin=80
+extension=same
+
+# Formatting options
+break-cases=toplevel
+break-infix-before-func=false
+break-separators=before
+break-sequences=false
+break-string-literals=auto
+doc-comments=before
+escape-chars=preserve
+escape-string-literals=preserve
+exp-grouping=parens
+field-space=loose
+function-indent-nested=never
+function-indent=2
+if-then-else=k-r
+indicate-multiline-delimiters=no
+indicate-nested-or-patterns=space
+infix-precedence=indent
+leading-nested-match-parens=false
+let-and=sparse
+let-binding-indent=2
+let-binding-spacing=compact
+module-item-spacing=compact
+nested-match=align
+ocp-indent-compat=false
+parens-ite=false
+parens-tuple=always
+parse-docstrings=true
+space-around-arrays=true
+space-around-lists=true
+space-around-records=true
+space-around-variants=true
+type-decl=sparse
+wrap-comments=true
+
+# Comments and documentation
+comment-check=false
+comment-padding=2
+comment-text=toplevel
+doc-comments-padding=2
+doc-comments-tag-only=default
+wrap-comments=wrap
+
+# Specific constructs
+assignment-operator=space
+break-fun-decl=wrap
+break-fun-sig=wrap
+break-struct=natural
+break-type-decl=wrap
+cases-exp-indent=2
+cases-matching-exp-indent=normal
+disambiguate-non-breaking-match=false
+field-space=loose
+function-application-indent=never
+function-indent-nested=never
+match-indent=2
+match-indent-nested=never
+module-type-decl-indent=2
+nested-match=wrap
+type-decl-indent=2
+with-indent=2
+
+# Other options
+wrap-fun-args=true
+wrap-items=true

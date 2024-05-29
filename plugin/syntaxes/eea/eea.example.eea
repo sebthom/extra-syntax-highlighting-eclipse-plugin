@@ -1,11 +1,11 @@
-class java/lang/Class
- <T:Ljava/lang/Object;>
+class java/lang/Class a class comment
+ <T:Ljava/lang/Object;> # another comment
 
-<init>
- (Ljava/lang/ClassLoader;Ljava/lang/Class<*>;)V
- (L1java/lang/ClassLoader;L0java/lang/Class<*>;)V
+<init> a constructor comment
+ (Ljava/lang/ClassLoader;Ljava/lang/Class<*>;)V # another comment
+ (L1java/lang/ClassLoader;L0java/lang/Class<*>;)V ; yet another comment
 
-forName
+forName a method comment
  (Ljava/lang/Module;Ljava/lang/String;)Ljava/lang/Class<*>;
  (L1java/lang/Module;L1java/lang/String;)L0java/lang/Class<*>;
 forName
@@ -25,8 +25,8 @@ asSubclass
  <U:Ljava/lang/Object;>(Ljava/lang/Class<TU;>;)Ljava/lang/Class<+TU;>;
  <U:Ljava/lang/Object;>(L1java/lang/Class<TU;>;)L1java/lang/Class<+TU;>;
 cast
- (Ljava/lang/Object;)TT;
- (L0java/lang/Object;)TT;
+ (Ljava/lang/Object;)TT; // comment
+ (L0java/lang/Object;)TT; /* comment */
 componentType
  ()Ljava/lang/Class<*>;
  ()Ljava/lang/Class<*>;
@@ -188,7 +188,7 @@ isAnnotationPresent
  (L1java/lang/Class<+Ljava/lang/annotation/Annotation;>;)Z
 isAssignableFrom
  (Ljava/lang/Class<*>;)Z
- (L1java/lang/Class<*>;)Z
+ (L1java/lang/Class<*>;)Z some comment
 isInstance
  (Ljava/lang/Object;)Z
  (L0java/lang/Object;)Z

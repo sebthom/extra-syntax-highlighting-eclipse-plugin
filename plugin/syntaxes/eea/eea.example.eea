@@ -34,8 +34,8 @@ describeConstable
  ()Ljava/util/Optional<Ljava/lang/constant/ClassDesc;>;
  ()Ljava/util/Optional<Ljava/lang/constant/ClassDesc;>;
 descriptorString
- ()Ljava/lang/String;
- ()Ljava/lang/String;
+ ()Ljava/lang/String; // comment
+ ()Ljava/lang/String; /* comment */
 getAnnotatedInterfaces
  ()[Ljava/lang/reflect/AnnotatedType;
  ()[1L1java/lang/reflect/AnnotatedType;

@@ -34,8 +34,8 @@ repository:
         1: { name: entity.name.function.eea }  # ([a-zA-Z_][a-zA-Z_\d]*)
         3: { name: comment.line.eea }
 
-    # type reference
-    - match: (\[?)([01]?)(L)([01]?)(([a-zA-Z_$][a-zA-Z\d_$]*/)*[a-zA-Z_$][a-zA-Z\d_$]*)([;<])
+    # type reference in signature
+    - match: (\[?)([01]?)(L)([01]?)(([a-zA-Z_$][a-zA-Z\d_$]*/)*[a-zA-Z_$][a-zA-Z\d_$]*)
       captures:
         1: { name: punctuation.eea }        # (\[?)
         2: { name: constant.numeric.eea }   # ([01]?)
@@ -46,6 +46,11 @@ repository:
         7: { name: punctuation.eea }        # ([;<])
 
     # signature comment
-    - match: '[;DFIBVZ>]\s+(.+)$'
+    - match: '[;BDFIVZ>]\s+(.+)$'
       captures:
         1: { name: comment.line.eea }
+
+    # null annotations for generic types
+    - match: T([01])[a-zA-Z_$][a-zA-Z\d_$]*
+      captures:
+        1: { name: constant.numeric.eea }

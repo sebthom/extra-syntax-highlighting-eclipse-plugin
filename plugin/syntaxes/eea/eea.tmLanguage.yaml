@@ -22,6 +22,14 @@ repository:
       # 3: { name: entity.name.class.eea }  #  ([a-zA-Z_$][a-zA-Z\d_$]*/)
         5: { name: comment.line.eea }
 
+    # super class / interface header
+    - match: ^(super)\s+(([a-zA-Z_$][a-zA-Z\d_$]*/)*[a-zA-Z_$][a-zA-Z\d_$]*)(\s+(.+))?$
+      captures:
+        1: { name: keyword.eea }            # (super)
+        2: { name: entity.name.class.eea }  # (([a-zA-Z_$][a-zA-Z\d_$]*/)*[a-zA-Z_$][a-zA-Z\d_$]*)
+      # 3: { name: entity.name.class.eea }  #  ([a-zA-Z_$][a-zA-Z\d_$]*/)
+        5: { name: comment.line.eea }
+
     # constructor header
     - match: ^(<init>)(\s+(.*))?$
       captures:

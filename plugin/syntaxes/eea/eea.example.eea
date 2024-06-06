@@ -1,9 +1,9 @@
 class java/lang/Class a class comment
  <T:Ljava/lang/Object;> # another comment
 
-<init> a constructor comment
- (Ljava/lang/ClassLoader;Ljava/lang/Class<*>;)V # another comment
- (L1java/lang/ClassLoader;L0java/lang/Class<*>;)V ; yet another comment
+super java/lang/invoke/TypeDescriptor$OfField
+ <Ljava/lang/Class<*>;>
+ <Ljava/lang/Class<*>;>
 
 forName a method comment
  (Ljava/lang/Module;Ljava/lang/String;)Ljava/lang/Class<*>;
@@ -14,6 +14,10 @@ forName
 forName
  (Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class<*>;
  (L1java/lang/String;ZL0java/lang/ClassLoader;)L1java/lang/Class<*>;
+
+<init> a constructor comment
+ (Ljava/lang/ClassLoader;Ljava/lang/Class<*>;)V # another comment
+ (L1java/lang/ClassLoader;L0java/lang/Class<*>;)V ; yet another comment
 
 accessFlags
  ()Ljava/util/Set<Ljava/lang/reflect/AccessFlag;>;

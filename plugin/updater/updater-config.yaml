@@ -365,7 +365,7 @@ sources:
       path: packages/vscode
     languages:
       prisma:
-        example: https://raw.githubusercontent.com/prisma/language-tools/main/packages/language-server/test/fixtures/correct_mongodb.prisma
+        example: https://raw.githubusercontent.com/prisma/language-tools/main/packages/language-server/src/__test__/__fixtures__/single-file/jump-to-definition/correct_mongodb.prisma
 
   svelte:
     type: vscode-extension

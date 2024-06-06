@@ -36,7 +36,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 2614f1985f9ea4ba0a16418f338cfcd736067f2a
+      commit: 7084368f5e76741fd8cdc2fd072a799187e7e513
     languages:
       bazelrc:
         label: bazelrc
@@ -127,7 +127,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 03ab3a6b76378591ef79a828d80cc69b0b8f2842
+      commit: c1268783c2fe1ca40d61e52cdd3b360ba5868768
     languages:
       graphql:
         label: GraphQL
@@ -585,7 +585,7 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: 359e3a69c516c996e5bcd7161290f78feaebbbfb
+      commit: c854eb1403a4a4ef9788a57fe042bec0a397c02d
     languages:
       nushell:
         label: nushell
@@ -596,7 +596,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: c585f581565837940e0d15a3e0baaf6fbf59e012
+      commit: 93612358aa5a55f3ac67cdc0884840cccdcedeaf
     languages:
       ocaml:
         label: OCaml
@@ -676,7 +676,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 53e70077abbcf26c03c8aabb416521dba248804b
+      commit: 30df3444fcc3ef091aa00f1164a9dfd202e43883
     languages:
       prisma:
         label: Prisma
@@ -692,7 +692,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 6e57bcef67d5d94c194a4eeaf4acd7fdd60b02fb
+      commit: c18615292110d7a945547a71609c4af03f971484
     languages:
       svelte:
         label: Svelte

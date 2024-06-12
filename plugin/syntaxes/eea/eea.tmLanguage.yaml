@@ -54,13 +54,13 @@ repository:
         7: { name: punctuation.eea }        # ([;<])
 
     # scalar array type reference in signature
-    - match: (\[)([01])[BCDFIJVZ]
+    - match: (\[)([01])[BCDFIJSVZ]
       captures:
         1: { name: punctuation.eea }        # (\[)
         2: { name: constant.numeric.eea }   # ([01])
 
     # signature comment
-    - match: '[;BCDFIJVZ>]\s+(.+)$'
+    - match: '[;BCDFIJSVZ>]\s+(.+)$'
       captures:
         1: { name: comment.line.eea }
 

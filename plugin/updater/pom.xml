@@ -60,17 +60,11 @@
          <artifactId>batik-transcoder</artifactId>
          <version>1.17</version>
          <exclusions>
-         	<exclusion>
-         		<groupId>xml-apis</groupId>
-         		<artifactId>xml-apis</artifactId>
-         	</exclusion>
+            <exclusion>
+               <groupId>xml-apis</groupId>
+               <artifactId>xml-apis</artifactId>
+            </exclusion>
          </exclusions>
-      </dependency>
-      <dependency>
-         <!-- for icon resizing -->
-         <groupId>net.coobird</groupId>
-         <artifactId>thumbnailator</artifactId>
-         <version>0.4.20</version>
       </dependency>
    </dependencies>
 </project>

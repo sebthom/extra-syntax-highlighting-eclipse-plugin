@@ -36,17 +36,6 @@
     <snippet name="EEA Example" path="syntaxes/eea/eea.example.eea" scopeName="source.eea" />
   </extension>
 
-  <!-- ======================================== -->
-  <!-- TextMate                                 -->
-  <!-- ======================================== -->
-  <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.textmate" name="Textmate Grammar File" priority="normal" base-type="org.eclipse.core.runtime.xml"
-                  file-extensions="tmLanguage,plist" />
-  </extension>
-  <extension point="org.eclipse.ui.editors">
-    <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="extra-syntax-highlighting.textmate" />
-  </extension>
-
   <!-- START-GENERATED -->
 
   <!-- ======================================== -->

@@ -9,12 +9,10 @@ package updater.utils;
 import static updater.utils.Log.*;
 import static updater.utils.Sys.*;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.regex.Pattern;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -109,10 +107,7 @@ public abstract class Git {
             }
 
             // delete local git repo if not in desired state
-            Files.walk(localPath) //
-               .sorted(Comparator.reverseOrder()) //
-               .map(Path::toFile) //
-               .forEach(File::delete);
+            Sys.rmDir(localPath);
          }
 
          Files.createDirectories(localPath);

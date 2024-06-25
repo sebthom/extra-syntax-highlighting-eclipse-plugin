@@ -105,6 +105,8 @@ public class Updater {
       }
 
       static class VSCodeSingleExtensionSource extends Source {
+         /** list of build commands */
+         public List<String> build = Collections.emptyList();
          public Map<String /*langId*/, LanguageIgnoreable> languages = Collections.emptyMap();
          public Map<String /*scopeName*/, InlineGrammarIgnoreable> inlineGrammars = Collections.emptyMap();
       }
@@ -249,6 +251,11 @@ public class Updater {
             final var extensionState = new State.ExtensionState();
             extensionState.github = gitCheckoutState;
             state.extensions.put(sourceId, extensionState);
+
+            for (final String buildCommand : src.build) {
+               Sys.execVerbose(sourceRepoPath, (Sys.IS_WINDOWS ? "cmd /c " : "") + buildCommand);
+            }
+
             new VSCodeSingleExtensionSourceHandler(sourceId, src, sourceRepoPath, syntaxesDir, extensionState).handle();
          } else if (source instanceof final Config.VSCodeMultiExtensionsSource src) {
             new VSCodeMultiExtensionsSourceHandler(sourceId, src, sourceRepoPath, gitCheckoutState, syntaxesDir, state.extensions).handle();

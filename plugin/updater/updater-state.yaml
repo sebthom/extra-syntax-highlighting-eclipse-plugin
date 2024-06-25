@@ -562,6 +562,21 @@ extensions:
         - ronn
         - scd
         - workbook
+  mermaid:
+    github:
+      repo: bpruitt-goddard/vscode-mermaid-syntax-highlight
+      ref: master
+      commit: a45668c7967c52f436a5e268e681c46b9dc9b85a
+    languages:
+      mermaid:
+        label: mermaid
+        scope-name: source.mermaid
+        file-extensions:
+        - .mermaid
+        - .mmd
+    inline-grammars:
+    - markdown.mermaid.codeblock
+    - mdx.mermaid.codeblock
   nginx:
     github:
       repo: ahmadalli/vscode-nginx-conf

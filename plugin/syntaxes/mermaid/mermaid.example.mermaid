@@ -1,0 +1,86 @@
+%% Flowchart
+graph TD;
+    A[Start] --> B{Is it sunny?};
+    B -->|Yes| C[Go outside];
+    B -->|No| D[Stay inside];
+    C --> E{Do you have work?};
+    D --> F[Watch TV];
+    E -->|Yes| G[Work from home];
+    E -->|No| H[Relax in the park];
+
+%% Sequence Diagram
+sequenceDiagram;
+    participant Alice;
+    participant Bob;
+    Alice->>Bob: Hello Bob, how are you?;
+    Bob->>Alice: Fine, and you?;
+    Alice->>Bob: Great!;
+
+%% Class Diagram
+classDiagram;
+    class Bird {
+        +String color
+        +int age
+        fly()
+        chirp()
+    }
+    class Duck {
+        +swim()
+    }
+    Bird <|-- Duck;
+
+%% Gantt Chart
+gantt;
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2024-01-01, 30d
+    Another task     :after a1  , 20d
+
+%% Pie Chart
+pie;
+    title Pets owned in percentages
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+
+%% State Diagram
+stateDiagram-v2;
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+
+%% Entity Relationship Diagram
+erDiagram;
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE_ITEM : contains
+    CUSTOMER {
+        string name
+        string id
+    }
+    ORDER {
+        string orderNumber
+        string date
+    }
+    LINE_ITEM {
+        int quantity
+        float price
+    }
+
+%% User Journey Map
+journey
+    title My working day
+    section Go to work
+      Make coffee: 5: Me, Cat
+      Go outside: 3: Me
+      Take the bus: 2: Me, Bus driver
+    section Work
+      Check e-mail: 3: Me, System
+      Work on project: 5: Me, Colleague
+    section Go home
+      Take the bus: 3: Me, Bus driver
+      Cook dinner: 4: Me, Partner
+      Watch TV: 5: Me, Cat

@@ -37,6 +37,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 - Mako Templates (`*.mako`) - https://www.makotemplates.org/
 - Markdown (`*.md`) - https://daringfireball.net/projects/markdown/
+- Mermaid (`*.mmd, *.mermaid`) - https://github.com/mermaid-js/mermaid/
 - NginX (`nginx.conf`) - https://www.nginx.com/
 - Nushell (`*.nu`) - https://github.com/nushell/nushell
 - OCaml (`*.ml`) - https://ocaml.org/
@@ -127,6 +128,7 @@ To install the plugin into an existing Eclipse installation do:
 | LDIF File | file-extensions="ldif" | [master@FlashSystems/LDIF-Syntax](https://github.com/FlashSystems/LDIF-Syntax/tree/f00c21eb1cc5fe5966cf6ef158e854a65449a9fa/)
 | Mako Template | file-extensions="mako" | [master@marconi/mako-tmbundle](https://github.com/marconi/mako-tmbundle/tree/45037e4e98f0c215b55b194d303811d43b85407c/Syntaxes)
 | Markdown | file-extensions="livemd, markdown, md, mdown, mdwn, mkd, mkdn, mkdown, ronn, scd, workbook" | [main@wooorm/markdown-tm-language](https://github.com/wooorm/markdown-tm-language/tree/371d61df9ddc3850e12aabe61b602d02e259e8a4/)
+| mermaid <img src="plugin/syntaxes/mermaid/icon.png" width=16/> | file-extensions="mermaid, mmd" | [master@bpruitt-goddard/vscode-mermaid-syntax-highlight](https://github.com/bpruitt-goddard/vscode-mermaid-syntax-highlight/tree/a45668c7967c52f436a5e268e681c46b9dc9b85a/)
 | NGINX Conf <img src="plugin/syntaxes/nginx/icon.png" width=16/> | file-extensions="conf, conf.default, conf.template, fastcgi_params, mime.types, nginx, nginx.conf, scgi_params, uwsgi_params" | [main@ahmadalli/vscode-nginx-conf](https://github.com/ahmadalli/vscode-nginx-conf/tree/10414d948cc5e52fbf2a8207629427d4ae3bc8c4/)
 | nushell <img src="plugin/syntaxes/nushell/nushell.png" width=16/> | file-extensions="nu" | [main@nushell/vscode-nushell-lang](https://github.com/nushell/vscode-nushell-lang/tree/c854eb1403a4a4ef9788a57fe042bec0a397c02d/)
 | OCaml <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="eliom, ml, ocamlinit" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/93612358aa5a55f3ac67cdc0884840cccdcedeaf/)

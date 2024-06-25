@@ -40,6 +40,7 @@ sources:
   #       repo: <repo-name>             # REQUIRED
   #       path: <folderpath_in_repo>    # optional
   #       ref:  <branch_name>|<tag>     # optional
+  #     build: []                       # optional. a list of commands to be executed in the checked out directory
   #     license-download: <true|false>  # optional. defaults to true
   #     languages:  # optional
   #       <language-id>:       # existing id as defined in package.json to override values
@@ -275,6 +276,14 @@ sources:
         - ronn
         - scd
         - workbook
+
+  mermaid:
+    type: vscode-extension
+    github:
+      repo: bpruitt-goddard/vscode-mermaid-syntax-highlight
+    build:
+      - npm install
+      - node build/ConvertYaml.js
 
   nginx:
     type: vscode-extension

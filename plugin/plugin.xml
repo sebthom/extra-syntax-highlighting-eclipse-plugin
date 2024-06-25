@@ -1040,6 +1040,38 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- mermaid/mermaid: mermaid -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.mermaid" name="mermaid" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="mermaid,mmd" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.mermaid" path="syntaxes/mermaid/mermaid.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.mermaid" contentTypeId="extra-syntax-highlighting.mermaid" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.mermaid" path="syntaxes/mermaid/mermaid.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.mermaid" icon="syntaxes/mermaid/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="mermaid Example" path="syntaxes/mermaid/mermaid.example.mermaid" scopeName="source.mermaid" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- mermaid: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.mermaid.codeblock" path="syntaxes/mermaid/markdown.mermaid.codeblock.tmLanguage.json" />
+    <grammar scopeName="mdx.mermaid.codeblock" path="syntaxes/mermaid/mdx.mermaid.codeblock.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- nginx/nginx: NGINX Conf -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

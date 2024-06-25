@@ -1,4 +1,4 @@
-/**
+/*
  * SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
  * SPDX-FileContributor: Sebastian Thomschke
  * SPDX-License-Identifier: EPL-2.0
@@ -55,7 +55,7 @@ public abstract class Strings {
    }
 
    public static String replaceSubstringBetween(final String searchIn, final String startTag, final String endTag,
-      final String replaceWith) {
+         final String replaceWith) {
       return Pattern //
          .compile(Pattern.quote(startTag) + ".*" + Pattern.quote(endTag), Pattern.DOTALL) //
          .matcher(searchIn) //

@@ -1,4 +1,4 @@
-/**
+/*
  * SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
  * SPDX-FileContributor: Sebastian Thomschke
  * SPDX-License-Identifier: EPL-2.0
@@ -34,7 +34,7 @@ class VSCodeMultiExtensionsSourceHandler extends AbstractSourceHandler<Config.VS
    final GitCheckoutState gitCheckoutState;
 
    VSCodeMultiExtensionsSourceHandler(final String sourceId, final Config.VSCodeMultiExtensionsSource source, final Path sourceRepoDir,
-      final GitCheckoutState gitCheckoutState, final Path targetSyntaxDir, final Map<String, ExtensionState> extensionStates) {
+         final GitCheckoutState gitCheckoutState, final Path targetSyntaxDir, final Map<String, ExtensionState> extensionStates) {
       super(sourceId, source, sourceRepoDir, targetSyntaxDir);
       this.extensionStates = extensionStates;
       this.gitCheckoutState = gitCheckoutState;
@@ -70,26 +70,26 @@ class VSCodeMultiExtensionsSourceHandler extends AbstractSourceHandler<Config.VS
             final var extId = ext.getKey();
             if (!pkgJsonByExtId.containsKey(extId))
                throw new IllegalArgumentException("No valid extension named [" + extId + "] found in source repo, "
-                  + "as specified at [update-syntaxes-config.yaml/sources/" + sourceId + "/extensions/" + extId + "]");
+                     + "as specified at [update-syntaxes-config.yaml/sources/" + sourceId + "/extensions/" + extId + "]");
          }
       }
 
       if (!source.includeAllByDefault && isEmpty(source.extensions))
          throw new IllegalArgumentException("Extensions to include must be declared at [update-syntaxes-config.yaml/sources/" + sourceId
-            + "/extensions/...]");
+               + "/extensions/...]");
 
       try (var l = withLogIndented()) {
          var i = 0;
          for (final var extId : new TreeSet<>(pkgJsonByExtId.keySet())) {
             i++;
             logHeader("[" + i + "/" + pkgJsonByExtId.size() + "] " //
-               + "Processing [" + extId + "] " //
-               + "(" + VSCodeSingleExtensionSource.class.getSimpleName() + ")");
+                  + "Processing [" + extId + "] " //
+                  + "(" + VSCodeSingleExtensionSource.class.getSimpleName() + ")");
 
             final var extOverrides = source.extensions.get(extId);
             if (extOverrides != null && !isBlank(extOverrides.ignoredReason) && !"false".equals(extOverrides.ignoredReason)) {
                logInfo("Ignoring available extension [" + extId + "] as per user config" + ("true".equals(extOverrides.ignoredReason) ? "."
-                  : ": " + extOverrides.ignoredReason));
+                     : ": " + extOverrides.ignoredReason));
                continue;
             }
 

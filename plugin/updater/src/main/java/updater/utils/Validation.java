@@ -1,4 +1,4 @@
-/**
+/*
  * SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
  * SPDX-FileContributor: Sebastian Thomschke
  * SPDX-License-Identifier: EPL-2.0

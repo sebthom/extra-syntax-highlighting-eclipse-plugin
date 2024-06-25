@@ -1,4 +1,4 @@
-/**
+/*
  * SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
  * SPDX-FileContributor: Sebastian Thomschke
  * SPDX-License-Identifier: EPL-2.0
@@ -50,17 +50,17 @@ public class Updater {
     * model for update-syntaxes-config.yaml
     */
    record Config( //
-      @JsonProperty(required = true) String contentTypePrefix, //
-      @JsonProperty(required = true) String contentTypePriority, //
-      @JsonProperty(required = true) Map<String, Source> sources, //
-      @JsonProperty(required = true) Targets targets //
-   ) {
+         @JsonProperty(required = true) String contentTypePrefix, //
+         @JsonProperty(required = true) String contentTypePriority, //
+         @JsonProperty(required = true) Map<String, Source> sources, //
+         @JsonProperty(required = true) Targets targets) {
+
       record Targets( //
-         @JsonProperty(required = true) String sourceReposCacheDir, //
-         @JsonProperty(required = true) String pluginXml, //
-         @JsonProperty(required = true) String readmeMd, //
-         @JsonProperty(required = true) String stateFile, //
-         @JsonProperty(required = true) String syntaxesDir) {
+            @JsonProperty(required = true) String sourceReposCacheDir, //
+            @JsonProperty(required = true) String pluginXml, //
+            @JsonProperty(required = true) String readmeMd, //
+            @JsonProperty(required = true) String stateFile, //
+            @JsonProperty(required = true) String syntaxesDir) {
       }
 
       static class Language extends WithToString {
@@ -145,30 +145,31 @@ public class Updater {
     * model for VSCode extension package.json
     */
    record VsCodeExtensionPackageJson( //
-      @JsonProperty(required = true) String name, //
-      String icon, //
-      String license, //
-      String version, //
-      @JsonProperty(required = true) Contributions contributes //
-   ) {
+         @JsonProperty(required = true) String name, //
+         String icon, //
+         String license, //
+         String version, //
+         @JsonProperty(required = true) Contributions contributes) {
+
       record Contributions( //
-         @JsonProperty(required = true) List<Grammar> grammars, //
-         @JsonProperty(required = true) List<Language> languages //
-      ) {
+            @JsonProperty(required = true) List<Grammar> grammars, //
+            @JsonProperty(required = true) List<Language> languages) {
+
          record Grammar( //
-            String language, //
-            @JsonProperty(required = true) String scopeName, //
-            @JsonProperty(required = true) String path) {
+               String language, //
+               @JsonProperty(required = true) String scopeName, //
+               @JsonProperty(required = true) String path) {
          }
 
          record Language( //
-            @JsonProperty(required = true) String id, //
-            List<String> aliases, //
-            @JsonProperty("extensions") List<String> fileExtensions, //
-            @JsonProperty("filenames") List<String> fileNames, //
-            @JsonProperty("filenamePatterns") List<String> filePatterns, //
-            Icon icon, //
-            String configuration) {
+               @JsonProperty(required = true) String id, //
+               List<String> aliases, //
+               @JsonProperty("extensions") List<String> fileExtensions, //
+               @JsonProperty("filenames") List<String> fileNames, //
+               @JsonProperty("filenamePatterns") List<String> filePatterns, //
+               Icon icon, //
+               String configuration) {
+
             record Icon(String light, String dark) {
             }
          }
@@ -225,15 +226,15 @@ public class Updater {
 
          if (sourceIdToUpdate == null) {
             logHeader("[" + i + "/" + config.sources.size() + "] " //
-               + "Processing [" + sourceId + "] " //
-               + "(" + source.getClass().getSimpleName() + ")");
+                  + "Processing [" + sourceId + "] " //
+                  + "(" + source.getClass().getSimpleName() + ")");
          } else {
             if (!sourceId.equals(sourceIdToUpdate)) {
                continue;
             }
             logHeader("[1/1] " //
-               + "Processing [" + sourceId + "] " //
-               + "(" + source.getClass().getSimpleName() + ")");
+                  + "Processing [" + sourceId + "] " //
+                  + "(" + source.getClass().getSimpleName() + ")");
          }
 
          final var sourceRepoPath = sourceReposCacheDir.resolve(sourceId);
@@ -289,7 +290,7 @@ public class Updater {
                f -> f.matches(Pattern.quote(langId) + "[.]tmLanguage[.](yaml|json|plist)"));
 
             final var iconFileName = Files.exists(syntaxDir.resolve(langId + ".png")) ? langId + ".png"
-               : Files.exists(syntaxDir.resolve("icon.png")) ? "icon.png" : null;
+                  : Files.exists(syntaxDir.resolve("icon.png")) ? "icon.png" : null;
 
             final var exampleFile = findFirstFile(syntaxDir, //
                f -> f.matches(Pattern.quote(langId) + "[.]example[.].*"));
@@ -341,7 +342,7 @@ public class Updater {
             ).stream().filter(Objects::nonNull).collect(Collectors.joining(" "));
 
             templateVars.put("file_associations", fileAssociations.isBlank() ? "file-names=\"PREVENT_FILE_ASSOCIATION_INHERITANCE\""
-               : fileAssociations);
+                  : fileAssociations);
 
             pluginLines.append(render(
                """
@@ -439,19 +440,19 @@ public class Updater {
 
             final var syntaxDir = syntaxesDir.resolve(extId);
             final var iconFileName = Files.exists(syntaxDir.resolve(langId + ".png")) ? langId + ".png"
-               : Files.exists(syntaxDir.resolve("icon.png")) ? "icon.png" : null;
+                  : Files.exists(syntaxDir.resolve("icon.png")) ? "icon.png" : null;
 
             final var templateVars = new HashMap<String, Object>();
 
             templateVars.put("label", langState.label);
             templateVars.put("icon", iconFileName == null ? ""
-               : " <img src=\"plugin/syntaxes/" + extId + "/" + iconFileName + "\" width=16/>");
+                  : " <img src=\"plugin/syntaxes/" + extId + "/" + iconFileName + "\" width=16/>");
 
             templateVars.put("file_associations", //
                Arrays.asList( //
                   isEmpty(langState.fileExtensions) ? null
-                     : "file-extensions=\"" + join(langState.fileExtensions.stream().map(Strings::removeLeadingDot).distinct().sorted(),
-                        ", ") + "\"", //
+                        : "file-extensions=\"" + join(langState.fileExtensions.stream().map(Strings::removeLeadingDot).distinct().sorted(),
+                           ", ") + "\"", //
                   isEmpty(langState.fileNames) ? null : "file-names=\"" + join(langState.fileNames, ", ") + "\"", //
                   isEmpty(langState.filePatterns) ? null : "file-patterns=\"" + join(langState.filePatterns, ", ") + "\"" //
                ).stream() //

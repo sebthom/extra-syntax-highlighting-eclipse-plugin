@@ -1,4 +1,4 @@
-/**
+/*
  * SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
  * SPDX-FileContributor: Sebastian Thomschke
  * SPDX-License-Identifier: EPL-2.0
@@ -38,7 +38,7 @@ class VSCodeSingleExtensionSourceHandler extends AbstractSourceHandler<Config.VS
    final ExtensionState state;
 
    VSCodeSingleExtensionSourceHandler(final String sourceId, final Config.VSCodeSingleExtensionSource source, final Path sourceRepoDir,
-      final Path targetSyntaxDir, final ExtensionState state) {
+         final Path targetSyntaxDir, final ExtensionState state) {
       super(sourceId, source, sourceRepoDir, targetSyntaxDir);
       this.state = state;
    }
@@ -86,7 +86,7 @@ class VSCodeSingleExtensionSourceHandler extends AbstractSourceHandler<Config.VS
             if (!pkgJsonInlineGrammars.containsKey(scopeName)) {
                logInfo("FAILED", true, false);
                throw new IllegalArgumentException("No inline grammar with scopeName [" + scopeName
-                  + "] found at [package.json/contributes/grammars]");
+                     + "] found at [package.json/contributes/grammars]");
             }
          }
          logInfo("OK", true, false);
@@ -111,16 +111,16 @@ class VSCodeSingleExtensionSourceHandler extends AbstractSourceHandler<Config.VS
          final var langOverrides = defaultIfNull(source.languages.get(langId), Config.LanguageIgnoreable::new);
          if (!isBlank(langOverrides.ignoredReason) && !"false".equals(langOverrides.ignoredReason)) {
             logInfo("Ignoring language contribution [" + langId + "] as per user config" + ("true".equals(langOverrides.ignoredReason) ? "."
-               : ": " + langOverrides.ignoredReason));
+                  : ": " + langOverrides.ignoredReason));
             continue;
          }
 
          final var grammarCfg = pkgJsonLangGrammars.get(langId);
          final var grammarPath = !isBlank(langOverrides.grammar) //
-            ? langOverrides.grammar //
-            : grammarCfg != null //
-               ? grammarCfg.path() //
-               : null;
+               ? langOverrides.grammar //
+               : grammarCfg != null //
+                     ? grammarCfg.path() //
+                     : null;
          if (grammarPath == null) {
             logInfo("[WARNING] Ignoring language contribution [" + langId + "] as no grammar is provided.");
             continue;
@@ -130,8 +130,8 @@ class VSCodeSingleExtensionSourceHandler extends AbstractSourceHandler<Config.VS
          final var grammarFile = downloadTextMateGrammarFile(ctx, grammarPath);
 
          final var langcfgPath = !isBlank(langOverrides.langcfg) //
-            ? langOverrides.langcfg //
-            : langCfg.configuration();
+               ? langOverrides.langcfg //
+               : langCfg.configuration();
          downloadLangConfigurationJSONFile(ctx, langcfgPath);
 
          downloadExampleFile(ctx, langOverrides.example);
@@ -153,20 +153,20 @@ class VSCodeSingleExtensionSourceHandler extends AbstractSourceHandler<Config.VS
 
          final var langState = new LanguageState();
          langState.label = !isBlank(langOverrides.label) //
-            ? langOverrides.label //
-            : isEmpty(langCfg.aliases()) ? langId : langCfg.aliases().get(0);
+               ? langOverrides.label //
+               : isEmpty(langCfg.aliases()) ? langId : langCfg.aliases().get(0);
          langState.scopeName = !isBlank(langOverrides.scopeName) //
-            ? langOverrides.scopeName //
-            : grammarCfg == null ? null : grammarCfg.scopeName();
+               ? langOverrides.scopeName //
+               : grammarCfg == null ? null : grammarCfg.scopeName();
          langState.fileExtensions = !isEmpty(langOverrides.fileExtensions) //
-            ? new TreeSet<>(langOverrides.fileExtensions) //
-            : langCfg.fileExtensions() == null ? null : new TreeSet<>(langCfg.fileExtensions());
+               ? new TreeSet<>(langOverrides.fileExtensions) //
+               : langCfg.fileExtensions() == null ? null : new TreeSet<>(langCfg.fileExtensions());
          langState.fileNames = !isEmpty(langOverrides.fileNames) //
-            ? new TreeSet<>(langOverrides.fileNames) //
-            : langCfg.fileNames() == null ? null : new TreeSet<>(langCfg.fileNames());
+               ? new TreeSet<>(langOverrides.fileNames) //
+               : langCfg.fileNames() == null ? null : new TreeSet<>(langCfg.fileNames());
          langState.filePatterns = !isEmpty(langOverrides.filePatterns) //
-            ? new TreeSet<>(langOverrides.filePatterns) //
-            : langCfg.filePatterns() == null ? null : new TreeSet<>(langCfg.filePatterns());
+               ? new TreeSet<>(langOverrides.filePatterns) //
+               : langCfg.filePatterns() == null ? null : new TreeSet<>(langCfg.filePatterns());
          langState.upstreamURL = getUpstreamUrlFromGrammarFile(grammarFile);
          state.languages.put(langId, langState);
       }

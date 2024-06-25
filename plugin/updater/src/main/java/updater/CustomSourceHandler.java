@@ -1,4 +1,4 @@
-/**
+/*
  * SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
  * SPDX-FileContributor: Sebastian Thomschke
  * SPDX-License-Identifier: EPL-2.0
@@ -27,7 +27,7 @@ class CustomSourceHandler extends AbstractSourceHandler<Config.CustomSource> {
    final ExtensionState state;
 
    CustomSourceHandler(final String sourceId, final Config.CustomSource source, final Path sourceRepoDir, final Path syntaxesDir,
-      final ExtensionState state) {
+         final ExtensionState state) {
       super(sourceId, source, sourceRepoDir, syntaxesDir);
       this.state = state;
    }

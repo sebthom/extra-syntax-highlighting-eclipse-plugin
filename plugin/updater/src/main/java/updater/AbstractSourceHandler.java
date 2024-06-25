@@ -1,4 +1,4 @@
-/**
+/*
  * SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
  * SPDX-FileContributor: Sebastian Thomschke
  * SPDX-License-Identifier: EPL-2.0
@@ -90,13 +90,13 @@ abstract class AbstractSourceHandler<T extends Source> {
       if (source.licenseDownload) {
          var srcLicenseFile = findFirstFile(sourceExtensionDir, //
             name -> "license".equalsIgnoreCase(name) //
-               || "license.md".equalsIgnoreCase(name) //
-               || "license.txt".equalsIgnoreCase(name));
+                  || "license.md".equalsIgnoreCase(name) //
+                  || "license.txt".equalsIgnoreCase(name));
          if (srcLicenseFile.isEmpty() && !sourceRepoDir.equals(sourceExtensionDir)) {
             srcLicenseFile = findFirstFile(sourceRepoDir, //
                name -> "license".equalsIgnoreCase(name) //
-                  || "license.md".equalsIgnoreCase(name) //
-                  || "license.txt".equalsIgnoreCase(name));
+                     || "license.md".equalsIgnoreCase(name) //
+                     || "license.txt".equalsIgnoreCase(name));
          }
          if (srcLicenseFile.isEmpty())
             throw new IllegalStateException("License file not found for source [" + sourceId + "]");
@@ -117,7 +117,8 @@ abstract class AbstractSourceHandler<T extends Source> {
 
       if (isURL(grammarPathOrURL)) {
          final var sourceURL = new URL(grammarPathOrURL);
-         final var targetFile = ctx.targetDir.resolve(ctx.targetNamePrefix + mapFileExt.apply(getFileExtension(sourceURL.getPath()).toLowerCase()));
+         final var targetFile = ctx.targetDir.resolve(ctx.targetNamePrefix + mapFileExt.apply(getFileExtension(sourceURL.getPath())
+            .toLowerCase()));
          if (ctx.updateExistingFiles || !Files.exists(targetFile)) {
             downloadFile(sourceURL, targetFile);
          }

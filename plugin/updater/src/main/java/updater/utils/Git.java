@@ -1,4 +1,4 @@
-/**
+/*
  * SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
  * SPDX-FileContributor: Sebastian Thomschke
  * SPDX-License-Identifier: EPL-2.0
@@ -64,7 +64,7 @@ public abstract class Git {
    }
 
    public static GitCheckoutState gitSparseCheckout(final Path localPath, final GitCheckoutConfig gitCheckoutCfg) throws IOException,
-      InterruptedException {
+         InterruptedException {
       final var repoURL = gitCheckoutCfg.repo.contains("://") ? gitCheckoutCfg.repo : "https://github.com/" + gitCheckoutCfg.repo;
 
       logInfo("Sparse checkout [" + repoURL + "]...");

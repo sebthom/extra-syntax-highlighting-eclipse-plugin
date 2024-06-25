@@ -1,4 +1,4 @@
-/**
+/*
  * SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
  * SPDX-FileContributor: Sebastian Thomschke
  * SPDX-License-Identifier: EPL-2.0
@@ -71,9 +71,9 @@ public abstract class Log {
       final var accentColor = Ansi.BOLD + (logIndentation.length() % 4 == 0 ? Ansi.MAGENTA : Ansi.BLUE);
       System.out.print( //
          (withIndentation ? logIndentation : "") //
-            + mainColor //
-            + msg.replace("[", "[" + accentColor).replace("]", mainColor + "]") //
-            + Ansi.RESET);
+               + mainColor //
+               + msg.replace("[", "[" + accentColor).replace("]", mainColor + "]") //
+               + Ansi.RESET);
       if (withNewLine) {
          System.out.println();
       }

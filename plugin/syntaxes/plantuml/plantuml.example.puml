@@ -1,16 +1,23 @@
-@startuml macro_tests
+@startuml
 
-!define simple_macro "text"
+class Animal {
+    +String name
+    +int age
+    +void eat()
+    +void sleep()
+}
 
-!define params_macro(p1, p2) "text"
+class Dog extends Animal {
+    +String breed
+    +void bark()
+}
 
-!define params_defaults_macro(p1, color="#F58536") "text"
+class Cat extends Animal {
+    +String furColor
+    +void meow()
+}
 
-!define params_overload_macro(p1, p2) "text"
-
-!define params_overload_macro(p1, p2, color="#F58536") "text"
-
-params_overload_macro()
-params_overload_macro(hello, world, )
+Animal <|-- Dog
+Animal <|-- Cat
 
 @enduml

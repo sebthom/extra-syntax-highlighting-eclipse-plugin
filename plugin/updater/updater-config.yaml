@@ -365,7 +365,6 @@ sources:
     languages:
       plantuml:
         grammar: syntaxes/plantuml.yaml-tmLanguage
-        example: test/testFixture/macros.puml
 
   prisma:
     type: vscode-extension

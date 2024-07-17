@@ -91,6 +91,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.html.markdown.astro" path="syntaxes/astro/text.html.markdown.astro.tmLanguage.json" />
+    <grammar scopeName="text.mdx.astro.codeblock" path="syntaxes/astro/text.mdx.astro.codeblock.tmLanguage.json" />
   </extension>
 
   <!-- ======================================== -->

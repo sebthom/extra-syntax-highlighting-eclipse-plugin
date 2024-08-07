@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: f2de94820052ef6697c0dbabbf007dd24e1d1319
+      commit: b6d5aab526a08a78e501cf67ceed10d491ed9bb6
     languages:
       astro:
         label: Astro
@@ -37,7 +37,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 4f02dc5a86d5293800b44b67000b14cbd4edce38
+      commit: 9c77c18410b565f69fcad0f44f8861abf4fc9caf
     languages:
       bazelrc:
         label: bazelrc
@@ -128,7 +128,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 32ea9f1a3bf801c0bcccabd5567e28b8c150fdd2
+      commit: ab119d640012360360e1f5145e009217d2d62498
     languages:
       graphql:
         label: GraphQL
@@ -160,7 +160,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: ab30f27a046eb0fbb7274513916fb21d98189835
+      commit: 90ea3c094833e1e3fb6b90db5470e65361519a4f
     languages:
       hcl:
         label: HCL Config File
@@ -182,7 +182,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 6bfa905f5906e1ccf4a33ffdb84a0e2a0f943465
+      commit: e6bff8826b63380992e35c738b256d6e3a81d146
     languages:
       helm:
         label: helm-template
@@ -509,7 +509,7 @@ extensions:
     github:
       repo: fwcd/vscode-kotlin
       ref: main
-      commit: 531f35e458ac74b84c1ca7b0c3a790cf1c5d9e5b
+      commit: a2b912de4fa9139eacd976bc0b22907105b83e4a
     languages:
       kotlin:
         label: Kotlin
@@ -612,7 +612,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 9d72206db17bda50696606dc56ae3eef0260f9dd
+      commit: 641428da4979b0297970922964d2a2c14673b187
     languages:
       ocaml:
         label: OCaml
@@ -692,7 +692,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: e8ba48edb71c5567ccd32ec666f130161780e201
+      commit: 4c2598e868da8078d78f09f742e627844d3e8f80
     languages:
       prisma:
         label: Prisma
@@ -708,7 +708,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 027ab23e3e59939ad1f018a34ca5e0386cbaf829
+      commit: 719f17be66e1a1b0f0eedac70c65a5759e2c6577
     languages:
       svelte:
         label: Svelte
@@ -745,7 +745,7 @@ extensions:
     github:
       repo: ziglang/vscode-zig
       ref: master
-      commit: c6a604b958f6479ab2f70ec04552643a7f9cf66d
+      commit: cc7b17df5d30337700a035ed45fac362d9df5a3e
     languages:
       zig:
         label: Zig

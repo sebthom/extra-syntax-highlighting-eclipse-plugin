@@ -741,6 +741,21 @@ extensions:
         - pdm.lock
     inline-grammars:
     - markdown.toml.codeblock
+  wing:
+    github:
+      repo: winglang/wing
+      path: packages/vscode-wing
+      ref: main
+      commit: 9adaea0116fc8d00229d45660b6fdf1456708ec8
+    languages:
+      wing:
+        label: Wing
+        scope-name: source.wing
+        file-extensions:
+        - .w
+        - .wsim
+    inline-grammars:
+    - markdown.wing.codeblock
   zig:
     github:
       repo: ziglang/vscode-zig

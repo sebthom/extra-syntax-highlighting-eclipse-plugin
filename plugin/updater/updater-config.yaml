@@ -411,6 +411,12 @@ sources:
         - pdm.lock
         - Pipfile
 
+  wing:
+    type: vscode-extension
+    github:
+      repo: winglang/wing
+      path: packages/vscode-wing
+
   zig:
     type: vscode-extension
     github:

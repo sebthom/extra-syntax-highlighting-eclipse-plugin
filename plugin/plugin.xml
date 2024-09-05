@@ -1402,6 +1402,33 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- wing/wing: Wing -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.wing" name="Wing" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="w,wsim" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.wing" path="syntaxes/wing/wing.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.wing" contentTypeId="extra-syntax-highlighting.wing" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.wing" path="syntaxes/wing/wing.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.wing" icon="syntaxes/wing/wing.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- wing: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.wing.codeblock" path="syntaxes/wing/markdown.wing.codeblock.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- zig/zig: Zig -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

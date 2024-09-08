@@ -158,6 +158,10 @@
     <icon contentType="extra-syntax-highlighting.crystal" icon="syntaxes/crystal/icon.png"/>
   </extension>
 
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Crystal Example" path="syntaxes/crystal/crystal.example.cr" scopeName="source.crystal" />
+  </extension>
+
   <!-- ======================================== -->
   <!-- crystal/crystal-markdown-injection: crystal-markdown-injection -->
   <!-- ======================================== -->
@@ -212,6 +216,10 @@
 
   <extension point="org.eclipse.ui.genericeditor.icons">
     <icon contentType="extra-syntax-highlighting.slang" icon="syntaxes/crystal/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Crystal Slang Example" path="syntaxes/crystal/slang.example.slang" scopeName="text.slang" />
   </extension>
 
   <!-- ======================================== -->
@@ -1447,6 +1455,10 @@
     <languageConfiguration contentTypeId="extra-syntax-highlighting.pony" path="syntaxes/pony/pony.language-configuration.json" />
   </extension>
 
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Pony Example" path="syntaxes/pony/pony.example.pony" scopeName="source.pony" />
+  </extension>
+
   <!-- ======================================== -->
   <!-- prisma/prisma: Prisma -->
   <!-- ======================================== -->
@@ -1566,6 +1578,10 @@
 
   <extension point="org.eclipse.ui.genericeditor.icons">
     <icon contentType="extra-syntax-highlighting.wing" icon="syntaxes/wing/wing.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Wing Example" path="syntaxes/wing/wing.example.wing" scopeName="source.wing" />
   </extension>
 
   <!-- ======================================== -->

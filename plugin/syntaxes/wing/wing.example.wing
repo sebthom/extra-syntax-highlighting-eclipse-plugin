@@ -1,0 +1,44 @@
+bring cloud;
+
+// 1. Creating cloud resources
+let queue = new cloud.Queue();
+let bucket = new cloud.Bucket();
+let counter = new cloud.Counter();
+
+// 2. Setting up a consumer for the queue
+queue.setConsumer(inflight (message) => {
+  let count = counter.inc();  // Increment the counter
+  bucket.put("file-{count}.txt", message);  // Store message in the bucket
+});
+
+// 3. Functions and inflight code
+inflight fun process_message(msg: str) {
+  let formatted = "Message: " + msg;
+  return formatted;
+}
+
+// 4. Using a cloud function
+let func = new cloud.Function(inflight () => {
+  let result = process_message("Hello from the cloud!");
+  bucket.put("greeting.txt", result);  // Save result to a cloud bucket
+});
+
+// 5. Using environment variables
+let my_function = new cloud.Function(
+  inflight () => { bucket.put("config.txt", "Environment setup!"); },
+  env: { "DB_HOST": "localhost", "DB_NAME": "example_db" }
+);
+
+// 6. Error handling
+inflight fun safe_divide(a: num, b: num) -> num {
+  if b == 0 {
+    throw "Cannot divide by zero";
+  }
+  return a / b;
+}
+
+try {
+  let result = safe_divide(10, 0);
+} catch {
+  print("Error during division");
+}

@@ -115,6 +115,11 @@ sources:
       bazelrc:
         grammar: syntaxes/bazelrc.tmLanguage.yaml
 
+  crystal:
+    type: vscode-extension
+    github:
+      repo: crystal-lang-tools/vscode-crystal-lang
+
   dot:
     type: custom
     github:

@@ -21,6 +21,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - Apache HTTP configuration files - https://httpd.apache.org/docs/current/configuring.html
 - Astro - https://astro.build/
 - Bazel - https://bazel.build/
+- Crystal (`*.cr` - https://crystal-lang.org/
 - Eclipse External null Annotations (`*.eea`) - https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations#File_format
 - Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd
 - GLSL (OpenGL Shading Language) - https://registry.khronos.org/OpenGL/index_gl.php#apispecs
@@ -90,6 +91,9 @@ To install the plugin into an existing Eclipse installation do:
 | Apache HTTP Config <img src="plugin/syntaxes/apache-http/icon.png" width=16/> | file-extensions="conf, htaccess, htgroups, htpasswd" | [master@mrmlnc/vscode-apache](https://github.com/mrmlnc/vscode-apache/tree/0585b0bb3d390fc541aa27cfcfb83b3204156be3/)
 | Astro <img src="plugin/syntaxes/astro/icon.png" width=16/> | file-extensions="astro" | [main@withastro/language-tools](https://github.com/withastro/language-tools/tree/b79ff829224838492fcdfa273a03316863e724da/packages/vscode)
 | bazelrc <img src="plugin/syntaxes/bazel/icon.png" width=16/> | file-extensions="bazelrc"<br />file-names=".bazelrc, bazel.rc" | [master@bazelbuild/vscode-bazel](https://github.com/bazelbuild/vscode-bazel/tree/b4a8b0cc23d280a774cd1272e2979385818bbef0/)
+| Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="cr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/34b86beaffa85c5639e86519f7b16db58b04a923/) [[upstream]](https://github.com/Microsoft/vscode/blob/3f1f36333d3453f67a36b6bfb1206e9159e9c4f0/extensions/ruby/syntaxes/ruby.tmLanguage.json)
+| Crystal Slang <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="slang" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/34b86beaffa85c5639e86519f7b16db58b04a923/)
+| Embedded Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="ecr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/34b86beaffa85c5639e86519f7b16db58b04a923/)
 | Entity Relationship <img src="plugin/syntaxes/er/icon.png" width=16/> | file-extensions="er" | [master@mikkel-ol/vsc-er-syntax-highlighting](https://github.com/mikkel-ol/vsc-er-syntax-highlighting/tree/160f6061a525858e4a17df97a4e3b51d0ff9c1bd/)
 | GraphQL <img src="plugin/syntaxes/graphql/icon.png" width=16/> | file-extensions="gql, graphql, graphqls" | [main@graphql/graphiql](https://github.com/graphql/graphiql/tree/76b3cc872dedd667504f58c9313a86bada7688d6/packages/vscode-graphql-syntax)
 | GraphViz DOT File | file-extensions="dot" | [master@textmate/graphviz.tmbundle](https://github.com/textmate/graphviz.tmbundle/tree/d1d489f893a0e6ef5d9021bf7dc1ffd08b3f9b90/Syntaxes)

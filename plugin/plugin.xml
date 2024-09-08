@@ -139,6 +139,82 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- crystal/crystal: Crystal -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.crystal" name="Crystal" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="cr" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.crystal" path="syntaxes/crystal/crystal.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.crystal" contentTypeId="extra-syntax-highlighting.crystal" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.crystal" path="syntaxes/crystal/crystal.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.crystal" icon="syntaxes/crystal/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- crystal/crystal-markdown-injection: crystal-markdown-injection -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.crystal-markdown-injection" name="crystal-markdown-injection" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-names="PREVENT_FILE_ASSOCIATION_INHERITANCE" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.crystal.codeblock" path="syntaxes/crystal/crystal-markdown-injection.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="markdown.crystal.codeblock" contentTypeId="extra-syntax-highlighting.crystal-markdown-injection" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.crystal-markdown-injection" icon="syntaxes/crystal/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- crystal/ecr: Embedded Crystal -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.ecr" name="Embedded Crystal" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="ecr" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.ecr" path="syntaxes/crystal/ecr.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.ecr" contentTypeId="extra-syntax-highlighting.ecr" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.ecr" path="syntaxes/crystal/ecr.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.ecr" icon="syntaxes/crystal/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- crystal/slang: Crystal Slang -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.slang" name="Crystal Slang" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="slang" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.slang" path="syntaxes/crystal/slang.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.slang" contentTypeId="extra-syntax-highlighting.slang" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.slang" path="syntaxes/crystal/slang.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.slang" icon="syntaxes/crystal/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
   <!-- dot/dot: GraphViz DOT File -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

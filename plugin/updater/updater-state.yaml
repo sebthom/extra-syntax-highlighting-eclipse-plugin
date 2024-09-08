@@ -61,6 +61,31 @@ extensions:
         file-names:
         - BUILD
         - WORKSPACE
+  crystal:
+    github:
+      repo: crystal-lang-tools/vscode-crystal-lang
+      ref: master
+      commit: 34b86beaffa85c5639e86519f7b16db58b04a923
+    languages:
+      crystal:
+        label: Crystal
+        scope-name: source.crystal
+        upstream-url: https://github.com/Microsoft/vscode/blob/3f1f36333d3453f67a36b6bfb1206e9159e9c4f0/extensions/ruby/syntaxes/ruby.tmLanguage.json
+        file-extensions:
+        - .cr
+      crystal-markdown-injection:
+        label: crystal-markdown-injection
+        scope-name: markdown.crystal.codeblock
+      ecr:
+        label: Embedded Crystal
+        scope-name: text.ecr
+        file-extensions:
+        - .ecr
+      slang:
+        label: Crystal Slang
+        scope-name: text.slang
+        file-extensions:
+        - .slang
   dot:
     github:
       repo: textmate/graphviz.tmbundle

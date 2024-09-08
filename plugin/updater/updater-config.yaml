@@ -142,6 +142,21 @@ sources:
       er:
         example: example.er
 
+  erlang:
+    type: vscode-extension
+    github:
+      repo: erlang-ls/vscode
+
+  #elixir:  # TODO uses negative look-behinds unsupported by joni
+  #  type: vscode-extension
+  #  github:
+  #    repo: elixir-lsp/vscode-elixir-ls
+
+  gleam:
+    type: vscode-extension
+    github:
+      repo: gleam-lang/vscode-gleam
+
   glsl:
     type: vscode-extension
     github:

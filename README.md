@@ -24,6 +24,8 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - Crystal (`*.cr` - https://crystal-lang.org/
 - Eclipse External null Annotations (`*.eea`) - https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations#File_format
 - Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd
+- Erlang (`*.erl`) - https://www.erlang.org/
+- Gleam (`*.gleam`) - https://gleam.run/
 - GLSL (OpenGL Shading Language) - https://registry.khronos.org/OpenGL/index_gl.php#apispecs
 - GraphQL - https://graphql.org/
 - Graphviz Dot (`*.dot`) - https://graphviz.org/doc/info/lang.html
@@ -95,6 +97,8 @@ To install the plugin into an existing Eclipse installation do:
 | Crystal Slang <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="slang" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/34b86beaffa85c5639e86519f7b16db58b04a923/)
 | Embedded Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="ecr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/34b86beaffa85c5639e86519f7b16db58b04a923/)
 | Entity Relationship <img src="plugin/syntaxes/er/icon.png" width=16/> | file-extensions="er" | [master@mikkel-ol/vsc-er-syntax-highlighting](https://github.com/mikkel-ol/vsc-er-syntax-highlighting/tree/160f6061a525858e4a17df97a4e3b51d0ff9c1bd/)
+| Erlang <img src="plugin/syntaxes/erlang/icon.png" width=16/> | file-extensions="config, erl, escript, hrl, src" | [main@erlang-ls/vscode](https://github.com/erlang-ls/vscode/tree/34ac95f874b5fd377e1a9fa44a17baf78f36683d/)
+| Gleam <img src="plugin/syntaxes/gleam/gleam.png" width=16/> | file-extensions="gleam" | [main@gleam-lang/vscode-gleam](https://github.com/gleam-lang/vscode-gleam/tree/6ed1e8a5acb5c4dbe2d44fe7d01d835ddc09cc9e/)
 | GraphQL <img src="plugin/syntaxes/graphql/icon.png" width=16/> | file-extensions="gql, graphql, graphqls" | [main@graphql/graphiql](https://github.com/graphql/graphiql/tree/76b3cc872dedd667504f58c9313a86bada7688d6/packages/vscode-graphql-syntax)
 | GraphViz DOT File | file-extensions="dot" | [master@textmate/graphviz.tmbundle](https://github.com/textmate/graphviz.tmbundle/tree/d1d489f893a0e6ef5d9021bf7dc1ffd08b3f9b90/Syntaxes)
 | HashiCorp Sentinel | file-extensions="sentinel" | [main@hashicorp/syntax](https://github.com/hashicorp/syntax/tree/2eeee061eca93eb1a892e92307ff1251b5be90ee/)

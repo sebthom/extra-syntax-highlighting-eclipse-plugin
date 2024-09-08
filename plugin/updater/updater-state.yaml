@@ -111,6 +111,34 @@ extensions:
         - .er
     inline-grammars:
     - markdown.er.codeblock
+  erlang:
+    github:
+      repo: erlang-ls/vscode
+      ref: main
+      commit: 34ac95f874b5fd377e1a9fa44a17baf78f36683d
+    languages:
+      erlang:
+        label: Erlang
+        scope-name: source.erlang
+        file-extensions:
+        - .config
+        - .erl
+        - .escript
+        - .hrl
+        - .src
+  gleam:
+    github:
+      repo: gleam-lang/vscode-gleam
+      ref: main
+      commit: 6ed1e8a5acb5c4dbe2d44fe7d01d835ddc09cc9e
+    languages:
+      gleam:
+        label: Gleam
+        scope-name: source.gleam
+        file-extensions:
+        - .gleam
+    inline-grammars:
+    - markdown.gleam.codeblock
   glsl:
     github:
       repo: GeForceLegend/vscode-glsl

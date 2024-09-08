@@ -262,6 +262,61 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- erlang/erlang: Erlang -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.erlang" name="Erlang" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="config,erl,escript,hrl,src" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.erlang" path="syntaxes/erlang/erlang.tmLanguage.plist" />
+    <scopeNameContentTypeBinding scopeName="source.erlang" contentTypeId="extra-syntax-highlighting.erlang" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.erlang" path="syntaxes/erlang/erlang.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.erlang" icon="syntaxes/erlang/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Erlang Example" path="syntaxes/erlang/erlang.example.erl" scopeName="source.erlang" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- gleam/gleam: Gleam -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.gleam" name="Gleam" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="gleam" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.gleam" path="syntaxes/gleam/gleam.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.gleam" contentTypeId="extra-syntax-highlighting.gleam" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.gleam" path="syntaxes/gleam/gleam.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.gleam" icon="syntaxes/gleam/gleam.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Gleam Example" path="syntaxes/gleam/gleam.example.gleam" scopeName="source.gleam" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- gleam: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.gleam.codeblock" path="syntaxes/gleam/markdown.gleam.codeblock.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- glsl/glsl: OpenGL Shading Language -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

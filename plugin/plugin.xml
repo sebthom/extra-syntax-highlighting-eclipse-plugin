@@ -1301,6 +1301,22 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- pony/pony: Pony -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.pony" name="Pony" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="pony" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.pony" path="syntaxes/pony/pony.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.pony" contentTypeId="extra-syntax-highlighting.pony" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.pony" path="syntaxes/pony/pony.language-configuration.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- prisma/prisma: Prisma -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

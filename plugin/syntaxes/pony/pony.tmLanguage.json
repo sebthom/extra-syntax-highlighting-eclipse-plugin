@@ -1,0 +1,77 @@
+{
+  "name": "Pony",
+  "scopeName": "source.pony",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#keywords"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.pony",
+          "match": "\\s*//.*"
+        },
+        {
+          "name": "comment.block.pony",
+          "match": "/\\*.*\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.single.pony",
+          "match": "'(\\'|[^'])+'"
+        },
+        {
+          "name": "string.quoted.double.pony",
+          "match": "\"((\\\\\"|[^\\\"])+)\""
+        },
+        {
+          "name": "string.quoted.triple.pony",
+          "match": "\"\"\".*\"\"\""
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "storage.type.pony",
+          "match": "\\b(actor|be|class|embed|fun|interface|let|new|object|primitive|struct|trait|type|var)\\b"
+        },
+        {
+          "name": "keyword.control.pony",
+          "match": "\\b(contine|do|else|elseif|end|for|if|ifdef|iftype|in|match|recover|repeat|then|try|until|while|with)\\b"
+        },
+        {
+          "name": "keyword.operator.pony",
+          "match": "\\b(addressof|and|as|break|compile_error|compile_intrinsic|consume|digestof|error|is|not|or|return|xor|&|->|@|\\\\|!|!=|!=~|\\||\\.>|\\}|\\)|\\]|:|,|\\.|\\\"|=|=>|==|==~|>|>=|>=~|>~|#|\\^|<|<=|<=~|<~|-|-~|\\{|\\(|\\[|%|%%|%%~|%~|\\+|\\+~|\\?|;|<<|<<~|>>|>>~|'|/|/~|\\*|\\*~|<:|~|_)\\b"
+        },
+        {
+          "name": "keyword.other.pony",
+          "match": "\\b(use|where)\\b"
+        },
+        {
+          "name": "constant.language.pony",
+          "match": "\\b(box|false|\\#alias|#any|#read|#send|#share|iso|ref|tag|trn|true|val)\\b"
+        },
+        {
+          "name": "constant.numeric.pony",
+          "match": "(0x[abcdefABCDEF0-9][abcdefABCDEF_0-9]+|0b[01][01_]+|\\d+(\\.\\d+)?([eE][+-]?\\d+(\\.\\d+)?)?)"
+        },
+        {
+          "name": "variable.language.pony",
+          "match": "\\b(__loc|this)\\b"
+        }
+      ]
+    }
+  }
+}

@@ -687,6 +687,18 @@ extensions:
         - .wsd
     inline-grammars:
     - markdown.plantuml.codeblock
+  pony:
+    github:
+      repo: chalcolith/eohippus
+      path: eohippus-vscode
+      ref: main
+      commit: d090950816305635c72805f3f05c215c37f587f0
+    languages:
+      pony:
+        label: Pony
+        scope-name: source.pony
+        file-extensions:
+        - .pony
   prisma:
     github:
       repo: prisma/language-tools

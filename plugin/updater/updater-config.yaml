@@ -366,6 +366,21 @@ sources:
       plantuml:
         grammar: syntaxes/plantuml.yaml-tmLanguage
 
+  pony:
+    type: custom
+    # type: vscode-extension #TODO package.json misses 'contributes/grammars' secion
+    github:
+      repo: chalcolith/eohippus
+      path: eohippus-vscode
+    languages:
+      pony:
+        label: Pony
+        grammar: syntaxes/pony.tmLanguage.json
+        langcfg: pony-configuration.json
+        scope-name: source.pony
+        file-extensions:
+        - .pony
+
   prisma:
     type: vscode-extension
     github:

@@ -41,8 +41,9 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - NginX (`nginx.conf`) - https://www.nginx.com/
 - Nushell (`*.nu`) - https://github.com/nushell/nushell
 - OCaml (`*.ml`) - https://ocaml.org/
-- PlantUML (`*.pu`) - https://plantuml.com/
 - Pascal (`*.pas`) - https://en.wikipedia.org/wiki/Pascal_(programming_language)
+- PlantUML (`*.pu`) - https://plantuml.com/
+- Pony (`*.pony´) - https://www.ponylang.io/
 - Prisma - https://www.prisma.io/
 - Reason (`*.re`) - https://reasonml.github.io/
 - Svelte - https://svelte.dev/
@@ -139,6 +140,7 @@ To install the plugin into an existing Eclipse installation do:
 | OpenGL Shading Language <img src="plugin/syntaxes/glsl/icon.png" width=16/> | file-extensions="comp, csh, frag, fs, fsh, fshader, geom, glsl, gs, gsh, gshader, mesh, rahit, rcall, rchit, rgen, rint, rmiss, task, tesc, tese, vert, vs, vsh, vshader" | [master@GeForceLegend/vscode-glsl](https://github.com/GeForceLegend/vscode-glsl/tree/d03a9d548f23c6170e73f893a4ada3070509b043/)
 | Pascal | file-extensions="dfm, dpk, dpr, fmx, lfm, lpr, p, pas" | [master@textmate/pascal.tmbundle](https://github.com/textmate/pascal.tmbundle/tree/3b11b782368065e55acce0423f385722771d28b0/Syntaxes)
 | PlantUML <img src="plugin/syntaxes/plantuml/icon.png" width=16/> | file-extensions="iuml, plantuml, pu, puml, wsd" | [master@qjebbs/vscode-plantuml](https://github.com/qjebbs/vscode-plantuml/tree/7bc1758ed73dc269f5721d78c6c6c01f461d7cb0/)
+| Pony | file-extensions="pony" | [main@chalcolith/eohippus](https://github.com/chalcolith/eohippus/tree/d090950816305635c72805f3f05c215c37f587f0/eohippus-vscode)
 | Prisma <img src="plugin/syntaxes/prisma/prisma.png" width=16/> | file-extensions="prisma" | [main@prisma/language-tools](https://github.com/prisma/language-tools/tree/06ba59680dc5cb70fa50facf2a359a95aae9a113/packages/vscode)
 | Reason <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="re, rei" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/2cb90d1d19de081555863856f40d2d26078ec2c9/)
 | Starlark <img src="plugin/syntaxes/bazel/icon.png" width=16/> | file-extensions="BUILD, WORKSPACE, bazel, bzl, bzlmod, sky, star"<br />file-names="BUILD, WORKSPACE" | [master@bazelbuild/vscode-bazel](https://github.com/bazelbuild/vscode-bazel/tree/b4a8b0cc23d280a774cd1272e2979385818bbef0/)

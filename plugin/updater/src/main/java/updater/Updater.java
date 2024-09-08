@@ -147,6 +147,7 @@ public class Updater {
     * model for VSCode extension package.json
     */
    record VsCodeExtensionPackageJson( //
+         // https://code.visualstudio.com/api/references/extension-manifest
          @JsonProperty(required = true) String name, //
          String icon, //
          String license, //

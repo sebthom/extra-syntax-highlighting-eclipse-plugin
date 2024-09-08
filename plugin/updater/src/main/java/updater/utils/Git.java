@@ -121,6 +121,10 @@ public abstract class Git {
             execVerbose(localPath, "git", "sparse-checkout", "set", gitCheckoutCfg.path);
          }
          execVerbose(localPath, "git", gitPullArgs.toArray(String[]::new));
+
+         // checkout potential git modules
+         execVerbose(localPath, "git", "submodule", "update", "--init", "--recursive");
+
          final var commitHash = execSilent(localPath, "git", "rev-parse", "HEAD");
          return new GitCheckoutState(gitCheckoutCfg.repo, gitCheckoutCfg.path, ref, commitHash.get(0));
       }

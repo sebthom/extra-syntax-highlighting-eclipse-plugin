@@ -181,7 +181,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 76b3cc872dedd667504f58c9313a86bada7688d6
+      commit: e7915d8e75e784257baf8b3bed80564e3120efe1
     languages:
       graphql:
         label: GraphQL
@@ -599,7 +599,7 @@ extensions:
     github:
       repo: wooorm/markdown-tm-language
       ref: main
-      commit: 403f851b6ff7b52f3dbf5fc3b3e5b215c8e505a2
+      commit: 5caa71e2bbddea59b27c6a5a346881cd10fa0f5f
     languages:
       markdown:
         label: Markdown
@@ -665,7 +665,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: d64ec31685120225cc89de1a917867f63a35457a
+      commit: 523cded195ad5aaa187f86ee8c8246bebfc0b87d
     languages:
       ocaml:
         label: OCaml
@@ -745,7 +745,7 @@ extensions:
       repo: chalcolith/eohippus
       path: eohippus-vscode
       ref: main
-      commit: d090950816305635c72805f3f05c215c37f587f0
+      commit: de9d2b4cf848c8a8a87c1b7535e13285677fedee
     languages:
       pony:
         label: Pony
@@ -757,7 +757,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 3a8582395cbc44543fb0204a6e89d23e60bfc72a
+      commit: 7b32ba9087bd621a050795eb224a5f1092035f76
     languages:
       prisma:
         label: Prisma
@@ -773,7 +773,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 9221ca336d9abafadae1659bf35434834a06f864
+      commit: 0921d657a5224f08536552d825710ef1b52ab8f5
     languages:
       svelte:
         label: Svelte
@@ -811,7 +811,7 @@ extensions:
       repo: winglang/wing
       path: packages/vscode-wing
       ref: main
-      commit: 90a80777b60e53aedd388bd81597e58b6be8f6af
+      commit: 2f2665e27c8f6f4bcd9570484045077ef06971ac
     languages:
       wing:
         label: Wing

@@ -768,6 +768,20 @@ extensions:
     - inline.prisma
     - markdown.prisma.codeblock
     - source.ts.prismaClientRawSQL
+  ring:
+    github:
+      repo: ring-lang/ring
+      path: tools/editors/vscode/extension
+      ref: master
+      commit: 49d646efb6d4fecb04463a75737c1f3299d3fd54
+    languages:
+      ring:
+        label: ring
+        scope-name: source.ring
+        file-extensions:
+        - rform
+        - rh
+        - ring
   svelte:
     github:
       repo: sveltejs/language-tools

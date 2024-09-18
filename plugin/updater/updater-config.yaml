@@ -410,6 +410,12 @@ sources:
       prisma:
         example: https://raw.githubusercontent.com/prisma/language-tools/main/packages/language-server/src/__test__/__fixtures__/single-file/jump-to-definition/correct_mongodb.prisma
 
+  ring:
+    type: vscode-extension
+    github:
+      repo: ring-lang/ring
+      path: tools/editors/vscode/extension
+
   svelte:
     type: vscode-extension
     github:

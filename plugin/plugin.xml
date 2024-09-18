@@ -1493,6 +1493,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- ring/ring: ring -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.ring" name="ring" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="rform,rh,ring" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.ring" path="syntaxes/ring/ring.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.ring" contentTypeId="extra-syntax-highlighting.ring" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.ring" path="syntaxes/ring/ring.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.ring" icon="syntaxes/ring/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="ring Example" path="syntaxes/ring/ring.example.ring" scopeName="source.ring" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- svelte/svelte: Svelte -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

@@ -825,7 +825,7 @@ extensions:
       repo: winglang/wing
       path: packages/vscode-wing
       ref: main
-      commit: 90a80777b60e53aedd388bd81597e58b6be8f6af
+      commit: c90bf7773271ba2d9b66c6f34a7f9e5d7caefe95
     languages:
       wing:
         label: Wing

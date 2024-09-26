@@ -115,6 +115,11 @@ sources:
       bazelrc:
         grammar: syntaxes/bazelrc.tmLanguage.yaml
 
+  bf:
+    type: vscode-extension
+    github:
+      repo: chrisvrose/bf-server
+
   crystal:
     type: vscode-extension
     github:

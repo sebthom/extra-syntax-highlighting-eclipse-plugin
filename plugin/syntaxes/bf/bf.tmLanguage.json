@@ -1,0 +1,74 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "source.bf",
+	"patterns": [
+		{
+			"include": "#program"
+		}
+	],
+	"repository": {
+		"program": {
+			"patterns": [
+				{
+					"include": "#valchange"
+				},
+				{
+					"include":"#ptrchange"
+				},
+				{
+					"include":"#input"
+				},
+				{
+					"include":"#output"
+				},
+				{
+					"include":"#paren-expression"
+				},
+				{
+					"include": "#everythingelse"
+				}
+			]
+		},
+		"valchange": {
+			"match": "[+-]",
+			"name": "keyword.operator"
+		},
+		"ptrchange":{
+			"match":"[<>]",
+			"name":"keyword.operator"
+		},
+		
+		"everythingelse": {
+			"match": ".",
+			"name": "comment.block.documentation"
+		},
+		"input":{
+			"match":",",
+			"name":"keyword.operator.input"
+		},
+		"output":{
+			"match":"[.]",
+			"name":"keyword.operator.output"
+		},
+		"paren-expression": {
+			"begin": "\\[",
+			"end": "\\]",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.paren.open"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.paren.close"
+				}
+			},
+			"name": "expression.group",
+			"patterns": [
+				{
+					"include": "#program"
+				}
+			]
+		}
+	}
+}

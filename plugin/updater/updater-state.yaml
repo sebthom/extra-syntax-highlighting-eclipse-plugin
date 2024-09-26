@@ -61,6 +61,19 @@ extensions:
         file-names:
         - BUILD
         - WORKSPACE
+  bf:
+    github:
+      repo: chrisvrose/bf-server
+      ref: main
+      commit: e8ce9b73ae31ada02a4127891b4ba1c0bad8ee50
+    languages:
+      bf:
+        label: Branflakes
+        scope-name: source.bf
+        file-extensions:
+        - .bf
+        - .bfsck
+        - .brainfuck
   crystal:
     github:
       repo: crystal-lang-tools/vscode-crystal-lang

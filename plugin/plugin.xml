@@ -139,6 +139,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- bf/bf: Branflakes -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.bf" name="Branflakes" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="bf,bfsck,brainfuck" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.bf" path="syntaxes/bf/bf.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.bf" contentTypeId="extra-syntax-highlighting.bf" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.bf" path="syntaxes/bf/bf.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.bf" icon="syntaxes/bf/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Branflakes Example" path="syntaxes/bf/bf.example.bf" scopeName="source.bf" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- crystal/crystal: Crystal -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

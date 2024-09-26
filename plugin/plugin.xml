@@ -163,6 +163,38 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- cobol/cobol: COBOL -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.cobol" name="COBOL" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="cbl,cob,cobol,copy,cpy" file-patterns="**/broadcommfd.cobol-language-support/*/copybooks/**" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.cobol" path="syntaxes/cobol/cobol.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.cobol" contentTypeId="extra-syntax-highlighting.cobol" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.cobol" path="syntaxes/cobol/cobol.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.cobol" icon="syntaxes/cobol/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="COBOL Example" path="syntaxes/cobol/cobol.example.cob" scopeName="source.cobol" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- cobol: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="meta.embedded.block.cics" path="syntaxes/cobol/meta.embedded.block.cics.tmLanguage.json" />
+    <grammar scopeName="meta.embedded.block.sql" path="syntaxes/cobol/meta.embedded.block.sql.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- crystal/crystal: Crystal -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

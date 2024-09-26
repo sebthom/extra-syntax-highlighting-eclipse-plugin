@@ -22,6 +22,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - Astro - https://astro.build/
 - Bazel - https://bazel.build/
 - BF - https://en.wikipedia.org/wiki/Brainfuck
+- COBOL - https://en.wikipedia.org/wiki/COBOL
 - Crystal (`*.cr` - https://crystal-lang.org/
 - Eclipse External null Annotations (`*.eea`) - https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations#File_format
 - Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd
@@ -96,6 +97,7 @@ To install the plugin into an existing Eclipse installation do:
 | Astro <img src="plugin/syntaxes/astro/icon.png" width=16/> | file-extensions="astro" | [main@withastro/language-tools](https://github.com/withastro/language-tools/tree/0c3f30e7aeaf3374f3d88e275e0e0b5e60d7f6fb/packages/vscode)
 | bazelrc <img src="plugin/syntaxes/bazel/icon.png" width=16/> | file-extensions="bazelrc"<br />file-names=".bazelrc, bazel.rc" | [master@bazelbuild/vscode-bazel](https://github.com/bazelbuild/vscode-bazel/tree/b4a8b0cc23d280a774cd1272e2979385818bbef0/)
 | Branflakes <img src="plugin/syntaxes/bf/icon.png" width=16/> | file-extensions="bf, bfsck, brainfuck" | [main@chrisvrose/bf-server](https://github.com/chrisvrose/bf-server/tree/e8ce9b73ae31ada02a4127891b4ba1c0bad8ee50/)
+| COBOL <img src="plugin/syntaxes/cobol/icon.png" width=16/> | file-extensions="cbl, cob, cobol, copy, cpy"<br />file-patterns="\*\*/broadcommfd.cobol-language-support/\*/copybooks/\*\*" | [development@eclipse-che4z/che-che4z-lsp-for-cobol](https://github.com/eclipse-che4z/che-che4z-lsp-for-cobol/tree/348b036186373411b58131b390eb7b53ceab9adf/clients/cobol-lsp-vscode-extension)
 | Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="cr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/34b86beaffa85c5639e86519f7b16db58b04a923/) [[upstream]](https://github.com/Microsoft/vscode/blob/3f1f36333d3453f67a36b6bfb1206e9159e9c4f0/extensions/ruby/syntaxes/ruby.tmLanguage.json)
 | Crystal Slang <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="slang" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/34b86beaffa85c5639e86519f7b16db58b04a923/)
 | Embedded Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="ecr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/34b86beaffa85c5639e86519f7b16db58b04a923/)

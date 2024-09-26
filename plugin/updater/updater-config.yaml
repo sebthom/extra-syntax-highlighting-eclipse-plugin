@@ -120,6 +120,15 @@ sources:
     github:
       repo: chrisvrose/bf-server
 
+  cobol:
+    type: vscode-extension
+    github:
+      repo: eclipse-che4z/che-che4z-lsp-for-cobol
+      path: clients/cobol-lsp-vscode-extension
+    languages:
+      hpcobol:
+        ignored: true
+
   crystal:
     type: vscode-extension
     github:

@@ -74,6 +74,27 @@ extensions:
         - .bf
         - .bfsck
         - .brainfuck
+  cobol:
+    github:
+      repo: eclipse-che4z/che-che4z-lsp-for-cobol
+      path: clients/cobol-lsp-vscode-extension
+      ref: development
+      commit: 348b036186373411b58131b390eb7b53ceab9adf
+    languages:
+      cobol:
+        label: COBOL
+        scope-name: source.cobol
+        file-extensions:
+        - .cbl
+        - .cob
+        - .cobol
+        - .copy
+        - .cpy
+        file-patterns:
+        - '**/broadcommfd.cobol-language-support/*/copybooks/**'
+    inline-grammars:
+    - meta.embedded.block.cics
+    - meta.embedded.block.sql
   crystal:
     github:
       repo: crystal-lang-tools/vscode-crystal-lang

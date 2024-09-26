@@ -23,7 +23,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: b79ff829224838492fcdfa273a03316863e724da
+      commit: 0c3f30e7aeaf3374f3d88e275e0e0b5e60d7f6fb
     languages:
       astro:
         label: Astro
@@ -128,7 +128,7 @@ extensions:
     github:
       repo: erlang-ls/vscode
       ref: main
-      commit: 34ac95f874b5fd377e1a9fa44a17baf78f36683d
+      commit: dd799eacef4e668f39ef58c3ab78b7c567f9c149
     languages:
       erlang:
         label: Erlang
@@ -233,7 +233,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 76b3cc872dedd667504f58c9313a86bada7688d6
+      commit: 43d7eed7792d1857f2f8cdbb0a0547dca2c70bff
     languages:
       graphql:
         label: GraphQL
@@ -265,7 +265,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: 2eeee061eca93eb1a892e92307ff1251b5be90ee
+      commit: 552e39b6df1d01ebaadfbe32f9e220854ba04491
     languages:
       hcl:
         label: HCL Config File
@@ -287,7 +287,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: c26496740c69042868a8297522a5bef146bed2fc
+      commit: 5124b6d60732c71873babbfb8c11c169ddecc92a
     languages:
       helm:
         label: helm-template
@@ -651,7 +651,7 @@ extensions:
     github:
       repo: wooorm/markdown-tm-language
       ref: main
-      commit: 403f851b6ff7b52f3dbf5fc3b3e5b215c8e505a2
+      commit: 5caa71e2bbddea59b27c6a5a346881cd10fa0f5f
     languages:
       markdown:
         label: Markdown
@@ -706,7 +706,7 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: c854eb1403a4a4ef9788a57fe042bec0a397c02d
+      commit: 63fcfaf32fe18db9f8bc75805117c2af3a896806
     languages:
       nushell:
         label: nushell
@@ -717,7 +717,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: d64ec31685120225cc89de1a917867f63a35457a
+      commit: d4f99ef428e82d9aec53e2063d163d3aa0c19a3b
     languages:
       ocaml:
         label: OCaml
@@ -797,7 +797,7 @@ extensions:
       repo: chalcolith/eohippus
       path: eohippus-vscode
       ref: main
-      commit: d090950816305635c72805f3f05c215c37f587f0
+      commit: de9d2b4cf848c8a8a87c1b7535e13285677fedee
     languages:
       pony:
         label: Pony
@@ -809,7 +809,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 3a8582395cbc44543fb0204a6e89d23e60bfc72a
+      commit: 087cd3ea79bc434dac90dd309f9ee883f7a3975d
     languages:
       prisma:
         label: Prisma
@@ -825,7 +825,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 49d646efb6d4fecb04463a75737c1f3299d3fd54
+      commit: 44f356c157c387d5dcddd9a9703968f89639aa61
     languages:
       ring:
         label: ring
@@ -839,7 +839,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 9221ca336d9abafadae1659bf35434834a06f864
+      commit: fc2144b82a34298f9046d929b94009f06e144749
     languages:
       svelte:
         label: Svelte
@@ -877,7 +877,7 @@ extensions:
       repo: winglang/wing
       path: packages/vscode-wing
       ref: main
-      commit: c90bf7773271ba2d9b66c6f34a7f9e5d7caefe95
+      commit: 9176564a6c0dbb9197dc39d7fb392332e855d0bd
     languages:
       wing:
         label: Wing
@@ -891,7 +891,7 @@ extensions:
     github:
       repo: ziglang/vscode-zig
       ref: master
-      commit: ff6fc577dbcced13c156d151daf56acca7231ce2
+      commit: 72540f6abda5e158b59f0d751e9dce55e4a399f3
     languages:
       zig:
         label: Zig

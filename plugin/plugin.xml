@@ -318,6 +318,62 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- fortran/FortranFixedForm: Fortran77 -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.FortranFixedForm" name="Fortran77" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="F,F77,FOR,f,f77,for" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.fortran.fixed" path="syntaxes/fortran/FortranFixedForm.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.fortran.fixed" contentTypeId="extra-syntax-highlighting.FortranFixedForm" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.FortranFixedForm" path="syntaxes/fortran/FortranFixedForm.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.FortranFixedForm" icon="syntaxes/fortran/FortranFixedForm.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Fortran77 Example" path="syntaxes/fortran/FortranFixedForm.example.f77" scopeName="source.fortran.fixed" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- fortran/FortranFreeForm: Fortran -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.FortranFreeForm" name="Fortran" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="F03,F08,F18,F90,F95,FPP,FYPP,PF,f03,f08,f18,f90,f95,fpp,fypp,pf" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.fortran.free" path="syntaxes/fortran/FortranFreeForm.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.fortran.free" contentTypeId="extra-syntax-highlighting.FortranFreeForm" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.FortranFreeForm" path="syntaxes/fortran/FortranFreeForm.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.FortranFreeForm" icon="syntaxes/fortran/FortranFreeForm.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Fortran Example" path="syntaxes/fortran/FortranFreeForm.example.f95" scopeName="source.fortran.free" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- fortran: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.openacc" path="syntaxes/fortran/source.openacc.tmLanguage.json" />
+    <grammar scopeName="source.openmp" path="syntaxes/fortran/source.openmp.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- gleam/gleam: Gleam -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

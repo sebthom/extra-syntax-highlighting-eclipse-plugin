@@ -157,6 +157,11 @@ sources:
   #  github:
   #    repo: elixir-lsp/vscode-elixir-ls
 
+  fortran:
+    type: vscode-extension
+    github:
+      repo: fortran-lang/vscode-fortran-support
+
   gleam:
     type: vscode-extension
     github:

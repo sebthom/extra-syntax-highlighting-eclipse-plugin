@@ -139,6 +139,45 @@ extensions:
         - .escript
         - .hrl
         - .src
+  fortran:
+    github:
+      repo: fortran-lang/vscode-fortran-support
+      ref: main
+      commit: c97b09c29eb6bb0e963cedbcf7884c6950941a6a
+    languages:
+      FortranFixedForm:
+        label: Fortran77
+        scope-name: source.fortran.fixed
+        file-extensions:
+        - .F
+        - .F77
+        - .FOR
+        - .f
+        - .f77
+        - .for
+      FortranFreeForm:
+        label: Fortran
+        scope-name: source.fortran.free
+        file-extensions:
+        - .F03
+        - .F08
+        - .F18
+        - .F90
+        - .F95
+        - .FPP
+        - .FYPP
+        - .PF
+        - .f03
+        - .f08
+        - .f18
+        - .f90
+        - .f95
+        - .fpp
+        - .fypp
+        - .pf
+    inline-grammars:
+    - source.openacc
+    - source.openmp
   gleam:
     github:
       repo: gleam-lang/vscode-gleam

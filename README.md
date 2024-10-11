@@ -18,6 +18,7 @@
 ## <a name="what-is-it"></a>What is it?
 
 This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support for the following languages/file formats utilizing [TM4E](https://github.com/eclipse/tm4e):
+- ANTRL4 - https://www.antlr.org/
 - Apache HTTP configuration files - https://httpd.apache.org/docs/current/configuring.html
 - Astro - https://astro.build/
 - Bazel - https://bazel.build/
@@ -93,6 +94,7 @@ To install the plugin into an existing Eclipse installation do:
 
 | Language/Format | File Associations | Source
 |:--------------- |:----------------- |:------ |
+| ANTLR <img src="plugin/syntaxes/antlr4/icon.png" width=16/> | file-extensions="g, g4" | [master@mike-lischke/vscode-antlr4](https://github.com/mike-lischke/vscode-antlr4/tree/3f47fbb5e53d4d0af5c3a48be16f16089301dff9/)
 | Apache HTTP Config <img src="plugin/syntaxes/apache-http/icon.png" width=16/> | file-extensions="conf, htaccess, htgroups, htpasswd" | [master@mrmlnc/vscode-apache](https://github.com/mrmlnc/vscode-apache/tree/0585b0bb3d390fc541aa27cfcfb83b3204156be3/)
 | Astro <img src="plugin/syntaxes/astro/icon.png" width=16/> | file-extensions="astro" | [main@withastro/language-tools](https://github.com/withastro/language-tools/tree/0c3f30e7aeaf3374f3d88e275e0e0b5e60d7f6fb/packages/vscode)
 | bazelrc <img src="plugin/syntaxes/bazel/icon.png" width=16/> | file-extensions="bazelrc"<br />file-names=".bazelrc, bazel.rc" | [master@bazelbuild/vscode-bazel](https://github.com/bazelbuild/vscode-bazel/tree/b4a8b0cc23d280a774cd1272e2979385818bbef0/)

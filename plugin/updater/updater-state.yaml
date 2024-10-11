@@ -1,5 +1,20 @@
 # AUTO-GENERATED FILE - Do not edit manually; changes will be lost.
 extensions:
+  antlr4:
+    github:
+      repo: mike-lischke/vscode-antlr4
+      ref: master
+      commit: 3f47fbb5e53d4d0af5c3a48be16f16089301dff9
+    languages:
+      antlr:
+        label: ANTLR
+        scope-name: source.antlr
+        file-extensions:
+        - .g
+        - .g4
+      antlr-injection:
+        label: antlr-injection
+        scope-name: markdown.antlr.codeblock
   apache-http:
     github:
       repo: mrmlnc/vscode-apache

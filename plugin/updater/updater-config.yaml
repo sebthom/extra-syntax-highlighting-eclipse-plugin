@@ -153,6 +153,11 @@ sources:
         - .dot
     license-download: false
 
+  elm:
+    type: vscode-extension
+    github:
+      repo: elm-tooling/elm-language-client-vscode
+
   er:
     type: vscode-extension
     github:

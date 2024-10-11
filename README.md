@@ -24,8 +24,9 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - Bazel - https://bazel.build/
 - BF - https://en.wikipedia.org/wiki/Brainfuck
 - COBOL - https://en.wikipedia.org/wiki/COBOL
-- Crystal (`*.cr` - https://crystal-lang.org/
+- Crystal (`*.cr`) - https://crystal-lang.org/
 - Eclipse External null Annotations (`*.eea`) - https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations#File_format
+- Elm - https://elm-lang.org/
 - Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd
 - Erlang (`*.erl`) - https://www.erlang.org/
 - Fish (`*.fish`) - https://fishshell.com/docs/current/language.html
@@ -51,7 +52,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - OCaml (`*.ml`) - https://ocaml.org/
 - Pascal (`*.pas`) - https://en.wikipedia.org/wiki/Pascal_(programming_language)
 - PlantUML (`*.pu`) - https://plantuml.com/
-- Pony (`*.pony´) - https://www.ponylang.io/
+- Pony (`*.pony`) - https://www.ponylang.io/
 - Prisma - https://www.prisma.io/
 - Reason (`*.re`) - https://reasonml.github.io/
 - Roc (`*.roc`) - https://www.roc-lang.org/
@@ -104,6 +105,7 @@ To install the plugin into an existing Eclipse installation do:
 | COBOL <img src="plugin/syntaxes/cobol/icon.png" width=16/> | file-extensions="cbl, cob, cobol, copy, cpy"<br />file-patterns="\*\*/broadcommfd.cobol-language-support/\*/copybooks/\*\*" | [development@eclipse-che4z/che-che4z-lsp-for-cobol](https://github.com/eclipse-che4z/che-che4z-lsp-for-cobol/tree/348b036186373411b58131b390eb7b53ceab9adf/clients/cobol-lsp-vscode-extension)
 | Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="cr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/34b86beaffa85c5639e86519f7b16db58b04a923/) [[upstream]](https://github.com/Microsoft/vscode/blob/3f1f36333d3453f67a36b6bfb1206e9159e9c4f0/extensions/ruby/syntaxes/ruby.tmLanguage.json)
 | Crystal Slang <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="slang" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/34b86beaffa85c5639e86519f7b16db58b04a923/)
+| Elm <img src="plugin/syntaxes/elm/icon.png" width=16/> | file-extensions="elm" | [main@elm-tooling/elm-language-client-vscode](https://github.com/elm-tooling/elm-language-client-vscode/tree/a32f6a908c113ea4710d18b612a7ecd70f0a2c8b/)
 | Embedded Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="ecr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/34b86beaffa85c5639e86519f7b16db58b04a923/)
 | Entity Relationship <img src="plugin/syntaxes/er/icon.png" width=16/> | file-extensions="er" | [master@mikkel-ol/vsc-er-syntax-highlighting](https://github.com/mikkel-ol/vsc-er-syntax-highlighting/tree/160f6061a525858e4a17df97a4e3b51d0ff9c1bd/)
 | Erlang <img src="plugin/syntaxes/erlang/icon.png" width=16/> | file-extensions="config, erl, escript, hrl, src" | [main@erlang-ls/vscode](https://github.com/erlang-ls/vscode/tree/dd799eacef4e668f39ef58c3ab78b7c567f9c149/)

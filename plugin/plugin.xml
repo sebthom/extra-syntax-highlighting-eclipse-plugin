@@ -335,6 +335,37 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- elm/elm: Elm -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.elm" name="Elm" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="elm" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.elm" path="syntaxes/elm/elm.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.elm" contentTypeId="extra-syntax-highlighting.elm" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.elm" path="syntaxes/elm/elm.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.elm" icon="syntaxes/elm/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Elm Example" path="syntaxes/elm/elm.example.elm" scopeName="source.elm" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- elm: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.elm.codeblock" path="syntaxes/elm/markdown.elm.codeblock.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- er/er: Entity Relationship -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

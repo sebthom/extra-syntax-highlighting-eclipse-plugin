@@ -147,6 +147,19 @@ extensions:
         scope-name: source.dot
         file-extensions:
         - .dot
+  elm:
+    github:
+      repo: elm-tooling/elm-language-client-vscode
+      ref: main
+      commit: a32f6a908c113ea4710d18b612a7ecd70f0a2c8b
+    languages:
+      elm:
+        label: Elm
+        scope-name: source.elm
+        file-extensions:
+        - .elm
+    inline-grammars:
+    - markdown.elm.codeblock
   er:
     github:
       repo: mikkel-ol/vsc-er-syntax-highlighting

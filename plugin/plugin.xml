@@ -1669,6 +1669,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- roc/roc: Roc -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.roc" name="Roc" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="roc" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.roc" path="syntaxes/roc/roc.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.roc" contentTypeId="extra-syntax-highlighting.roc" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.roc" path="syntaxes/roc/roc.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.roc" icon="syntaxes/roc/roc.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Roc Example" path="syntaxes/roc/roc.example.roc" scopeName="source.roc" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- svelte/svelte: Svelte -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

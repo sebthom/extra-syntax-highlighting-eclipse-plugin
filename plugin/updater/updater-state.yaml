@@ -870,6 +870,17 @@ extensions:
         - rform
         - rh
         - ring
+  roc:
+    github:
+      repo: ivan-demchenko/roc-vscode-unofficial
+      ref: main
+      commit: 5580b983f3a1fc5d56f40a4bafd94b80dbcf93cb
+    languages:
+      roc:
+        label: Roc
+        scope-name: source.roc
+        file-extensions:
+        - .roc
   svelte:
     github:
       repo: sveltejs/language-tools

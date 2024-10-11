@@ -53,6 +53,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - Pony (`*.pony´) - https://www.ponylang.io/
 - Prisma - https://www.prisma.io/
 - Reason (`*.re`) - https://reasonml.github.io/
+- Roc (`*.roc`) - https://www.roc-lang.org/
 - Svelte - https://svelte.dev/
 - TOML - https://toml.io/en/
 - Wing - https://www.winglang.io/
@@ -161,6 +162,7 @@ To install the plugin into an existing Eclipse installation do:
 | Prisma <img src="plugin/syntaxes/prisma/prisma.png" width=16/> | file-extensions="prisma" | [main@prisma/language-tools](https://github.com/prisma/language-tools/tree/087cd3ea79bc434dac90dd309f9ee883f7a3975d/packages/vscode)
 | Reason <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="re, rei" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/d4f99ef428e82d9aec53e2063d163d3aa0c19a3b/)
 | ring <img src="plugin/syntaxes/ring/icon.png" width=16/> | file-extensions="rform, rh, ring" | [master@ring-lang/ring](https://github.com/ring-lang/ring/tree/44f356c157c387d5dcddd9a9703968f89639aa61/tools/editors/vscode/extension)
+| Roc <img src="plugin/syntaxes/roc/roc.png" width=16/> | file-extensions="roc" | [main@ivan-demchenko/roc-vscode-unofficial](https://github.com/ivan-demchenko/roc-vscode-unofficial/tree/5580b983f3a1fc5d56f40a4bafd94b80dbcf93cb/)
 | Starlark <img src="plugin/syntaxes/bazel/icon.png" width=16/> | file-extensions="BUILD, WORKSPACE, bazel, bzl, bzlmod, sky, star"<br />file-names="BUILD, WORKSPACE" | [master@bazelbuild/vscode-bazel](https://github.com/bazelbuild/vscode-bazel/tree/b4a8b0cc23d280a774cd1272e2979385818bbef0/)
 | Svelte <img src="plugin/syntaxes/svelte/icon.png" width=16/> | file-extensions="svelte" | [master@sveltejs/language-tools](https://github.com/sveltejs/language-tools/tree/fc2144b82a34298f9046d929b94009f06e144749/packages/svelte-vscode)
 | TOML Config File <img src="plugin/syntaxes/toml/icon.png" width=16/> | file-extensions="toml"<br />file-names="Cargo.lock, Pipfile, pdm.lock" | [master@juggernautjp/less-toml](https://github.com/juggernautjp/less-toml/tree/13eb891232e98c4a9c595bf8c657893c84edf3a9/) [[upstream]](https://github.com/textmate/toml.tmbundle/commit/e82b64c1e86396220786846201e9aa3f0a2d9ca2)

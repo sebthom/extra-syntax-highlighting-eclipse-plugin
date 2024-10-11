@@ -440,6 +440,14 @@ sources:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
 
+  roc:
+    type: vscode-extension
+    github:
+      repo: ivan-demchenko/roc-vscode-unofficial
+    languages:
+      roc:
+        example: syntaxes/test/main.roc
+
   svelte:
     type: vscode-extension
     github:

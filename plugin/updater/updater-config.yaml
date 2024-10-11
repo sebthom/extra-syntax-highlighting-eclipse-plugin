@@ -171,6 +171,11 @@ sources:
   #  github:
   #    repo: elixir-lsp/vscode-elixir-ls
 
+  fish:
+    type: vscode-extension
+    github:
+      repo: bmalehorn/vscode-fish
+
   fortran:
     type: vscode-extension
     github:

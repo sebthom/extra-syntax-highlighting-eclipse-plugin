@@ -390,6 +390,37 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- fish/fish: Fish -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.fish" name="Fish" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="fish" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.fish" path="syntaxes/fish/fish.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.fish" contentTypeId="extra-syntax-highlighting.fish" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.fish" path="syntaxes/fish/fish.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.fish" icon="syntaxes/fish/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Fish Example" path="syntaxes/fish/fish.example.fish" scopeName="source.fish" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- fish: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.fish.codeblock" path="syntaxes/fish/markdown.fish.codeblock.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- fortran/FortranFixedForm: Fortran77 -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

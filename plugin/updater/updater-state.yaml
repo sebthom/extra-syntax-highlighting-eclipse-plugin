@@ -175,6 +175,19 @@ extensions:
         - .escript
         - .hrl
         - .src
+  fish:
+    github:
+      repo: bmalehorn/vscode-fish
+      ref: master
+      commit: 2bdcfbea62cadc2a977eace3189d25b31df71e72
+    languages:
+      fish:
+        label: Fish
+        scope-name: source.fish
+        file-extensions:
+        - .fish
+    inline-grammars:
+    - markdown.fish.codeblock
   fortran:
     github:
       repo: fortran-lang/vscode-fortran-support

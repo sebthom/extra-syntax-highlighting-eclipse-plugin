@@ -89,6 +89,18 @@ extensions:
         - .bf
         - .bfsck
         - .brainfuck
+  carbon:
+    github:
+      repo: carbon-language/carbon-lang
+      path: utils
+      ref: trunk
+      commit: 62c36ecedac902a3ca3bc22974134e7dd509f92f
+    languages:
+      carbon:
+        label: Carbon
+        scope-name: source.carbon
+        file-extensions:
+        - .carbon
   cobol:
     github:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol

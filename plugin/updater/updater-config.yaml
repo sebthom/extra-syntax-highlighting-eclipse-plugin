@@ -125,6 +125,20 @@ sources:
     github:
       repo: chrisvrose/bf-server
 
+  carbon:
+    type: custom
+    github:
+      repo: carbon-language/carbon-lang
+      path: utils
+    languages:
+      carbon:
+        label: Carbon
+        scope-name: source.carbon
+        grammar: textmate/Syntaxes/carbon.tmLanguage.json
+        langcfg: vscode/language-configuration.json
+        file-extensions:
+        - .carbon
+
   cobol:
     type: vscode-extension
     github:

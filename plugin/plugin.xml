@@ -203,6 +203,26 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- carbon/carbon: Carbon -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.carbon" name="Carbon" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="carbon" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.carbon" path="syntaxes/carbon/carbon.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.carbon" contentTypeId="extra-syntax-highlighting.carbon" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.carbon" path="syntaxes/carbon/carbon.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Carbon Example" path="syntaxes/carbon/carbon.example.carbon" scopeName="source.carbon" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- cobol/cobol: COBOL -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

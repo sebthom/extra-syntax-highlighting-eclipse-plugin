@@ -135,6 +135,22 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- ballerina/ballerina: Ballerina -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.ballerina" name="Ballerina" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="bal" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.ballerina" path="syntaxes/ballerina/ballerina.tmLanguage.yaml" />
+    <scopeNameContentTypeBinding scopeName="source.ballerina" contentTypeId="extra-syntax-highlighting.ballerina" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Ballerina Example" path="syntaxes/ballerina/ballerina.example.bal" scopeName="source.ballerina" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- bazel/bazelrc: bazelrc -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

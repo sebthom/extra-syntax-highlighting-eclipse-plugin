@@ -48,6 +48,18 @@ extensions:
     inline-grammars:
     - source.mdx.astro
     - text.html.markdown.astro
+  ballerina:
+    github:
+      repo: ballerina-platform/ballerina-grammar
+      path: syntaxes
+      ref: master
+      commit: ebf45ae95304250c0d81503983cf3052791bc831
+    languages:
+      ballerina:
+        label: Ballerina
+        scope-name: source.ballerina
+        file-extensions:
+        - bal
   bazel:
     github:
       repo: bazelbuild/vscode-bazel

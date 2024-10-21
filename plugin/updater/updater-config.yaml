@@ -112,6 +112,19 @@ sources:
       astro:
         example: https://raw.githubusercontent.com/withastro/astro/main/examples/basics/src/pages/index.astro
 
+  ballerina:
+    type: custom
+    github:
+      repo: ballerina-platform/ballerina-grammar
+      path: syntaxes
+    languages:
+      ballerina:
+        label: Ballerina
+        scope-name: source.ballerina
+        grammar: ballerina.YAML-tmLanguage
+        file-extensions:
+        - bal
+
   bazel:
     type: vscode-extension
     github:

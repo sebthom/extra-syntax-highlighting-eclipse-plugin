@@ -42,6 +42,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - HashiCorp Terraform (`*.tf`) - https://www.terraform.io/
 - Haxe - https://haxe.org
 - Helm (`*.tpl`) - https://helm.sh/
+- Janet - https://janet-lang.org/
 - Jinja Templates - https://jinja.palletsprojects.com/
 - JSON5 (`*.json5`) - https://json5.org/
 - Kotlin - https://kotlinlang.org/
@@ -124,6 +125,7 @@ To install the plugin into an existing Eclipse installation do:
 | Haxe | file-extensions="hx" | [master@vshaxe/haxe-TmLanguage](https://github.com/vshaxe/haxe-TmLanguage/tree/ddad8b4c6d0781ac20be0481174ec1be772c5da5/)
 | HCL Config File | file-extensions="hcl" | [main@hashicorp/syntax](https://github.com/hashicorp/syntax/tree/552e39b6df1d01ebaadfbe32f9e220854ba04491/)
 | helm-template <img src="plugin/syntaxes/helm/icon.png" width=16/> | file-patterns="\*\*/templates/\*\*/\*.tpl, \*\*/templates/\*\*/\*.yaml, \*\*/templates/\*\*/\*.yml, \*\*/templates/\*.tpl, \*\*/templates/\*.yaml, \*\*/templates/\*.yml" | [master@vscode-kubernetes-tools/vscode-kubernetes-tools](https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools/tree/5124b6d60732c71873babbfb8c11c169ddecc92a/)
+| Janet <img src="plugin/syntaxes/janet/icon.png" width=16/> | file-extensions="janet" | [master@janet-lang/vscode-janet](https://github.com/janet-lang/vscode-janet/tree/0225a87fb8c75d9dec024d592f2bdcf74f366e5e/)
 | Jinja C++ <img src="plugin/syntaxes/jinja/icon.png" width=16/> | file-extensions="c.j2, c.jinja, c.jinja2, cpp.j2, cpp.jinja, cpp.jinja2, h.j2, h.jinja, h.jinja2" | [main@samuelcolvin/jinjahtml-vscode](https://github.com/samuelcolvin/jinjahtml-vscode/tree/d8daf5fd43941deec8803be2335b35922e3e1eeb/)
 | Jinja Cisco Config <img src="plugin/syntaxes/jinja/icon.png" width=16/> | file-extensions="cisco.j2, cisco.jinja, cisco.jinja2, ios.j2, ios.jinja, ios.jinja2" | [main@samuelcolvin/jinjahtml-vscode](https://github.com/samuelcolvin/jinjahtml-vscode/tree/d8daf5fd43941deec8803be2335b35922e3e1eeb/)
 | Jinja CSS <img src="plugin/syntaxes/jinja/icon.png" width=16/> | file-extensions="css.j2, css.jinja, css.jinja2" | [main@samuelcolvin/jinjahtml-vscode](https://github.com/samuelcolvin/jinjahtml-vscode/tree/d8daf5fd43941deec8803be2335b35922e3e1eeb/)

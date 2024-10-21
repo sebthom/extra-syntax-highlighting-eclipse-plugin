@@ -385,6 +385,17 @@ extensions:
         - '**/templates/*.tpl'
         - '**/templates/*.yaml'
         - '**/templates/*.yml'
+  janet:
+    github:
+      repo: janet-lang/vscode-janet
+      ref: master
+      commit: 0225a87fb8c75d9dec024d592f2bdcf74f366e5e
+    languages:
+      janet:
+        label: Janet
+        scope-name: source.janet
+        file-extensions:
+        - .janet
   jinja:
     github:
       repo: samuelcolvin/jinjahtml-vscode

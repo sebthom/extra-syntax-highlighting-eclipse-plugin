@@ -731,6 +731,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- janet/janet: Janet -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.janet" name="Janet" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="janet" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.janet" path="syntaxes/janet/janet.tmLanguage.plist" />
+    <scopeNameContentTypeBinding scopeName="source.janet" contentTypeId="extra-syntax-highlighting.janet" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.janet" path="syntaxes/janet/janet.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.janet" icon="syntaxes/janet/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Janet Example" path="syntaxes/janet/janet.example.janet" scopeName="source.janet" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- jinja/jinja: Jinja Raw -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

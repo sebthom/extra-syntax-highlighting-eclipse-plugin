@@ -38,7 +38,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 0c3f30e7aeaf3374f3d88e275e0e0b5e60d7f6fb
+      commit: 4db55f0b7b6efd6abdc8eacbe9bcdc0878d5d587
     languages:
       astro:
         label: Astro
@@ -64,7 +64,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: b4a8b0cc23d280a774cd1272e2979385818bbef0
+      commit: b01fdbc54dfeee719ee5e86b7274f02e7770ad1a
     languages:
       bazelrc:
         label: bazelrc
@@ -118,7 +118,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 348b036186373411b58131b390eb7b53ceab9adf
+      commit: 9d091f48ebd47630904d8fbde0a6a494add5c104
     languages:
       cobol:
         label: COBOL
@@ -138,7 +138,7 @@ extensions:
     github:
       repo: crystal-lang-tools/vscode-crystal-lang
       ref: master
-      commit: 34b86beaffa85c5639e86519f7b16db58b04a923
+      commit: aad5ae5077e9a326ef5c58c011311f48d0e76629
     languages:
       crystal:
         label: Crystal
@@ -201,7 +201,7 @@ extensions:
     github:
       repo: erlang-ls/vscode
       ref: main
-      commit: dd799eacef4e668f39ef58c3ab78b7c567f9c149
+      commit: 1e5bc08853523c6dcd563fa7de8af597710eaa8f
     languages:
       erlang:
         label: Erlang
@@ -229,7 +229,7 @@ extensions:
     github:
       repo: fortran-lang/vscode-fortran-support
       ref: main
-      commit: c97b09c29eb6bb0e963cedbcf7884c6950941a6a
+      commit: 82bac3ea3181be27af5124edd92b75ed43471f53
     languages:
       FortranFixedForm:
         label: Fortran77
@@ -281,7 +281,7 @@ extensions:
     github:
       repo: GeForceLegend/vscode-glsl
       ref: master
-      commit: d03a9d548f23c6170e73f893a4ada3070509b043
+      commit: f6231b5cc5f4521c9b4ab7dc212cd8c414a6cfca
     languages:
       glsl:
         label: OpenGL Shading Language
@@ -319,7 +319,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 43d7eed7792d1857f2f8cdbb0a0547dca2c70bff
+      commit: c500e825094acac01d65840943d5ccd80e7de18a
     languages:
       graphql:
         label: GraphQL
@@ -351,7 +351,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: 552e39b6df1d01ebaadfbe32f9e220854ba04491
+      commit: 38d20c9ba824b31c898d15b69801839d4ce4db84
     languages:
       hcl:
         label: HCL Config File
@@ -373,7 +373,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 5124b6d60732c71873babbfb8c11c169ddecc92a
+      commit: 6f1975c909e2be051688723e63b8d06ccd69d489
     languages:
       helm:
         label: helm-template
@@ -814,7 +814,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: d4f99ef428e82d9aec53e2063d163d3aa0c19a3b
+      commit: 9d4868f50273a163f2df3c6b8e535b356a495a85
     languages:
       ocaml:
         label: OCaml
@@ -894,7 +894,7 @@ extensions:
       repo: chalcolith/eohippus
       path: eohippus-vscode
       ref: main
-      commit: de9d2b4cf848c8a8a87c1b7535e13285677fedee
+      commit: cc0c6f5f337c0f7ae1d0cae332bcc6a458ae7a45
     languages:
       pony:
         label: Pony
@@ -906,7 +906,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 087cd3ea79bc434dac90dd309f9ee883f7a3975d
+      commit: 42a85df422e2edf94ce6e7681374ba3eeeef839b
     languages:
       prisma:
         label: Prisma
@@ -922,10 +922,10 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 44f356c157c387d5dcddd9a9703968f89639aa61
+      commit: 014bd61d611b2a96a61c88aea37242a828bc5d19
     languages:
       ring:
-        label: ring
+        label: Ring
         scope-name: source.ring
         file-extensions:
         - rform
@@ -947,7 +947,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: fc2144b82a34298f9046d929b94009f06e144749
+      commit: 156bd7d7f445899dd7cf861495a570059d9e47ef
     languages:
       svelte:
         label: Svelte
@@ -985,7 +985,7 @@ extensions:
       repo: winglang/wing
       path: packages/vscode-wing
       ref: main
-      commit: 9176564a6c0dbb9197dc39d7fb392332e855d0bd
+      commit: 1fcd84ed1ca8b48c9bfe5a2cf4411cd381768610
     languages:
       wing:
         label: Wing

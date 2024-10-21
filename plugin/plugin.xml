@@ -1767,10 +1767,10 @@
   </extension>
 
   <!-- ======================================== -->
-  <!-- ring/ring: ring -->
+  <!-- ring/ring: Ring -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.ring" name="ring" base-type="extra-syntax-highlighting.basetype" priority="normal"
+    <content-type id="extra-syntax-highlighting.ring" name="Ring" base-type="extra-syntax-highlighting.basetype" priority="normal"
                   file-extensions="rform,rh,ring" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
@@ -1783,11 +1783,11 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.ring" icon="syntaxes/ring/icon.png"/>
+    <icon contentType="extra-syntax-highlighting.ring" icon="syntaxes/ring/ring.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
-    <snippet name="ring Example" path="syntaxes/ring/ring.example.ring" scopeName="source.ring" />
+    <snippet name="Ring Example" path="syntaxes/ring/ring.example.ring" scopeName="source.ring" />
   </extension>
 
   <!-- ======================================== -->

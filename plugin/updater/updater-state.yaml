@@ -4,7 +4,7 @@ extensions:
     github:
       repo: mike-lischke/vscode-antlr4
       ref: master
-      commit: 3f47fbb5e53d4d0af5c3a48be16f16089301dff9
+      commit: c12fea624fed4ce6998e67d62537d88135a598a7
     languages:
       antlr:
         label: ANTLR
@@ -53,7 +53,7 @@ extensions:
       repo: ballerina-platform/ballerina-grammar
       path: syntaxes
       ref: master
-      commit: ebf45ae95304250c0d81503983cf3052791bc831
+      commit: d9c8924600c45ad04e6d966cb0916373f00146d6
     languages:
       ballerina:
         label: Ballerina
@@ -64,7 +64,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: b01fdbc54dfeee719ee5e86b7274f02e7770ad1a
+      commit: 81fe29d4e4cecfa771d1fa8808968a3e6b104b36
     languages:
       bazelrc:
         label: bazelrc
@@ -106,7 +106,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 62c36ecedac902a3ca3bc22974134e7dd509f92f
+      commit: b67d03126e92dff59532cffd1d5f47d6388308e9
     languages:
       carbon:
         label: Carbon
@@ -118,7 +118,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 9d091f48ebd47630904d8fbde0a6a494add5c104
+      commit: d8c4b5cb15f5fe65ef76772be7ae5cdc4134ec18
     languages:
       cobol:
         label: COBOL
@@ -292,7 +292,7 @@ extensions:
     github:
       repo: GeForceLegend/vscode-glsl
       ref: master
-      commit: f6231b5cc5f4521c9b4ab7dc212cd8c414a6cfca
+      commit: fb5e3efcd55ae0ec98eb6eac0ceacb2e563ae6cd
     languages:
       glsl:
         label: OpenGL Shading Language
@@ -384,7 +384,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 6f1975c909e2be051688723e63b8d06ccd69d489
+      commit: 1961fb4a54688eb02e4b0ded34faa89e68147b33
     languages:
       helm:
         label: helm-template
@@ -759,7 +759,7 @@ extensions:
     github:
       repo: wooorm/markdown-tm-language
       ref: main
-      commit: 5caa71e2bbddea59b27c6a5a346881cd10fa0f5f
+      commit: c4a90d34caa298ccd3652dee887b1981a4602f4b
     languages:
       markdown:
         label: Markdown
@@ -825,7 +825,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 9d4868f50273a163f2df3c6b8e535b356a495a85
+      commit: bcb2bfb89e4f75d0e48c3411459a7a67350709c9
     languages:
       ocaml:
         label: OCaml
@@ -917,7 +917,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 42a85df422e2edf94ce6e7681374ba3eeeef839b
+      commit: 997e96b921432f4f21a998ff752e74952380a6a8
     languages:
       prisma:
         label: Prisma
@@ -933,7 +933,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 014bd61d611b2a96a61c88aea37242a828bc5d19
+      commit: 23a31b795f5f5a943269ee2cf94e61845e2e7fb1
     languages:
       ring:
         label: Ring

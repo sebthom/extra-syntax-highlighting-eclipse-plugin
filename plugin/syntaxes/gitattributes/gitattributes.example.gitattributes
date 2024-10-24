@@ -1,0 +1,148 @@
+# .gitattributes
+# This file defines attributes per path and how Git should handle them.
+# More information: https://git-scm.com/docs/gitattributes
+
+# 1. Global Settings
+
+# Ensure all text files use LF (Unix) line endings in the repository
+* text=auto
+
+# Normalize line endings for specific file types to LF
+*.c      text
+*.cpp    text
+*.h      text
+*.hpp    text
+*.java   text
+*.js     text
+*.jsx    text
+*.ts     text
+*.tsx    text
+*.py     text
+*.rb     text
+*.go     text
+*.sh     text
+*.html   text
+*.css    text
+*.json   text
+*.md     text
+*.yml    text
+*.yaml   text
+
+# 2. Binary Files
+
+# Mark specific file types as binary to prevent Git from attempting to perform diffs
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.bmp    binary
+*.ico    binary
+*.svg    binary
+*.pdf    binary
+*.zip    binary
+*.tar    binary
+*.gz     binary
+*.exe    binary
+*.dll    binary
+*.so     binary
+
+# Alternatively, use -text to mark files as binary
+*.png    -text
+*.jpg    -text
+*.gif    -text
+
+# 3. End-of-Line (EOL) Normalization
+
+# Force all shell scripts to use LF
+*.sh     eol=lf
+
+# Force Windows-specific files to use CRLF
+*.bat    eol=crlf
+*.cmd    eol=crlf
+
+# 4. Custom Diff Settings
+
+# Use a custom diff driver for specific file types
+*.md     diff=markdown
+*.json   diff=json
+
+# Define the custom diff drivers in your Git config
+# Example (to be added to .git/config or global gitconfig):
+# [diff "markdown"]
+#     textconv = md2text
+# [diff "json"]
+#     textconv = json2text
+
+# 5. Merge Strategies
+
+# Use the 'binary' merge driver for specific binary files to prevent Git from trying to merge them
+*.png    merge=binary
+*.jpg    merge=binary
+
+# 6. Export Settings
+
+# Exclude certain files from export (e.g., when creating archives)
+*.log    export-ignore
+*.tmp    export-ignore
+*.bak    export-ignore
+
+# Include files that are normally excluded
+!important.log
+
+# 7. Linguist Overrides (for GitHub)
+
+# Mark certain files or directories as generated, documentation, etc.
+# Useful for GitHub's Linguist to classify files correctly
+/path/to/generated/* linguist-generated=true
+*.min.js              linguist-generated=true
+*.bundle.js          linguist-generated=true
+*.md                  linguist-documentation=true
+
+# 8. Language-Specific Settings
+
+# Ensure specific languages handle their unique attributes
+*.cs     text diff=csharp
+*.swift  text diff=swift
+
+# 9. Lockable Files (for Git LFS or other locking mechanisms)
+
+# Mark large files to be handled by Git LFS
+*.psd    filter=lfs diff=lfs merge=lfs -text
+*.mp4    filter=lfs diff=lfs merge=lfs -text
+
+# 10. Custom Attributes
+
+# Define custom attributes for use in hooks or scripts
+*.html   myattribute=htmlfile
+*.css    myattribute=cssfile
+
+# 11. Localization Files
+
+# Ensure that localization files are treated as text with specific encoding
+*.po     text working-tree-encoding=UTF-8
+
+# 12. XML Files
+
+# Normalize line endings and specify XML as text
+*.xml    text eol=lf
+
+# 13. Special Cases
+
+# Prevent specific files from being treated as text
+README.TXT binary
+LICENSE binary
+
+# 14. Handling Empty Directories
+
+# Git does not track empty directories, but you can add a .gitattributes file to ensure certain behaviors if needed
+
+# 15. Setting Exportable Files
+
+# Ensure certain files are always included or excluded in exports
+docs/** export-ignore
+src/**
+
+# 16. Handling Symlinks
+
+# Specify how to treat symbolic links
+*.lnk    merge=symlink

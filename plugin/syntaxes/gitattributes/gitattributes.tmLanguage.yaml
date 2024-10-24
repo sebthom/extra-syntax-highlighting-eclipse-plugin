@@ -1,0 +1,51 @@
+# converted from https://github.com/ldez/atom-language-gitattributes/blob/master/grammars/language-gitattributes.cson
+name: Git Attributes
+scopeName: source.git-attributes
+fileTypes:
+- gitattributes
+- ".git/info/attributes"
+patterns:
+- include: "#line"
+- include: "#comment"
+repository:
+  comment:
+    name: comment.line.git-attributes
+    match: "^#.*$"
+  line:
+    name: simple.line.git-attributes
+    match: "^([\\p{Word}\\*-\\./]+)(([ |\\t]+([\\w\\-,=]+))+)$"
+    captures:
+      '1':
+        name: constant.pattern.git-attributes
+        patterns:
+        - include: "#symbols"
+      '2':
+        name: string.attributes.git-attributes
+        patterns:
+        - include: "#attributes"
+  attributes:
+    patterns:
+    - name: markup.deleted.negate.attribute.git-attributes
+      match: "(?<= |\\t)(-[\\w\\-]+((=)([\\S]+))?)"
+      captures:
+        '3':
+          name: punctuation.definition.seperator..attribute.git-attributes
+        '4':
+          name: markup.italic.att
+    - name: punctuation.definition.seperator.attribute.git-attributes
+      match: "(?<= |\\t)([\\w\\-]+)(=)([\\S]+)"
+      captures:
+        '1':
+          name: string.key.attribute.git-attributes
+        '2':
+          name: punctuation.definition.seperator.attribute.git-attributes
+        '3':
+          name: markup.italic.value.attribute.git-attributes
+  symbols:
+    patterns:
+    - name: constant.other.symbol.asterisk.git-attributes
+      match: "\\*"
+    - name: support.type.directory.git-attributes
+      match: "/"
+    - name: variable.character.escape.git-attributes
+      match: "\\\\"

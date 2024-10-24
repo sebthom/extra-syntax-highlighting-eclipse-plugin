@@ -36,6 +36,24 @@
     <snippet name="EEA Example" path="syntaxes/eea/eea.example.eea" scopeName="source.eea" />
   </extension>
 
+  <!-- ======================================== -->
+  <!-- .gitattributes                           -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.git-attributes" name="gitattributes" priority="normal" base-type="extra-syntax-highlighting.basetype"
+                  file-extensions="gitattributes" />
+  </extension>
+  <extension point="org.eclipse.ui.editors">
+    <editorContentTypeBinding editorId="org.eclipse.ui.genericeditor.GenericEditor" contentTypeId="extra-syntax-highlighting.git-attributes" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar path="syntaxes/gitattributes/gitattributes.tmLanguage.yaml" scopeName="source.git-attributes" />
+    <scopeNameContentTypeBinding contentTypeId="extra-syntax-highlighting.git-attributes" scopeName="source.git-attributes" />
+  </extension>
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="gitattributes Example" path="syntaxes/gitattributes/gitattributes.example.gitattributes" scopeName="source.git-attributes" />
+  </extension>
+
   <!-- START-GENERATED -->
 
   <!-- ======================================== -->

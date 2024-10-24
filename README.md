@@ -34,6 +34,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - Erlang (`*.erl`) - https://www.erlang.org/
 - Fish (`*.fish`) - https://fishshell.com/docs/current/language.html
 - Fortran - https://fortran-lang.org/
+- gitattributes - https://git-scm.com/docs/gitattributes
 - Gleam (`*.gleam`) - https://gleam.run/
 - GLSL (OpenGL Shading Language) - https://registry.khronos.org/OpenGL/index_gl.php#apispecs
 - GraphQL - https://graphql.org/

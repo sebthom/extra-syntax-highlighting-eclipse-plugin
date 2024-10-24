@@ -171,6 +171,17 @@ extensions:
         scope-name: source.dot
         file-extensions:
         - .dot
+  editorconfig:
+    github:
+      repo: editorconfig/editorconfig-vscode
+      ref: main
+      commit: b86ebd4e9062c76e7145bcefc1a17cf2e6cc1acc
+    languages:
+      editorconfig:
+        label: EditorConfig
+        scope-name: source.editorconfig
+        file-extensions:
+        - .editorconfig
   elm:
     github:
       repo: elm-tooling/elm-language-client-vscode

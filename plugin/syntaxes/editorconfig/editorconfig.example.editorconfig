@@ -1,0 +1,124 @@
+# Top-most EditorConfig file
+root = true
+
+# 1. Global Settings: Apply to all files
+[*]
+# Indentation style: space or tab
+indent_style = space
+
+# Indentation size: number of spaces or tab width
+indent_size = 4
+
+# If tab is used, how many spaces a tab counts for
+tab_width = 4
+
+# End of line character: lf, cr, or crlf
+end_of_line = lf
+
+# Character encoding: utf-8, utf-16be, utf-16le, etc.
+charset = utf-8
+
+# Trim any whitespace characters preceding newline
+trim_trailing_whitespace = true
+
+# Insert a newline at the end of the file if one does not exist
+insert_final_newline = true
+
+# Maximum line length (optional)
+max_line_length = 120
+
+# 2. Specific file types
+
+# 2.1 Markdown files
+[*.md]
+# Use 4 spaces for indentation in Markdown files
+indent_style = space
+indent_size = 4
+
+# Do not trim trailing whitespace in Markdown files
+trim_trailing_whitespace = false
+
+# 2.2 Makefile (tabs are required)
+[Makefile]
+indent_style = tab
+
+# 2.3 JSON files
+[*.json]
+# Use 2 spaces for indentation in JSON files
+indent_style = space
+indent_size = 2
+
+# 2.4 YAML files
+[*.{yml,yaml}]
+# Use 2 spaces for indentation in YAML files
+indent_style = space
+indent_size = 2
+
+# 3. Files in specific directories
+
+# 3.1 All files in the "src" directory
+[src/**]
+# Use 2 spaces for indentation in source files
+indent_size = 2
+
+# 3.2 All test files
+[tests/**]
+# Use tabs for indentation in test files
+indent_style = tab
+
+# 4. Specific file extensions
+
+# 4.1 Python files
+[*.py]
+# Use 4 spaces for indentation in Python files
+indent_style = space
+indent_size = 4
+
+# 4.2 JavaScript and TypeScript files
+[*.{js,jsx,ts,tsx}]
+# Use 2 spaces for indentation in JS/TS files
+indent_style = space
+indent_size = 2
+
+# 5. Overrides based on filename
+
+# 5.1 Dockerfile requires tabs for indentation
+[Dockerfile]
+indent_style = tab
+
+# 5.2 HTML files
+[*.html]
+# Use 2 spaces for indentation in HTML files
+indent_style = space
+indent_size = 2
+
+# 6. Additional properties
+
+# 6.1 Binary files should not have trailing whitespace trimmed
+[*.{png,jpg,gif,svg,ico}]
+trim_trailing_whitespace = false
+
+# 6.2 Override for specific filenames
+[{.eslintrc.json,.prettierrc}]
+# Use 2 spaces for indentation in config files
+indent_style = space
+indent_size = 2
+
+# 7. Special cases
+
+# 7.1 Shell scripts
+[*.sh]
+# Use 4 spaces for indentation in shell scripts
+indent_style = space
+indent_size = 4
+
+# 7.2 Ruby files
+[*.rb]
+# Use 2 spaces for indentation in Ruby files
+indent_style = space
+indent_size = 2
+
+# 8. Handle mixed indentation gracefully
+[*]
+# Detect and use existing indentation style
+indent_style = auto

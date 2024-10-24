@@ -371,6 +371,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- editorconfig/editorconfig: EditorConfig -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.editorconfig" name="EditorConfig" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="editorconfig" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.editorconfig" path="syntaxes/editorconfig/editorconfig.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.editorconfig" contentTypeId="extra-syntax-highlighting.editorconfig" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.editorconfig" path="syntaxes/editorconfig/editorconfig.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.editorconfig" icon="syntaxes/editorconfig/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="EditorConfig Example" path="syntaxes/editorconfig/editorconfig.example.editorconfig" scopeName="source.editorconfig" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- elm/elm: Elm -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

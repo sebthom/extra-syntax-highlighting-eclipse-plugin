@@ -180,6 +180,11 @@ sources:
         - .dot
     license-download: false
 
+  editorconfig:
+    type: vscode-extension
+    github:
+      repo: editorconfig/editorconfig-vscode
+
   elm:
     type: vscode-extension
     github:

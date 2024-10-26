@@ -1705,6 +1705,37 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- odin/odin: odin -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.odin" name="odin" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="odin" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.odin" path="syntaxes/odin/odin.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.odin" contentTypeId="extra-syntax-highlighting.odin" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.odin" path="syntaxes/odin/odin.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.odin" icon="syntaxes/odin/odin.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="odin Example" path="syntaxes/odin/odin.example.odin" scopeName="source.odin" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- odin: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.odin.codeblock" path="syntaxes/odin/markdown.odin.codeblock.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- pascal/pascal: Pascal -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

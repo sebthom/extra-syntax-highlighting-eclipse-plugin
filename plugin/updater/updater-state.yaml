@@ -864,6 +864,20 @@ extensions:
     - markdown.ocaml.codeblock
     - markdown.reason.codeblock
     - source.action.menhir
+  odin:
+    github:
+      repo: DanielGavin/ols
+      path: editors/vscode
+      ref: master
+      commit: ff04a5b7bf1b01c6556e8ce8554d7873604c9541
+    languages:
+      odin:
+        label: odin
+        scope-name: source.odin
+        file-extensions:
+        - .odin
+    inline-grammars:
+    - markdown.odin.codeblock
   pascal:
     github:
       repo: textmate/pascal.tmbundle

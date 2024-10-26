@@ -55,6 +55,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 - NginX (`nginx.conf`) - https://www.nginx.com/
 - Nushell (`*.nu`) - https://github.com/nushell/nushell
 - OCaml (`*.ml`) - https://ocaml.org/
+- Odin - https://odin-lang.org/
 - Pascal (`*.pas`) - https://en.wikipedia.org/wiki/Pascal_(programming_language)
 - PlantUML (`*.pu`) - https://plantuml.com/
 - Pony (`*.pony`) - https://www.ponylang.io/
@@ -167,6 +168,7 @@ To install the plugin into an existing Eclipse installation do:
 | OCaml <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="eliom, ml, ocamlinit" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/bcb2bfb89e4f75d0e48c3411459a7a67350709c9/)
 | OCaml Interface <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="eliomi, mli" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/bcb2bfb89e4f75d0e48c3411459a7a67350709c9/)
 | OCamlFormat <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="ocamlformat" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/bcb2bfb89e4f75d0e48c3411459a7a67350709c9/)
+| odin <img src="plugin/syntaxes/odin/odin.png" width=16/> | file-extensions="odin" | [master@DanielGavin/ols](https://github.com/DanielGavin/ols/tree/ff04a5b7bf1b01c6556e8ce8554d7873604c9541/editors/vscode)
 | opam <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="opam, opam.locked, opam.template"<br />file-names="opam" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/bcb2bfb89e4f75d0e48c3411459a7a67350709c9/)
 | OpenGL Shading Language <img src="plugin/syntaxes/glsl/icon.png" width=16/> | file-extensions="comp, csh, frag, fs, fsh, fshader, geom, glsl, gs, gsh, gshader, mesh, rahit, rcall, rchit, rgen, rint, rmiss, task, tesc, tese, vert, vs, vsh, vshader" | [master@GeForceLegend/vscode-glsl](https://github.com/GeForceLegend/vscode-glsl/tree/fb5e3efcd55ae0ec98eb6eac0ceacb2e563ae6cd/)
 | Pascal | file-extensions="dfm, dpk, dpr, fmx, lfm, lpr, p, pas" | [master@textmate/pascal.tmbundle](https://github.com/textmate/pascal.tmbundle/tree/3b11b782368065e55acce0423f385722771d28b0/Syntaxes)

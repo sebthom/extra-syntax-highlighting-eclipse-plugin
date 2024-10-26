@@ -18,54 +18,54 @@
 ## <a name="what-is-it"></a>What is it?
 
 This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support for the following languages/file formats utilizing [TM4E](https://github.com/eclipse/tm4e):
-- ANTRL4 - https://www.antlr.org/
-- Apache HTTP configuration files - https://httpd.apache.org/docs/current/configuring.html
-- Astro - https://astro.build/
-- Ballerina - https://ballerina.io/
-- Bazel - https://bazel.build/
-- BF - https://en.wikipedia.org/wiki/Brainfuck
-- Carbon - https://carbon-lang.dev
-- COBOL - https://en.wikipedia.org/wiki/COBOL
-- Crystal (`*.cr`) - https://crystal-lang.org/
-- Eclipse External null Annotations (`*.eea`) - https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations#File_format
-- EditorConfig - https://editorconfig.org
-- Elm - https://elm-lang.org/
-- Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd
-- Erlang (`*.erl`) - https://www.erlang.org/
-- Fish (`*.fish`) - https://fishshell.com/docs/current/language.html
-- Fortran - https://fortran-lang.org/
-- gitattributes - https://git-scm.com/docs/gitattributes
-- Gleam (`*.gleam`) - https://gleam.run/
-- GLSL (OpenGL Shading Language) - https://registry.khronos.org/OpenGL/index_gl.php#apispecs
-- GraphQL - https://graphql.org/
-- Graphviz Dot (`*.dot`) - https://graphviz.org/doc/info/lang.html
-- HashiCorp HCL (`*.hcl`) - https://github.com/hashicorp/hcl (e.g. used by HasiCorp Packer)
-- HashiCorp Sentinel (`*.sentinel`) - https://www.hashicorp.com/sentinel
-- HashiCorp Terraform (`*.tf`) - https://www.terraform.io/
-- Haxe - https://haxe.org
-- Helm (`*.tpl`) - https://helm.sh/
-- Janet - https://janet-lang.org/
-- Jinja Templates - https://jinja.palletsprojects.com/
-- JSON5 (`*.json5`) - https://json5.org/
-- Kotlin - https://kotlinlang.org/
-- LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
-- Mako Templates (`*.mako`) - https://www.makotemplates.org/
-- Markdown (`*.md`) - https://daringfireball.net/projects/markdown/
-- Mermaid (`*.mmd, *.mermaid`) - https://github.com/mermaid-js/mermaid/
-- NginX (`nginx.conf`) - https://www.nginx.com/
-- Nushell (`*.nu`) - https://github.com/nushell/nushell
-- OCaml (`*.ml`) - https://ocaml.org/
-- Odin - https://odin-lang.org/
-- Pascal (`*.pas`) - https://en.wikipedia.org/wiki/Pascal_(programming_language)
-- PlantUML (`*.pu`) - https://plantuml.com/
-- Pony (`*.pony`) - https://www.ponylang.io/
-- Prisma - https://www.prisma.io/
-- Reason (`*.re`) - https://reasonml.github.io/
-- Roc (`*.roc`) - https://www.roc-lang.org/
-- Svelte - https://svelte.dev/
-- TOML - https://toml.io/en/
-- Wing - https://www.winglang.io/
-- Zig - https://ziglang.org/
+1. ANTRL4 - https://www.antlr.org/
+1. Apache HTTP configuration files - https://httpd.apache.org/docs/current/configuring.html
+1. Astro - https://astro.build/
+1. Ballerina - https://ballerina.io/
+1. Bazel - https://bazel.build/
+1. BF - https://en.wikipedia.org/wiki/Brainfuck
+1. Carbon - https://carbon-lang.dev
+1. COBOL - https://en.wikipedia.org/wiki/COBOL
+1. Crystal (`*.cr`) - https://crystal-lang.org/
+1. Eclipse External null Annotations (`*.eea`) - https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations#File_format
+1. EditorConfig - https://editorconfig.org
+1. Elm - https://elm-lang.org/
+1. Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd
+1. Erlang (`*.erl`) - https://www.erlang.org/
+1. Fish (`*.fish`) - https://fishshell.com/docs/current/language.html
+1. Fortran - https://fortran-lang.org/
+1. gitattributes - https://git-scm.com/docs/gitattributes
+1. Gleam (`*.gleam`) - https://gleam.run/
+1. GLSL (OpenGL Shading Language) - https://registry.khronos.org/OpenGL/index_gl.php#apispecs
+1. GraphQL - https://graphql.org/
+1. Graphviz Dot (`*.dot`) - https://graphviz.org/doc/info/lang.html
+1. HashiCorp HCL (`*.hcl`) - https://github.com/hashicorp/hcl (e.g. used by HasiCorp Packer)
+1. HashiCorp Sentinel (`*.sentinel`) - https://www.hashicorp.com/sentinel
+1. HashiCorp Terraform (`*.tf`) - https://www.terraform.io/
+1. Haxe - https://haxe.org
+1. Helm (`*.tpl`) - https://helm.sh/
+1. Janet - https://janet-lang.org/
+1. Jinja Templates - https://jinja.palletsprojects.com/
+1. JSON5 (`*.json5`) - https://json5.org/
+1. Kotlin - https://kotlinlang.org/
+1. LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
+1. Mako Templates (`*.mako`) - https://www.makotemplates.org/
+1. Markdown (`*.md`) - https://daringfireball.net/projects/markdown/
+1. Mermaid (`*.mmd, *.mermaid`) - https://github.com/mermaid-js/mermaid/
+1. NginX (`nginx.conf`) - https://www.nginx.com/
+1. Nushell (`*.nu`) - https://github.com/nushell/nushell
+1. OCaml (`*.ml`) - https://ocaml.org/
+1. Odin - https://odin-lang.org/
+1. Pascal (`*.pas`) - https://en.wikipedia.org/wiki/Pascal_(programming_language)
+1. PlantUML (`*.pu`) - https://plantuml.com/
+1. Pony (`*.pony`) - https://www.ponylang.io/
+1. Prisma - https://www.prisma.io/
+1. Reason (`*.re`) - https://reasonml.github.io/
+1. Roc (`*.roc`) - https://www.roc-lang.org/
+1. Svelte - https://svelte.dev/
+1. TOML - https://toml.io/en/
+1. Wing - https://www.winglang.io/
+1. Zig - https://ziglang.org/
 
 For a lot more formats install the TM4E **Language Pack** from the TM4E update site https://download.eclipse.org/tm4e/releases/latest/
 

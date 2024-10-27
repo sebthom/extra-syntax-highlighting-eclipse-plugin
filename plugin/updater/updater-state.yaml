@@ -38,7 +38,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 4db55f0b7b6efd6abdc8eacbe9bcdc0878d5d587
+      commit: df90fe5f79978b567387cc1b0cedcc23a43bd156
     languages:
       astro:
         label: Astro
@@ -64,7 +64,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 81fe29d4e4cecfa771d1fa8808968a3e6b104b36
+      commit: 0bb1fe3da76fb522ffa130db374ecbbafd154a07
     languages:
       bazelrc:
         label: bazelrc
@@ -106,7 +106,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: b67d03126e92dff59532cffd1d5f47d6388308e9
+      commit: a0609b91558aab6a5e9a780714ee0643a550a9de
     languages:
       carbon:
         label: Carbon
@@ -118,7 +118,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: d8c4b5cb15f5fe65ef76772be7ae5cdc4134ec18
+      commit: 5f712889f57e34f6e82ebf922230ae8be54b7f0a
     languages:
       cobol:
         label: COBOL
@@ -825,7 +825,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: bcb2bfb89e4f75d0e48c3411459a7a67350709c9
+      commit: 57bdbcf727a049098e46f56d18319810e434044d
     languages:
       ocaml:
         label: OCaml
@@ -869,7 +869,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: ff04a5b7bf1b01c6556e8ce8554d7873604c9541
+      commit: a3b090c7ef9604b0d6630caedb9c204a708828ac
     languages:
       odin:
         label: odin
@@ -947,7 +947,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 23a31b795f5f5a943269ee2cf94e61845e2e7fb1
+      commit: f66a2e93dc944cec0a067885141ac3c13dbb3455
     languages:
       ring:
         label: Ring
@@ -1024,7 +1024,7 @@ extensions:
     github:
       repo: ziglang/vscode-zig
       ref: master
-      commit: 72540f6abda5e158b59f0d751e9dce55e4a399f3
+      commit: 133b167f83562dbafe7927707a200353d3c00996
     languages:
       zig:
         label: Zig

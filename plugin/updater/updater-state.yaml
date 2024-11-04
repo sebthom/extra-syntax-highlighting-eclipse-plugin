@@ -718,6 +718,18 @@ extensions:
         scope-name: source.json5
         file-extensions:
         - .json5
+  jsonnet:
+    github:
+      repo: grafana/vscode-jsonnet
+      ref: main
+      commit: 1522d6203ee2374f30e594f583514ff484b0d6dd
+    languages:
+      jsonnet:
+        label: Jsonnet
+        scope-name: source.jsonnet
+        file-extensions:
+        - .jsonnet
+        - .libsonnet
   kotlin:
     github:
       repo: fwcd/vscode-kotlin

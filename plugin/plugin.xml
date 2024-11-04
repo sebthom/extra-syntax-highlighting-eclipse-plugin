@@ -1417,6 +1417,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- jsonnet/jsonnet: Jsonnet -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.jsonnet" name="Jsonnet" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="jsonnet,libsonnet" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.jsonnet" path="syntaxes/jsonnet/jsonnet.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.jsonnet" contentTypeId="extra-syntax-highlighting.jsonnet" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.jsonnet" path="syntaxes/jsonnet/jsonnet.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.jsonnet" icon="syntaxes/jsonnet/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Jsonnet Example" path="syntaxes/jsonnet/jsonnet.example.jsonnet" scopeName="source.jsonnet" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- kotlin/kotlin: Kotlin -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

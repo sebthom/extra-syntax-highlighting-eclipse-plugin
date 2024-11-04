@@ -315,6 +315,11 @@ sources:
     github:
       repo: katjanakosic/vscode-json5
 
+  jsonnet:
+    type: vscode-extension
+    github:
+      repo: grafana/vscode-jsonnet
+
   kotlin:
     type: vscode-extension
     github:

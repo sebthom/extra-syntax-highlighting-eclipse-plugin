@@ -389,6 +389,23 @@ sources:
       nginx:
         grammar: src/syntax/nginx.tmLanguage
 
+  nunjucks:
+    type: custom
+    github:
+      repo: edheltzel/better-nunjucks-for-visual-studio-code
+    languages:
+      nunjucks-html:
+        label: Nunjucks HTML
+        scope-name: text.html.njk
+        grammar: src/syntaxes/nunjucks-html.tmLanguage.json
+        langcfg: src/language/html.language-configuration.json
+        file-extensions:
+        - .njk
+        - .njk.html
+    inline-grammars:
+      source.njk:
+        grammar: src/syntaxes/nunjucks.tmLanguage.json
+
   nushell:
     type: vscode-extension
     github:

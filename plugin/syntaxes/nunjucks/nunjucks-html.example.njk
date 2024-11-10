@@ -1,0 +1,163 @@
+{#
+    === Macros Definition Section ===
+    Define reusable macros that can be used throughout the template.
+#}
+{% macro button(text, url, type="primary") %}
+    <a href="{{ url }}" class="btn btn-{{ type }}">{{ text }}</a>
+{% endmacro %}
+
+{% macro card(title, content, imageUrl) %}
+    <div class="card">
+        <img src="{{ imageUrl }}" alt="{{ title }}">
+        <h3>{{ title }}</h3>
+        <p>{{ content }}</p>
+    </div>
+{% endmacro %}
+
+{#
+    === Template Inheritance Simulation ===
+    Normally, inheritance requires separate base and child templates.
+    For demonstration, we'll define a base template and extend it within the same file.
+#}
+
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Default Title{% endblock %}</title>
+    <link rel="stylesheet" href="/styles.css">
+    {# Block for additional head elements #}
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {# Header Section #}
+    <header>
+        <h1>{{ siteName | capitalize }}</h1>
+        <nav>
+            <ul>
+                {% for link in navigation %}
+                    <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+                {% else %}
+                    <li>No navigation links available.</li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {# Main content block #}
+        {% block content %}{% endblock %}
+    </main>
+
+    {# Footer Section #}
+    <footer>
+        <p>&copy; {{ currentYear }} {{ siteName }}. All rights reserved.</p>
+    </footer>
+
+    <script src="/bundle.js"></script>
+    {# Block for additional scripts #}
+    {% block scripts %}{% endblock %}
+</body>
+</html>
+{% endblock %}
+
+{#
+    === Child Template Section ===
+    Extends the base template and overrides specific blocks.
+#}
+{% extends "example.njk" %}
+
+{% block title %}Home - {{ siteName | capitalize }}{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="/home.css">
+{% endblock %}
+
+{% block content %}
+    <h2>Welcome to {{ siteName | capitalize }}</h2>
+
+    {# Using Set Statement to define a variable #}
+    {% set currentDate = "now" | date("dddd, MMMM Do YYYY") %}
+    <p>Today is {{ currentDate }}.</p>
+
+    {# Control Structures: if statement #}
+    {% if user.isLoggedIn %}
+        <p>Hello, {{ user.name | capitalize }}!</p>
+        {{ button("Logout", "/logout", "secondary") }}
+    {% else %}
+        <p>Please <a href="/login">log in</a> or <a href="/signup">sign up</a>.</p>
+        {{ button("Sign Up", "/signup") }}
+    {% endif %}
+
+    {# Control Structures: for loop with else #}
+    <h3>Latest Articles</h3>
+    <ul>
+        {% for article in articles %}
+            <li>
+                <a href="{{ article.url }}">{{ article.title }}</a>
+                <small>by {{ article.author | capitalize }} on {{ article.date | date("MMM Do, YYYY") }}</small>
+            </li>
+        {% else %}
+            <li>No articles found.</li>
+        {% endfor %}
+    </ul>
+
+    {# Using Macros to create Cards #}
+    <h3>Featured Articles</h3>
+    <div class="cards">
+        {% for featured in featuredArticles %}
+            {{ card(featured.title, featured.summary, featured.image) }}
+        {% endfor %}
+    </div>
+
+    {# Raw block to display code without rendering #}
+    {% raw %}
+        <p>This will not be processed by Nunjucks: {{ variable }}</p>
+    {% endraw %}
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        console.log('Home page loaded');
+    </script>
+{% endblock %}
+
+{#
+    === Simulated Includes Section ===
+    Normally, includes require separate files. Here, we'll define a partial template within the same file.
+#}
+
+{# Define a partial template using a block that can be included elsewhere #}
+{% block additionalContent %}
+    <section>
+        <h3>About Us</h3>
+        <p>{{ aboutText }}</p>
+    </section>
+{% endblock %}
+
+{#
+    === Example Data Context ===
+    Normally, data is passed from the rendering engine. For illustration, we'll define variables here.
+#}
+
+{% set siteName = "example site" %}
+{% set navigation = [
+    { name: "Home", url: "/" },
+    { name: "About", url: "/about" },
+    { name: "Contact", url: "/contact" }
+] %}
+{% set currentYear = 2024 %}
+{% set user = {
+    isLoggedIn: true,
+    name: "john doe"
+} %}
+{% set articles = [
+    { title: "Nunjucks Templating", url: "/articles/nunjucks", author: "jane smith", date: "2024-04-21" },
+    { title: "Integrating Vite with 11ty", url: "/articles/vite-11ty", author: "john doe", date: "2024-05-15" }
+] %}
+{% set featuredArticles = [
+    { title: "Understanding Macros", summary: "Learn how to create reusable components with macros.", image: "/images/macro.png" },
+    { title: "Advanced Filters", summary: "Enhance your templates with custom filters.", image: "/images/filter.png" }
+] %}
+{% set aboutText = "We are passionate about building static websites with modern tools." %}

@@ -822,6 +822,20 @@ extensions:
         - nginx.conf
         - scgi_params
         - uwsgi_params
+  nunjucks:
+    github:
+      repo: edheltzel/better-nunjucks-for-visual-studio-code
+      ref: main
+      commit: 332160a51a5ce4742619aa9c39331de418eac9b7
+    languages:
+      nunjucks-html:
+        label: Nunjucks HTML
+        scope-name: text.html.njk
+        file-extensions:
+        - .njk
+        - .njk.html
+    inline-grammars:
+    - source.njk
   nushell:
     github:
       repo: nushell/vscode-nushell-lang

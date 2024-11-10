@@ -54,6 +54,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. Markdown (`*.md`) - https://daringfireball.net/projects/markdown/
 1. Mermaid (`*.mmd, *.mermaid`) - https://github.com/mermaid-js/mermaid/
 1. NginX (`nginx.conf`) - https://www.nginx.com/
+1. Nunjucks (`*.njk`) - https://mozilla.github.io/nunjucks/
 1. Nushell (`*.nu`) - https://github.com/nushell/nushell
 1. OCaml (`*.ml`) - https://ocaml.org/
 1. Odin - https://odin-lang.org/
@@ -166,6 +167,7 @@ To install the plugin into an existing Eclipse installation do:
 | Markdown | file-extensions="livemd, markdown, md, mdown, mdwn, mkd, mkdn, mkdown, ronn, scd, workbook" | [main@wooorm/markdown-tm-language](https://github.com/wooorm/markdown-tm-language/tree/c4a90d34caa298ccd3652dee887b1981a4602f4b/)
 | mermaid <img src="plugin/syntaxes/mermaid/icon.png" width=16/> | file-extensions="mermaid, mmd" | [master@bpruitt-goddard/vscode-mermaid-syntax-highlight](https://github.com/bpruitt-goddard/vscode-mermaid-syntax-highlight/tree/a45668c7967c52f436a5e268e681c46b9dc9b85a/)
 | NGINX Conf <img src="plugin/syntaxes/nginx/icon.png" width=16/> | file-extensions="conf, conf.default, conf.template, fastcgi_params, mime.types, nginx, nginx.conf, scgi_params, uwsgi_params" | [main@ahmadalli/vscode-nginx-conf](https://github.com/ahmadalli/vscode-nginx-conf/tree/10414d948cc5e52fbf2a8207629427d4ae3bc8c4/)
+| Nunjucks HTML <img src="plugin/syntaxes/nunjucks/icon.png" width=16/> | file-extensions="njk, njk.html" | [main@edheltzel/better-nunjucks-for-visual-studio-code](https://github.com/edheltzel/better-nunjucks-for-visual-studio-code/tree/332160a51a5ce4742619aa9c39331de418eac9b7/)
 | nushell <img src="plugin/syntaxes/nushell/nushell.png" width=16/> | file-extensions="nu" | [main@nushell/vscode-nushell-lang](https://github.com/nushell/vscode-nushell-lang/tree/63fcfaf32fe18db9f8bc75805117c2af3a896806/)
 | OCaml <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="eliom, ml, ocamlinit" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/57bdbcf727a049098e46f56d18319810e434044d/)
 | OCaml Interface <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="eliomi, mli" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/57bdbcf727a049098e46f56d18319810e434044d/)

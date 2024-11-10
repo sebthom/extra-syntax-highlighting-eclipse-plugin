@@ -1576,6 +1576,37 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- nunjucks/nunjucks-html: Nunjucks HTML -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.nunjucks-html" name="Nunjucks HTML" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="njk" file-patterns="*.njk.html" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.html.njk" path="syntaxes/nunjucks/nunjucks-html.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.html.njk" contentTypeId="extra-syntax-highlighting.nunjucks-html" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.nunjucks-html" path="syntaxes/nunjucks/nunjucks-html.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.nunjucks-html" icon="syntaxes/nunjucks/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Nunjucks HTML Example" path="syntaxes/nunjucks/nunjucks-html.example.njk" scopeName="text.html.njk" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- nunjucks: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.njk" path="syntaxes/nunjucks/source.njk.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- nushell/nushell: nushell -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

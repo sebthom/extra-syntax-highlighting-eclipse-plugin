@@ -379,7 +379,7 @@ sources:
       repo: bpruitt-goddard/vscode-mermaid-syntax-highlight
     build:
       - npm install
-      - node build/ConvertYaml.js
+      - npm run convertYaml
 
   nginx:
     type: vscode-extension

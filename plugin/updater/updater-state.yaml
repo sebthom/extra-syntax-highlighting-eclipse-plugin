@@ -106,7 +106,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 6dce164c4940fbea8c853a98372a43aaf45cf180
+      commit: 5e293ad97f9779e8ff82cee143e6a6c40daef703
     languages:
       carbon:
         label: Carbon
@@ -118,7 +118,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 0e772fbd8bbb9db8a991581950b4e549a12b4388
+      commit: 09904583f977e076cd5c1e04c8a5a7dcfbfb2ee1
     languages:
       cobol:
         label: COBOL
@@ -330,7 +330,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: f86e2bce40826b3d07755f91b37a72051de00f9c
+      commit: cd5f72390578dd37e72c2b40f1c498efa61277ba
     languages:
       graphql:
         label: GraphQL
@@ -384,7 +384,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 506f169788d909c78c88e8c344b3145ac0b50628
+      commit: 621261065641e42798a78ed0b3bd8413f46e37b1
     languages:
       helm:
         label: helm-template
@@ -771,7 +771,7 @@ extensions:
     github:
       repo: wooorm/markdown-tm-language
       ref: main
-      commit: c4a90d34caa298ccd3652dee887b1981a4602f4b
+      commit: c78b1e5df644d24fa76716bbe26f4b48a6fc1610
     languages:
       markdown:
         label: Markdown
@@ -792,7 +792,7 @@ extensions:
     github:
       repo: bpruitt-goddard/vscode-mermaid-syntax-highlight
       ref: master
-      commit: 37e987eaafe5978e209f51c92ebd2e2fa1d2ee80
+      commit: dff0421fb9e5d07d752f71181e7a154bd103994d
     languages:
       mermaid:
         label: mermaid
@@ -851,7 +851,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 1113a5dde0282f074a53f865c9d2a99f8cd5b9ea
+      commit: 6df8e68d8c420e2f36ed5f693732841409652afa
     languages:
       ocaml:
         label: OCaml
@@ -957,7 +957,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 17563a87bf969c977ef8bff420bed690725899e2
+      commit: a38f4f1a50a8287c44cc3309ab2937f5243a316c
     languages:
       prisma:
         label: Prisma
@@ -998,7 +998,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 0698bc77e8ab6558ea8d983fae624b6f7c295dc7
+      commit: 77160ff7956744311ce3fc8c65b99eb7ae9e0dc7
     languages:
       svelte:
         label: Svelte
@@ -1036,7 +1036,7 @@ extensions:
       repo: winglang/wing
       path: packages/vscode-wing
       ref: main
-      commit: 7f0009843b2b20de13b65d1edd5118229b732b89
+      commit: c8aea628c1be9f753356f450ea189025c6a55797
     languages:
       wing:
         label: Wing

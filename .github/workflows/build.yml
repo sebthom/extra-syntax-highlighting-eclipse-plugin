@@ -49,6 +49,7 @@ defaults:
   run:
     shell: bash
 
+
 env:
   JAVA_VERSION: 17
   KEYSTORE_PATH: /tmp/sebthom.github.io.p12
@@ -70,7 +71,13 @@ jobs:
 
 
     steps:
-    - name: Show environment variables
+    - name: "Show: GitHub context"
+      env:
+        GITHUB_CONTEXT: ${{ toJSON(github) }}
+      run: echo $GITHUB_CONTEXT
+
+
+    - name: "Show: environment variables"
       run: env | sort
 
 
@@ -86,17 +93,11 @@ jobs:
         python plugin/verify-syntax-registrations.py
 
 
-    - name: "Install: JDK ${{ env.JAVA_VERSION }}"
+    - name: "Install: JDK ${{ env.JAVA_VERSION }} ☕"
       uses: actions/setup-java@v4  # https://github.com/actions/setup-java
       with:
         distribution: temurin
         java-version: ${{ env.JAVA_VERSION }}
-
-
-    - name: "Install: Maven"
-      uses: stCarolas/setup-maven@v5  # https://github.com/stCarolas/setup-maven
-      with:
-        maven-version: 3.9.8
 
 
     - name: "Cache: Restore"
@@ -127,7 +128,13 @@ jobs:
         (set -x; keytool -keypass:env KEYSTORE_PW -storepass:env KEYSTORE_PW -list -keystore $KEYSTORE_PATH)
 
 
-    - name: Build with Maven
+    - name: "Install: Maven"
+      uses: stCarolas/setup-maven@v5  # https://github.com/stCarolas/setup-maven
+      with:
+        maven-version: 3.9.9
+
+
+    - name: "Build with Maven 🔨"
       env:
         GITHUB_USER: ${{ github.actor }}
         GITHUB_API_KEY: ${{ github.token }}
@@ -139,12 +146,11 @@ jobs:
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
         MAVEN_OPTS="${MAVEN_OPTS:-}"
-        MAVEN_OPTS="$MAVEN_OPTS -XX:+TieredCompilation -XX:TieredStopAtLevel=1" # https://zeroturnaround.com/rebellabs/your-maven-build-is-slow-speed-it-up/
-        MAVEN_OPTS="$MAVEN_OPTS -Djava.security.egd=file:/dev/./urandom" # https://stackoverflow.com/questions/58991966/what-java-security-egd-option-is-for/59097932#59097932
-        MAVEN_OPTS="$MAVEN_OPTS -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS" # https://stackoverflow.com/questions/5120470/how-to-time-the-different-stages-of-maven-execution/49494561#49494561
-        MAVEN_OPTS="$MAVEN_OPTS -Xmx1024m -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dhttps.protocols=TLSv1.2"
-        echo "  -> MAVEN_OPTS: $MAVEN_OPTS"
+        MAVEN_OPTS+=" -Djava.security.egd=file:/dev/./urandom" # https://stackoverflow.com/questions/58991966/what-java-security-egd-option-is-for/59097932#59097932
+        MAVEN_OPTS+=" -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS" # https://stackoverflow.com/questions/5120470/how-to-time-the-different-stages-of-maven-execution/49494561#49494561
+        MAVEN_OPTS+=" -Xmx1024m -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dhttps.protocols=TLSv1.3,TLSv1.2"
         export MAVEN_OPTS
+        echo "MAVEN_OPTS: $MAVEN_OPTS"
 
         mvn \
           --errors \

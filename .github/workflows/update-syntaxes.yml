@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: © Sebastian Thomschke and contributors
+# SPDX-FileContributor: Sebastian Thomschke (https://sebthom.de/)
+# SPDX-License-Identifier: EPL-2.0
+# SPDX-ArtifactOfProjectHomePage: https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin
+#
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
 name: Update Syntax Files
 
@@ -8,9 +13,11 @@ on:
   workflow_dispatch:
     # https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/
 
+
 defaults:
   run:
     shell: bash
+
 
 env:
   JAVA_VERSION: 17
@@ -24,25 +31,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Show environment variables
+    - name: "Show: GitHub context"
+      env:
+        GITHUB_CONTEXT: ${{ toJSON(github) }}
+      run: echo $GITHUB_CONTEXT
+
+
+    - name: "Show: environment variables"
       run: env | sort
 
 
     - name: Git Checkout
-      uses: actions/checkout@v4 # https://github.com/actions/checkout
+      uses: actions/checkout@v4  # https://github.com/actions/checkout
 
 
-    - name: "Install: JDK ${{ env.JAVA_VERSION }}"
-      uses: actions/setup-java@v4 # https://github.com/actions/setup-java
+    - name: "Install: JDK ${{ env.JAVA_VERSION }} ☕"
+      uses: actions/setup-java@v4  # https://github.com/actions/setup-java
       with:
         distribution: temurin
         java-version: ${{ env.JAVA_VERSION }}
 
 
     - name: "Install: Maven"
-      uses: stCarolas/setup-maven@v5 # https://github.com/stCarolas/setup-maven
+      uses: stCarolas/setup-maven@v5  # https://github.com/stCarolas/setup-maven
       with:
-        maven-version: 3.9.8
+        maven-version: 3.9.9
+
+
+    - name: "Install: Node LTS"
+      uses: actions/setup-node@v4  # https://github.com/marketplace/actions/setup-node-js-environment
+      with:
+        node-version: "lts/*"  # required by mermaid
 
 
     - name: Update Syntax Files 

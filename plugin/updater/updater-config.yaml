@@ -373,6 +373,12 @@ sources:
         - scd
         - workbook
 
+  mdx:
+    type: vscode-extension
+    github:
+      repo: mdx-js/mdx-analyzer
+      path: packages/vscode-mdx
+
   mermaid:
     type: vscode-extension
     github:

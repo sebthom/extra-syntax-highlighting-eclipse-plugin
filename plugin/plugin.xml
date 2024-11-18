@@ -1520,6 +1520,37 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- mdx/mdx: MDX -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.mdx" name="MDX" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="mdx" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.mdx" path="syntaxes/mdx/mdx.tmLanguage.plist" />
+    <scopeNameContentTypeBinding scopeName="source.mdx" contentTypeId="extra-syntax-highlighting.mdx" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.mdx" path="syntaxes/mdx/mdx.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.mdx" icon="syntaxes/mdx/mdx.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="MDX Example" path="syntaxes/mdx/mdx.example.mdx" scopeName="source.mdx" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- mdx: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.markdown.mdx.codeblock" path="syntaxes/mdx/source.markdown.mdx.codeblock.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- mermaid/mermaid: mermaid -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

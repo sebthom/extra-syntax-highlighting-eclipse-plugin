@@ -1,0 +1,91 @@
+---
+title: "JSX Features in MDX"
+author: "John Doe"
+date: "2024-11-18"
+tags:
+  - mdx
+  - jsx
+  - web-components
+  - react
+---
+
+import MyButton from './components/MyButton'
+import Alert from './components/Alert'
+
+# JSX Features in MDX
+
+This MDX file showcases various uses of JSX, including React components, web components, inline code, code blocks, and more.
+
+## Inline JSX
+
+You can include inline JSX components like `<MyButton />` directly within your Markdown content.
+
+<MyButton label="Click Me!" onClick={() => alert('Button clicked!')} />
+
+## Web Components
+
+MDX also allows the integration of custom web components:
+
+<my-web-component prop="value" />
+
+**Note:** Ensure that the web component `<my-web-component>` is defined and imported appropriately in your project.
+
+## Using React Components
+
+You can embed React components seamlessly:
+
+<Alert type="success">
+  This is a success alert!
+</Alert>
+
+## Code Blocks
+
+You can include code blocks with syntax highlighting:
+
+```javascript
+import React from 'react';
+
+const MyComponent = () => {
+  return <div>Hello, JSX in MDX!</div>
+}
+
+export default MyComponent;
+```
+
+## Inline Code
+
+Use inline code within your text, such as `const x = 10;`.
+
+## Lists
+
+### Unordered List
+
+- Item 1
+- Item 2
+  - Subitem 2.1
+  - Subitem 2.2
+- Item 3
+
+### Ordered List
+
+1. First
+2. Second
+3. Third
+
+## Links and Images
+
+Visit [Wikipedia](https://en.wikipedia.org/) for more information.
+
+![Sample Image](https://via.placeholder.com/300)
+
+## Blockquotes
+
+> This is a blockquote demonstrating how JSX can be used within Markdown.
+
+## Tables
+
+| Feature       | Description                      |
+| ------------- | -------------------------------- |
+| React         | JavaScript library for UI        |
+| Web Components| Reusable custom elements         |
+| JSX           | Syntax extension for JavaScript  |

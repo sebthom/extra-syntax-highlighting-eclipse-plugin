@@ -52,6 +52,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 1. Mako Templates (`*.mako`) - https://www.makotemplates.org/
 1. Markdown (`*.md`) - https://daringfireball.net/projects/markdown/
+1. MDX (`*.mdx`) - https://mdxjs.com/
 1. Mermaid (`*.mmd, *.mermaid`) - https://github.com/mermaid-js/mermaid/
 1. NginX (`nginx.conf`) - https://www.nginx.com/
 1. Nunjucks (`*.njk`) - https://mozilla.github.io/nunjucks/
@@ -165,6 +166,7 @@ To install the plugin into an existing Eclipse installation do:
 | LDIF File | file-extensions="ldif" | [master@FlashSystems/LDIF-Syntax](https://github.com/FlashSystems/LDIF-Syntax/tree/f00c21eb1cc5fe5966cf6ef158e854a65449a9fa/)
 | Mako Template | file-extensions="mako" | [master@marconi/mako-tmbundle](https://github.com/marconi/mako-tmbundle/tree/45037e4e98f0c215b55b194d303811d43b85407c/Syntaxes)
 | Markdown | file-extensions="livemd, markdown, md, mdown, mdwn, mkd, mkdn, mkdown, ronn, scd, workbook" | [main@wooorm/markdown-tm-language](https://github.com/wooorm/markdown-tm-language/tree/c78b1e5df644d24fa76716bbe26f4b48a6fc1610/)
+| MDX <img src="plugin/syntaxes/mdx/mdx.png" width=16/> | file-extensions="mdx" | [main@mdx-js/mdx-analyzer](https://github.com/mdx-js/mdx-analyzer/tree/77aac6619b87e355c142d7a1210e1a1ebbdb077f/packages/vscode-mdx)
 | mermaid <img src="plugin/syntaxes/mermaid/icon.png" width=16/> | file-extensions="mermaid, mmd" | [master@bpruitt-goddard/vscode-mermaid-syntax-highlight](https://github.com/bpruitt-goddard/vscode-mermaid-syntax-highlight/tree/dff0421fb9e5d07d752f71181e7a154bd103994d/)
 | NGINX Conf <img src="plugin/syntaxes/nginx/icon.png" width=16/> | file-extensions="conf, conf.default, conf.template, fastcgi_params, mime.types, nginx, nginx.conf, scgi_params, uwsgi_params" | [main@ahmadalli/vscode-nginx-conf](https://github.com/ahmadalli/vscode-nginx-conf/tree/10414d948cc5e52fbf2a8207629427d4ae3bc8c4/)
 | Nunjucks HTML <img src="plugin/syntaxes/nunjucks/icon.png" width=16/> | file-extensions="njk, njk.html" | [main@edheltzel/better-nunjucks-for-visual-studio-code](https://github.com/edheltzel/better-nunjucks-for-visual-studio-code/tree/332160a51a5ce4742619aa9c39331de418eac9b7/)

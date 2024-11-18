@@ -788,6 +788,20 @@ extensions:
         - ronn
         - scd
         - workbook
+  mdx:
+    github:
+      repo: mdx-js/mdx-analyzer
+      path: packages/vscode-mdx
+      ref: main
+      commit: 77aac6619b87e355c142d7a1210e1a1ebbdb077f
+    languages:
+      mdx:
+        label: MDX
+        scope-name: source.mdx
+        file-extensions:
+        - .mdx
+    inline-grammars:
+    - source.markdown.mdx.codeblock
   mermaid:
     github:
       repo: bpruitt-goddard/vscode-mermaid-syntax-highlight

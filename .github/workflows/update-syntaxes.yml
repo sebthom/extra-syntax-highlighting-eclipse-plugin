@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: © Sebastian Thomschke and contributors
-# SPDX-FileContributor: Sebastian Thomschke (https://sebthom.de/)
+# SPDX-FileContributor: Sebastian Thomschke (https://sebthom.de)
 # SPDX-License-Identifier: EPL-2.0
 # SPDX-ArtifactOfProjectHomePage: https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin
 #
@@ -66,8 +66,6 @@ jobs:
 
     - name: Update Syntax Files 
       id: update_syntaxes
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         set -euo pipefail
 
@@ -90,8 +88,8 @@ jobs:
 
     - name: Create PR
       id: create-pr
-      uses: peter-evans/create-pull-request@v7 # https://github.com/peter-evans/create-pull-request
-      if: "${{ steps.update_syntaxes.outputs.updates != '' }}"
+      uses: peter-evans/create-pull-request@v7  # https://github.com/peter-evans/create-pull-request
+      if: steps.update_syntaxes.outputs.updates
       with:
         title: "chore: Update Syntax Files"
         author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
@@ -105,4 +103,4 @@ jobs:
           README.md
         branch: dependencies/syntaxes
         delete-branch: true
-        token: ${{ secrets.GH_TOKEN }}
+        token: ${{ github.token }}

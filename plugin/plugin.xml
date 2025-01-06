@@ -1504,6 +1504,37 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- markdoc/markdoc: Markdoc -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.markdoc" name="Markdoc" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="markdoc,mdoc" file-patterns="*.markdoc.md" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.html.markdown.markdoc" path="syntaxes/markdoc/markdoc.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.html.markdown.markdoc" contentTypeId="extra-syntax-highlighting.markdoc" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.markdoc" path="syntaxes/markdoc/markdoc.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.markdoc" icon="syntaxes/markdoc/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Markdoc Example" path="syntaxes/markdoc/markdoc.example.mdoc" scopeName="text.html.markdown.markdoc" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- markdoc: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.html.markdown.markdoc.injection" path="syntaxes/markdoc/text.html.markdown.markdoc.injection.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- markdown/markdown: Markdown -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

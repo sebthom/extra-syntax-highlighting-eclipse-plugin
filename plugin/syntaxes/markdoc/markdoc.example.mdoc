@@ -1,0 +1,89 @@
+
+---
+title: "Markdoc Example File"
+description: "A simple example to demonstrate Markdoc's syntax and features."
+date: "2025-01-06"
+author: "Your Name"
+---
+
+# Welcome to Markdoc
+
+Markdoc is a Markdown-based authoring tool that supports custom syntax, making it flexible and extensible. This document demonstrates its core capabilities.
+
+## Basic Markdown Features
+
+You can use all standard Markdown syntax, such as:
+
+### Headings
+
+```markdown
+# Heading 1
+## Heading 2
+### Heading 3
+```
+
+### Lists
+
+- Item 1
+  - Sub-item 1
+  - Sub-item 2
+- Item 2
+
+### Links and Images
+
+[Visit the official Markdoc website](https://markdoc.io)
+
+![Example Image](https://via.placeholder.com/150)
+
+### Inline Styles
+
+You can include **bold**, *italic*, or `code` inline.
+
+---
+
+## Custom Markdoc Features
+
+Markdoc allows you to define custom tags and components. Here's an example of a custom tag:
+
+### Info Box
+
+{% info %}
+This is an example of an **info box** created using a custom tag.
+{% /info %}
+
+### Parameters
+
+You can pass parameters to custom tags:
+
+{% callout type="warning" title="Be Careful!" %}
+Always validate your inputs!
+{% /callout %}
+
+### Variables
+
+Use variables to dynamically insert content into your document:
+
+```markdoc
+{% $variable %}
+```
+
+For example:
+
+{% $greeting %}
+
+---
+
+## Code Blocks
+
+```javascript
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+console.log(greet("World"));
+```
+
+---
+
+## Conclusion
+
+Markdoc combines the simplicity of Markdown with the power of custom syntax. For more details, check out the [official documentation](https://markdoc.io).

@@ -351,6 +351,11 @@ sources:
         file-extensions:
         - .mako
 
+  markdoc:
+    type: vscode-extension
+    github:
+      repo: markdoc/language-server
+
   markdown:
     type: custom
     github:

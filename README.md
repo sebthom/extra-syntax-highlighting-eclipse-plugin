@@ -51,6 +51,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. Kotlin - https://kotlinlang.org/
 1. LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 1. Mako Templates (`*.mako`) - https://www.makotemplates.org/
+1. Markdoc (`*.markdoc`) - https://markdoc.dev/
 1. Markdown (`*.md`) - https://daringfireball.net/projects/markdown/
 1. MDX (`*.mdx`) - https://mdxjs.com/
 1. Mermaid (`*.mmd, *.mermaid`) - https://github.com/mermaid-js/mermaid/
@@ -165,6 +166,7 @@ To install the plugin into an existing Eclipse installation do:
 | Kotlin <img src="plugin/syntaxes/kotlin/icon.png" width=16/> | file-extensions="kt, kts" | [main@fwcd/vscode-kotlin](https://github.com/fwcd/vscode-kotlin/tree/4a7c1538754828c1d22a8bee8ff3400045b4352a/)
 | LDIF File | file-extensions="ldif" | [master@FlashSystems/LDIF-Syntax](https://github.com/FlashSystems/LDIF-Syntax/tree/f00c21eb1cc5fe5966cf6ef158e854a65449a9fa/)
 | Mako Template | file-extensions="mako" | [master@marconi/mako-tmbundle](https://github.com/marconi/mako-tmbundle/tree/45037e4e98f0c215b55b194d303811d43b85407c/Syntaxes)
+| Markdoc <img src="plugin/syntaxes/markdoc/icon.png" width=16/> | file-extensions="markdoc, markdoc.md, mdoc" | [main@markdoc/language-server](https://github.com/markdoc/language-server/tree/a6b8babf602735dc31bae1d10fad903dc40c9761/)
 | Markdown | file-extensions="livemd, markdown, md, mdown, mdwn, mkd, mkdn, mkdown, ronn, scd, workbook" | [main@wooorm/markdown-tm-language](https://github.com/wooorm/markdown-tm-language/tree/c78b1e5df644d24fa76716bbe26f4b48a6fc1610/)
 | MDX <img src="plugin/syntaxes/mdx/mdx.png" width=16/> | file-extensions="mdx" | [main@mdx-js/mdx-analyzer](https://github.com/mdx-js/mdx-analyzer/tree/89920f33d0be84498e4f7d794159235eecc3b293/packages/vscode-mdx)
 | mermaid <img src="plugin/syntaxes/mermaid/icon.png" width=16/> | file-extensions="mermaid, mmd" | [master@bpruitt-goddard/vscode-mermaid-syntax-highlight](https://github.com/bpruitt-goddard/vscode-mermaid-syntax-highlight/tree/dff0421fb9e5d07d752f71181e7a154bd103994d/)

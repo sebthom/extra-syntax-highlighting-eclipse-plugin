@@ -767,6 +767,21 @@ extensions:
         scope-name: text.html.mako
         file-extensions:
         - .mako
+  markdoc:
+    github:
+      repo: markdoc/language-server
+      ref: main
+      commit: a6b8babf602735dc31bae1d10fad903dc40c9761
+    languages:
+      markdoc:
+        label: Markdoc
+        scope-name: text.html.markdown.markdoc
+        file-extensions:
+        - .markdoc
+        - .markdoc.md
+        - .mdoc
+    inline-grammars:
+    - text.html.markdown.markdoc.injection
   markdown:
     github:
       repo: wooorm/markdown-tm-language

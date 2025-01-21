@@ -106,7 +106,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 72e594dfd00af4426679b48ee523107a6df9d63b
+      commit: 4f024410f7adf7b73ef7178b0fb00e09350697f7
     languages:
       carbon:
         label: Carbon
@@ -118,7 +118,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 300d00e2f7a5ff185f5c79f9207277c8db8c5db4
+      commit: 918996f875d37f3a13cdebe29754ab914f935335
     languages:
       cobol:
         label: COBOL
@@ -138,7 +138,7 @@ extensions:
     github:
       repo: crystal-lang-tools/vscode-crystal-lang
       ref: master
-      commit: aad5ae5077e9a326ef5c58c011311f48d0e76629
+      commit: 5cc1cf3e6be8467c61677f070560fe59e445c494
     languages:
       crystal:
         label: Crystal
@@ -330,7 +330,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 869a8c05e246fdd8c5112cb0101186f965bef628
+      commit: d217a65efcf9d4c19368f71310339c831556f26b
     languages:
       graphql:
         label: GraphQL
@@ -362,7 +362,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: aecbffd7050331b9c01c92977717afe2cc47ed20
+      commit: 37f6a6d7cc865af262c6c14b93e9c5792eb48046
     languages:
       hcl:
         label: HCL Config File
@@ -384,7 +384,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 0b254cafec4a3d64e4c73848a84def8b0d170709
+      commit: 0b8315527f8b6cc23d265bf34148496868aab5be
     languages:
       helm:
         label: helm-template
@@ -880,7 +880,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 3c13a91e6a9ad42d8aa2e3db56b52b5a8e668ba2
+      commit: fccc2ea8b5ba990ca9616c7ba499b627e8c1e091
     languages:
       ocaml:
         label: OCaml
@@ -924,7 +924,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 3589fe03d7124c9058dc69bcc21aa85910367cfe
+      commit: 42ce5bd45056a926358eb6d7316bb91cb64baf16
     languages:
       odin:
         label: odin
@@ -974,7 +974,7 @@ extensions:
       repo: chalcolith/eohippus
       path: eohippus-vscode
       ref: main
-      commit: f0146f6b2e72528f039b59c9961f19d5bd2c860b
+      commit: 50e61331a5b89901ef0499efba8c0b2d87f31a69
     languages:
       pony:
         label: Pony
@@ -986,7 +986,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 46d2700a5783fead9a8ce2cbd32a945c93e5dab4
+      commit: 886efbc36c2c42b8463b8fcfdb1b92da0693a631
     languages:
       prisma:
         label: Prisma
@@ -1002,7 +1002,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: a2f2c751416145b64fcb53be0992861ae12417ce
+      commit: 6322047137e6352b6508224f20cc394fe400a66e
     languages:
       ring:
         label: Ring
@@ -1027,7 +1027,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 4ba7760cdbf45bafcd6e1e5a957e22a8c31a9159
+      commit: 9b44c6db9e20b0c6cd51a358a60313a5aa45edb3
     languages:
       svelte:
         label: Svelte
@@ -1065,7 +1065,7 @@ extensions:
       repo: winglang/wing
       path: packages/vscode-wing
       ref: main
-      commit: 4315ce3b377f91d13df6f1ae9c5cd6f71868ccd4
+      commit: 0dca2e256757d7f824cc4626fb43fc734f2ccaa9
     languages:
       wing:
         label: Wing
@@ -1079,7 +1079,7 @@ extensions:
     github:
       repo: ziglang/vscode-zig
       ref: master
-      commit: 56e39b9488ea5636b160b54f94790f1b15433a44
+      commit: fe9f01c5812c2bd60ce341bc86ebf25cce049647
     languages:
       zig:
         label: Zig

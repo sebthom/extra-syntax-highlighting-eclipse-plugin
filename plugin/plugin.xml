@@ -137,7 +137,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.astro" icon="syntaxes/astro/icon.png"/>
+    <icon contentType="extra-syntax-highlighting.astro" icon="syntaxes/astro/astro.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">

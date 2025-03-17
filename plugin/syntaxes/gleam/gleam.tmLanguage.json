@@ -112,9 +112,6 @@
           "include": "#decimal_number"
         },
         {
-          "include": "#boolean"
-        },
-        {
           "name": "entity.name.type.gleam",
           "match": "[[:upper:]][[:alnum:]]*"
         }
@@ -171,5 +168,6 @@
       "match": "\\b_(?:[[:word:]]+)?\\b"
     }
   },
-  "scopeName": "source.gleam"
+  "scopeName": "source.gleam",
+  "fileTypes": ["gleam"]
 }

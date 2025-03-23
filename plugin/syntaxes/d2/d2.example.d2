@@ -1,0 +1,138 @@
+// Title, description, theme, and layout
+title: "Terrastruct D2 Full Language Feature Demo"
+description: "This diagram showcases all major D2 language features."
+theme: "cool" // try "minty", "neutral", "monochrome", "sketch"
+layout: dagre-left
+
+// Reusable styles
+class redbox {
+  style.fill: "#ffcccc"
+  style.stroke: "#cc0000"
+  style.stroke-dash: 4
+}
+
+class server {
+  icon: server
+  shape: cube
+  style.fill: "#e0f7fa"
+  style.stroke: "#00838f"
+}
+
+// Groups/subgraphs
+cloud {
+  label: "Cloud Infra"
+  style.fill: "#f0f0ff"
+  style.stroke: "#3333aa"
+  style.stroke-width: 2
+
+  aws: AWS {
+    shape: cloud
+    icon: cloud
+  }
+
+  db: "Database" {
+    shape: cylinder
+    icon: database
+    style.fill: "#fff3e0"
+    style.stroke: "#ff6f00"
+  }
+}
+
+// Main flow
+User {
+  shape: person
+  icon: user
+  style.fill: "#d0f0c0"
+  style.stroke: "#33691e"
+}
+
+User -> aws: "Sends request"
+aws -> db: "Fetch data"
+aws -> AppServer: "Returns result"
+
+// Use class
+AppServer: "App Server" {
+  class: server
+  note: "Handles logic"
+}
+
+// Group with layout direction
+frontend {
+  direction: right
+  WebUI: "Web UI" {
+    shape: component
+    icon: globe
+    class: redbox
+  }
+
+  WebUI -> AppServer: "Calls API"
+}
+
+// Automation with loop
+for i in [1,2,3] {
+  queue$i: "Queue $i" {
+    shape: queue
+    style.fill: "#ffe0b2"
+  }
+
+  AppServer -> queue$i
+  queue$i -> db
+}
+
+// Conditional rendering
+if true {
+  Analytics: "Analytics Service" {
+    icon: graph
+    shape: component
+  }
+
+  db -> Analytics: "Export logs"
+}
+
+// State transition diagram
+stateDiagram {
+  AuthFlow: "Auth Flow"
+  AuthFlow.Register -> AuthFlow.Login: "Success"
+  AuthFlow.Login -> AuthFlow.Dashboard: "Valid Token"
+  AuthFlow.Login -> AuthFlow.Error: "Failed"
+  AuthFlow.Error -> AuthFlow.Login: "Retry"
+}
+
+// External image
+Logo: "Company Logo" {
+  image: "https://d2lang.com/logo.svg"
+  shape: image
+  style.stroke: none
+}
+
+// Invisible helper node (automation)
+Invisible {
+  style.opacity: 0
+  note: "Invisible helper node"
+}
+AppServer -> Invisible -> Analytics
+
+// Inline styling
+db.style {
+  fill: "#ffeecc"
+  stroke: "#ff9900"
+  stroke-dash: 2
+}
+
+// Bi-directional edge
+AppServer <-> WebUI: "Sync State"
+
+// Custom edge styling
+WebUI -> Logo {
+  label: "Loads assets"
+  style.stroke: "#999"
+  style.stroke-dash: 5
+  style.arrowhead: vee
+}
+
+// Markdown labels and notes
+AppServer.note: """
+## Server Info
+- 🧠 CPU: 8 cores
+- 💾 RAM: 32 GB
+"""

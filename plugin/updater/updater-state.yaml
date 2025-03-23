@@ -159,6 +159,23 @@ extensions:
         scope-name: text.slang
         file-extensions:
         - .slang
+  d2:
+    github:
+      repo: terrastruct/d2-vscode
+      ref: master
+      commit: 88d9716009f9b8d65bfd6dea96064c94a5cf275f
+    languages:
+      d2:
+        label: d2
+        scope-name: source.d2
+        file-extensions:
+        - .d2
+      d2-markdown-injection:
+        label: d2-markdown-injection
+        scope-name: markdown.d2.codeblock
+      markdown.d2:
+        label: markdown.d2
+        scope-name: text.html.markdown.d2
   dot:
     github:
       repo: textmate/graphviz.tmbundle

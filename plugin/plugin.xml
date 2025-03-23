@@ -373,6 +373,62 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- d2/d2: d2 -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.d2" name="d2" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="d2" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.d2" path="syntaxes/d2/d2.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.d2" contentTypeId="extra-syntax-highlighting.d2" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.d2" path="syntaxes/d2/d2.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.d2" icon="syntaxes/d2/d2.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="d2 Example" path="syntaxes/d2/d2.example.d2" scopeName="source.d2" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- d2/d2-markdown-injection: d2-markdown-injection -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.d2-markdown-injection" name="d2-markdown-injection" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-names="PREVENT_FILE_ASSOCIATION_INHERITANCE" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.d2.codeblock" path="syntaxes/d2/d2-markdown-injection.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="markdown.d2.codeblock" contentTypeId="extra-syntax-highlighting.d2-markdown-injection" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.d2-markdown-injection" icon="syntaxes/d2/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- d2/markdown.d2: markdown.d2 -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.markdown.d2" name="markdown.d2" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-names="PREVENT_FILE_ASSOCIATION_INHERITANCE" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.html.markdown.d2" path="syntaxes/d2/markdown.d2.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.html.markdown.d2" contentTypeId="extra-syntax-highlighting.markdown.d2" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.markdown.d2" icon="syntaxes/d2/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
   <!-- dot/dot: GraphViz DOT File -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

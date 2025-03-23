@@ -27,6 +27,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. Carbon - https://carbon-lang.dev
 1. COBOL - https://en.wikipedia.org/wiki/COBOL
 1. Crystal (`*.cr`) - https://crystal-lang.org/
+1. D2 - https://d2lang.com/
 1. Eclipse External null Annotations (`*.eea`) - https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations#File_format
 1. EditorConfig - https://editorconfig.org
 1. Elm - https://elm-lang.org/
@@ -117,6 +118,7 @@ To install the plugin into an existing Eclipse installation do:
 | COBOL <img src="plugin/syntaxes/cobol/icon.png" width=16/> | file-extensions="cbl, cob, cobol, copy, cpy"<br />file-patterns="\*\*/broadcommfd.cobol-language-support/\*/copybooks/\*\*" | [development@eclipse-che4z/che-che4z-lsp-for-cobol](https://github.com/eclipse-che4z/che-che4z-lsp-for-cobol/tree/a7c03bd1b94caba382fb7ec6e0ef6e8cdd2bd079/clients/cobol-lsp-vscode-extension)
 | Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="cr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/c7675e289f54fd0d6f4ba94f5c950e06a9a8202a/) [[upstream]](https://github.com/Microsoft/vscode/blob/3f1f36333d3453f67a36b6bfb1206e9159e9c4f0/extensions/ruby/syntaxes/ruby.tmLanguage.json)
 | Crystal Slang <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="slang" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/c7675e289f54fd0d6f4ba94f5c950e06a9a8202a/)
+| d2 <img src="plugin/syntaxes/d2/d2.png" width=16/> | file-extensions="d2" | [master@terrastruct/d2-vscode](https://github.com/terrastruct/d2-vscode/tree/88d9716009f9b8d65bfd6dea96064c94a5cf275f/)
 | EditorConfig <img src="plugin/syntaxes/editorconfig/icon.png" width=16/> | file-extensions="editorconfig" | [main@editorconfig/editorconfig-vscode](https://github.com/editorconfig/editorconfig-vscode/tree/ca06ffc5aabaa51f133a6dd568ca14858a727e44/)
 | Elm <img src="plugin/syntaxes/elm/icon.png" width=16/> | file-extensions="elm" | [main@elm-tooling/elm-language-client-vscode](https://github.com/elm-tooling/elm-language-client-vscode/tree/a32f6a908c113ea4710d18b612a7ecd70f0a2c8b/)
 | Embedded Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="ecr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/c7675e289f54fd0d6f4ba94f5c950e06a9a8202a/)

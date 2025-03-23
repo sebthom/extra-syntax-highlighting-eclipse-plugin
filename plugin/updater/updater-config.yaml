@@ -180,6 +180,11 @@ sources:
         - .dot
     license-download: false
 
+  d2:
+    type: vscode-extension
+    github:
+      repo: terrastruct/d2-vscode
+
   editorconfig:
     type: vscode-extension
     github:

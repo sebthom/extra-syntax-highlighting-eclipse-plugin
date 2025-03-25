@@ -106,7 +106,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: d8d2da4ea0246b2bdddaa4bdcb19190d63a23d23
+      commit: a7d9ac576c6ced9cf411fa9c75c78f6108e062a5
     languages:
       carbon:
         label: Carbon
@@ -118,7 +118,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: a7c03bd1b94caba382fb7ec6e0ef6e8cdd2bd079
+      commit: fa7f19ea38ccee08002510beb9519a5c69cfaef9
     languages:
       cobol:
         label: COBOL
@@ -192,7 +192,7 @@ extensions:
     github:
       repo: editorconfig/editorconfig-vscode
       ref: main
-      commit: ca06ffc5aabaa51f133a6dd568ca14858a727e44
+      commit: 02aea3dc4b51e07376ff27472aacf99481322fc5
     languages:
       editorconfig:
         label: EditorConfig
@@ -401,7 +401,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: b2d46f8c6908f9b7e234d8e4c3729465c30eea38
+      commit: 42c913544d84cf61d3f6fb07ffb9da3f41d3b187
     languages:
       helm:
         label: helm-template
@@ -886,18 +886,20 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: 63fcfaf32fe18db9f8bc75805117c2af3a896806
+      commit: 28ccc907ad4e6bccf252fba4c83cc7f4c00c2161
     languages:
       nushell:
         label: nushell
         scope-name: source.nushell
         file-extensions:
         - .nu
+    inline-grammars:
+    - markdown.nushell.codeblock
   ocaml:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 854599460ed8651d4cbb0ae61486912270434127
+      commit: 830ffe5a63cde42fb00c9bc90dceef93df6dbb9c
     languages:
       ocaml:
         label: OCaml
@@ -1003,7 +1005,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 2654c9cb1c59cfd5f4bb82affba5fedead4b95c6
+      commit: 32f7b5c363c60a9f4361d25a1fb9f7197f65ba05
     languages:
       prisma:
         label: Prisma
@@ -1019,7 +1021,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 07917d3d47a1da9baa7243083c9c1cd6d6732092
+      commit: d55dcaa5d9f6f44fce74fb83f26df67bda15a32f
     languages:
       ring:
         label: Ring
@@ -1044,7 +1046,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 05c515eec1a03dbd3217c2fc373d9bcc88d12c58
+      commit: 3eaf9ac436cc7ae55fdc83983cde8b3a2ab4fdf4
     languages:
       svelte:
         label: Svelte

@@ -1749,6 +1749,13 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- nushell: Inline Grammars -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.nushell.codeblock" path="syntaxes/nushell/markdown.nushell.codeblock.tmLanguage.json" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- ocaml/ocaml: OCaml -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

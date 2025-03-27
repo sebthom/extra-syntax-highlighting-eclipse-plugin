@@ -106,7 +106,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: a7d9ac576c6ced9cf411fa9c75c78f6108e062a5
+      commit: c7a338be59a1037904dbde4fa7f1b0accebad0ac
     languages:
       carbon:
         label: Carbon
@@ -118,7 +118,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: fa7f19ea38ccee08002510beb9519a5c69cfaef9
+      commit: 0f925e3b6f36ca92865df1c8d079c30c93f93e8c
     languages:
       cobol:
         label: COBOL
@@ -244,7 +244,7 @@ extensions:
     github:
       repo: bmalehorn/vscode-fish
       ref: master
-      commit: 2bdcfbea62cadc2a977eace3189d25b31df71e72
+      commit: 79caf9502d6e12db3b7b97666cc0324a4de1dc49
     languages:
       fish:
         label: Fish
@@ -401,7 +401,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 42c913544d84cf61d3f6fb07ffb9da3f41d3b187
+      commit: 5d2e9144b6326981ac80831cef5eaad6bdf312ea
     languages:
       helm:
         label: helm-template
@@ -886,7 +886,7 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: 28ccc907ad4e6bccf252fba4c83cc7f4c00c2161
+      commit: b03d40225eeec75f08c24720b734cd462c946ead
     languages:
       nushell:
         label: nushell
@@ -899,7 +899,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 830ffe5a63cde42fb00c9bc90dceef93df6dbb9c
+      commit: 662ce4bdfd4067ae05b03570581c9a658aa644f3
     languages:
       ocaml:
         label: OCaml
@@ -1005,7 +1005,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 32f7b5c363c60a9f4361d25a1fb9f7197f65ba05
+      commit: a4b2171db2fbc8a106ad34d5a414b1e7ed5d04de
     languages:
       prisma:
         label: Prisma
@@ -1021,7 +1021,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: d55dcaa5d9f6f44fce74fb83f26df67bda15a32f
+      commit: 7eca4cd14848d4ff5c69a6071966e5fa7b58040e
     languages:
       ring:
         label: Ring
@@ -1098,7 +1098,7 @@ extensions:
     github:
       repo: ziglang/vscode-zig
       ref: master
-      commit: 698550f8a1d52a68b2e951d6c85bf489d886c50b
+      commit: a41a3a2c4956a39e2b663909a8c1761071280931
     languages:
       zig:
         label: Zig

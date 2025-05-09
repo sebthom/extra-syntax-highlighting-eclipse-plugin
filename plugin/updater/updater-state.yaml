@@ -106,7 +106,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 1b96e40b631079697e71a3b59285481e5bea6fd7
+      commit: 69b9982e95bfa3a769ba741717a6ef02ce11d7ff
     languages:
       carbon:
         label: Carbon
@@ -118,7 +118,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 7bece12c83182e18d60fbf972e828b8ccf3f9ce7
+      commit: f814905f862736ddf4f4472df3b4e4556f155757
     languages:
       cobol:
         label: COBOL
@@ -347,7 +347,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 03171d5614c61fb345763636d120da2b536d54a0
+      commit: 9f55d930c8a63b1683740cc7e51531fe09059b72
     languages:
       graphql:
         label: GraphQL
@@ -401,7 +401,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 2927fe679353f7067b2d130b2356608c46820b27
+      commit: 830b3fabf05ae6c4464f53c3ea9899d260dba31d
     languages:
       helm:
         label: helm-template
@@ -899,7 +899,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: bcd50fb97208250c56359a25d1260a391a545751
+      commit: 445bfab2873b4533f4deb5e48e108593d40a117f
     languages:
       ocaml:
         label: OCaml
@@ -914,6 +914,11 @@ extensions:
         file-extensions:
         - .eliomi
         - .mli
+      ocaml.mlx:
+        label: OCaml.mlx
+        scope-name: source.ocaml.mlx
+        file-extensions:
+        - .mlx
       ocaml.ocamlformat:
         label: OCamlFormat
         scope-name: source.ocaml.ocamlformat
@@ -1005,7 +1010,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 6d1dbacb1be9b7502f6b812af467716654374453
+      commit: c188f9d4a550d4fdb05d1733275bdece20428b0d
     languages:
       prisma:
         label: Prisma
@@ -1021,7 +1026,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 8fda8391a7f633fa8bc92e1b3e7f42dd67c7cec9
+      commit: 316e147b29468c81ea40985b377ad64516799e15
     languages:
       ring:
         label: Ring

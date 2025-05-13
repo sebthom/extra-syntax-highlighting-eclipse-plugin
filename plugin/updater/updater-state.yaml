@@ -106,7 +106,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 1b96e40b631079697e71a3b59285481e5bea6fd7
+      commit: dc61460b5aec137295c4f3bc410f37f12f945f0e
     languages:
       carbon:
         label: Carbon
@@ -118,7 +118,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 7bece12c83182e18d60fbf972e828b8ccf3f9ce7
+      commit: f814905f862736ddf4f4472df3b4e4556f155757
     languages:
       cobol:
         label: COBOL
@@ -347,7 +347,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 03171d5614c61fb345763636d120da2b536d54a0
+      commit: fa784819ce020346052901019079fb5b44af6ef0
     languages:
       graphql:
         label: GraphQL
@@ -401,7 +401,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 2927fe679353f7067b2d130b2356608c46820b27
+      commit: 294a436e58a41624e355a5634160d81ba0967c68
     languages:
       helm:
         label: helm-template
@@ -899,7 +899,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: bcd50fb97208250c56359a25d1260a391a545751
+      commit: 60084c86cdf65d7d293cc701be8a65f064b106a1
     languages:
       ocaml:
         label: OCaml
@@ -914,6 +914,11 @@ extensions:
         file-extensions:
         - .eliomi
         - .mli
+      ocaml.mlx:
+        label: OCaml.mlx
+        scope-name: source.ocaml.mlx
+        file-extensions:
+        - .mlx
       ocaml.ocamlformat:
         label: OCamlFormat
         scope-name: source.ocaml.ocamlformat
@@ -943,7 +948,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 9172bd42c8b0977aa62aa899a8ed09e5b822d021
+      commit: 89f83305019a70d714af015aec734700dfee967c
     languages:
       odin:
         label: odin
@@ -1005,7 +1010,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 6d1dbacb1be9b7502f6b812af467716654374453
+      commit: c3febc27d43c2cc232397aee8c3f82ab30123bb2
     languages:
       prisma:
         label: Prisma
@@ -1021,7 +1026,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 8fda8391a7f633fa8bc92e1b3e7f42dd67c7cec9
+      commit: d01f7ba15e7af7387675a3dc5bd288c262efe379
     languages:
       ring:
         label: Ring
@@ -1034,7 +1039,7 @@ extensions:
     github:
       repo: ivan-demchenko/roc-vscode-unofficial
       ref: main
-      commit: 2b489649d1e6d658a2423a267a5a41fa346efe99
+      commit: f60596f4b8d65937e7a8df2c0b454a3a309aa91e
     languages:
       roc:
         label: Roc
@@ -1098,7 +1103,7 @@ extensions:
     github:
       repo: ziglang/vscode-zig
       ref: master
-      commit: 70c2cc5709d39b1d6af04453c703621d041ade3a
+      commit: dba6b80173d92c002ba7f32d03a22e3d4253b0da
     languages:
       zig:
         label: Zig

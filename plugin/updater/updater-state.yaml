@@ -106,7 +106,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: dc61460b5aec137295c4f3bc410f37f12f945f0e
+      commit: e9823df1302b9b8058c0e5761b53d4f99c366548
     languages:
       carbon:
         label: Carbon
@@ -118,7 +118,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: f814905f862736ddf4f4472df3b4e4556f155757
+      commit: bbafe7bff82b76b343715cd9bfdbb59e2fa577ec
     languages:
       cobol:
         label: COBOL
@@ -347,7 +347,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: fa784819ce020346052901019079fb5b44af6ef0
+      commit: 60b0798d7d0bff346e392b06a98d3652e3033c86
     languages:
       graphql:
         label: GraphQL
@@ -401,7 +401,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 294a436e58a41624e355a5634160d81ba0967c68
+      commit: b7dd6b0aa5e42f6e039e5f556c2ac5897a12ecaf
     languages:
       helm:
         label: helm-template
@@ -899,7 +899,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 60084c86cdf65d7d293cc701be8a65f064b106a1
+      commit: b8a7ffc190b091d72f0326ccd753fcf80de2e103
     languages:
       ocaml:
         label: OCaml
@@ -1010,7 +1010,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: c3febc27d43c2cc232397aee8c3f82ab30123bb2
+      commit: 5f4dc7231fd83d9002be79e953837a43850f00b4
     languages:
       prisma:
         label: Prisma
@@ -1026,7 +1026,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: d01f7ba15e7af7387675a3dc5bd288c262efe379
+      commit: 7f132b8799e4d43b4b98bc00d239d96e8244d145
     languages:
       ring:
         label: Ring
@@ -1051,7 +1051,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 2bdbf6d49b4514ed91167812c11b590f810d5f8c
+      commit: d12a9ae276c9f4c6a62964bbdca074424cbab123
     languages:
       svelte:
         label: Svelte

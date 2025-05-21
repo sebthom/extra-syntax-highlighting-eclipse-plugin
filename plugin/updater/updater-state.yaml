@@ -106,7 +106,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: e9823df1302b9b8058c0e5761b53d4f99c366548
+      commit: c1eea8f2eb23252f06977b8ad685d56d41b4929b
     languages:
       carbon:
         label: Carbon
@@ -118,7 +118,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: bbafe7bff82b76b343715cd9bfdbb59e2fa577ec
+      commit: 86c38c8fc9702ff93bc032ae392cc19ca7362dee
     languages:
       cobol:
         label: COBOL
@@ -347,7 +347,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 60b0798d7d0bff346e392b06a98d3652e3033c86
+      commit: 3b93d27f7568d93db5cd146157220b127eeea737
     languages:
       graphql:
         label: GraphQL
@@ -401,7 +401,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: b7dd6b0aa5e42f6e039e5f556c2ac5897a12ecaf
+      commit: 9adc13cd9af344776c4214b25ce5e187f9bc45f7
     languages:
       helm:
         label: helm-template
@@ -899,7 +899,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: b8a7ffc190b091d72f0326ccd753fcf80de2e103
+      commit: 119b239d81d3e6d1408f6a8bd50208e004070c55
     languages:
       ocaml:
         label: OCaml
@@ -948,7 +948,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 89f83305019a70d714af015aec734700dfee967c
+      commit: 07ea39ecdcf02dba84c82d90b028055463f6562c
     languages:
       odin:
         label: odin
@@ -1010,7 +1010,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 5f4dc7231fd83d9002be79e953837a43850f00b4
+      commit: 629cd68806bcdd9680871818b90104d5465f38f2
     languages:
       prisma:
         label: Prisma
@@ -1026,7 +1026,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 7f132b8799e4d43b4b98bc00d239d96e8244d145
+      commit: 6bd6dd14134fe89cb8f0de6499a5e19867b0f5c4
     languages:
       ring:
         label: Ring
@@ -1051,7 +1051,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: d12a9ae276c9f4c6a62964bbdca074424cbab123
+      commit: ef92ff314e6f647c10c36b04c151da911453e19e
     languages:
       svelte:
         label: Svelte

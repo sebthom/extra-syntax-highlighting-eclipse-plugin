@@ -1,0 +1,4 @@
+
+Lists of 2 third-party dependencies.
+     (Unknown license) extra-syntax-highlighting-feature (de.sebthom.eclipse.extra_syntax_highlighting:de.sebthom.eclipse.extra_syntax_highlighting.feature:1.0.0-SNAPSHOT - no url defined)
+     (Unknown license) extra-syntax-highlighting-plugin (de.sebthom.eclipse.extra_syntax_highlighting:de.sebthom.eclipse.extra_syntax_highlighting:1.0.0-SNAPSHOT - no url defined)

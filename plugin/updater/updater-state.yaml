@@ -159,6 +159,35 @@ extensions:
         scope-name: text.slang
         file-extensions:
         - .slang
+  csv:
+    github:
+      repo: mechatroner/vscode_rainbow_csv
+      ref: master
+      commit: 18c3cb377fd42128f39ff21706efdc1d6a73efc0
+    languages:
+      csv:
+        label: CSV
+        scope-name: text.csv
+        file-extensions:
+        - .csv
+      csv (pipe):
+        label: CSV (pipe)
+        scope-name: text.psv
+      csv (semicolon):
+        label: CSV (semicolon)
+        scope-name: text.scsv
+      csv (whitespace):
+        label: CSV (whitespace)
+        scope-name: text.wspcsv
+      dynamic csv:
+        label: Dynamic CSV
+        scope-name: text.dynamiccsv
+      tsv:
+        label: TSV
+        scope-name: text.tsv
+        file-extensions:
+        - .tab
+        - .tsv
   d2:
     github:
       repo: terrastruct/d2-vscode

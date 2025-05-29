@@ -70,6 +70,13 @@ public abstract class Strings {
       return input;
    }
 
+   public static String sanitizeFilename(final String input) {
+      if (input.isEmpty() || ".".equals(input) || "..".equals(input))
+         return "_";
+
+      return input.replaceAll("[<>:\"/\\\\|?*\\p{Cntrl}\\s]", "_");
+   }
+
    /**
     * Splits the command string using shell-like syntax.
     *

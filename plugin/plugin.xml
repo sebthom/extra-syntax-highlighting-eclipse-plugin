@@ -373,6 +373,110 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- csv/csv: CSV -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.csv" name="CSV" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="csv" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.csv" path="syntaxes/csv/csv.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.csv" contentTypeId="extra-syntax-highlighting.csv" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.csv" path="syntaxes/csv/csv.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.csv" icon="syntaxes/csv/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- csv/csv (pipe): CSV (pipe) -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.csv (pipe)" name="CSV (pipe)" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-names="PREVENT_FILE_ASSOCIATION_INHERITANCE" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.psv" path="syntaxes/csv/csv_(pipe).tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.psv" contentTypeId="extra-syntax-highlighting.csv (pipe)" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.csv (pipe)" icon="syntaxes/csv/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- csv/csv (semicolon): CSV (semicolon) -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.csv (semicolon)" name="CSV (semicolon)" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-names="PREVENT_FILE_ASSOCIATION_INHERITANCE" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.scsv" path="syntaxes/csv/csv_(semicolon).tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.scsv" contentTypeId="extra-syntax-highlighting.csv (semicolon)" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.csv (semicolon)" icon="syntaxes/csv/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- csv/csv (whitespace): CSV (whitespace) -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.csv (whitespace)" name="CSV (whitespace)" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-names="PREVENT_FILE_ASSOCIATION_INHERITANCE" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.wspcsv" path="syntaxes/csv/csv_(whitespace).tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.wspcsv" contentTypeId="extra-syntax-highlighting.csv (whitespace)" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.csv (whitespace)" icon="syntaxes/csv/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- csv/dynamic csv: Dynamic CSV -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.dynamic csv" name="Dynamic CSV" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-names="PREVENT_FILE_ASSOCIATION_INHERITANCE" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.dynamiccsv" path="syntaxes/csv/dynamic_csv.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.dynamiccsv" contentTypeId="extra-syntax-highlighting.dynamic csv" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.dynamic csv" icon="syntaxes/csv/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- csv/tsv: TSV -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.tsv" name="TSV" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="tab,tsv" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.tsv" path="syntaxes/csv/tsv.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.tsv" contentTypeId="extra-syntax-highlighting.tsv" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.tsv" path="syntaxes/csv/tsv.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.tsv" icon="syntaxes/csv/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
   <!-- d2/d2: d2 -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

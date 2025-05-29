@@ -166,6 +166,11 @@ sources:
     github:
       repo: crystal-lang-tools/vscode-crystal-lang
 
+  csv:
+    type: vscode-extension
+    github:
+      repo: mechatroner/vscode_rainbow_csv
+
   dot:
     type: custom
     github:

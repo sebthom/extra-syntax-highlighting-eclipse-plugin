@@ -294,14 +294,16 @@ public class Updater {
             final var langState = lang.getValue();
             logInfo("Rendering entry [" + extId + "/" + langId + "]...");
 
-            final var grammarFile = findFirstFile(syntaxDir, //
-               f -> f.matches(Pattern.quote(langId) + "[.]tmLanguage[.](yaml|json|plist)"));
+            final var landIdSanitized = Strings.sanitizeFilename(langId);
 
-            final var iconFileName = Files.exists(syntaxDir.resolve(langId + ".png")) ? langId + ".png"
+            final var grammarFile = findFirstFile(syntaxDir, //
+               f -> f.matches(Pattern.quote(landIdSanitized) + "[.]tmLanguage[.](yaml|json|plist)"));
+
+            final var iconFileName = Files.exists(syntaxDir.resolve(landIdSanitized + ".png")) ? landIdSanitized + ".png"
                   : Files.exists(syntaxDir.resolve("icon.png")) ? "icon.png" : null;
 
             final var exampleFile = findFirstFile(syntaxDir, //
-               f -> f.matches(Pattern.quote(langId) + "[.]example[.].*"));
+               f -> f.matches(Pattern.quote(landIdSanitized) + "[.]example[.].*"));
 
             final var templateVars = new HashMap<String, Object>();
             templateVars.put("ext_id", extId);

@@ -27,6 +27,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. Carbon - https://carbon-lang.dev
 1. COBOL - https://en.wikipedia.org/wiki/COBOL
 1. Crystal (`*.cr`) - https://crystal-lang.org/
+1. CSV (`*.cvs`) / TSV (`*.tab*`, `*.tsv*`)
 1. D2 - https://d2lang.com/
 1. Eclipse External null Annotations (`*.eea`) - https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations#File_format
 1. EditorConfig - https://editorconfig.org
@@ -118,6 +119,7 @@ To install the plugin into an existing Eclipse installation do:
 | COBOL <img src="plugin/syntaxes/cobol/icon.png" width=16/> | file-extensions="cbl, cob, cobol, copy, cpy"<br />file-patterns="\*\*/broadcommfd.cobol-language-support/\*/copybooks/\*\*" | [development@eclipse-che4z/che-che4z-lsp-for-cobol](https://github.com/eclipse-che4z/che-che4z-lsp-for-cobol/tree/86c38c8fc9702ff93bc032ae392cc19ca7362dee/clients/cobol-lsp-vscode-extension)
 | Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="cr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/d1be719abf9bff0c722cb3127948e33361fc74e0/) [[upstream]](https://github.com/Microsoft/vscode/blob/3f1f36333d3453f67a36b6bfb1206e9159e9c4f0/extensions/ruby/syntaxes/ruby.tmLanguage.json)
 | Crystal Slang <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="slang" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/d1be719abf9bff0c722cb3127948e33361fc74e0/)
+| CSV <img src="plugin/syntaxes/csv/icon.png" width=16/> | file-extensions="csv" | [master@mechatroner/vscode_rainbow_csv](https://github.com/mechatroner/vscode_rainbow_csv/tree/18c3cb377fd42128f39ff21706efdc1d6a73efc0/)
 | d2 <img src="plugin/syntaxes/d2/d2.png" width=16/> | file-extensions="d2" | [master@terrastruct/d2-vscode](https://github.com/terrastruct/d2-vscode/tree/88d9716009f9b8d65bfd6dea96064c94a5cf275f/)
 | EditorConfig <img src="plugin/syntaxes/editorconfig/icon.png" width=16/> | file-extensions="editorconfig" | [main@editorconfig/editorconfig-vscode](https://github.com/editorconfig/editorconfig-vscode/tree/02aea3dc4b51e07376ff27472aacf99481322fc5/)
 | Elm <img src="plugin/syntaxes/elm/icon.png" width=16/> | file-extensions="elm" | [main@elm-tooling/elm-language-client-vscode](https://github.com/elm-tooling/elm-language-client-vscode/tree/a32f6a908c113ea4710d18b612a7ecd70f0a2c8b/)
@@ -192,6 +194,7 @@ To install the plugin into an existing Eclipse installation do:
 | Starlark <img src="plugin/syntaxes/bazel/icon.png" width=16/> | file-extensions="BUILD, WORKSPACE, bazel, bzl, bzlmod, sky, star"<br />file-names="BUILD, WORKSPACE" | [master@bazelbuild/vscode-bazel](https://github.com/bazelbuild/vscode-bazel/tree/7b6f85f9d08d0b6d1f1991f05e09cfcd8740407e/)
 | Svelte <img src="plugin/syntaxes/svelte/icon.png" width=16/> | file-extensions="svelte" | [master@sveltejs/language-tools](https://github.com/sveltejs/language-tools/tree/ef92ff314e6f647c10c36b04c151da911453e19e/packages/svelte-vscode)
 | TOML Config File <img src="plugin/syntaxes/toml/icon.png" width=16/> | file-extensions="toml"<br />file-names="Cargo.lock, Pipfile, pdm.lock" | [master@juggernautjp/less-toml](https://github.com/juggernautjp/less-toml/tree/13eb891232e98c4a9c595bf8c657893c84edf3a9/) [[upstream]](https://github.com/textmate/toml.tmbundle/commit/e82b64c1e86396220786846201e9aa3f0a2d9ca2)
+| TSV <img src="plugin/syntaxes/csv/icon.png" width=16/> | file-extensions="tab, tsv" | [master@mechatroner/vscode_rainbow_csv](https://github.com/mechatroner/vscode_rainbow_csv/tree/18c3cb377fd42128f39ff21706efdc1d6a73efc0/)
 | Wing <img src="plugin/syntaxes/wing/wing.png" width=16/> | file-extensions="w, wsim" | [main@winglang/wing](https://github.com/winglang/wing/tree/43ec45981cbb3f08b19d882e86f068e7eebc6c66/packages/vscode-wing)
 | Zig <img src="plugin/syntaxes/zig/icon.png" width=16/> | file-extensions="zig, zon" | [master@ziglang/vscode-zig](https://github.com/ziglang/vscode-zig/tree/dba6b80173d92c002ba7f32d03a22e3d4253b0da/)
 

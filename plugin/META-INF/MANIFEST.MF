@@ -8,6 +8,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.compare;resolution:=optional,
  org.eclipse.core.contenttype,
+ org.eclipse.equinox.common,
  org.eclipse.ui.editors,
  org.eclipse.ui.genericeditor,
  org.eclipse.tm4e.registry,

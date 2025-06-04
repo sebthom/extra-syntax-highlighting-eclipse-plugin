@@ -173,6 +173,21 @@ sources:
     github:
       repo: crystal-lang-tools/vscode-crystal-lang
 
+  csv:
+    type: vscode-extension
+    github:
+      repo: mechatroner/vscode_rainbow_csv
+    languages:
+      csv (pipe):
+        content-base-type: extra-syntax-highlighting.csv
+        content-describer: de.sebthom.eclipse.extra_syntax_highlighting.CsvDelimiterDescriber$Pipe
+      csv (semicolon):
+        content-base-type: extra-syntax-highlighting.csv
+        content-describer: de.sebthom.eclipse.extra_syntax_highlighting.CsvDelimiterDescriber$Semicolon
+      csv (whitespace):
+        content-base-type: extra-syntax-highlighting.csv
+        content-describer: de.sebthom.eclipse.extra_syntax_highlighting.CsvDelimiterDescriber$Space
+
   dot:
     type: custom
     github:

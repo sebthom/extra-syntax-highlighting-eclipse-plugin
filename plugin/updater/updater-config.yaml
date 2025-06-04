@@ -1,3 +1,4 @@
+content-base-type: extra-syntax-highlighting.basetype
 content-type-prefix: extra-syntax-highlighting
 content-type-priority: normal # low|normal|high
 
@@ -28,6 +29,8 @@ sources:
   #         file-extensions: []              # optional
   #         file-names:      []              # optional
   #         file_patterns:   []              # optional
+  #         content-base-type: <name> # optional
+  #         content-describer: <ITextContentDescriber class name> # optional
   #     inline-grammars: # optional
   #       <scope-name>:
   #         grammar: <filepath_in_repo>      # REQUIRED
@@ -54,6 +57,8 @@ sources:
   #         file-extensions: []              # optional
   #         file-names:      []              # optional
   #         file_patterns:   []              # optional
+  #         content-base-type: <name> # optional
+  #         content-describer: <ITextContentDescriber class name> # optional
   #     inline-grammars: # optional
   #       <scope-name>:   # existing scope-name as defined in package.json to override values
   #         ignored: <reason>                # optional. if set, this language is ignored
@@ -84,6 +89,8 @@ sources:
   #             file-extensions: []              # optional
   #             file-names:      []              # optional
   #             file_patterns:   []              # optional
+  #             content-base-type: <name> # optional
+  #             content-describer: <ITextContentDescriber class name> # optional
   #         inline-grammars: # optional
   #           <scope-name>:   # existing scope-name as defined in package.json to override values
   #             ignored: <reason>                # optional. if set, this language is ignored
@@ -557,7 +564,7 @@ sources:
   toml:
     type: vscode-extension
     github:
-      #repo: oovm/vscode-toml
+      # repo: oovm/vscode-toml
 
       # repo: tamasfe/taplo
       # path: editors/vscode

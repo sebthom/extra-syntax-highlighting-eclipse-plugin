@@ -72,5 +72,11 @@
          <artifactId>thumbnailator</artifactId>
          <version>0.4.20</version>
       </dependency>
+
+      <dependency>
+         <groupId>io.pebbletemplates</groupId>
+         <artifactId>pebble</artifactId>
+         <version>3.2.4</version>
+      </dependency>
    </dependencies>
 </project>

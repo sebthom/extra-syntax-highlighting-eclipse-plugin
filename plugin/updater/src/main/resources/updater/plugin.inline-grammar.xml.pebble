@@ -1,0 +1,9 @@
+
+<!-- ======================================== -->
+<!-- {{ ext_id }}: Inline Grammars -->
+<!-- ======================================== -->
+<extension point="org.eclipse.tm4e.registry.grammars">
+{% for g in inlineGrammars %}
+  <grammar scopeName="{{ g.scope_name }}" path="syntaxes/{{ ext_id }}/{{ g.grammar_filename }}" />
+{% endfor %}
+</extension>

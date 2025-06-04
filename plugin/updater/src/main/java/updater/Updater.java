@@ -19,6 +19,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,6 +36,9 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.core.JacksonException;
 
+import updater.Updater.Config.Source;
+import updater.Updater.State.ExtensionState;
+import updater.Updater.State.LanguageState;
 import updater.utils.Git.GitCheckoutConfig;
 import updater.utils.Git.GitCheckoutState;
 import updater.utils.Log.WithToString;
@@ -50,6 +54,7 @@ public class Updater {
     * model for update-syntaxes-config.yaml
     */
    record Config( //
+         @JsonProperty(required = true) String contentBaseType, //
          @JsonProperty(required = true) String contentTypePrefix, //
          @JsonProperty(required = true) String contentTypePriority, //
          @JsonProperty(required = true) Map<String, Source> sources, //
@@ -73,6 +78,9 @@ public class Updater {
          public List<String> fileExtensions;
          public List<String> fileNames;
          public List<String> filePatterns;
+
+         public String contentBaseType;
+         public String contentDescriber;
       }
 
       static class LanguageIgnoreable extends Language {
@@ -120,6 +128,22 @@ public class Updater {
 
          public boolean includeAllByDefault = false;
          public Map<String, Extension> extensions = Collections.emptyMap();
+      }
+
+      public /* @Nullable */ Language findSourceLanguageConfig(final String extId, final String langId) {
+         final Source source = sources.get(extId);
+         if (source instanceof final CustomSource src)
+            return src.languages.get(langId);
+         if (source instanceof final VSCodeSingleExtensionSource src)
+            return src.languages.get(langId);
+
+         for (final var source1 : sources.values())
+            if (source1 instanceof final VSCodeMultiExtensionsSource src) {
+               final var ext = src.extensions.get(extId);
+               if (ext != null)
+                  return ext.languages.get(langId);
+            }
+         return null;
       }
    }
 
@@ -224,8 +248,8 @@ public class Updater {
       int i = 0;
       for (final var sourceEntry : config.sources.entrySet()) {
          i++;
-         final var sourceId = sourceEntry.getKey();
-         final var source = sourceEntry.getValue();
+         final String sourceId = sourceEntry.getKey();
+         final Source source = sourceEntry.getValue();
 
          if (sourceIdToUpdate == null) {
             logHeader("[" + i + "/" + config.sources.size() + "] " //
@@ -240,26 +264,26 @@ public class Updater {
                   + "(" + source.getClass().getSimpleName() + ")");
          }
 
-         final var sourceRepoPath = sourceReposCacheDir.resolve(sourceId);
-         final var gitCheckoutState = gitSparseCheckout(sourceRepoPath, source.github);
+         final Path sourceRepoDir = sourceReposCacheDir.resolve(sourceId);
+         final var gitCheckoutState = gitSparseCheckout(sourceRepoDir, source.github);
 
          if (source instanceof final Config.CustomSource src) {
             final var extensionState = new State.ExtensionState();
             extensionState.github = gitCheckoutState;
             state.extensions.put(sourceId, extensionState);
-            new CustomSourceHandler(sourceId, src, sourceRepoPath, syntaxesDir, extensionState).handle();
+            new CustomSourceHandler(sourceId, src, sourceRepoDir, syntaxesDir, extensionState).handle();
          } else if (source instanceof final Config.VSCodeSingleExtensionSource src) {
             final var extensionState = new State.ExtensionState();
             extensionState.github = gitCheckoutState;
             state.extensions.put(sourceId, extensionState);
 
             for (final String buildCommand : src.build) {
-               Sys.execVerbose(sourceRepoPath, (Sys.IS_WINDOWS ? "cmd /c " : "") + buildCommand);
+               Sys.execVerbose(sourceRepoDir, (Sys.IS_WINDOWS ? "cmd /c " : "") + buildCommand);
             }
 
-            new VSCodeSingleExtensionSourceHandler(sourceId, src, sourceRepoPath, syntaxesDir, extensionState).handle();
+            new VSCodeSingleExtensionSourceHandler(sourceId, src, sourceRepoDir, syntaxesDir, extensionState).handle();
          } else if (source instanceof final Config.VSCodeMultiExtensionsSource src) {
-            new VSCodeMultiExtensionsSourceHandler(sourceId, src, sourceRepoPath, gitCheckoutState, syntaxesDir, state.extensions).handle();
+            new VSCodeMultiExtensionsSourceHandler(sourceId, src, sourceRepoDir, gitCheckoutState, syntaxesDir, state.extensions).handle();
          }
 
          logInfo("Saving state to [" + stateFile + "]");
@@ -285,33 +309,40 @@ public class Updater {
       logHeader("Updating [plugin.xml]...");
       final var pluginLines = new StringBuilder();
       for (final var ext : state.extensions.entrySet()) {
-         final var extId = ext.getKey();
-         final var extCfg = ext.getValue();
-         final var syntaxDir = syntaxesDir.resolve(extId);
+         final String extId = ext.getKey();
+         final ExtensionState extState = ext.getValue();
+         final Path syntaxDir = syntaxesDir.resolve(extId);
 
-         for (final var lang : extCfg.languages.entrySet()) {
-            final var langId = lang.getKey();
-            final var langState = lang.getValue();
+         for (final var lang : extState.languages.entrySet()) {
+            final String langId = lang.getKey();
+            final LanguageState langState = lang.getValue();
             logInfo("Rendering entry [" + extId + "/" + langId + "]...");
 
-            final var grammarFile = findFirstFile(syntaxDir, //
-               f -> f.matches(Pattern.quote(langId) + "[.]tmLanguage[.](yaml|json|plist)"));
+            final String landIdSanitized = sanitizeFilename(langId);
 
-            final var iconFileName = Files.exists(syntaxDir.resolve(langId + ".png")) ? langId + ".png"
+            final Path grammarFile = findFirstFile(syntaxDir, //
+               f -> f.matches(Pattern.quote(landIdSanitized) + "[.]tmLanguage[.](yaml|json|plist)")).get();
+
+            final String iconFileName = Files.exists(syntaxDir.resolve(landIdSanitized + ".png")) ? landIdSanitized + ".png"
                   : Files.exists(syntaxDir.resolve("icon.png")) ? "icon.png" : null;
 
             final var exampleFile = findFirstFile(syntaxDir, //
-               f -> f.matches(Pattern.quote(langId) + "[.]example[.].*"));
+               f -> f.matches(Pattern.quote(landIdSanitized) + "[.]example[.].*"));
+
+            final var srcLangCfg = config.findSourceLanguageConfig(extId, langId);
+            final var contentBaseType = srcLangCfg == null ? "" : stripToEmpty(srcLangCfg.contentBaseType);
+            final var contentTypeDescriber = srcLangCfg == null ? "" : stripToEmpty(srcLangCfg.contentDescriber);
 
             final var templateVars = new HashMap<String, Object>();
             templateVars.put("ext_id", extId);
             templateVars.put("lang_id", langId);
             templateVars.put("label", langState.label);
-            templateVars.put("content_type_prefix", config.contentTypePrefix);
+            templateVars.put("content_base_type", contentBaseType.isEmpty() ? config.contentBaseType : contentBaseType);
+            templateVars.put("content_type_describer", contentTypeDescriber);
             templateVars.put("content_type_priority", config.contentTypePriority);
             templateVars.put("content_type_id", config.contentTypePrefix + "." + langId);
             templateVars.put("scope_name", langState.scopeName);
-            templateVars.put("grammar_filename", grammarFile.get().getFileName());
+            templateVars.put("grammar_filename", grammarFile.getFileName());
             templateVars.put("icon_filename", iconFileName);
             templateVars.put("example_filename", exampleFile.isPresent() ? exampleFile.get().getFileName() : null);
 
@@ -349,151 +380,102 @@ public class Updater {
                filePatterns.isEmpty() ? null : "file-patterns=\"" + join(filePatterns, ",") + "\"" //
             ).stream().filter(Objects::nonNull).collect(Collectors.joining(" "));
 
-            templateVars.put("file_associations", fileAssociations.isBlank() ? "file-names=\"PREVENT_FILE_ASSOCIATION_INHERITANCE\""
+            templateVars.put("file_associations", fileAssociations.isBlank() && contentTypeDescriber.isEmpty()
+                  ? "file-names=\"PREVENT_FILE_ASSOCIATION_INHERITANCE\""
                   : fileAssociations);
 
-            pluginLines.append(render(
-               """
-                  \n
-                  <!-- ======================================== -->
-                  <!-- {ext_id}/{lang_id}: {label} -->
-                  <!-- ======================================== -->
-                  <extension point="org.eclipse.core.contenttype.contentTypes">
-                    <content-type id="{content_type_id}" name="{label}" base-type="{content_type_prefix}.basetype" priority="{content_type_priority}"
-                                  {file_associations} />
-                  </extension>
-                  <extension point="org.eclipse.tm4e.registry.grammars">
-                    <grammar scopeName="{scope_name}" path="syntaxes/{ext_id}/{grammar_filename}" />
-                    <scopeNameContentTypeBinding scopeName="{scope_name}" contentTypeId="{content_type_id}" />
-                  </extension>""",
-               templateVars));
+            templateVars.put("has_language_configuration", Files.exists(syntaxDir.resolve(langId + ".language-configuration.json")));
+            templateVars.put("has_icon_file", iconFileName != null);
+            templateVars.put("has_example_file", exampleFile.isPresent());
 
-            if (Files.exists(syntaxDir.resolve(langId + ".language-configuration.json"))) {
-               pluginLines.append(render(
-                  """
-                     \n
-                     <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-                       <languageConfiguration contentTypeId="{content_type_id}" path="syntaxes/{ext_id}/{lang_id}.language-configuration.json" />
-                     </extension>""",
-                  templateVars));
-            }
-
-            if (iconFileName != null) {
-               pluginLines.append(render("""
-                  \n
-                  <extension point="org.eclipse.ui.genericeditor.icons">
-                    <icon contentType="{content_type_id}" icon="syntaxes/{ext_id}/{icon_filename}"/>
-                  </extension>""", templateVars));
-            }
-
-            if (exampleFile.isPresent()) {
-               pluginLines.append(render("""
-                  \n
-                  <extension point="org.eclipse.tm4e.ui.snippets">
-                    <snippet name="{label} Example" path="syntaxes/{ext_id}/{example_filename}" scopeName="{scope_name}" />
-                  </extension>""", templateVars));
-            }
+            pluginLines.append(render("updater/plugin.grammar.xml.pebble", templateVars));
          }
 
-         if (!extCfg.inlineGrammarScopeNames.isEmpty()) {
+         if (!extState.inlineGrammarScopeNames.isEmpty()) {
 
-            pluginLines.append(render("""
-               \n
-               <!-- ======================================== -->
-               <!-- {ext_id}: Inline Grammars -->
-               <!-- ======================================== -->
-               <extension point="org.eclipse.tm4e.registry.grammars">
-               """, templateVars -> templateVars.put("ext_id", extId)));
+            final var inlineGrammars = new ArrayList<Map<String, String>>();
+            for (final String inlineScope : extState.inlineGrammarScopeNames) {
+               final Path grammarFile = findFirstFile(syntaxDir, //
+                  f -> f.matches(Pattern.quote(inlineScope) + "[.]tmLanguage[.](yaml|json|plist)")).get();
 
-            for (final var inlineGrammarScopeName : extCfg.inlineGrammarScopeNames) {
-
-               final var grammarFile = findFirstFile(syntaxDir, //
-                  f -> f.matches(Pattern.quote(inlineGrammarScopeName) + "[.]tmLanguage[.](yaml|json|plist)"));
-
-               pluginLines.append(render("""
-                    <grammar scopeName="{scope_name}" path="syntaxes/{ext_id}/{grammar_filename}" />
-                  """, templateVars -> {
-                  templateVars.put("ext_id", extId);
-                  templateVars.put("scope_name", inlineGrammarScopeName);
-                  templateVars.put("grammar_filename", grammarFile.get().getFileName());
-               }));
+               final var entry = new HashMap<String, String>();
+               entry.put("scope_name", inlineScope);
+               entry.put("grammar_filename", grammarFile.getFileName().toString());
+               inlineGrammars.add(entry);
             }
-            pluginLines.append("</extension>");
+
+            final var templateVars = new HashMap<String, Object>();
+            templateVars.put("ext_id", extId);
+            templateVars.put("inlineGrammars", inlineGrammars);
+
+            pluginLines.append(render("updater/plugin.inline-grammar.xml.pebble", templateVars));
          }
       }
 
       final var pluginXML = Path.of(config.targets.pluginXml).toAbsolutePath().normalize();
       logInfo("Saving [" + pluginXML + "]...");
       Files.writeString(pluginXML, //
-         replaceSubstringBetween(Files.readString(pluginXML), //
-            "<!-- START-GENERATED -->", "<!-- END-GENERATED -->", //
-            indent(2, pluginLines.toString()) + "\n\n  ") //
-      );
+         normalizeNewlines( //
+            replaceSubstringBetween(Files.readString(pluginXML), //
+               "<!-- START-GENERATED -->", "<!-- END-GENERATED -->", //
+               "\n" + indent(2, pluginLines.toString()) + "\n\n  ") //
+         ));
    }
 
    private void updateReadmeMD() throws IOException {
       logHeader("Updating [README.md.]...");
 
-      final var readmeLines = new TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER);
-      for (final var ext : state.extensions.entrySet()) {
-         final var extId = ext.getKey();
-         final var extState = ext.getValue();
-         for (final var lang : extState.languages.entrySet()) {
-            final var langId = lang.getKey();
-            final var langState = lang.getValue();
+      final var languages = new ArrayList<Map<String, Object>>();
+
+      for (final var extEntry : state.extensions.entrySet()) {
+         final String extId = extEntry.getKey();
+         final ExtensionState extState = extEntry.getValue();
+
+         for (final var langEntry : extState.languages.entrySet()) {
+            final String langId = langEntry.getKey();
+            final LanguageState langState = langEntry.getValue();
 
             if (isEmpty(langState.fileExtensions) && isEmpty(langState.fileNames) && isEmpty(langState.filePatterns)) {
                continue;
             }
 
-            final var syntaxDir = syntaxesDir.resolve(extId);
-            final var iconFileName = Files.exists(syntaxDir.resolve(langId + ".png")) ? langId + ".png"
+            final Path syntaxDir = syntaxesDir.resolve(extId);
+            final String iconFileName = Files.exists(syntaxDir.resolve(langId + ".png")) ? langId + ".png"
                   : Files.exists(syntaxDir.resolve("icon.png")) ? "icon.png" : null;
 
-            final var templateVars = new HashMap<String, Object>();
-
-            templateVars.put("label", langState.label);
-            templateVars.put("icon", iconFileName == null ? ""
-                  : " <img src=\"plugin/syntaxes/" + extId + "/" + iconFileName + "\" width=16/>");
-
-            templateVars.put("file_associations", //
-               Arrays.asList( //
-                  isEmpty(langState.fileExtensions) ? null
-                        : "file-extensions=\"" + join(langState.fileExtensions.stream().map(Strings::removeLeadingDot).distinct().sorted(),
-                           ", ") + "\"", //
-                  isEmpty(langState.fileNames) ? null : "file-names=\"" + join(langState.fileNames, ", ") + "\"", //
-                  isEmpty(langState.filePatterns) ? null : "file-patterns=\"" + join(langState.filePatterns, ", ") + "\"" //
-               ).stream() //
-                  .filter(Objects::nonNull) //
-                  .collect(Collectors.joining("<br />")) //
-                  .replace("*", "\\\\*"));
-
-            templateVars.put("repo_name", extState.github.repo);
-            templateVars.put("repo_ref", extState.github.ref);
-            templateVars.put("repo_path", extState.github.path == null ? "" : extState.github.path);
-            templateVars.put("commit", extState.github.commit);
-
-            templateVars.put("upstream_url", isURL(langState.upstreamURL) ? " [[upstream]](" + langState.upstreamURL + ")" : "");
-
-            readmeLines.put(langState.label, render(
-               """
-                  | {label}{icon} | {file_associations} | [{repo_ref}@{repo_name}](https://github.com/{repo_name}/tree/{commit}/{repo_path}){upstream_url}
-                  """,
-               templateVars));
+            final var langMap = new HashMap<String, Object>();
+            langMap.put("extId", extId);
+            langMap.put("label", langState.label);
+            langMap.put("iconFileName", iconFileName);
+            langMap.put("file_associations", Arrays.asList( //
+               isEmpty(langState.fileExtensions) ? null
+                     : "file-extensions=\"" + join(langState.fileExtensions.stream().map(Strings::removeLeadingDot).distinct().sorted(),
+                        ", ") + "\"", //
+               isEmpty(langState.fileNames) ? null : "file-names=\"" + join(langState.fileNames, ", ") + "\"", //
+               isEmpty(langState.filePatterns) ? null : "file-patterns=\"" + join(langState.filePatterns, ", ") + "\"" //
+            ).stream() //
+               .filter(Objects::nonNull) //
+               .collect(Collectors.joining("<br />")) //
+               .replace("*", "\\*"));
+            langMap.put("repo_ref", extState.github.ref);
+            langMap.put("repo_name", extState.github.repo);
+            langMap.put("repo_path", extState.github.path == null ? "" : extState.github.path);
+            langMap.put("commit", extState.github.commit);
+            langMap.put("upstream_url", isURL(langState.upstreamURL) ? " [[upstream]](" + langState.upstreamURL + ")" : "");
+            languages.add(langMap);
          }
       }
+
+      languages.sort(Comparator.comparing(l -> (String) l.get("label"), String.CASE_INSENSITIVE_ORDER));
 
       final var readmeMD = Path.of(config.targets.readmeMd).toAbsolutePath().normalize();
       logInfo("Saving [" + readmeMD + "]...");
       Files.writeString(readmeMD, //
-         replaceSubstringBetween(Files.readString(readmeMD), //
-            "<!-- START-GENERATED -->", "<!-- END-GENERATED -->", //
-            """
-               \n
-               | Language/Format | File Associations | Source
-               |:--------------- |:----------------- |:------ |
-               """ + join(readmeLines.values(), "") + "\n") //
-      );
+         normalizeNewlines( //
+            replaceSubstringBetween(Files.readString(readmeMD), //
+               "<!-- START-GENERATED -->", "<!-- END-GENERATED -->", //
+               "\n" + render("updater/readme.md.pebble", Map.of("languages", languages)) + "\n") //
+         ));
    }
 
 }

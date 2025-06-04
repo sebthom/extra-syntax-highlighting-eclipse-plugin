@@ -11,7 +11,6 @@ import static updater.utils.Sys.*;
 import static updater.utils.Validation.isURL;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -52,7 +51,7 @@ abstract class AbstractSourceHandler<T extends Source> {
    record DownloadContext(String targetNamePrefix, boolean updateExistingFiles, Path targetDir) {
    }
 
-   void downloadExampleFile(final DownloadContext ctx, final String examplePathOrURL) throws MalformedURLException, IOException {
+   void downloadExampleFile(final DownloadContext ctx, final String examplePathOrURL) throws IOException {
       if (examplePathOrURL != null) {
          if (isURL(examplePathOrURL)) {
             final var sourceURL = new URL(examplePathOrURL);

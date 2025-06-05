@@ -15,6 +15,8 @@ extensions:
       antlr-injection:
         label: antlr-injection
         scope-name: markdown.antlr.codeblock
+        inject-to:
+        - text.html.markdown
   apache-http:
     github:
       repo: mrmlnc/vscode-apache
@@ -38,7 +40,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: df90fe5f79978b567387cc1b0cedcc23a43bd156
+      commit: 2cbd3f6f01f6ed65adb56d9dcb339cfe2c599031
     languages:
       astro:
         label: Astro
@@ -46,8 +48,13 @@ extensions:
         file-extensions:
         - .astro
     inline-grammars:
-    - source.mdx.astro
-    - text.html.markdown.astro
+    - scope-name: source.mdx.astro
+      inject-to:
+      - source.mdx
+    - scope-name: text.html.markdown.astro
+      inject-to:
+      - source.astro
+      - text.html.markdown
   ballerina:
     github:
       repo: ballerina-platform/ballerina-grammar
@@ -106,7 +113,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: c1eea8f2eb23252f06977b8ad685d56d41b4929b
+      commit: a508b00883d43219538f1d0bbecfd929997bbea2
     languages:
       carbon:
         label: Carbon
@@ -118,7 +125,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 86c38c8fc9702ff93bc032ae392cc19ca7362dee
+      commit: bad7fcaf0a9f653be3e350d16d1f9b7820b91cbe
     languages:
       cobol:
         label: COBOL
@@ -132,8 +139,12 @@ extensions:
         file-patterns:
         - '**/broadcommfd.cobol-language-support/*/copybooks/**'
     inline-grammars:
-    - meta.embedded.block.cics
-    - meta.embedded.block.sql
+    - scope-name: meta.embedded.block.cics
+      inject-to:
+      - source.cobol
+    - scope-name: meta.embedded.block.sql
+      inject-to:
+      - source.cobol
   crystal:
     github:
       repo: crystal-lang-tools/vscode-crystal-lang
@@ -149,6 +160,8 @@ extensions:
       crystal-markdown-injection:
         label: crystal-markdown-injection
         scope-name: markdown.crystal.codeblock
+        inject-to:
+        - text.html.markdown
       ecr:
         label: Embedded Crystal
         scope-name: text.ecr
@@ -202,6 +215,8 @@ extensions:
       d2-markdown-injection:
         label: d2-markdown-injection
         scope-name: markdown.d2.codeblock
+        inject-to:
+        - text.html.markdown
       markdown.d2:
         label: markdown.d2
         scope-name: text.html.markdown.d2
@@ -221,7 +236,7 @@ extensions:
     github:
       repo: editorconfig/editorconfig-vscode
       ref: main
-      commit: 02aea3dc4b51e07376ff27472aacf99481322fc5
+      commit: 71eca1f86c2e0c61464ddbf445a076f1c1473536
     languages:
       editorconfig:
         label: EditorConfig
@@ -240,7 +255,9 @@ extensions:
         file-extensions:
         - .elm
     inline-grammars:
-    - markdown.elm.codeblock
+    - scope-name: markdown.elm.codeblock
+      inject-to:
+      - text.html.markdown
   er:
     github:
       repo: mikkel-ol/vsc-er-syntax-highlighting
@@ -253,7 +270,9 @@ extensions:
         file-extensions:
         - .er
     inline-grammars:
-    - markdown.er.codeblock
+    - scope-name: markdown.er.codeblock
+      inject-to:
+      - text.html.markdown
   erlang:
     github:
       repo: erlang-ls/vscode
@@ -281,7 +300,9 @@ extensions:
         file-extensions:
         - .fish
     inline-grammars:
-    - markdown.fish.codeblock
+    - scope-name: markdown.fish.codeblock
+      inject-to:
+      - text.html.markdown
   fortran:
     github:
       repo: fortran-lang/vscode-fortran-support
@@ -319,8 +340,12 @@ extensions:
         - .fypp
         - .pf
     inline-grammars:
-    - source.openacc
-    - source.openmp
+    - scope-name: source.openacc
+      inject-to:
+      - source.fortran.free
+    - scope-name: source.openmp
+      inject-to:
+      - source.fortran.free
   gleam:
     github:
       repo: gleam-lang/vscode-gleam
@@ -333,7 +358,9 @@ extensions:
         file-extensions:
         - .gleam
     inline-grammars:
-    - markdown.gleam.codeblock
+    - scope-name: markdown.gleam.codeblock
+      inject-to:
+      - text.html.markdown
   glsl:
     github:
       repo: GeForceLegend/vscode-glsl
@@ -370,13 +397,15 @@ extensions:
         - .vsh
         - .vshader
     inline-grammars:
-    - markdown.glsl.codeblock
+    - scope-name: markdown.glsl.codeblock
+      inject-to:
+      - text.html.markdown
   graphql:
     github:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 3b93d27f7568d93db5cd146157220b127eeea737
+      commit: 1d88966580afb8a6ed64b634ee72ca4ffcc085fa
     languages:
       graphql:
         label: GraphQL
@@ -386,13 +415,47 @@ extensions:
         - .graphql
         - .graphqls
     inline-grammars:
-    - inline.graphql
-    - inline.graphql.markdown.codeblock
-    - inline.graphql.php
-    - inline.graphql.python
-    - inline.graphql.re
-    - inline.graphql.res
-    - inline.graphql.scala
+    - scope-name: inline.graphql
+      inject-to:
+      - source.astro
+      - source.js
+      - source.js.jsx
+      - source.svelte
+      - source.ts
+      - source.tsx
+      - source.vue
+      - text.html.derivative
+      - text.html.markdown
+    - scope-name: inline.graphql.markdown.codeblock
+      inject-to:
+      - text.html.derivative
+      - text.html.markdown
+    - scope-name: inline.graphql.php
+      inject-to:
+      - text.html.derivative
+      - text.html.markdown
+      - text.html.php
+    - scope-name: inline.graphql.python
+      inject-to:
+      - source.python
+      - text.html.derivative
+      - text.html.markdown
+    - scope-name: inline.graphql.re
+      inject-to:
+      - source.ocaml
+      - source.reason
+      - text.html.derivative
+      - text.html.markdown
+    - scope-name: inline.graphql.res
+      inject-to:
+      - source.rescript
+      - text.html.derivative
+      - text.html.markdown
+    - scope-name: inline.graphql.scala
+      inject-to:
+      - source.scala
+      - text.html.derivative
+      - text.html.markdown
   haxe:
     github:
       repo: vshaxe/haxe-TmLanguage
@@ -430,7 +493,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 9adc13cd9af344776c4214b25ce5e187f9bc45f7
+      commit: 563e73437ea36ff6b5857c76bc028735cec00647
     languages:
       helm:
         label: helm-template
@@ -789,7 +852,9 @@ extensions:
         - .kt
         - .kts
     inline-grammars:
-    - markdown.kotlin.codeblock
+    - scope-name: markdown.kotlin.codeblock
+      inject-to:
+      - text.html.markdown
   ldif:
     github:
       repo: FlashSystems/LDIF-Syntax
@@ -827,7 +892,10 @@ extensions:
         - .markdoc.md
         - .mdoc
     inline-grammars:
-    - text.html.markdown.markdoc.injection
+    - scope-name: text.html.markdown.markdoc.injection
+      inject-to:
+      - source.markup.markdoc
+      - text.html.markdown
   markdown:
     github:
       repo: wooorm/markdown-tm-language
@@ -854,7 +922,7 @@ extensions:
       repo: mdx-js/mdx-analyzer
       path: packages/vscode-mdx
       ref: main
-      commit: f20fb8e182a23355e8c6864999689a6204a90c2c
+      commit: bf880355d603962e803955c2fd504753ba8f6053
     languages:
       mdx:
         label: MDX
@@ -862,12 +930,14 @@ extensions:
         file-extensions:
         - .mdx
     inline-grammars:
-    - source.markdown.mdx.codeblock
+    - scope-name: source.markdown.mdx.codeblock
+      inject-to:
+      - text.html.markdown
   mermaid:
     github:
       repo: bpruitt-goddard/vscode-mermaid-syntax-highlight
       ref: master
-      commit: 469cc2a8d80e150a9b330ad8183e9874aa39e754
+      commit: 725b6e676fe9c743b3caf00defb907545d3a0da0
     languages:
       mermaid:
         label: mermaid
@@ -876,8 +946,12 @@ extensions:
         - .mermaid
         - .mmd
     inline-grammars:
-    - markdown.mermaid.codeblock
-    - mdx.mermaid.codeblock
+    - scope-name: markdown.mermaid.codeblock
+      inject-to:
+      - text.html.markdown
+    - scope-name: mdx.mermaid.codeblock
+      inject-to:
+      - source.mdx
   nginx:
     github:
       repo: ahmadalli/vscode-nginx-conf
@@ -910,7 +984,7 @@ extensions:
         - .njk
         - .njk.html
     inline-grammars:
-    - source.njk
+    - scope-name: source.njk
   nushell:
     github:
       repo: nushell/vscode-nushell-lang
@@ -923,12 +997,14 @@ extensions:
         file-extensions:
         - .nu
     inline-grammars:
-    - markdown.nushell.codeblock
+    - scope-name: markdown.nushell.codeblock
+      inject-to:
+      - text.html.markdown
   ocaml:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 119b239d81d3e6d1408f6a8bd50208e004070c55
+      commit: 910a44354ee59d3e728badf72474ad53bab43d45
     languages:
       ocaml:
         label: OCaml
@@ -969,15 +1045,21 @@ extensions:
         - .re
         - .rei
     inline-grammars:
-    - markdown.ocaml.codeblock
-    - markdown.reason.codeblock
-    - source.action.menhir
+    - scope-name: markdown.ocaml.codeblock
+      inject-to:
+      - text.html.markdown
+    - scope-name: markdown.reason.codeblock
+      inject-to:
+      - text.html.markdown
+    - scope-name: source.action.menhir
+      inject-to:
+      - source.ocaml
   odin:
     github:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 07ea39ecdcf02dba84c82d90b028055463f6562c
+      commit: 4fb3c51850eadffe0091dcd297ff284526dca601
     languages:
       odin:
         label: odin
@@ -985,7 +1067,9 @@ extensions:
         file-extensions:
         - .odin
     inline-grammars:
-    - markdown.odin.codeblock
+    - scope-name: markdown.odin.codeblock
+      inject-to:
+      - text.html.markdown
   pascal:
     github:
       repo: textmate/pascal.tmbundle
@@ -1021,7 +1105,9 @@ extensions:
         - .puml
         - .wsd
     inline-grammars:
-    - markdown.plantuml.codeblock
+    - scope-name: markdown.plantuml.codeblock
+      inject-to:
+      - text.html.markdown
   pony:
     github:
       repo: chalcolith/eohippus
@@ -1039,7 +1125,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 629cd68806bcdd9680871818b90104d5465f38f2
+      commit: 8fcb5be0ae0eb4cf68627d67045a3f3e62d8515d
     languages:
       prisma:
         label: Prisma
@@ -1047,15 +1133,31 @@ extensions:
         file-extensions:
         - .prisma
     inline-grammars:
-    - inline.prisma
-    - markdown.prisma.codeblock
-    - source.ts.prismaClientRawSQL
+    - scope-name: inline.prisma
+      inject-to:
+      - source.js
+      - source.js.jsx
+      - source.jsx
+      - source.ts
+      - source.tsx
+      - source.vue
+    - scope-name: markdown.prisma.codeblock
+      inject-to:
+      - text.html.markdown
+    - scope-name: source.ts.prismaClientRawSQL
+      inject-to:
+      - source.js
+      - source.js.jsx
+      - source.jsx
+      - source.ts
+      - source.tsx
+      - source.vue
   ring:
     github:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 6bd6dd14134fe89cb8f0de6499a5e19867b0f5c4
+      commit: 96a7b7a3e1d36b9f11226a5789011a076d6e1dd3
     languages:
       ring:
         label: Ring
@@ -1088,13 +1190,30 @@ extensions:
         file-extensions:
         - .svelte
     inline-grammars:
-    - markdown.svelte.codeblock
-    - markdown.svelte.codeblock.script
-    - markdown.svelte.codeblock.style
-    - source.css.postcss
-    - svelte.pug
-    - svelte.pug.dotblock
-    - svelte.pug.tags
+    - scope-name: markdown.svelte.codeblock
+      inject-to:
+      - source.mdx
+      - text.html.markdown
+    - scope-name: markdown.svelte.codeblock.script
+      inject-to:
+      - source.mdx
+      - text.html.markdown
+    - scope-name: markdown.svelte.codeblock.style
+      inject-to:
+      - source.mdx
+      - text.html.markdown
+    - scope-name: source.css.postcss
+      inject-to:
+      - source.svelte
+    - scope-name: svelte.pug
+      inject-to:
+      - source.svelte
+    - scope-name: svelte.pug.dotblock
+      inject-to:
+      - source.svelte
+    - scope-name: svelte.pug.tags
+      inject-to:
+      - source.svelte
   toml:
     github:
       repo: juggernautjp/less-toml
@@ -1112,7 +1231,9 @@ extensions:
         - Pipfile
         - pdm.lock
     inline-grammars:
-    - markdown.toml.codeblock
+    - scope-name: markdown.toml.codeblock
+      inject-to:
+      - text.html.markdown
   twig:
     github:
       repo: rholdos/vscode-twig-language-support
@@ -1139,12 +1260,14 @@ extensions:
         - .w
         - .wsim
     inline-grammars:
-    - markdown.wing.codeblock
+    - scope-name: markdown.wing.codeblock
+      inject-to:
+      - text.html.markdown
   zig:
     github:
       repo: ziglang/vscode-zig
       ref: master
-      commit: dba6b80173d92c002ba7f32d03a22e3d4253b0da
+      commit: 59b1eb0e6ac0ad5fe3f571841c7952ff831613bc
     languages:
       zig:
         label: Zig

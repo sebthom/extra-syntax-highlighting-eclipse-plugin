@@ -90,6 +90,7 @@
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.antlr.codeblock" path="syntaxes/antlr4/antlr-injection.tmLanguage.json" />
     <scopeNameContentTypeBinding scopeName="markdown.antlr.codeblock" contentTypeId="extra-syntax-highlighting.antlr-injection" />
+    <injection scopeName="markdown.antlr.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
@@ -149,7 +150,10 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.mdx.astro" path="syntaxes/astro/source.mdx.astro.tmLanguage.json" />
+    <injection scopeName="source.mdx.astro" injectTo="source.mdx" />
     <grammar scopeName="text.html.markdown.astro" path="syntaxes/astro/text.html.markdown.astro.tmLanguage.json" />
+    <injection scopeName="text.html.markdown.astro" injectTo="source.astro" />
+    <injection scopeName="text.html.markdown.astro" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -285,7 +289,9 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="meta.embedded.block.cics" path="syntaxes/cobol/meta.embedded.block.cics.tmLanguage.json" />
+    <injection scopeName="meta.embedded.block.cics" injectTo="source.cobol" />
     <grammar scopeName="meta.embedded.block.sql" path="syntaxes/cobol/meta.embedded.block.sql.tmLanguage.json" />
+    <injection scopeName="meta.embedded.block.sql" injectTo="source.cobol" />
   </extension>
 
   <!-- ======================================== -->
@@ -322,6 +328,7 @@
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.crystal.codeblock" path="syntaxes/crystal/crystal-markdown-injection.tmLanguage.json" />
     <scopeNameContentTypeBinding scopeName="markdown.crystal.codeblock" contentTypeId="extra-syntax-highlighting.crystal-markdown-injection" />
+    <injection scopeName="markdown.crystal.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
@@ -529,6 +536,7 @@
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.d2.codeblock" path="syntaxes/d2/d2-markdown-injection.tmLanguage.json" />
     <scopeNameContentTypeBinding scopeName="markdown.d2.codeblock" contentTypeId="extra-syntax-highlighting.d2-markdown-injection" />
+    <injection scopeName="markdown.d2.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
@@ -620,6 +628,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.elm.codeblock" path="syntaxes/elm/markdown.elm.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.elm.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -651,6 +660,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.er.codeblock" path="syntaxes/er/markdown.er.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.er.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -706,6 +716,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.fish.codeblock" path="syntaxes/fish/markdown.fish.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.fish.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -761,7 +772,9 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.openacc" path="syntaxes/fortran/source.openacc.tmLanguage.json" />
+    <injection scopeName="source.openacc" injectTo="source.fortran.free" />
     <grammar scopeName="source.openmp" path="syntaxes/fortran/source.openmp.tmLanguage.json" />
+    <injection scopeName="source.openmp" injectTo="source.fortran.free" />
   </extension>
 
   <!-- ======================================== -->
@@ -793,6 +806,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.gleam.codeblock" path="syntaxes/gleam/markdown.gleam.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.gleam.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -824,6 +838,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.glsl.codeblock" path="syntaxes/glsl/markdown.glsl.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.glsl.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -855,12 +870,39 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="inline.graphql" path="syntaxes/graphql/inline.graphql.tmLanguage.json" />
+    <injection scopeName="inline.graphql" injectTo="source.astro" />
+    <injection scopeName="inline.graphql" injectTo="source.js" />
+    <injection scopeName="inline.graphql" injectTo="source.js.jsx" />
+    <injection scopeName="inline.graphql" injectTo="source.svelte" />
+    <injection scopeName="inline.graphql" injectTo="source.ts" />
+    <injection scopeName="inline.graphql" injectTo="source.tsx" />
+    <injection scopeName="inline.graphql" injectTo="source.vue" />
+    <injection scopeName="inline.graphql" injectTo="text.html.derivative" />
+    <injection scopeName="inline.graphql" injectTo="text.html.markdown" />
     <grammar scopeName="inline.graphql.markdown.codeblock" path="syntaxes/graphql/inline.graphql.markdown.codeblock.tmLanguage.json" />
+    <injection scopeName="inline.graphql.markdown.codeblock" injectTo="text.html.derivative" />
+    <injection scopeName="inline.graphql.markdown.codeblock" injectTo="text.html.markdown" />
     <grammar scopeName="inline.graphql.php" path="syntaxes/graphql/inline.graphql.php.tmLanguage.json" />
+    <injection scopeName="inline.graphql.php" injectTo="text.html.derivative" />
+    <injection scopeName="inline.graphql.php" injectTo="text.html.markdown" />
+    <injection scopeName="inline.graphql.php" injectTo="text.html.php" />
     <grammar scopeName="inline.graphql.python" path="syntaxes/graphql/inline.graphql.python.tmLanguage.json" />
+    <injection scopeName="inline.graphql.python" injectTo="source.python" />
+    <injection scopeName="inline.graphql.python" injectTo="text.html.derivative" />
+    <injection scopeName="inline.graphql.python" injectTo="text.html.markdown" />
     <grammar scopeName="inline.graphql.re" path="syntaxes/graphql/inline.graphql.re.tmLanguage.json" />
+    <injection scopeName="inline.graphql.re" injectTo="source.ocaml" />
+    <injection scopeName="inline.graphql.re" injectTo="source.reason" />
+    <injection scopeName="inline.graphql.re" injectTo="text.html.derivative" />
+    <injection scopeName="inline.graphql.re" injectTo="text.html.markdown" />
     <grammar scopeName="inline.graphql.res" path="syntaxes/graphql/inline.graphql.res.tmLanguage.json" />
+    <injection scopeName="inline.graphql.res" injectTo="source.rescript" />
+    <injection scopeName="inline.graphql.res" injectTo="text.html.derivative" />
+    <injection scopeName="inline.graphql.res" injectTo="text.html.markdown" />
     <grammar scopeName="inline.graphql.scala" path="syntaxes/graphql/inline.graphql.scala.tmLanguage.json" />
+    <injection scopeName="inline.graphql.scala" injectTo="source.scala" />
+    <injection scopeName="inline.graphql.scala" injectTo="text.html.derivative" />
+    <injection scopeName="inline.graphql.scala" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -1648,6 +1690,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.kotlin.codeblock" path="syntaxes/kotlin/markdown.kotlin.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.kotlin.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -1711,6 +1754,8 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="text.html.markdown.markdoc.injection" path="syntaxes/markdoc/text.html.markdown.markdoc.injection.tmLanguage.json" />
+    <injection scopeName="text.html.markdown.markdoc.injection" injectTo="source.markup.markdoc" />
+    <injection scopeName="text.html.markdown.markdoc.injection" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -1758,6 +1803,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="source.markdown.mdx.codeblock" path="syntaxes/mdx/source.markdown.mdx.codeblock.tmLanguage.json" />
+    <injection scopeName="source.markdown.mdx.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -1789,7 +1835,9 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.mermaid.codeblock" path="syntaxes/mermaid/markdown.mermaid.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.mermaid.codeblock" injectTo="text.html.markdown" />
     <grammar scopeName="mdx.mermaid.codeblock" path="syntaxes/mermaid/mdx.mermaid.codeblock.tmLanguage.json" />
+    <injection scopeName="mdx.mermaid.codeblock" injectTo="source.mdx" />
   </extension>
 
   <!-- ======================================== -->
@@ -1876,6 +1924,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.nushell.codeblock" path="syntaxes/nushell/markdown.nushell.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.nushell.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -2023,8 +2072,11 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.ocaml.codeblock" path="syntaxes/ocaml/markdown.ocaml.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.ocaml.codeblock" injectTo="text.html.markdown" />
     <grammar scopeName="markdown.reason.codeblock" path="syntaxes/ocaml/markdown.reason.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.reason.codeblock" injectTo="text.html.markdown" />
     <grammar scopeName="source.action.menhir" path="syntaxes/ocaml/source.action.menhir.tmLanguage.json" />
+    <injection scopeName="source.action.menhir" injectTo="source.ocaml" />
   </extension>
 
   <!-- ======================================== -->
@@ -2056,6 +2108,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.odin.codeblock" path="syntaxes/odin/markdown.odin.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.odin.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -2107,6 +2160,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.plantuml.codeblock" path="syntaxes/plantuml/markdown.plantuml.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.plantuml.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -2158,8 +2212,21 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="inline.prisma" path="syntaxes/prisma/inline.prisma.tmLanguage.json" />
+    <injection scopeName="inline.prisma" injectTo="source.js" />
+    <injection scopeName="inline.prisma" injectTo="source.js.jsx" />
+    <injection scopeName="inline.prisma" injectTo="source.jsx" />
+    <injection scopeName="inline.prisma" injectTo="source.ts" />
+    <injection scopeName="inline.prisma" injectTo="source.tsx" />
+    <injection scopeName="inline.prisma" injectTo="source.vue" />
     <grammar scopeName="markdown.prisma.codeblock" path="syntaxes/prisma/markdown.prisma.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.prisma.codeblock" injectTo="text.html.markdown" />
     <grammar scopeName="source.ts.prismaClientRawSQL" path="syntaxes/prisma/source.ts.prismaClientRawSQL.tmLanguage.json" />
+    <injection scopeName="source.ts.prismaClientRawSQL" injectTo="source.js" />
+    <injection scopeName="source.ts.prismaClientRawSQL" injectTo="source.js.jsx" />
+    <injection scopeName="source.ts.prismaClientRawSQL" injectTo="source.jsx" />
+    <injection scopeName="source.ts.prismaClientRawSQL" injectTo="source.ts" />
+    <injection scopeName="source.ts.prismaClientRawSQL" injectTo="source.tsx" />
+    <injection scopeName="source.ts.prismaClientRawSQL" injectTo="source.vue" />
   </extension>
 
   <!-- ======================================== -->
@@ -2239,12 +2306,22 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.svelte.codeblock" path="syntaxes/svelte/markdown.svelte.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.svelte.codeblock" injectTo="source.mdx" />
+    <injection scopeName="markdown.svelte.codeblock" injectTo="text.html.markdown" />
     <grammar scopeName="markdown.svelte.codeblock.script" path="syntaxes/svelte/markdown.svelte.codeblock.script.tmLanguage.json" />
+    <injection scopeName="markdown.svelte.codeblock.script" injectTo="source.mdx" />
+    <injection scopeName="markdown.svelte.codeblock.script" injectTo="text.html.markdown" />
     <grammar scopeName="markdown.svelte.codeblock.style" path="syntaxes/svelte/markdown.svelte.codeblock.style.tmLanguage.json" />
+    <injection scopeName="markdown.svelte.codeblock.style" injectTo="source.mdx" />
+    <injection scopeName="markdown.svelte.codeblock.style" injectTo="text.html.markdown" />
     <grammar scopeName="source.css.postcss" path="syntaxes/svelte/source.css.postcss.tmLanguage.yaml" />
+    <injection scopeName="source.css.postcss" injectTo="source.svelte" />
     <grammar scopeName="svelte.pug" path="syntaxes/svelte/svelte.pug.tmLanguage.json" />
+    <injection scopeName="svelte.pug" injectTo="source.svelte" />
     <grammar scopeName="svelte.pug.dotblock" path="syntaxes/svelte/svelte.pug.dotblock.tmLanguage.json" />
+    <injection scopeName="svelte.pug.dotblock" injectTo="source.svelte" />
     <grammar scopeName="svelte.pug.tags" path="syntaxes/svelte/svelte.pug.tags.tmLanguage.json" />
+    <injection scopeName="svelte.pug.tags" injectTo="source.svelte" />
   </extension>
 
   <!-- ======================================== -->
@@ -2276,6 +2353,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.toml.codeblock" path="syntaxes/toml/markdown.toml.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.toml.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->
@@ -2331,6 +2409,7 @@
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="markdown.wing.codeblock" path="syntaxes/wing/markdown.wing.codeblock.tmLanguage.json" />
+    <injection scopeName="markdown.wing.codeblock" injectTo="text.html.markdown" />
   </extension>
 
   <!-- ======================================== -->

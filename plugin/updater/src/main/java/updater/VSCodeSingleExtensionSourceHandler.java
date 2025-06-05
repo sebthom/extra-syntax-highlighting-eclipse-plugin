@@ -22,6 +22,7 @@ import javax.imageio.ImageIO;
 import net.coobird.thumbnailator.Thumbnails;
 import updater.Updater.Config;
 import updater.Updater.State.ExtensionState;
+import updater.Updater.State.InlineGrammarState;
 import updater.Updater.State.LanguageState;
 import updater.Updater.VsCodeExtensionPackageJson;
 import updater.Updater.VsCodeExtensionPackageJson.Contributions;
@@ -165,6 +166,9 @@ class VSCodeSingleExtensionSourceHandler extends AbstractSourceHandler<Config.VS
          langState.scopeName = !isBlank(langOverrides.scopeName) //
                ? langOverrides.scopeName //
                : grammarCfg == null ? null : grammarCfg.scopeName();
+         langState.injectTo = !isEmpty(langOverrides.injectTo) //
+               ? new TreeSet<>(langOverrides.injectTo) //
+               : grammarCfg == null || grammarCfg.injectTo() == null ? null : new TreeSet<>(grammarCfg.injectTo());
          langState.fileExtensions = !isEmpty(langOverrides.fileExtensions) //
                ? new TreeSet<>(langOverrides.fileExtensions) //
                : langCfg.fileExtensions() == null ? null : new TreeSet<>(langCfg.fileExtensions());
@@ -191,7 +195,10 @@ class VSCodeSingleExtensionSourceHandler extends AbstractSourceHandler<Config.VS
          final var grammarPath = isBlank(grammarOverrides.grammar) ? grammarCfg.path() : grammarOverrides.grammar;
          final var ctx = new DownloadContext(Strings.sanitizeFilename(scopeName), grammarOverrides.update, targetSyntaxDir);
          downloadTextMateGrammarFile(ctx, grammarPath);
-         state.inlineGrammarScopeNames.add(scopeName);
+         final var inlineGrammarSate = new InlineGrammarState();
+         inlineGrammarSate.scopeName = scopeName;
+         inlineGrammarSate.injectTo = grammarCfg.injectTo() == null ? null : new TreeSet<>(grammarCfg.injectTo());
+         state.inlineGrammars.add(inlineGrammarSate);
       }
    }
 }

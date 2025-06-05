@@ -38,6 +38,7 @@ import com.fasterxml.jackson.core.JacksonException;
 
 import updater.Updater.Config.Source;
 import updater.Updater.State.ExtensionState;
+import updater.Updater.State.InlineGrammarState;
 import updater.Updater.State.LanguageState;
 import updater.utils.Git.GitCheckoutConfig;
 import updater.utils.Git.GitCheckoutState;
@@ -75,6 +76,7 @@ public class Updater {
          public String grammar;
          public String langcfg;
          public String example;
+         public List<String> injectTo;
          public List<String> fileExtensions;
          public List<String> fileNames;
          public List<String> filePatterns;
@@ -90,6 +92,7 @@ public class Updater {
       static class InlineGrammar extends WithToString {
          public boolean update = true;
          public String grammar;
+         public List<String> injectTo;
       }
 
       static class InlineGrammarIgnoreable extends InlineGrammar {
@@ -154,13 +157,24 @@ public class Updater {
       static class ExtensionState extends WithToString {
          public GitCheckoutState github;
          public SortedMap<String /* langId */, LanguageState> languages = new TreeMap<>();
-         public @JsonProperty("inline-grammars") SortedSet<String /* scopeName */> inlineGrammarScopeNames = new TreeSet<>();
+         public @JsonProperty("inline-grammars") SortedSet<InlineGrammarState> inlineGrammars = new TreeSet<>();
+      }
+
+      static class InlineGrammarState extends WithToString implements Comparable<InlineGrammarState> {
+         public String scopeName;
+         public SortedSet<String> injectTo;
+
+         @Override
+         public int compareTo(final InlineGrammarState o) {
+            return scopeName.compareTo(o.scopeName);
+         }
       }
 
       static class LanguageState extends WithToString {
          public String label;
          public String scopeName;
          public String upstreamURL;
+         public SortedSet<String> injectTo;
          public SortedSet<String> fileExtensions;
          public SortedSet<String> fileNames;
          public SortedSet<String> filePatterns;
@@ -185,7 +199,8 @@ public class Updater {
          record Grammar( //
                String language, //
                @JsonProperty(required = true) String scopeName, //
-               @JsonProperty(required = true) String path) {
+               @JsonProperty(required = true) String path, //
+               List<String> injectTo) {
          }
 
          record Language( //
@@ -345,7 +360,7 @@ public class Updater {
             templateVars.put("grammar_filename", grammarFile.getFileName());
             templateVars.put("icon_filename", iconFileName);
             templateVars.put("example_filename", exampleFile.isPresent() ? exampleFile.get().getFileName() : null);
-
+            templateVars.put("inject_to", langState.injectTo);
             List<String> fileExtensions = new ArrayList<>();
             List<String> fileNames = new ArrayList<>();
             List<String> filePatterns = new ArrayList<>();
@@ -391,15 +406,16 @@ public class Updater {
             pluginLines.append(render("updater/plugin.grammar.xml.peb", templateVars));
          }
 
-         if (!extState.inlineGrammarScopeNames.isEmpty()) {
+         if (!extState.inlineGrammars.isEmpty()) {
 
-            final var inlineGrammars = new ArrayList<Map<String, String>>();
-            for (final String inlineScope : extState.inlineGrammarScopeNames) {
+            final var inlineGrammars = new ArrayList<Map<String, Object>>();
+            for (final InlineGrammarState inlineGrammar : extState.inlineGrammars) {
                final Path grammarFile = findFirstFile(syntaxDir, //
-                  f -> f.matches(Pattern.quote(inlineScope) + "[.]tmLanguage[.](yaml|json|plist)")).get();
+                  f -> f.matches(Pattern.quote(inlineGrammar.scopeName) + "[.]tmLanguage[.](yaml|json|plist)")).get();
 
-               final var entry = new HashMap<String, String>();
-               entry.put("scope_name", inlineScope);
+               final var entry = new HashMap<String, Object>();
+               entry.put("scope_name", inlineGrammar.scopeName);
+               entry.put("inject_to", inlineGrammar.injectTo);
                entry.put("grammar_filename", grammarFile.getFileName().toString());
                inlineGrammars.add(entry);
             }

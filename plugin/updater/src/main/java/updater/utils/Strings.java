@@ -20,14 +20,19 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import io.pebbletemplates.pebble.PebbleEngine;
-import io.pebbletemplates.pebble.loader.ClasspathLoader;
+import io.pebbletemplates.pebble.loader.FileLoader;
 
 /**
  * @author Sebastian Thomschke
  */
 public abstract class Strings {
 
-   private static final PebbleEngine PEBBLE = new PebbleEngine.Builder().loader(new ClasspathLoader()).build();
+   private static final PebbleEngine PEBBLE = new PebbleEngine.Builder().loader(new FileLoader() {
+      // using FileLoader is a workaround because ClasspathLoader for some reason does not find templates on GHA/Linux
+      {
+         setPrefix("src/main/resources");
+      }
+   }).build();
 
    public static String indent(final int spaces, final String input) {
       final String indentation = " ".repeat(spaces);

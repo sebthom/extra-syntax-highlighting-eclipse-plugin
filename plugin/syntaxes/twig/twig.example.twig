@@ -1,0 +1,44 @@
+{# ======================= #}
+{#    Base Layout File     #}
+{# ======================= #}
+{% extends "base.twig" %}
+
+{# Override a block defined in base.twig #}
+{% block content %}
+
+  <h1>{{ title|upper }}</h1>
+
+  {# Conditional logic #}
+  {% if user.is_logged_in %}
+    <p>Welcome back, {{ user.name|title }}!</p>
+  {% else %}
+    <p>Please <a href="/login">log in</a>.</p>
+  {% endif %}
+
+  {# Set a variable #}
+  {% set items = ['apple', 'banana', 'cherry'] %}
+
+  <h2>Items List</h2>
+  <ul>
+    {% for item in items %}
+      <li>{{ loop.index }}. {{ item|capitalize }}</li>
+    {% else %}
+      <li>No items found.</li>
+    {% endfor %}
+  </ul>
+
+  {# Raw output block (e.g., render JS template) #}
+  {% raw %}
+    {{ This will not be parsed by Twig }}
+  {% endraw %}
+
+  {# Include another template #}
+  {% include "partials/_footer.twig" with {'year': "2025"} only %}
+
+  {# Use a macro from another file #}
+  {% import "macros/form.twig" as form %}
+
+  <h2>Contact Us</h2>
+  {{ form.input('email', 'Email Address') }}
+
+{% endblock %}

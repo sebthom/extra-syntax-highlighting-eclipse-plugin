@@ -35,6 +35,8 @@ public abstract class ObjectMappers {
             {
                // :-( https://github.com/FasterXML/jackson-dataformats-text/issues/4
                setDefaultFlowStyle(DumperOptions.FlowStyle.AUTO);
+
+               setLineBreak(DumperOptions.LineBreak.getPlatformLineBreak());
             }
          }) //
          .enable(YAMLGenerator.Feature.MINIMIZE_QUOTES) //

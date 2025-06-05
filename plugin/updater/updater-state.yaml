@@ -1113,6 +1113,18 @@ extensions:
         - pdm.lock
     inline-grammars:
     - markdown.toml.codeblock
+  twig:
+    github:
+      repo: rholdos/vscode-twig-language-support
+      ref: main
+      commit: f1e9a1722c91d3f3b3c548386861fd01bfdbeb3b
+    languages:
+      twig:
+        label: Twig
+        scope-name: source.twig
+        file-extensions:
+        - .peb
+        - .twig
   wing:
     github:
       repo: winglang/wing

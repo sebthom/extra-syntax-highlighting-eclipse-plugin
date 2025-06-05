@@ -597,6 +597,18 @@ sources:
         - pdm.lock
         - Pipfile
 
+  twig:
+    type: vscode-extension
+    github:
+      repo: rholdos/vscode-twig-language-support
+      #repo: moetelo/twiggy
+      #path: packages/vscode
+    languages:
+      twig:
+        file-extensions:
+        - .peb # pebbletemplates.io
+        - .twig
+
   wing:
     type: vscode-extension
     github:

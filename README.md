@@ -70,6 +70,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. Roc (`*.roc`) - https://www.roc-lang.org/
 1. Svelte - https://svelte.dev/
 1. TOML - https://toml.io/en/
+1. Twig Templates (`*.twig`) - https://twig.symfony.com/
 1. Wing - https://www.winglang.io/
 1. Zig - https://ziglang.org/
 
@@ -195,6 +196,7 @@ To install the plugin into an existing Eclipse installation do:
 | Svelte <img src="plugin/syntaxes/svelte/icon.png" width=16/> | file-extensions="svelte" | [master@sveltejs/language-tools](https://github.com/sveltejs/language-tools/tree/ef92ff314e6f647c10c36b04c151da911453e19e/packages/svelte-vscode)
 | TOML Config File <img src="plugin/syntaxes/toml/icon.png" width=16/> | file-extensions="toml"<br />file-names="Cargo.lock, Pipfile, pdm.lock" | [master@juggernautjp/less-toml](https://github.com/juggernautjp/less-toml/tree/13eb891232e98c4a9c595bf8c657893c84edf3a9/) [[upstream]](https://github.com/textmate/toml.tmbundle/commit/e82b64c1e86396220786846201e9aa3f0a2d9ca2)
 | TSV <img src="plugin/syntaxes/csv/icon.png" width=16/> | file-extensions="tab, tsv" | [master@mechatroner/vscode_rainbow_csv](https://github.com/mechatroner/vscode_rainbow_csv/tree/18c3cb377fd42128f39ff21706efdc1d6a73efc0/)
+| Twig <img src="plugin/syntaxes/twig/icon.png" width=16/> | file-extensions="peb, twig" | [main@rholdos/vscode-twig-language-support](https://github.com/rholdos/vscode-twig-language-support/tree/f1e9a1722c91d3f3b3c548386861fd01bfdbeb3b/)
 | Wing <img src="plugin/syntaxes/wing/wing.png" width=16/> | file-extensions="w, wsim" | [main@winglang/wing](https://github.com/winglang/wing/tree/43ec45981cbb3f08b19d882e86f068e7eebc6c66/packages/vscode-wing)
 | Zig <img src="plugin/syntaxes/zig/icon.png" width=16/> | file-extensions="zig, zon" | [master@ziglang/vscode-zig](https://github.com/ziglang/vscode-zig/tree/dba6b80173d92c002ba7f32d03a22e3d4253b0da/)
 

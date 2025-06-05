@@ -388,7 +388,7 @@ public class Updater {
             templateVars.put("has_icon_file", iconFileName != null);
             templateVars.put("has_example_file", exampleFile.isPresent());
 
-            pluginLines.append(render("updater/plugin.grammar.xml.pebble", templateVars));
+            pluginLines.append(render("updater/plugin.grammar.xml.peb", templateVars));
          }
 
          if (!extState.inlineGrammarScopeNames.isEmpty()) {
@@ -408,7 +408,7 @@ public class Updater {
             templateVars.put("ext_id", extId);
             templateVars.put("inlineGrammars", inlineGrammars);
 
-            pluginLines.append(render("updater/plugin.inline-grammar.xml.pebble", templateVars));
+            pluginLines.append(render("updater/plugin.inline-grammar.xml.peb", templateVars));
          }
       }
 
@@ -474,7 +474,7 @@ public class Updater {
          normalizeNewlines( //
             replaceSubstringBetween(Files.readString(readmeMD), //
                "<!-- START-GENERATED -->", "<!-- END-GENERATED -->", //
-               "\n" + render("updater/readme.md.pebble", Map.of("languages", languages)) + "\n") //
+               "\n" + render("updater/readme.md.peb", Map.of("languages", languages)) + "\n") //
          ));
    }
 

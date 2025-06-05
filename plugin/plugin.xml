@@ -2279,6 +2279,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- twig/twig: Twig -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.twig" name="Twig" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="peb,twig" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.twig" path="syntaxes/twig/twig.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.twig" contentTypeId="extra-syntax-highlighting.twig" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.twig" path="syntaxes/twig/twig.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.twig" icon="syntaxes/twig/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Twig Example" path="syntaxes/twig/twig.example.twig" scopeName="source.twig" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- wing/wing: Wing -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

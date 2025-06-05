@@ -113,7 +113,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: a508b00883d43219538f1d0bbecfd929997bbea2
+      commit: 9b1a0729a15f92b986bdb7fa56d279470011e845
     languages:
       carbon:
         label: Carbon
@@ -125,7 +125,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: bad7fcaf0a9f653be3e350d16d1f9b7820b91cbe
+      commit: f16217ecaac487d3a4ff68938eedf2cc10bf7f21
     languages:
       cobol:
         label: COBOL
@@ -416,7 +416,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 1d88966580afb8a6ed64b634ee72ca4ffcc085fa
+      commit: 4b84ea5f8663da69e727d2dddfcbe879d8c0aad4
     languages:
       graphql:
         label: GraphQL
@@ -1082,7 +1082,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 4fb3c51850eadffe0091dcd297ff284526dca601
+      commit: c2a2283bf4e0cc2c2b25a6ee2014a18c3b11f3c7
     languages:
       odin:
         label: odin
@@ -1148,7 +1148,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 8fcb5be0ae0eb4cf68627d67045a3f3e62d8515d
+      commit: a5f90f40b5168893f7e72d39f4fdc45dc49790a1
     languages:
       prisma:
         label: Prisma

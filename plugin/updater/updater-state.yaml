@@ -303,6 +303,17 @@ extensions:
     - scope-name: markdown.fish.codeblock
       inject-to:
       - text.html.markdown
+  fluent:
+    github:
+      repo: macabeus/vscode-fluent
+      ref: master
+      commit: 9f2a1c1f39175c1d4da46e5a14f1b11c6d466b63
+    languages:
+      fluent:
+        label: fluent
+        scope-name: source.ftl
+        file-extensions:
+        - .ftl
   fortran:
     github:
       repo: fortran-lang/vscode-fortran-support

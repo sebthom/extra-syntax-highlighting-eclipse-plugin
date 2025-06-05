@@ -35,6 +35,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd
 1. Erlang (`*.erl`) - https://www.erlang.org/
 1. Fish (`*.fish`) - https://fishshell.com/docs/current/language.html
+1. Fluent (`*.flt`) - https://projectfluent.org/
 1. Fortran - https://fortran-lang.org/
 1. gitattributes - https://git-scm.com/docs/gitattributes
 1. Gleam (`*.gleam`) - https://gleam.run/
@@ -129,6 +130,7 @@ To install the plugin into an existing Eclipse installation do:
 | Entity Relationship <img src="plugin/syntaxes/er/icon.png" width=16/> | file-extensions="er" | [master@mikkel-ol/vsc-er-syntax-highlighting](https://github.com/mikkel-ol/vsc-er-syntax-highlighting/tree/81e1625187753016ea693ee965a8f07616103214/)
 | Erlang <img src="plugin/syntaxes/erlang/icon.png" width=16/> | file-extensions="config, erl, escript, hrl, src" | [main@erlang-ls/vscode](https://github.com/erlang-ls/vscode/tree/1e5bc08853523c6dcd563fa7de8af597710eaa8f/)
 | Fish <img src="plugin/syntaxes/fish/icon.png" width=16/> | file-extensions="fish" | [master@bmalehorn/vscode-fish](https://github.com/bmalehorn/vscode-fish/tree/79caf9502d6e12db3b7b97666cc0324a4de1dc49/)
+| fluent <img src="plugin/syntaxes/fluent/fluent.png" width=16/> | file-extensions="ftl" | [master@macabeus/vscode-fluent](https://github.com/macabeus/vscode-fluent/tree/9f2a1c1f39175c1d4da46e5a14f1b11c6d466b63/)
 | Fortran <img src="plugin/syntaxes/fortran/FortranFreeForm.png" width=16/> | file-extensions="F03, F08, F18, F90, F95, FPP, FYPP, PF, f03, f08, f18, f90, f95, fpp, fypp, pf" | [main@fortran-lang/vscode-fortran-support](https://github.com/fortran-lang/vscode-fortran-support/tree/2e2182aa8a6cbb6596ec966f182b957f0d546989/)
 | Fortran77 <img src="plugin/syntaxes/fortran/FortranFixedForm.png" width=16/> | file-extensions="F, F77, FOR, f, f77, for" | [main@fortran-lang/vscode-fortran-support](https://github.com/fortran-lang/vscode-fortran-support/tree/2e2182aa8a6cbb6596ec966f182b957f0d546989/)
 | Gleam <img src="plugin/syntaxes/gleam/gleam.png" width=16/> | file-extensions="gleam" | [main@gleam-lang/vscode-gleam](https://github.com/gleam-lang/vscode-gleam/tree/c771e400c5847acdb431881018925d79bc270dda/)

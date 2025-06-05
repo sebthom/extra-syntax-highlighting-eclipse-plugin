@@ -240,6 +240,12 @@ sources:
     github:
       repo: bmalehorn/vscode-fish
 
+  fluent:
+    type: vscode-extension
+    github:
+      # repo: fluent-vue/fluent-vue
+      repo: macabeus/vscode-fluent
+
   fortran:
     type: vscode-extension
     github:

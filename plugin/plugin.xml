@@ -720,6 +720,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- fluent/fluent: fluent -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.fluent" name="fluent" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="ftl" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.ftl" path="syntaxes/fluent/fluent.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.ftl" contentTypeId="extra-syntax-highlighting.fluent" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.fluent" path="syntaxes/fluent/fluent.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.fluent" icon="syntaxes/fluent/fluent.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="fluent Example" path="syntaxes/fluent/fluent.example.flt" scopeName="source.ftl" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- fortran/FortranFixedForm: Fortran77 -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

@@ -1,0 +1,94 @@
+### Localization for Sample Application
+## General Messages
+
+# Simple message
+welcome = Welcome to our application!
+
+# Message with a variable
+greeting = Hello, { $userName }!
+
+# Multiline message
+description =
+    This is a long description that
+    spans multiple lines. Each line
+    must be indented by at least
+    one space.
+
+# Message with attributes
+login-input = Predefined value
+    .placeholder = email@example.com
+    .aria-label = Login input value
+    .title = Type your login email
+
+## Terms and References
+
+# Term definition
+-brand-name = FluentApp
+    .gender = feminine
+
+# Message referencing a term
+about = About { -brand-name }.
+
+# Message referencing a term attribute
+update-successful =
+    { -brand-name.gender ->
+        [masculine] { -brand-name } was updated successfully.
+        [feminine] { -brand-name } was updated successfully.
+       *[other] The application was updated successfully.
+    }
+
+## Select Expressions
+
+# Pluralization example
+unread-emails = { $emailCount ->
+    [one] You have one unread email.
+   *[other] You have { $emailCount } unread emails.
+}
+
+# Gender-based message
+shared-photo = { $userGender ->
+    [male] { $userName } shared his photo.
+    [female] { $userName } shared her photo.
+   *[other] { $userName } shared their photo.
+}
+
+## Built-in Functions
+
+# Number formatting
+pi-value = π is approximately { NUMBER($pi, maximumFractionDigits: 4) }.
+
+# Date formatting
+today-date = Today is { DATETIME($today, month: "long", day: "numeric", year: "numeric") }.
+
+## Parameterized Terms
+
+# Term with parameters for grammatical case
+-thing = { $case ->
+   *[nominative] the thing
+    [accusative] the thing (accusative)
+    [dative] the thing (dative)
+}
+
+# Message using a parameterized term
+this-is = This is { -thing(case: "accusative") }.
+
+## Special Characters and Escapes
+
+# Message with special characters
+braces-example = Use {"{"} and {"}"} to denote placeables.
+
+# Message with escape sequences
+privacy-label = Privacy{"\u00A0"}Policy
+
+## Comments
+
+# Translator comment
+# This message is shown on the home page
+home-title = Welcome Home!
+
+## Developer comment
+## This section contains error messages
+error-404 = Page not found.
+error-500 = Internal server error.
+
+### End of Localization File

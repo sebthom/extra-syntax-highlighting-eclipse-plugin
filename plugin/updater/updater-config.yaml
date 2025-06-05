@@ -347,6 +347,11 @@ sources:
     github:
       repo: grafana/vscode-jsonnet
 
+  jte:
+    type: vscode-extension
+    github:
+      repo: maj2c/jte-template-syntax-highlight
+
   kotlin:
     type: vscode-extension
     github:

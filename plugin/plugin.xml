@@ -1662,6 +1662,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- jte/jte: JTE Templates -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.jte" name="JTE Templates" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="jte,kte" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.html.jte" path="syntaxes/jte/jte.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="text.html.jte" contentTypeId="extra-syntax-highlighting.jte" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.jte" path="syntaxes/jte/jte.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.jte" icon="syntaxes/jte/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="JTE Templates Example" path="syntaxes/jte/jte.example.jte" scopeName="text.html.jte" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- kotlin/kotlin: Kotlin -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

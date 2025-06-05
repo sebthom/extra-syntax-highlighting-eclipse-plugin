@@ -50,6 +50,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. Jinja Templates - https://jinja.palletsprojects.com/
 1. JSON5 (`*.json5`) - https://json5.org/
 1. Jsonnet (`*.jsonnet`) - https://jsonnet.org/
+1. jte: Java Template Engine (`*.jte`) - https://jte.gg/
 1. Kotlin - https://kotlinlang.org/
 1. LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
 1. Mako Templates (`*.mako`) - https://www.makotemplates.org/
@@ -168,6 +169,7 @@ To install the plugin into an existing Eclipse installation do:
 | Jinja YAML <img src="plugin/syntaxes/jinja/icon.png" width=16/> | file-extensions="sls, yaml.j2, yaml.jinja, yaml.jinja2, yml.j2, yml.jinja, yml.jinja2" | [main@samuelcolvin/jinjahtml-vscode](https://github.com/samuelcolvin/jinjahtml-vscode/tree/d8daf5fd43941deec8803be2335b35922e3e1eeb/)
 | JSON5 | file-extensions="json5" | [master@katjanakosic/vscode-json5](https://github.com/katjanakosic/vscode-json5/tree/4bf68072f00ee0cc3cd0e82c4b27364c888fcb12/)
 | Jsonnet <img src="plugin/syntaxes/jsonnet/icon.png" width=16/> | file-extensions="jsonnet, libsonnet" | [main@grafana/vscode-jsonnet](https://github.com/grafana/vscode-jsonnet/tree/bfb5ac332d620a6f66d61d6b9c8125bacaba7cd4/)
+| JTE Templates <img src="plugin/syntaxes/jte/icon.png" width=16/> | file-extensions="jte, kte" | [main@maj2c/jte-template-syntax-highlight](https://github.com/maj2c/jte-template-syntax-highlight/tree/0b1242fdccb25bc9f72fccef48c51b01d9ac354d/)
 | Kotlin <img src="plugin/syntaxes/kotlin/icon.png" width=16/> | file-extensions="kt, kts" | [main@fwcd/vscode-kotlin](https://github.com/fwcd/vscode-kotlin/tree/4a7c1538754828c1d22a8bee8ff3400045b4352a/)
 | LDIF File | file-extensions="ldif" | [master@FlashSystems/LDIF-Syntax](https://github.com/FlashSystems/LDIF-Syntax/tree/f00c21eb1cc5fe5966cf6ef158e854a65449a9fa/)
 | Mako Template | file-extensions="mako" | [master@marconi/mako-tmbundle](https://github.com/marconi/mako-tmbundle/tree/45037e4e98f0c215b55b194d303811d43b85407c/Syntaxes)

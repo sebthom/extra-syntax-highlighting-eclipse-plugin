@@ -839,6 +839,18 @@ extensions:
         file-extensions:
         - .jsonnet
         - .libsonnet
+  jte:
+    github:
+      repo: maj2c/jte-template-syntax-highlight
+      ref: main
+      commit: 0b1242fdccb25bc9f72fccef48c51b01d9ac354d
+    languages:
+      jte:
+        label: JTE Templates
+        scope-name: text.html.jte
+        file-extensions:
+        - jte
+        - kte
   kotlin:
     github:
       repo: fwcd/vscode-kotlin

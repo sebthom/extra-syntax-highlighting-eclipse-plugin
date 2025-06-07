@@ -113,7 +113,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 9b1a0729a15f92b986bdb7fa56d279470011e845
+      commit: 766ef7077da5743a9da4a39efe47f7d7effe43ad
     languages:
       carbon:
         label: Carbon
@@ -236,7 +236,7 @@ extensions:
     github:
       repo: editorconfig/editorconfig-vscode
       ref: main
-      commit: 71eca1f86c2e0c61464ddbf445a076f1c1473536
+      commit: ea7217771a8b961ec2cca7160460ccd6c2f556ae
     languages:
       editorconfig:
         label: EditorConfig
@@ -416,7 +416,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 4b84ea5f8663da69e727d2dddfcbe879d8c0aad4
+      commit: 2da97414b678ea447c49d88898f275c5d868bc5d
     languages:
       graphql:
         label: GraphQL
@@ -1027,7 +1027,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 910a44354ee59d3e728badf72474ad53bab43d45
+      commit: f32e73f1c6169159a439acf1f7ceffe807f43729
     languages:
       ocaml:
         label: OCaml
@@ -1148,7 +1148,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: a5f90f40b5168893f7e72d39f4fdc45dc49790a1
+      commit: c51ca20e39d34566e0ca577483586e34869c739b
     languages:
       prisma:
         label: Prisma
@@ -1180,7 +1180,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 96a7b7a3e1d36b9f11226a5789011a076d6e1dd3
+      commit: 218d321a551bd229002c089ffb372a9b121afbaa
     languages:
       ring:
         label: Ring

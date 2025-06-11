@@ -23,18 +23,6 @@
    <artifactId>de.sebthom.eclipse.extra_syntax_highlighting_plugin.updater</artifactId>
    <packaging>jar</packaging>
 
-   <build>
-      <plugins>
-         <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <!-- pinning to 3.0.0 due to
-            https://github.com/mojohaus/exec-maven-plugin/issues/322 -->
-            <version>3.0.0</version>
-         </plugin>
-      </plugins>
-   </build>
-
    <dependencies>
       <dependency>
          <!-- for JSON/YAML file support -->

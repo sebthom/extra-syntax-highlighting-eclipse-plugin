@@ -145,13 +145,14 @@ class VSCodeSingleExtensionSourceHandler extends AbstractSourceHandler<Config.VS
          downloadExampleFile(ctx, langOverrides.example);
 
          if (langCfg.icon() != null && !isBlank(langCfg.icon().light())) {
-            final var targetIcon = ctx.targetDir().resolve(landIdSanitized + ".png");
+            final var targetIcon = ctx.targetDir().resolve(landIdSanitized + ".icon.png");
             if (ctx.updateExistingFiles() || !Files.exists(targetIcon)) {
                logInfo("Copying image [" + langCfg.icon().light() + "] -> [" + targetIcon.getFileName() + "]...", false);
                try {
                   final var sourceIcon = ImageIO.read(sourceExtensionDir.resolve(langCfg.icon().light()).toFile());
                   Thumbnails.of(sourceIcon).size(16, 16).outputFormat("png").toFile(targetIcon.toFile());
-                  Thumbnails.of(sourceIcon).size(32, 32).outputFormat("png").toFile(targetSyntaxDir.resolve("icon@2x.png").toFile());
+                  Thumbnails.of(sourceIcon).size(32, 32).outputFormat("png").toFile(targetSyntaxDir.resolve(landIdSanitized
+                        + ".icon@2x.png").toFile());
                   logInfo(" OK", true, false);
                } catch (final Exception ex) {
                   logInfo(" ERROR [" + ex.getMessage().replace("\n", " | ") + "]", true, false);

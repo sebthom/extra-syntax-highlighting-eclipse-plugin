@@ -160,7 +160,7 @@ public abstract class Sys {
    }
 
    public static Optional<Path> findFirstFile(final Path path, final Predicate<String> nameFilter) throws IOException {
-      try (var files = Files.list(path)) {
+      try (Stream<Path> files = Files.list(path)) {
          return files //
             .filter(Files::isRegularFile) //
             .filter(file -> nameFilter.test(file.getFileName().toString())).findFirst();
@@ -178,7 +178,7 @@ public abstract class Sys {
 
    public static void rmDir(final Path dir) throws IOException {
       if (Files.exists(dir)) {
-         try (var files = Files.walk(dir)) {
+         try (Stream<Path> files = Files.walk(dir)) {
             files.sorted(Comparator.reverseOrder()) //
                .map(Path::toFile) //
                .forEach(File::delete);

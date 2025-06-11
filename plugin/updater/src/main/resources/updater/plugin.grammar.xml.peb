@@ -26,19 +26,19 @@
   <injection scopeName="{{ scope_name }}" injectTo="{{ i }}" />
 {% endfor %}{% endif %}
 </extension>
-{% if has_language_configuration %}
+{% if language_configuration_filename %}
 
 <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
-  <languageConfiguration contentTypeId="{{ content_type_id }}" path="syntaxes/{{ ext_id }}/{{ lang_id }}.language-configuration.json" />
+  <languageConfiguration contentTypeId="{{ content_type_id }}" path="syntaxes/{{ ext_id }}/{{ language_configuration_filename }}" />
 </extension>
 {% endif %}
-{% if has_icon_file %}
+{% if icon_filename %}
 
 <extension point="org.eclipse.ui.genericeditor.icons">
   <icon contentType="{{ content_type_id }}" icon="syntaxes/{{ ext_id }}/{{ icon_filename }}"/>
 </extension>
 {% endif %}
-{% if has_example_file %}
+{% if example_filename %}
 
 <extension point="org.eclipse.tm4e.ui.snippets">
   <snippet name="{{ label }} Example" path="syntaxes/{{ ext_id }}/{{ example_filename }}" scopeName="{{ scope_name }}" />

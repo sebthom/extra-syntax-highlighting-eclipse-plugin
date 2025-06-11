@@ -138,7 +138,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.astro" icon="syntaxes/astro/astro.png"/>
+    <icon contentType="extra-syntax-highlighting.astro" icon="syntaxes/astro/astro.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -519,7 +519,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.d2" icon="syntaxes/d2/d2.png"/>
+    <icon contentType="extra-syntax-highlighting.d2" icon="syntaxes/d2/d2.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -736,7 +736,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.fluent" icon="syntaxes/fluent/fluent.png"/>
+    <icon contentType="extra-syntax-highlighting.fluent" icon="syntaxes/fluent/fluent.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -760,7 +760,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.FortranFixedForm" icon="syntaxes/fortran/FortranFixedForm.png"/>
+    <icon contentType="extra-syntax-highlighting.FortranFixedForm" icon="syntaxes/fortran/FortranFixedForm.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -784,7 +784,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.FortranFreeForm" icon="syntaxes/fortran/FortranFreeForm.png"/>
+    <icon contentType="extra-syntax-highlighting.FortranFreeForm" icon="syntaxes/fortran/FortranFreeForm.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -818,7 +818,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.gleam" icon="syntaxes/gleam/gleam.png"/>
+    <icon contentType="extra-syntax-highlighting.gleam" icon="syntaxes/gleam/gleam.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -1839,7 +1839,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.mdx" icon="syntaxes/mdx/mdx.png"/>
+    <icon contentType="extra-syntax-highlighting.mdx" icon="syntaxes/mdx/mdx.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -1960,7 +1960,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.nushell" icon="syntaxes/nushell/nushell.png"/>
+    <icon contentType="extra-syntax-highlighting.nushell" icon="syntaxes/nushell/nushell.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -2144,7 +2144,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.odin" icon="syntaxes/odin/odin.png"/>
+    <icon contentType="extra-syntax-highlighting.odin" icon="syntaxes/odin/odin.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -2248,7 +2248,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.prisma" icon="syntaxes/prisma/prisma.png"/>
+    <icon contentType="extra-syntax-highlighting.prisma" icon="syntaxes/prisma/prisma.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -2294,7 +2294,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.ring" icon="syntaxes/ring/ring.png"/>
+    <icon contentType="extra-syntax-highlighting.ring" icon="syntaxes/ring/ring.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -2318,7 +2318,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.roc" icon="syntaxes/roc/roc.png"/>
+    <icon contentType="extra-syntax-highlighting.roc" icon="syntaxes/roc/roc.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">
@@ -2445,7 +2445,7 @@
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.wing" icon="syntaxes/wing/wing.png"/>
+    <icon contentType="extra-syntax-highlighting.wing" icon="syntaxes/wing/wing.icon.png"/>
   </extension>
 
   <extension point="org.eclipse.tm4e.ui.snippets">

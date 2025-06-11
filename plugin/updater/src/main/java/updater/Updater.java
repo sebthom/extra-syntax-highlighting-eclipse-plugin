@@ -320,6 +320,12 @@ public class Updater {
       logHeader("** DONE **");
    }
 
+   private String getIconFileName(final Path syntaxDir, final String langId) {
+      final String landIdSanitized = sanitizeFilename(langId);
+      return Files.exists(syntaxDir.resolve(landIdSanitized + ".icon.png")) ? landIdSanitized + ".icon.png"
+            : Files.exists(syntaxDir.resolve("icon.png")) ? "icon.png" : null;
+   }
+
    private void updatePluginXML() throws IOException {
       logHeader("Updating [plugin.xml]...");
       final var pluginLines = new StringBuilder();
@@ -338,8 +344,7 @@ public class Updater {
             final Path grammarFile = findFirstFile(syntaxDir, //
                f -> f.matches(Pattern.quote(landIdSanitized) + "[.]tmLanguage[.](yaml|json|plist)")).get();
 
-            final String iconFileName = Files.exists(syntaxDir.resolve(landIdSanitized + ".png")) ? landIdSanitized + ".png"
-                  : Files.exists(syntaxDir.resolve("icon.png")) ? "icon.png" : null;
+            final String iconFileName = getIconFileName(syntaxDir, langId);
 
             final var exampleFile = findFirstFile(syntaxDir, //
                f -> f.matches(Pattern.quote(landIdSanitized) + "[.]example[.].*"));
@@ -348,6 +353,7 @@ public class Updater {
             final var contentBaseType = srcLangCfg == null ? "" : stripToEmpty(srcLangCfg.contentBaseType);
             final var contentTypeDescriber = srcLangCfg == null ? "" : stripToEmpty(srcLangCfg.contentDescriber);
 
+            final var langCfgFile = syntaxDir.resolve(langId + ".language-configuration.json");
             final var templateVars = new HashMap<String, Object>();
             templateVars.put("ext_id", extId);
             templateVars.put("lang_id", langId);
@@ -358,8 +364,9 @@ public class Updater {
             templateVars.put("content_type_id", config.contentTypePrefix + "." + langId);
             templateVars.put("scope_name", langState.scopeName);
             templateVars.put("grammar_filename", grammarFile.getFileName());
+            templateVars.put("language_configuration_filename", Files.exists(langCfgFile) ? langCfgFile.getFileName().toString() : null);
             templateVars.put("icon_filename", iconFileName);
-            templateVars.put("example_filename", exampleFile.isPresent() ? exampleFile.get().getFileName() : null);
+            templateVars.put("example_filename", exampleFile.isPresent() ? exampleFile.get().getFileName().toString() : null);
             templateVars.put("inject_to", langState.injectTo);
             List<String> fileExtensions = new ArrayList<>();
             List<String> fileNames = new ArrayList<>();
@@ -398,10 +405,6 @@ public class Updater {
             templateVars.put("file_associations", fileAssociations.isBlank() && contentTypeDescriber.isEmpty()
                   ? "file-names=\"PREVENT_FILE_ASSOCIATION_INHERITANCE\""
                   : fileAssociations);
-
-            templateVars.put("has_language_configuration", Files.exists(syntaxDir.resolve(langId + ".language-configuration.json")));
-            templateVars.put("has_icon_file", iconFileName != null);
-            templateVars.put("has_example_file", exampleFile.isPresent());
 
             pluginLines.append(render("updater/plugin.grammar.xml.peb", templateVars));
          }
@@ -456,13 +459,12 @@ public class Updater {
             }
 
             final Path syntaxDir = syntaxesDir.resolve(extId);
-            final String iconFileName = Files.exists(syntaxDir.resolve(langId + ".png")) ? langId + ".png"
-                  : Files.exists(syntaxDir.resolve("icon.png")) ? "icon.png" : null;
+            final String iconFileName = getIconFileName(syntaxDir, langId);
 
             final var langMap = new HashMap<String, Object>();
-            langMap.put("extId", extId);
+            langMap.put("ext_id", extId);
             langMap.put("label", langState.label);
-            langMap.put("iconFileName", iconFileName);
+            langMap.put("icon_filename", iconFileName);
             langMap.put("file_associations", Arrays.asList( //
                isEmpty(langState.fileExtensions) ? null
                      : "file-extensions=\"" + join(langState.fileExtensions.stream().map(Strings::removeLeadingDot).distinct().sorted(),

@@ -113,7 +113,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 29d4aae7224fb9aad93f3ab5fe17d9843cc74f70
+      commit: 3b7dc7979608aac833aa19225c139f21d2a6af7d
     languages:
       carbon:
         label: Carbon
@@ -125,7 +125,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 95481f590f0e328c6ce9169ca0d974a5a8707ce2
+      commit: 8e1907a727142c045cb273ae0360750414e725a9
     languages:
       cobol:
         label: COBOL
@@ -416,7 +416,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 2da97414b678ea447c49d88898f275c5d868bc5d
+      commit: a862358022a57678e1676835f1400e23e662d462
     languages:
       graphql:
         label: GraphQL
@@ -504,7 +504,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: ae220012474d39d87e4c297bb4646373a6e80875
+      commit: 05ba0eb306ff9859952c0899a312b163522f5684
     languages:
       helm:
         label: helm-template
@@ -1027,7 +1027,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: e169306dbf1afb5ff7c6c85d76425c8f677e44b8
+      commit: 804511525517ae40d40930e44694e84fe811844e
     languages:
       ocaml:
         label: OCaml
@@ -1082,7 +1082,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: f09e5fc3379ae4e706193ee777028c47293c9335
+      commit: 023c8a0fd1d8d8e54b38bf990a74816a31dee68e
     languages:
       odin:
         label: odin
@@ -1148,7 +1148,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 7ed293e877e8cf41ec7378e9a97f06f31abeaf25
+      commit: 2a0fb30ece69ad4bfe1663862757d96b4c2f377e
     languages:
       prisma:
         label: Prisma
@@ -1180,7 +1180,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 6d1eac5d97561834986e9320dcee362c57d25e09
+      commit: 86b4a7c979327caba46768787616037db8568f93
     languages:
       ring:
         label: Ring

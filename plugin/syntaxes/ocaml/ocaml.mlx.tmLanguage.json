@@ -67,8 +67,8 @@
         { "include": "#comments" },
         { "include": "#jsx-property-name" },
         {
-          "begin": "=(\\s*)",
-          "end": "(?=\\s|/?>)",
+          "begin": "=([[:space:]]*)",
+          "end": "(?=[[:space:]]|/?>)",
           "beginCaptures": {
             "0": { "name": "keyword.operator.ocaml" }
           },
@@ -88,7 +88,7 @@
       ]
     },
     "jsx-property-name": {
-      "match": "(?x)\n\\s*\n([_$[:alpha:]][-_$[:alnum:]]*)\n(?=\\s|=|/?>|/\\*|//)",
+      "match": "(?x)\n[[:space:]]*\n([_$[:alpha:]][-_$[:alnum:]]*)\n(?=[[:space:]]|=|/?>|/\\*|//)",
       "captures": {
         "1": {
           "name": "entity.other.attribute-name.namespace.js"
@@ -341,27 +341,11 @@
               "match": "\\\\\""
             }
           ]
-        },
-        {
-          "comment": "quoted string literal",
-          "begin": "\\{[[:lower:]_]*\\|",
-          "end": "\\|[[:lower:]_]*\\}"
         }
       ]
     },
     "strings": {
       "patterns": [
-        {
-          "comment": "quoted string literal",
-          "name": "string.quoted.braced.ocaml",
-          "begin": "\\{(%%?[[:alpha:]_][[:word:]']*(\\.[[:alpha:]_][[:word:]']*)*[[:space:]]*)?[[:lower:]_]*\\|",
-          "end": "\\|[[:lower:]_]*\\}",
-          "beginCaptures": {
-            "1": {
-              "name": "keyword.other.extension.ocaml"
-            }
-          }
-        },
         {
           "comment": "string literal",
           "name": "string.quoted.double.ocaml",

@@ -1,14 +1,14 @@
-# Contributing
+# Contributing to the Project
 
-Thanks for your interest in contributing to this project!
+Thank you for your interest in contributing to this project! We strive to make the contribution process clear and welcoming.
 
-We want to make contributing as easy and transparent as possible.
+Please take a moment to review the guidelines below.
 
 
 ## Code of Conduct
 
-Our code of conduct is described in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
-Please follow it in all your interactions with the project.
+Please review and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) in all your interactions with the project.
+This helps us maintain a positive and respectful environment for everyone involved.
 
 
 ## Issues

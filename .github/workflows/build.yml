@@ -9,38 +9,42 @@ name: Build
 on:
   push:
     branches-ignore:  # build all branches except:
-    - 'dependabot/**'  # prevent GHA triggered twice (once for commit to the branch and once for opening/syncing the PR)
+    - "dependabot/**"  # prevent GHA triggered twice (once for commit to the branch and once for opening/syncing the PR)
     tags-ignore:  # don't build tags
-    - '**'
+    - "**"
     paths-ignore:
-    - '**/*.adoc'
-    - '**/*.md'
-    - '.editorconfig'
-    - '.git*'
-    - '.github/*.yml'
-    - '.github/workflows/stale.yml'
-    - '.github/workflows/update-syntaxes.yml'
+    - ".act*"
+    - "**/*.adoc"
+    - "**/*.md"
+    - ".editorconfig"
+    - ".git*"
+    - ".github/*.yml"
+    - ".github/ISSUE_TEMPLATE/*"
+    - ".github/workflows/stale.yml"
   pull_request:
     paths-ignore:
-    - '**/*.adoc'
-    - '**/*.md'
-    - '.editorconfig'
-    - '.git*'
-    - '.github/*.yml'
+    - ".act*"
+    - "**/*.adoc"
+    - "**/*.md"
+    - ".editorconfig"
+    - ".git*"
+    - ".github/*.yml"
+    - ".github/ISSUE_TEMPLATE/*"
+    - ".github/workflows/stale.yml"
   workflow_dispatch:
     # https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#workflow_dispatch
     inputs:
-      additional_maven_args:
-        description: 'Additional Maven Args'
+      extra-maven-args:
+        description: "Additional command-line arguments to append to all Maven invocations"
         required: false
-        default: ''
+        type: string
       debug-with-ssh:
         description: "Start an SSH session for debugging purposes at the end of the build:"
         default: never
         type: choice
         options: [ always, on_failure, on_failure_or_cancelled, never ]
       debug-with-ssh-only-for-actor:
-        description: "Limit access to the SSH session to the GitHub user that triggered the job."
+        description: "Restrict SSH debug session access to the GitHub user who triggered the workflow"
         default: true
         type: boolean
 

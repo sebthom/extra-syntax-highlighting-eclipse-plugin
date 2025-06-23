@@ -1,3 +1,4 @@
+# https://docs.github.com/en/get-started/git-basics/configuring-git-to-handle-line-endings#example
 # inspired by
 # - https://github.com/alexkaratarakis/gitattributes/blob/master/Java.gitattributes
 # - https://github.com/alexkaratarakis/gitattributes/blob/master/Common.gitattributes
@@ -39,6 +40,7 @@
 # Config/Serialisation
 .editorconfig    text
 **/.editorconfig text
+*.graphql        text
 *.ini            text
 *.properties     text
 *.json           text
@@ -56,11 +58,16 @@
 *.fish       text eol=lf
 *.sh         text eol=lf
 *.zsh        text eol=lf
+*.dart       text
+*.hx         text
 *.lua        text
 *.php        text
 *.py         text
 *.python     text
 *.sql        text
+mvnw         text eol=lf
+**/Dockerfile text eol=lf
+**/*.Dockerfile text eol=lf
 
 
 # Archives
@@ -124,6 +131,8 @@
 *.htm        text diff=html
 *.html       text diff=html
 *.js         text
+*.ts         text
+*.vue        text
 
 
 # https://git-scm.com/docs/gitattributes#_export_ignore

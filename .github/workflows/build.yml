@@ -49,284 +49,32 @@ on:
         type: boolean
 
 
-defaults:
-  run:
-    shell: bash
-
-
-env:
-  JAVA_VERSION: 17
-  KEYSTORE_PATH: /tmp/sebthom.github.io.p12
-  KEYSTORE_PW: whatever
-
-
 jobs:
-
   ###########################################################
-  maven-build:
+  eclipse-plugin-build:
   ###########################################################
-    runs-on: ubuntu-latest
+    uses: sebthom/gha-shared/.github/workflows/reusable.eclipse-plugin-build.yml@v1
+    with:
+      timeout-minutes: 10
 
+      target-files: build.target
 
-    # https://docs.github.com/en/actions/using-jobs/using-concurrency
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: false
+      extra-maven-args: ${{ inputs.extra-maven-args }}
+      jarsigner-alias: sebthom.github.io
 
+      development-branch: none
+      development-updatesite-branch: updatesite-preview
+      release-branch: main
+      release-updatesite-branch: updatesite
+      release-archive-name: de.sebthom.eclipse.extra_syntax_highlighting.updatesite.zip
 
-    steps:
-    - name: "Show: GitHub context"
-      env:
-        GITHUB_CONTEXT: ${{ toJSON(github) }}
-      run: echo $GITHUB_CONTEXT
+      debug-with-ssh: ${{ inputs.debug-with-ssh }}
+      debug-with-ssh-only-for-actor: ${{ inputs.debug-with-ssh-only-for-actor }}
 
-
-    - name: "Show: environment variables"
-      run: env | sort
-
-
-    - name: Git Checkout
-      uses: actions/checkout@v4  # https://github.com/actions/checkout
-
-
-    - name: Verify Syntax Registration
-      run: |
-        set -euo pipefail
-
-        pip install ruamel.yaml
-        python plugin/verify-syntax-registrations.py
-
-
-    - name: "Install: JDK ${{ env.JAVA_VERSION }} ☕"
-      uses: actions/setup-java@v4  # https://github.com/actions/setup-java
-      with:
-        distribution: temurin
-        java-version: ${{ env.JAVA_VERSION }}
-
-
-    - name: "Cache: Restore"
-      id: cache-restore
-      if: ${{ !env.ACT }}  # https://github.com/nektos/act#skipping-steps
-      uses: actions/cache/restore@v4
-      with:
-        path: |
-          ~/.m2/repository
-          !~/.m2/repository/.cache/tycho/https/raw.githubusercontent.com
-          !~/.m2/repository/*SNAPSHOT*
-        key: ${{ runner.os }}-${{ hashFiles('build.target') }}-${{ hashFiles('**/pom.xml') }}
-
-
-    - name: Get Signing Certificate
-      if: ${{ github.ref_name == 'main' && !env.ACT }}
-      env:
-        CERTDB: ${{ secrets.CERTDB }} # populated by https://github.com/sebthom/sebthom.github.io/actions/workflows/renew-cert.yml
-      run: |
-        echo "$CERTDB" | base64 --decode | tar xvz -C /tmp
-        (set -x; openssl pkcs12 -export \
-          -inkey /tmp/etc/letsencrypt/live/sebthom.github.io/privkey.pem \
-          -in /tmp/etc/letsencrypt/live/sebthom.github.io/fullchain.pem \
-          -name sebthom.github.io \
-          -password env:KEYSTORE_PW \
-          -out $KEYSTORE_PATH)
-
-        (set -x; keytool -keypass:env KEYSTORE_PW -storepass:env KEYSTORE_PW -list -keystore $KEYSTORE_PATH)
-
-
-    - name: "Install: Maven"
-      uses: stCarolas/setup-maven@v5  # https://github.com/stCarolas/setup-maven
-      with:
-        maven-version: 3.9.9
-
-
-    - name: "Build with Maven 🔨"
-      env:
-        GITHUB_USER: ${{ github.actor }}
-        GITHUB_API_KEY: ${{ github.token }}
-      run: |
-        set -eu
-
-        # https://github.community/t/github-actions-bot-email-address/17204
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-        MAVEN_OPTS="${MAVEN_OPTS:-}"
-        MAVEN_OPTS+=" -Djava.security.egd=file:/dev/./urandom" # https://stackoverflow.com/questions/58991966/what-java-security-egd-option-is-for/59097932#59097932
-        MAVEN_OPTS+=" -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS" # https://stackoverflow.com/questions/5120470/how-to-time-the-different-stages-of-maven-execution/49494561#49494561
-        MAVEN_OPTS+=" -Xmx1024m -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dhttps.protocols=TLSv1.3,TLSv1.2"
-        export MAVEN_OPTS
-        echo "MAVEN_OPTS: $MAVEN_OPTS"
-
-        mvn \
-          --errors \
-          --update-snapshots \
-          --batch-mode \
-          --show-version \
-          --no-transfer-progress \
-          -s .ci/maven-settings.xml \
-          -t .ci/maven-toolchains.xml \
-          -Dtycho.disableP2Mirrors=true \
-          $([[ -f $KEYSTORE_PATH ]] && echo "-Djarsigner.keystore.path=$KEYSTORE_PATH -Djarsigner.keystore.password=$KEYSTORE_PW" || true) \
-          ${{ github.event.inputs.additional_maven_args }} \
-          clean verify
-
-        mv updatesite/target/de.sebthom.eclipse.extra_syntax_highlighting.updatesite-*.zip updatesite/target/de.sebthom.eclipse.extra_syntax_highlighting.updatesite.zip
-
-
-    - name: "Delete previous 'latest' release"
-      if: ${{ github.ref_name == 'main' && !env.ACT }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        RELEASE_NAME: latest
-      # https://cli.github.com/manual/gh_release_delete
-      run: |
-        GH_DEBUG=1 gh release delete "$RELEASE_NAME" --yes --cleanup-tag || true
-
-
-    - name: "Create 'latest' release"
-      if: ${{ github.ref_name == 'main' && !env.ACT }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        RELEASE_NAME: latest
-      # https://cli.github.com/manual/gh_release_create
-      run: |
-        GH_DEBUG=1 gh release create "$RELEASE_NAME" \
-          --title "$RELEASE_NAME" \
-          --latest \
-          --notes "${{ github.event.head_commit.message }}" \
-          --target "${{ github.sha }}" \
-          updatesite/target/de.sebthom.eclipse.extra_syntax_highlighting.updatesite.zip
-
-
-    - name: Deploy p2 update site
-      if: ${{ github.ref_name == 'main' && !env.ACT }}
-      run: |
-        set -eux
-
-        last_commit_message=$(git log --pretty=format:"%s (%h)" -1)
-
-        cd /tmp
-        github_repo_url="https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}"
-        if curl --output /dev/null --silent --head --fail "$github_repo_url/tree/updatesite"; then
-          git clone $github_repo_url --single-branch --branch updatesite updatesite
-          cd updatesite
-          # https://github.community/t/github-actions-bot-email-address/17204
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git reset --hard HEAD^
-        else
-          git clone $github_repo_url updatesite
-          cd updatesite
-          git checkout --orphan updatesite
-          git rm -rf .
-          cat <<EOF > index.html
-            <!DOCTYPE html>
-            <html>
-            <head>
-              <title>${{ github.repository }} - Update Site</title>
-            </head>
-            <body>
-            <h1>${{ github.repository }} - Update Site</h1>
-            </body>
-            </html>
-        EOF
-          git add index.html
-          # https://github.community/t/github-actions-bot-email-address/17204
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -am "Initialize Update Site"
-        fi
-
-        mv $GITHUB_WORKSPACE/updatesite/target/repository/* .
-        git add --all
-        git commit -am "$last_commit_message"
-        git push origin updatesite --force
-
-
-    ##################################################
-    # Cache Update
-    # See https://github.com/actions/cache/issues/342
-    ##################################################
-    - name: "Cache: Delete Previous"
-      if: ${{ steps.cache-restore.outputs.cache-hit && !env.ACT }}
-      env:
-        GH_TOKEN: ${{ github.token }}
-      run: |
-        gh extension install actions/gh-actions-cache
-        # "|| true" is to avoid "Error: Resource not accessible by integration" from failing the job 
-        gh actions-cache delete ${{ steps.cache-restore.outputs.cache-primary-key }} --confirm || true
-
-    - name: "Cache: Update"
-      uses: actions/cache/save@v4
-      if: ${{ always() && !cancelled() && !env.ACT }} # save cache even fails
-      with:
-        path: |
-          ~/.m2/repository
-          !~/.m2/repository/.cache/tycho/https/raw.githubusercontent.com
-          !~/.m2/repository/*SNAPSHOT*
-        key: ${{ steps.cache-restore.outputs.cache-primary-key }}
-
-
-    ##################################################
-    # Setup SSH debug session
-    ##################################################
-    - name: "SSH session for debugging: check"
-      id: DEBUG_SSH_SESSSION_CHECK
-      if: always()
-      run: |
-        set -eu
-
-        when="${{ inputs.debug-with-ssh }}"
-
-        if [[ $when == "always" ]] || case "${{ job.status }}" in
-          success)   [[ $when == "always" ]] ;;
-          cancelled) [[ $when == "on_failure_or_cancelled" ]] ;;
-          failure)   [[ $when == "on_failure"* ]] ;;
-        esac; then
-          echo "start_ssh_session=true" | tee -a "$GITHUB_OUTPUT"
-        fi
-
-
-    - name: "SSH session for debugging: start"
-      uses: mxschmitt/action-tmate@v3  # https://github.com/mxschmitt/action-tmate
-      if: always() && steps.DEBUG_SSH_SESSSION_CHECK.outputs.start_ssh_session
-      with:
-        limit-access-to-actor: ${{ inputs.debug-with-ssh-only-for-actor }}
-
-
-  ###########################################################
-  dependabot-pr-auto-merge:
-  ###########################################################
-    needs: maven-build
-    if: ${{ github.event_name == 'pull_request' && github.actor == 'dependabot[bot]' }}
-    runs-on: ubuntu-latest
-
-    concurrency: dependabot-pr-auto-merge
+    secrets:
+      JARSIGNER_KEYSTORE: ${{ secrets.CERTDB }}  # populated by https://github.com/sebthom/sebthom.github.io/actions/workflows/renew-cert.yml
 
     permissions:
-      contents: write
-      pull-requests: write
-
-    steps:
-    - name: Dependabot metadata
-      id: metadata
-      uses: dependabot/fetch-metadata@v2  # https://github.com/dependabot/fetch-metadata/
-      with:
-        github-token: "${{ secrets.GITHUB_TOKEN }}"
-
-
-    - name: Enable auto-merge for Dependabot PRs
-      if: |
-        ${{
-          (
-            steps.dependabot-metadata.outputs.package-ecosystem == 'github-actions' && 
-            steps.metadata.outputs.update-type == 'version-update:semver-major'
-          ) || (
-            steps.dependabot-metadata.outputs.package-ecosystem == 'maven' && 
-            steps.metadata.outputs.update-type == 'version-update:semver-minor'
-          )
-        }}
-      run: |
-        gh pr merge --auto --rebase "$PR_URL"
-      env:
-        PR_URL: ${{github.event.pull_request.html_url}}
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      actions: write        # to delete action cache entries
+      contents: write       # to create releases (commit to updatesite branches)
+      pull-requests: write  # for dependabot auto merges

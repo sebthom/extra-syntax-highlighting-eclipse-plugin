@@ -63,7 +63,7 @@ jobs:
 
 
     - name: "Install: Node LTS"
-      uses: actions/setup-node@v4  # https://github.com/marketplace/actions/setup-node-js-environment
+      uses: actions/setup-node@v5  # https://github.com/marketplace/actions/setup-node-js-environment
       with:
         node-version: "lts/*"  # required by mermaid
 

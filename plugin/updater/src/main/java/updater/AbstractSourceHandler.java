@@ -15,7 +15,7 @@ import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
-import java.util.function.Function;
+import java.util.function.UnaryOperator;
 
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -107,7 +107,7 @@ abstract class AbstractSourceHandler<T extends Source> {
     * @return grammarFile
     */
    Path downloadTextMateGrammarFile(final DownloadContext ctx, final String grammarPathOrURL) throws IOException {
-      final Function<String, String> mapFileExt = fileExt -> switch (fileExt) {
+      final UnaryOperator<String> mapFileExt = fileExt -> switch (fileExt) {
          case "json" -> ".tmLanguage.json";
          case "yml", "yaml", "yaml-tmlanguage" -> ".tmLanguage.yaml";
          case "plist", "xml", "tmlanguage" -> ".tmLanguage.plist";

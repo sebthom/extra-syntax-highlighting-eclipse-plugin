@@ -11,7 +11,7 @@ import static updater.utils.Sys.*;
 import static updater.utils.Validation.isURL;
 
 import java.io.IOException;
-import java.net.URL;
+import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
@@ -54,7 +54,7 @@ abstract class AbstractSourceHandler<T extends Source> {
    void downloadExampleFile(final DownloadContext ctx, final String examplePathOrURL) throws IOException {
       if (examplePathOrURL != null) {
          if (isURL(examplePathOrURL)) {
-            final var sourceURL = new URL(examplePathOrURL);
+            final var sourceURL = URI.create(examplePathOrURL).toURL();
             final var targetFile = ctx.targetDir.resolve(ctx.targetNamePrefix + ".example." + getFileExtension(sourceURL.getPath()));
             if (ctx.updateExistingFiles || !Files.exists(targetFile)) {
                downloadFile(sourceURL, targetFile);
@@ -74,7 +74,7 @@ abstract class AbstractSourceHandler<T extends Source> {
          if (isURL(langCfgPathOrURL)) {
             final var targetFile = ctx.targetDir.resolve(ctx.targetNamePrefix + ".language-configuration.json");
             if (ctx.updateExistingFiles || !Files.exists(targetFile)) {
-               downloadFile(new URL(langCfgPathOrURL), targetFile);
+               downloadFile(URI.create(langCfgPathOrURL).toURL(), targetFile);
             }
          } else {
             final var targetFile = ctx.targetDir.resolve(ctx.targetNamePrefix + ".language-configuration.json");
@@ -115,7 +115,7 @@ abstract class AbstractSourceHandler<T extends Source> {
       };
 
       if (isURL(grammarPathOrURL)) {
-         final var sourceURL = new URL(grammarPathOrURL);
+         final var sourceURL = URI.create(grammarPathOrURL).toURL();
          final var targetFile = ctx.targetDir.resolve(ctx.targetNamePrefix + mapFileExt.apply(getFileExtension(sourceURL.getPath())
             .toLowerCase()));
          if (ctx.updateExistingFiles || !Files.exists(targetFile)) {

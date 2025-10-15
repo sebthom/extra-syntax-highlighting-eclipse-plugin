@@ -40,7 +40,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: 2cbd3f6f01f6ed65adb56d9dcb339cfe2c599031
+      commit: c33dc7cdd0369722afc2f769c3dbfe2b8015f6bb
     languages:
       astro:
         label: Astro
@@ -113,7 +113,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 72754ff8eaf7c526f9c22b64fcf5cea69a064892
+      commit: a486c12bd69478bcfedcf73a3bb6b67a9b5f7ca8
     languages:
       carbon:
         label: Carbon
@@ -125,7 +125,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 2fcde1faff6d87f237e4521f4eb12d5b4ef68f45
+      commit: 2a4792f80fa2fcb274f4f99df3331c1239fb68cb
     languages:
       cobol:
         label: COBOL
@@ -292,7 +292,7 @@ extensions:
     github:
       repo: bmalehorn/vscode-fish
       ref: master
-      commit: 888213a73202e394bf9b80f09fb8b5c0f130d1b6
+      commit: af7f414d21859f116e8975470976062f7553c620
     languages:
       fish:
         label: Fish
@@ -318,7 +318,7 @@ extensions:
     github:
       repo: fortran-lang/vscode-fortran-support
       ref: main
-      commit: 2e2182aa8a6cbb6596ec966f182b957f0d546989
+      commit: 81c5707cb5400f46f3d862449e319a6c317d9472
     languages:
       FortranFixedForm:
         label: Fortran77
@@ -504,7 +504,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: cdcb17b06e76e765a9f24fb03f3e4c951f722d92
+      commit: bfb38cbf324e094f58488ce68087b0f1ee3e7713
     languages:
       helm:
         label: helm-template
@@ -1027,7 +1027,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 12b3fd68ac4dff0c4c3c3436a11a2b3b9e27bd1c
+      commit: cb3e6b32c180bbc10a7d8a979ecf92966521103a
     languages:
       ocaml:
         label: OCaml
@@ -1148,7 +1148,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: d2fdb0c82fdd5b60a803d7a022fecd912de49150
+      commit: 1dab1926cbb0edc33cd10770150ce2150b5e59d3
     languages:
       prisma:
         label: Prisma

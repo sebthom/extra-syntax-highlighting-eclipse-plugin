@@ -40,7 +40,7 @@ extensions:
       repo: withastro/language-tools
       path: packages/vscode
       ref: main
-      commit: c33dc7cdd0369722afc2f769c3dbfe2b8015f6bb
+      commit: 0d3bfb811c4343b81425db15f2db4f3ae3f79a17
     languages:
       astro:
         label: Astro
@@ -113,7 +113,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: a486c12bd69478bcfedcf73a3bb6b67a9b5f7ca8
+      commit: ca3f95faa610fdb9412c9e58ece524abf30c7a9e
     languages:
       carbon:
         label: Carbon
@@ -125,7 +125,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 2a4792f80fa2fcb274f4f99df3331c1239fb68cb
+      commit: 6551a0c9e31a71bbf248ec6c18e980a59463ef17
     languages:
       cobol:
         label: COBOL
@@ -291,8 +291,8 @@ extensions:
   fish:
     github:
       repo: bmalehorn/vscode-fish
-      ref: master
-      commit: af7f414d21859f116e8975470976062f7553c620
+      ref: main
+      commit: 0741d59ecf3d2aa018543747874eb8f34c655612
     languages:
       fish:
         label: Fish
@@ -504,7 +504,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: bfb38cbf324e094f58488ce68087b0f1ee3e7713
+      commit: 280c0d029f91bc465ca6b253259a95bb531a3a87
     languages:
       helm:
         label: helm-template
@@ -998,7 +998,7 @@ extensions:
     github:
       repo: edheltzel/better-nunjucks-for-visual-studio-code
       ref: main
-      commit: 332160a51a5ce4742619aa9c39331de418eac9b7
+      commit: 83bfc919563c30f8eeb1548f983e143adad29781
     languages:
       nunjucks-html:
         label: Nunjucks HTML
@@ -1027,7 +1027,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: cb3e6b32c180bbc10a7d8a979ecf92966521103a
+      commit: b4a8d183c56323fee2f31449cee405f0460754c9
     languages:
       ocaml:
         label: OCaml
@@ -1082,7 +1082,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 9f7ba16c9c9afeb49f2a8b1729141afe5011bc88
+      commit: af3a10a0e3030e8360607982d22781b59bcb6cb9
     languages:
       odin:
         label: odin
@@ -1148,7 +1148,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 1dab1926cbb0edc33cd10770150ce2150b5e59d3
+      commit: 68908c4e107770004f635308d1495db98a662369
     languages:
       prisma:
         label: Prisma
@@ -1205,7 +1205,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: edcb4ed8e840305d90fdb1084abab6ee91832a51
+      commit: 1e01c991cc3314aa617aa9e3cdd76579aa215cd4
     languages:
       svelte:
         label: Svelte
@@ -1274,7 +1274,7 @@ extensions:
       repo: winglang/wing
       path: packages/vscode-wing
       ref: main
-      commit: 43ec45981cbb3f08b19d882e86f068e7eebc6c66
+      commit: 8fb4c792ce202afb08b3aec9fc61f902d8c7efc6
     languages:
       wing:
         label: Wing
@@ -1290,7 +1290,7 @@ extensions:
     github:
       repo: ziglang/vscode-zig
       ref: master
-      commit: ecbd823bdc86143ec98c38ac43805d7b563c1ca9
+      commit: 51ead572f3e1b8f242284fd63a2cb66d6c3671c8
     languages:
       zig:
         label: Zig

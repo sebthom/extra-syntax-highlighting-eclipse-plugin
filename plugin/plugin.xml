@@ -295,6 +295,30 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- codeql/ql: CodeQL -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.ql" name="CodeQL" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="ql,qll" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.ql" path="syntaxes/codeql/ql.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.ql" contentTypeId="extra-syntax-highlighting.ql" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.ql" path="syntaxes/codeql/ql.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.ql" icon="syntaxes/codeql/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="CodeQL Example" path="syntaxes/codeql/ql.example.ql" scopeName="source.ql" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- crystal/crystal: Crystal -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

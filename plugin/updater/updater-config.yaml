@@ -168,6 +168,20 @@ sources:
       hpcobol:
         ignored: true
 
+  codeql:
+    type: custom
+    github:
+      repo: github/vscode-codeql
+    languages:
+      ql:
+        label: CodeQL
+        scope-name: source.ql
+        grammar: syntaxes/ql.tmLanguage.json
+        langcfg: extensions/ql-vscode/language-configuration.json
+        file-extensions:
+        - .ql
+        - .qll
+
   crystal:
     type: vscode-extension
     github:

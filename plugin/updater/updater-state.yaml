@@ -145,6 +145,18 @@ extensions:
     - scope-name: meta.embedded.block.sql
       inject-to:
       - source.cobol
+  codeql:
+    github:
+      repo: github/vscode-codeql
+      ref: main
+      commit: 8584fdf8820e26344e96cf6beef0193676e8082e
+    languages:
+      ql:
+        label: CodeQL
+        scope-name: source.ql
+        file-extensions:
+        - .ql
+        - .qll
   crystal:
     github:
       repo: crystal-lang-tools/vscode-crystal-lang

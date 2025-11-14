@@ -26,6 +26,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. BF - https://en.wikipedia.org/wiki/Brainfuck
 1. Carbon - https://carbon-lang.dev
 1. COBOL - https://en.wikipedia.org/wiki/COBOL
+1. CodeQL - https://codeql.github.com/
 1. Crystal (`*.cr`) - https://crystal-lang.org/
 1. CSV (`*.cvs`) / TSV (`*.tab*`, `*.tsv*`)
 1. D2 - https://d2lang.com/
@@ -120,6 +121,7 @@ To install the plugin into an existing Eclipse installation do:
 | Branflakes <img src="plugin/syntaxes/bf/icon.png" width=16/> | file-extensions="bf, bfsck, brainfuck" | [main@chrisvrose/bf-server](https://github.com/chrisvrose/bf-server/tree/5945c04ccea21cd13e133547276d27d6540375f2/)
 | Carbon | file-extensions="carbon" | [trunk@carbon-language/carbon-lang](https://github.com/carbon-language/carbon-lang/tree/1ece5000aabfbe553fcd844b28e6bfedd6b3d181/utils)
 | COBOL <img src="plugin/syntaxes/cobol/icon.png" width=16/> | file-extensions="cbl, cob, cobol, copy, cpy"<br />file-patterns="\*\*/broadcommfd.cobol-language-support/\*/copybooks/\*\*" | [development@eclipse-che4z/che-che4z-lsp-for-cobol](https://github.com/eclipse-che4z/che-che4z-lsp-for-cobol/tree/e595600949806eb9ba012499bec5ca88ecceedf0/clients/cobol-lsp-vscode-extension)
+| CodeQL <img src="plugin/syntaxes/codeql/icon.png" width=16/> | file-extensions="ql, qll" | [main@github/vscode-codeql](https://github.com/github/vscode-codeql/tree/8584fdf8820e26344e96cf6beef0193676e8082e/)
 | Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="cr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/5f14b919a52e4149587d1b72dc34fe2afa371a1e/) [[upstream]](https://github.com/Microsoft/vscode/blob/3f1f36333d3453f67a36b6bfb1206e9159e9c4f0/extensions/ruby/syntaxes/ruby.tmLanguage.json)
 | Crystal Slang <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="slang" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/5f14b919a52e4149587d1b72dc34fe2afa371a1e/)
 | CSV <img src="plugin/syntaxes/csv/icon.png" width=16/> | file-extensions="csv" | [master@mechatroner/vscode_rainbow_csv](https://github.com/mechatroner/vscode_rainbow_csv/tree/0166b04d884ae71600221fe3d934fbec3469638a/)

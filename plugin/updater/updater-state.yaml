@@ -60,7 +60,7 @@ extensions:
       repo: ballerina-platform/ballerina-grammar
       path: syntaxes
       ref: master
-      commit: eb62358724deaad784458ae1d5ec33c4d164e483
+      commit: 10325fc5436a87606407ba68bf668bcd59dc180d
     languages:
       ballerina:
         label: Ballerina
@@ -113,7 +113,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 1ece5000aabfbe553fcd844b28e6bfedd6b3d181
+      commit: 13bb660f7fcb5d55e28efb7034d5bed48765c80d
     languages:
       carbon:
         label: Carbon
@@ -125,7 +125,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: e595600949806eb9ba012499bec5ca88ecceedf0
+      commit: ec3adc042de0334a223f990b144435df1946fbde
     languages:
       cobol:
         label: COBOL
@@ -138,13 +138,24 @@ extensions:
         - .cpy
         file-patterns:
         - '**/broadcommfd.cobol-language-support/*/copybooks/**'
+      ndvr-cobol:
+        label: NDVR-COBOL
+        scope-name: source.ndvr.cobol
+        file-extensions:
+        - .cbl.prnt
+        - .cob.prnt
+        - .cobol.prnt
+        - .copy.prnt
+        - .cpy.prnt
     inline-grammars:
     - scope-name: meta.embedded.block.cics
       inject-to:
       - source.cobol
+      - source.ndvr.cobol
     - scope-name: meta.embedded.block.sql
       inject-to:
       - source.cobol
+      - source.ndvr.cobol
   codeql:
     github:
       repo: github/vscode-codeql
@@ -516,7 +527,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: e81ef7bbc6a89224bf8cf5cfe2e7a30312852816
+      commit: 810e02314685e457d2e6725f32dd02fa6a471592
     languages:
       helm:
         label: helm-template
@@ -1039,7 +1050,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 6a40dafae58e524e90dfe135dcdcdb11155274fc
+      commit: 2b552a95effa824a51e8465cfe4cf92a9f1f5640
     languages:
       ocaml:
         label: OCaml
@@ -1094,7 +1105,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 0d6f26fa21ceb6c656ed19e008f74091a4cf6686
+      commit: b893410bc7ff44a73f4c77d31d7ae5c7defbd9e6
     languages:
       odin:
         label: odin
@@ -1160,7 +1171,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 780607009c014e4f37fe5c93cf321842493b1eef
+      commit: 76bec75f7f86df777992397f453acee85499f22a
     languages:
       prisma:
         label: Prisma
@@ -1192,7 +1203,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: c859a4859499baa588b9d7ed6d591491da6bad58
+      commit: f032b1f98bf0831143817875f6cebccec142198c
     languages:
       ring:
         label: Ring
@@ -1217,7 +1228,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: d0858307af729f11ff5acb3038a61e0faa2c0c7f
+      commit: 253b87213c330061fab1279b82241e728746db82
     languages:
       svelte:
         label: Svelte

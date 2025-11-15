@@ -285,13 +285,31 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- cobol/ndvr-cobol: NDVR-COBOL -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.ndvr-cobol" name="NDVR-COBOL" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-patterns="*.cbl.prnt,*.cob.prnt,*.cobol.prnt,*.copy.prnt,*.cpy.prnt" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.ndvr.cobol" path="syntaxes/cobol/ndvr-cobol.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.ndvr.cobol" contentTypeId="extra-syntax-highlighting.ndvr-cobol" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.ndvr-cobol" icon="syntaxes/cobol/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
   <!-- cobol: Inline Grammars -->
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
     <grammar scopeName="meta.embedded.block.cics" path="syntaxes/cobol/meta.embedded.block.cics.tmLanguage.json" />
     <injection scopeName="meta.embedded.block.cics" injectTo="source.cobol" />
+    <injection scopeName="meta.embedded.block.cics" injectTo="source.ndvr.cobol" />
     <grammar scopeName="meta.embedded.block.sql" path="syntaxes/cobol/meta.embedded.block.sql.tmLanguage.json" />
     <injection scopeName="meta.embedded.block.sql" injectTo="source.cobol" />
+    <injection scopeName="meta.embedded.block.sql" injectTo="source.ndvr.cobol" />
   </extension>
 
   <!-- ======================================== -->

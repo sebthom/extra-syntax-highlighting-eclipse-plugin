@@ -447,10 +447,21 @@ sources:
   nginx:
     type: vscode-extension
     github:
-      repo: ahmadalli/vscode-nginx-conf
+      repo: almir/nginx-syntax-highlighter
     languages:
       nginx:
-        grammar: src/syntax/nginx.tmLanguage
+        label: NGINX Conf
+        file-extensions:
+        - .conf
+        - .fastcgi_params
+        - .nginx
+        - .scgi_params
+        - .uwsgi_params
+        file-patterns:
+        - "*.conf.default"
+        - "*.conf.template"
+        - "*.mime.types"
+        - "*.nginx.conf"
 
   nunjucks:
     type: custom

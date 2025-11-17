@@ -1000,23 +1000,24 @@ extensions:
       - source.mdx
   nginx:
     github:
-      repo: ahmadalli/vscode-nginx-conf
+      repo: almir/nginx-syntax-highlighter
       ref: main
-      commit: 10414d948cc5e52fbf2a8207629427d4ae3bc8c4
+      commit: 03fa6617212032f1d538891730bb15feb4df2ef8
     languages:
       nginx:
         label: NGINX Conf
         scope-name: source.nginx
         file-extensions:
         - .conf
-        - .conf.default
-        - .conf.template
+        - .fastcgi_params
         - .nginx
-        - fastcgi_params
-        - mime.types
-        - nginx.conf
-        - scgi_params
-        - uwsgi_params
+        - .scgi_params
+        - .uwsgi_params
+        file-patterns:
+        - '*.conf.default'
+        - '*.conf.template'
+        - '*.mime.types'
+        - '*.nginx.conf'
   nunjucks:
     github:
       repo: edheltzel/better-nunjucks-for-visual-studio-code

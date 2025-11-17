@@ -1938,7 +1938,7 @@
                   file-extensions="conf,fastcgi_params,nginx,scgi_params,uwsgi_params" file-patterns="*.conf.default,*.conf.template,*.mime.types,*.nginx.conf" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.nginx" path="syntaxes/nginx/nginx.tmLanguage.plist" />
+    <grammar scopeName="source.nginx" path="syntaxes/nginx/nginx.tmLanguage.json" />
     <scopeNameContentTypeBinding scopeName="source.nginx" contentTypeId="extra-syntax-highlighting.nginx" />
   </extension>
 

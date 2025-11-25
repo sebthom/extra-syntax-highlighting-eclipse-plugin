@@ -113,7 +113,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 201e408252c1eec3680e1d4f68e8473b1dc583be
+      commit: cf2c66c1b29fd54c73fbac2ed8357a1f217beb88
     languages:
       carbon:
         label: Carbon
@@ -125,7 +125,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 1b2507eb60a3f4250926d1a6406e78065a3b0c6b
+      commit: a2ecd79e558dd56f1593089b6be53fc6e8c55654
     languages:
       cobol:
         label: COBOL
@@ -160,7 +160,7 @@ extensions:
     github:
       repo: github/vscode-codeql
       ref: main
-      commit: e1482ad0427b8d77eeb9c8fb9d5f63e53c26e2b5
+      commit: ddeb8c570e13b9b6f2fb4b4789f424a1ee03787a
     languages:
       ql:
         label: CodeQL
@@ -399,7 +399,7 @@ extensions:
     github:
       repo: GeForceLegend/vscode-glsl
       ref: master
-      commit: 6cbfd57e2337a9e4eff66ae5b702cd942b876ea5
+      commit: da57fa1415d5b77191ee8566f2b4b6cd9dbb3572
     languages:
       glsl:
         label: OpenGL Shading Language
@@ -527,7 +527,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: 17f618020d22a80ee241a4c7c49e8a502d271920
+      commit: 26e5214fa89071b48677186385db84725f6e45ba
     languages:
       helm:
         label: helm-template
@@ -1051,7 +1051,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 2263572550fd502436b9b88563783718cdea0030
+      commit: ac3a5caa3d9f086aebda9af2493d80693d1db4e8
     languages:
       ocaml:
         label: OCaml
@@ -1106,7 +1106,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 74396f71ea35e313e6b2585db913e69cca14146e
+      commit: a5f43fd98dc7b853cf6c198a51d424886b66ea42
     languages:
       odin:
         label: odin
@@ -1172,7 +1172,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: e5c878d434dbf8c0f6a0d0b066183cfdac22afe6
+      commit: e65281d2a6ef19d6de3615aff20aca1cda009a0e
     languages:
       prisma:
         label: Prisma
@@ -1314,7 +1314,7 @@ extensions:
     github:
       repo: ziglang/vscode-zig
       ref: master
-      commit: ac345ffb9e3f8ccf2558da42ecefa62f571b53a9
+      commit: 38309f0b1dc0c1bdc4b23e78594302bf28ef43d1
     languages:
       zig:
         label: Zig

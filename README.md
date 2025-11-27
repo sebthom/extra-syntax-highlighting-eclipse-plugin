@@ -30,7 +30,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. Crystal (`*.cr`) - https://crystal-lang.org/
 1. CSV (`*.cvs`) / TSV (`*.tab*`, `*.tsv*`)
 1. D2 - https://d2lang.com/
-1. Eclipse External null Annotations (`*.eea`) - https://wiki.eclipse.org/JDT_Core/Null_Analysis/External_Annotations#File_format
+1. Eclipse External null Annotations (`*.eea`) - https://github.com/eclipse-jdt/eclipse.jdt.core/wiki/Null-Analysis-External-Annotations#file-format
 1. EditorConfig - https://editorconfig.org
 1. Elm - https://elm-lang.org/
 1. Entity-Relationship Diagram (`*.er`) - https://github.com/BurntSushi/erd

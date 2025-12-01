@@ -69,7 +69,7 @@
 
    <properties>
       <java.version>21</java.version>
-      <tycho.version>5.0.0</tycho.version>
+      <tycho.version>5.0.1</tycho.version>
 
       <!-- to prevent dozen of warnings like:
       [WARNING] System artifact: p2.eclipse-plugin:org.eclipse.mylyn.commons.notifications.ui:jar:1.17.2.v20200813-0821:system has no file attached
@@ -89,6 +89,27 @@
                <configuration>
                   <skip>true</skip>
                </configuration>
+            </plugin>
+
+            <plugin>
+               <groupId>org.codehaus.gmavenplus</groupId>
+               <artifactId>gmavenplus-plugin</artifactId>
+               <dependencies>
+                  <!--
+                     workaround since Tycho 5 where for some unknown reason the Maven build aborts with
+                        org.apache.maven.lifecycle.LifecycleExecutionException:
+                        Failed to execute goal org.codehaus.gmavenplus:gmavenplus-plugin:4.2.1:execute (groovy.script.onValidate@validate) on project de.sebthom.eclipse.extra_syntax_highlighting.parent:
+                        Error occurred while calling a method on a Groovy class from classpath.
+                        Caused by: InvocationTargetException: startup failed:
+                        General error during conversion: Error grabbing Grapes - [download failed: commons-codec#commons-codec;1.19.0!commons-codec.jar]
+                        at groovy.grape.GrapeIvy.getDependencies(GrapeIvy.groovy:487)
+                  -->
+                  <dependency>
+                    <groupId>commons-codec</groupId>
+                    <artifactId>commons-codec</artifactId>
+                    <version>1.19.0</version>
+                  </dependency>
+               </dependencies>
             </plugin>
 
             <plugin>

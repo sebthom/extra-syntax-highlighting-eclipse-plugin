@@ -14,7 +14,7 @@
   ],
   "repository": {
     "mermaid-code-block": {
-      "begin": "(?i)(?<=[`~])mermaid(\\s+[^`~]*)?$",
+      "begin": "(?i)(?<=[`~])\\s*mermaid(\\s+[^`~]*)?$",
       "end": "(^|\\G)(?=\\s*[`~]{3,}\\s*$)",
       "contentName": "meta.embedded.block.mermaid",
       "patterns": [
@@ -24,7 +24,7 @@
       ]
     },
     "mermaid-code-block-with-attributes": {
-      "begin": "(?i)(?<=[`~])\\{\\s*\\.?mermaid(\\s+[^`~]*)?$",
+      "begin": "(?i)(?<=[`~])\\s*\\{\\s*\\.?mermaid(\\s+[^`~]*)?$",
       "end": "(^|\\G)(?=\\s*[`~]{3,}\\s*$)",
       "contentName": "meta.embedded.block.mermaid",
       "patterns": [
@@ -502,7 +502,7 @@
             },
             {
               "comment": "(entity) {",
-              "begin": "(?i)\\s+([\\w-]+)\\s*(\\[)?\\s*((?:[\\w-]+)|(?:\"[\\w\\s-]+\"))?\\s*(\\])?\\s*({)",
+              "begin": "(?i)\\s*([\\w-]+)\\s*(\\[)?\\s*((?:[\\w-]+)|(?:\"[\\w\\s-]+\"))?\\s*(\\])?\\s*({)",
               "beginCaptures": {
                 "1": {
                   "name": "variable"
@@ -523,7 +523,7 @@
               "patterns": [
                 {
                   "comment": "(type) (name) (constraints)? (\"comment\")?",
-                  "match": "(?i)\\s*([\\w-]+)\\s+([\\w-]+)\\s+([PFU]K(?:,\\s*[PFU]K){0,2})?\\s*(\"[\"\\($&%\\^/#.,?!;:*+=<>\\'\\\\\\-\\w\\s]*\")?\\s*",
+                  "match": "(?i)\\s*([\\w-]+)\\s+([\\w-]+)\\s+([PFU]K(?:,\\s*[PFU]K){0,2})?\\s*(\"[^\"\\r\\n]*\")?\\s*",
                   "captures": {
                     "1": {
                       "name": "storage.type.mermaid"

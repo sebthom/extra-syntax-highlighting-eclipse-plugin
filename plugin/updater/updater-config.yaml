@@ -97,6 +97,11 @@ sources:
   #             grammar: <filepath_in_repo>      # optional
   #             update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
 
+  amber:
+    type: vscode-extension
+    github:
+      repo: amber-lang/amber-vsc
+
   antlr4:
     type: vscode-extension
     github:

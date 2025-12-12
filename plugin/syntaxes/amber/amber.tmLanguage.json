@@ -1,0 +1,153 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "amber",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#commands"
+		},
+		{
+			"include": "#chars"
+		},
+		{
+			"include": "#commentLine"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+			{
+				"match": "^#!.*$",
+				"name": "comment.line.shebang.amber"
+			},
+			{
+				"match": "(fun)\\s+(\\w[^\\(]+)",
+
+				"captures": {
+					"1" : {
+						"name" : "keyword.control.amber"
+					},
+					"2" : {
+						"name" : "entity.name.function"
+					}
+				}
+			},
+			{
+				"name": "keyword.control.amber",
+				"match": "\\b(if|loop|for|ref|return|fun|else|then|break|continue|and|or|not|let|const|import|from|pub|main|echo|cd|exit|mv|as|in|fail|failed|succeeded|exited|status|silent|nameof|len|lines|is|unsafe|trust|sudo|while)\\b"
+			},
+			{
+				"match": "^#\\[.*\\]$",
+				"name": "comment.compiler.amber"
+			},
+			{
+				"match": "\\b(true|false|null)\\b(?![?!])",
+				"name": "constant.language.boolean.amber"
+			},
+			{
+				"match": "\\b(Text|Num|Int|Bool|Null)\\b",
+				"name": "support.type.amber"
+			},
+			{
+				"match": "[A-Z][a-z0-9_]+",
+				"name": "entity.name.class.amber"
+			},
+			{
+				"match": "[+-]?([0-9]*[.])?[0-9]+",
+				"name": "constant.language.float.amber"
+			},
+			{
+				"match": "\\b\\w+\\s*(?=\\([\\S\\s]*?\\)?)",
+				"name": "entity.name.function"
+			},
+			{
+				"name" : "keyword.operator.amber",
+				"match" : "(\\+|\\-|\\^|\\*|\\=|\\||\\%|!|>|<|[.]{2}|\\?)"
+			},
+			{
+				"name" : "comment.block",
+				"match": "(\\/\\*[\\w\\'\\s\\r\\n\\*]*\\*\\/)"
+			},
+			{
+				"name" : "variable.name",
+				"match" : "\\b\\w+\\b"
+			}
+			]
+		},
+		"string-insides" : {
+			"patterns": [
+				{
+					"name": "constant.character.escape.amber",
+					"match": "\\\\."
+				},
+				{
+					"name": "keyword.control",
+					"begin" : "\\{",
+					"end" : "\\}",
+					"patterns": [
+						{
+							"include" : "$self"
+						}
+					]
+				}
+			]
+		},
+		"command-insides" : {
+			"patterns": [
+				{
+					"name": "constant.character.escape.amber",
+					"match": "\\\\."
+				},
+				{
+					"name": "constant.language",
+					"match": "-{1,2}[A-Za-z0-9-_]+"
+				},
+				{
+					"name": "nothing",
+					"match": "[A-Za-z0-9-_]+"
+				},
+				{
+					"name": "keyword.control",
+					"begin" : "\\{",
+					"end" : "\\}",
+					"patterns": [
+						{
+							"include" : "$self"
+						}
+					]
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.amber",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"include": "#string-insides"
+				}
+			]
+		},
+		"commands": {
+			"name": "string",
+			"begin": "\\$",
+			"end": "\\$",
+			"patterns": [
+				{
+					"include": "#command-insides"
+				}
+			]
+		},
+		"commentLine" : {
+			"name":"comment.line",
+			"begin" : "//",
+			"end" : "$"
+		}
+	},
+	"scopeName": "source.amber"
+}

@@ -18,6 +18,7 @@
 ## <a name="what-is-it"></a>What is it?
 
 This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support for the following languages/file formats utilizing [TM4E](https://github.com/eclipse/tm4e):
+1. Amber - https://amber-lang.com/
 1. ANTRL4 - https://www.antlr.org/
 1. Apache HTTP configuration files - https://httpd.apache.org/docs/current/configuring.html
 1. Astro - https://astro.build/
@@ -113,6 +114,7 @@ To install the plugin into an existing Eclipse installation do:
 
 | Language/Format | File Associations | Source
 |:--------------- |:----------------- |:------ |
+| Amber <img src="plugin/syntaxes/amber/amber.icon.png" width=16/> | file-extensions="ab, amber" | [main@amber-lang/amber-vsc](https://github.com/amber-lang/amber-vsc/tree/c0ebd53e075698fa62efffd492a41b27bff1c227/)
 | ANTLR <img src="plugin/syntaxes/antlr4/icon.png" width=16/> | file-extensions="g, g4" | [master@mike-lischke/vscode-antlr4](https://github.com/mike-lischke/vscode-antlr4/tree/8408f1d50c59bc81f52795525ad41a6b50787316/)
 | Apache HTTP Config <img src="plugin/syntaxes/apache-http/icon.png" width=16/> | file-extensions="conf, htaccess, htgroups, htpasswd" | [master@mrmlnc/vscode-apache](https://github.com/mrmlnc/vscode-apache/tree/0585b0bb3d390fc541aa27cfcfb83b3204156be3/)
 | Astro <img src="plugin/syntaxes/astro/astro.icon.png" width=16/> | file-extensions="astro" | [main@withastro/language-tools](https://github.com/withastro/language-tools/tree/b4bcb4fc02cd960936a5faee6c9cc0ad94fc4c05/packages/vscode)

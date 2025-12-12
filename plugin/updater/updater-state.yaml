@@ -1,5 +1,17 @@
 # AUTO-GENERATED FILE - Do not edit manually; changes will be lost.
 extensions:
+  amber:
+    github:
+      repo: amber-lang/amber-vsc
+      ref: main
+      commit: c0ebd53e075698fa62efffd492a41b27bff1c227
+    languages:
+      amber:
+        label: Amber
+        scope-name: source.amber
+        file-extensions:
+        - .ab
+        - .amber
   antlr4:
     github:
       repo: mike-lischke/vscode-antlr4

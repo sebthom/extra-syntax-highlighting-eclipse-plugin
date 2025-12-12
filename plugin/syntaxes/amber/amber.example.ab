@@ -1,0 +1,108 @@
+/// Sample Amber file for syntax highlighting showcase
+module demo.syntax
+
+// --- Imports ---------------------------------------------------------
+
+import std::io
+import std::collections::{Map, Set}
+import app::utils as utils
+
+
+// --- Records, Enums, Traits -----------------------------------------
+
+/// A simple record with typed fields
+record User {
+    id:    Int,
+    name:  String,
+    email: Option<String>,
+}
+
+/// An enum with payloads and unit cases
+enum Message {
+    Ping
+    Text(content: String)
+    Error(code: Int, reason: String)
+}
+
+/// A trait (interface)
+trait Printable {
+    fn print(self)
+}
+
+
+// --- Implementations -------------------------------------------------
+
+impl Printable for User {
+    fn print(self) {
+        io::println("User(#{}): {}", self.id, self.name)
+    }
+}
+
+impl Printable for Message {
+    fn print(self) {
+        match self {
+            Ping =>
+                io::println("Ping"),
+            Text(content) =>
+                io::println("Text: {}", content),
+            Error(code, reason) =>
+                io::println("Error {}: {}", code, reason)
+        }
+    }
+}
+
+
+// --- Generic Functions ----------------------------------------------
+
+fn identity<T>(value: T): T {
+    value
+}
+
+fn map_usernames(users: List<User>): List<String> {
+    users.map(|u| u.name)
+}
+
+
+// --- Async/await -----------------------------------------------------
+
+async fn fetch_user(id: Int): Result<User, String> {
+    let response = await utils::http_get("https://api.example.com/users/{}", id)
+    match response {
+        Ok(json) => utils::parse_user(json),
+        Err(e)   => Err("Network error: {}".format(e))
+    }
+}
+
+
+// --- Main Program ----------------------------------------------------
+
+fn main() {
+    // Variables
+    let mut users = List<User>::new()
+
+    // Creating instances
+    let u1 = User(id: 1, name: "Alice", email: Some("alice@example.com"))
+    let u2 = User(id: 2, name: "Bob",   email: None)
+
+    users.push(u1)
+    users.push(u2)
+
+    // Pattern matching
+    let msg = Message::Text("Hello Amber!")
+    msg.print()
+
+    // Pipeline operator
+    let names =
+        users
+        |> map_usernames
+        |> List::sort
+
+    io::println("Usernames: {}", names)
+
+    // Async example
+    let result = await fetch_user(3)
+    match result {
+        Ok(user) => user.print(),
+        Err(err) => io::println("Failed to fetch user: {}", err)
+    }
+}

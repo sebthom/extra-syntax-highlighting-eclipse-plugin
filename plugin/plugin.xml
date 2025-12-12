@@ -57,6 +57,30 @@
   <!-- START-GENERATED -->
 
   <!-- ======================================== -->
+  <!-- amber/amber: Amber -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.amber" name="Amber" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="ab,amber" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.amber" path="syntaxes/amber/amber.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.amber" contentTypeId="extra-syntax-highlighting.amber" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.amber" path="syntaxes/amber/amber.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.amber" icon="syntaxes/amber/amber.icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Amber Example" path="syntaxes/amber/amber.example.ab" scopeName="source.amber" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- antlr4/antlr: ANTLR -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

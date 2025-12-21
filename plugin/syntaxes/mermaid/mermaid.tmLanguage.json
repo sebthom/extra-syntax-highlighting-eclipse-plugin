@@ -1123,6 +1123,74 @@
           "end": "(^|\\G)(?=\\s*[`:~]{3,}\\s*$)"
         },
         {
+          "comment": "Mindmap Diagram",
+          "begin": "^\\s*(mindmap)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.mermaid"
+            }
+          },
+          "patterns": [
+            {
+              "match": "\\%%.*",
+              "name": "comment"
+            },
+            {
+              "comment": ":::Text",
+              "match": "(?i)(\\s*:::)(\\s*[\"$&\\^/#.,?!;*+=<>\\'\\\\\\-\\w\\s]*)",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "string"
+                }
+              }
+            },
+            {
+              "comment": "::icon(Text)",
+              "match": "(?i)(\\s*::icon)(\\s*\\()(\\s*[\"$&\\^/#.,?!;*+=<>\\'\\\\\\-\\w\\s]*)(\\s*\\))",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "string"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "(Id)(Shape Start)(Text)(Shape End)",
+              "match": "(?i)(\\s*[\"$&\\^/#.,?!;:*+=<>\\'\\\\\\-\\w\\s]*)(\\s*\\({1,2}|\\){1,2}|\\{\\{|\\[)(\\s*[\"$&\\^/#.,?!;:*+=<>\\'\\\\\\-\\w\\s]*)(\\s*\\){1,2}|\\({1,2}|\\}\\}|\\])",
+              "captures": {
+                "1": {
+                  "name": "variable"
+                },
+                "2": {
+                  "name": "keyword.control.mermaid"
+                },
+                "3": {
+                  "name": "string"
+                },
+                "4": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "match": "^(\\s*[\"$&\\^/#.,?!;:*+=<>\\'\\\\\\-\\w\\s]*)",
+              "name": "string"
+            }
+          ],
+          "end": "(^|\\G)(?=\\s*[`:~]{3,}\\s*$)"
+        },
+        {
           "comment": "Pie Chart",
           "begin": "^\\s*(pie)",
           "beginCaptures": {

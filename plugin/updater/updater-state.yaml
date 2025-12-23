@@ -125,7 +125,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 90f839e84ef9663ae40590aa17d35ab9a7b4b4ec
+      commit: 531d0635965e0979551f2d3acd2d2b361b26655e
     languages:
       carbon:
         label: Carbon
@@ -353,7 +353,7 @@ extensions:
     github:
       repo: fortran-lang/vscode-fortran-support
       ref: main
-      commit: 8f356b65108b91dfedf26827a3eaf30e6ab85bde
+      commit: f87209f16180d7adc095e012dd6457e5ce331eff
     languages:
       FortranFixedForm:
         label: Fortran77
@@ -539,7 +539,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: master
-      commit: c75f8502bcf8ce37ab9524fc23afc47a64e24038
+      commit: 5b5c56e3bbca86d1e3e0d48690df9d05f93b740f
     languages:
       helm:
         label: helm-template
@@ -1118,7 +1118,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 3fae1fa52ceee347940eabd8cbca0e2c7edec036
+      commit: 5872154f56d21074f0e77950612bc769351094aa
     languages:
       odin:
         label: odin
@@ -1184,7 +1184,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 6c1b746c8509d8352695999ec1d0c9161ae40751
+      commit: ca7702b17112d28f47f53dcc9800770740146ad5
     languages:
       prisma:
         label: Prisma
@@ -1216,7 +1216,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 33273a82327a8866274d966e8caaf7269e37bda0
+      commit: 84db9e5a82801f317c72a00a2fc9e49bf565754b
     languages:
       ring:
         label: Ring

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
    <feature id="de.sebthom.eclipse.extra_syntax_highlighting.feature" />
+   <repository-reference location="https://download.eclipse.org/tm4e/releases/0.6.2/" name="TM4E 0.6.2" enabled="true" />
+   <repository-reference location="https://download.eclipse.org/tm4e/releases/0.15.1/" name="TM4E 0.15.1" enabled="true" />
+   <repository-reference location="https://download.eclipse.org/tm4e/releases/latest/" name="TM4E Latest Release" enabled="true" />
 </site>

@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
-   SPDX-FileCopyrightText: © Sebastian Thomschke and contributors.
+   SPDX-FileCopyrightText: © Sebastian Thomschke and contributors
    SPDX-FileContributor: Sebastian Thomschke
    SPDX-License-Identifier: EPL-2.0
    SPDX-ArtifactOfProjectHomePage: https://github.com/sebthom/extra-syntax-highlighting-eclipse-plugin
@@ -23,20 +23,21 @@
    <packaging>eclipse-repository</packaging>
 
    <properties>
-      <jarsigner.keystore.alias>sebthom.github.io</jarsigner.keystore.alias>
       <!-- using a TimeStamp Authority allows signed jars to be used even after expiration of the signing certificates
            which is esp. important when short living certs (like letsencrypt) are used -->
       <jarsigner.timestamp.url>http://timestamp.digicert.com?alg=sha256</jarsigner.timestamp.url>
       <!-- properties to be specified via the CLI: -->
-      <!-- * jarsigner.keystore.path -->
-      <!-- * jarsigner.keystore.password -->
+      <!-- * -Djarsigner.alias= -->
+      <!-- * -Djarsigner.keystore= -->
+      <!-- * -Djarsigner.keypass= -->
+      <!-- * -Djarsigner.storepass= -->
    </properties>
 
    <profiles>
       <profile>
          <activation>
             <property>
-               <name>jarsigner.keystore.path</name>
+               <name>jarsigner.keystore</name>
             </property>
          </activation>
          <build>
@@ -70,11 +71,6 @@
                      </execution>
                   </executions>
                   <configuration>
-                     <alias>${jarsigner.keystore.alias}</alias>
-                     <keystore>${jarsigner.keystore.path}</keystore>
-                     <storepass>${jarsigner.keystore.password}</storepass>
-                     <keypass>${jarsigner.keystore.password}</keypass>
-
                      <archiveDirectory>${project.build.directory}/repository/</archiveDirectory>
                      <includes>
                         <include>features/${project.groupId}*</include>

@@ -9,7 +9,8 @@
         </location>
 
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <repository location="https://download.eclipse.org/releases/2021-06/"/>
+            <!-- Eclipse 4.25 (2022-09) is the first release requiring JDK 17 or newer-->
+            <repository location="https://download.eclipse.org/releases/2022-09/"/>
             <unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
             <unit id="org.eclipse.sdk.ide" version="0.0.0"/>
         </location>
@@ -27,7 +28,7 @@
         </location>
 
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-            <repository location="https://download.eclipse.org/tm4e/releases/0.4.2"/>
+            <repository location="https://download.eclipse.org/tm4e/releases/0.6.2"/>
             <unit id="org.eclipse.tm4e.feature.feature.group" version="0.0.0"/>
         </location>
     </locations>

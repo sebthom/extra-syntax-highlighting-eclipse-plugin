@@ -107,6 +107,12 @@ To install the plugin into an existing Eclipse installation do:
 1. When the download has finished, Eclipse will ask about installing unsigned content. You need to accept if you want to
 1. After installation you will be prompted for a restart of Eclipse, which is recommended.
 
+### Minimum version requirements
+
+- JDK: 17 or newer
+- Eclipse IDE: 2022-06 (4.25) or newer
+- TM4E: 0.6.2 or newer
+
 
 ## <a name="supported-fileformats"></a>Supported File Formats/Languages
 

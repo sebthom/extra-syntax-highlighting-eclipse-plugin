@@ -861,6 +861,8 @@
   <!-- fortran: Inline Grammars -->
   <!-- ======================================== -->
   <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="comment.line.fixed.injection" path="syntaxes/fortran/comment.line.fixed.injection.tmLanguage.json" />
+    <injection scopeName="comment.line.fixed.injection" injectTo="source.fortran.fixed" />
     <grammar scopeName="source.openacc" path="syntaxes/fortran/source.openacc.tmLanguage.json" />
     <injection scopeName="source.openacc" injectTo="source.fortran.free" />
     <grammar scopeName="source.openmp" path="syntaxes/fortran/source.openmp.tmLanguage.json" />

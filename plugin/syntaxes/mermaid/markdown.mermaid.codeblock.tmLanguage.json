@@ -167,6 +167,1168 @@
           "end": "(^|\\G)(?=\\s*[`:~]{3,}\\s*$)"
         },
         {
+          "comment": "C4 Component Diagram",
+          "begin": "^\\s*(C4Component)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.mermaid"
+            }
+          },
+          "patterns": [
+            {
+              "match": "\\%%.*",
+              "name": "comment"
+            },
+            {
+              "comment": "title",
+              "match": "(?i)^\\s*(title)\\s+(\\s*[\"\\(\\)$&%\\^/#.,?!;:*+=<>\\'\\\\\\-\\w\\s]*)",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "string"
+                }
+              }
+            },
+            {
+              "comment": "Person with parameters",
+              "match": "(?i)^\\s*(Person|Person_Ext)\\b(\\()?(\\w+)(\\))?(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Person without parameters",
+              "match": "(?i)^\\s*(Person|Person_Ext)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "System with parameters",
+              "match": "(?i)^\\s*(System|System_Ext|SystemDb|SystemDb_Ext|SystemQueue|SystemQueue_Ext)\\b(\\()?(\\w+)(\\))?(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "System without parameters",
+              "match": "(?i)^\\s*(System|System_Ext|SystemDb|SystemDb_Ext|SystemQueue|SystemQueue_Ext)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Rel with parameters",
+              "match": "(?i)^\\s*(Rel|BiRel|Rel_U|Rel_D|Rel_L|Rel_R|Rel_Up|Rel_Down|Rel_Left|Rel_Right)\\b(\\()?\\s*(\\w+)?\\s*(\\))?(,\\s*)(\\w+)(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.section.group.begin.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.section.group.end.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "variable"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "10": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "11": {
+                  "name": "punctuation.section.group.end.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Rel without parameters",
+              "match": "(?i)^\\s*(Rel|BiRel|Rel_U|Rel_D|Rel_L|Rel_R|Rel_Up|Rel_Down|Rel_Left|Rel_Right)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Boundary with parameters",
+              "match": "(?i)^\\s*(Boundary|Enterprise_Boundary|System_Boundary)\\b(\\()?\\s*(\\w+)?\\s*(\\))?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "10": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "11": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Boundary without parameters",
+              "match": "(?i)^\\s*(Boundary|Enterprise_Boundary|System_Boundary)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "LAYOUT keywords",
+              "match": "(?i)^\\s*(LAYOUT_TOP_DOWN|LAYOUT_LEFT_RIGHT|LAYOUT_LANDSCAPE|LAYOUT_WITH_LEGEND|SHOW_LEGEND|HIDE_STEREOTYPE)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "UpdateElementStyle",
+              "match": "(?i)^\\s*(UpdateElementStyle)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "UpdateRelStyle",
+              "match": "(?i)^\\s*(UpdateRelStyle)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "AddElementTag",
+              "match": "(?i)^\\s*(AddElementTag|AddRelTag|AddBoundaryTag|AddPersonTag|AddSystemTag)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Component",
+              "match": "(?i)^\\s*(Component|ComponentDb|ComponentQueue|Component_Ext|ComponentDb_Ext|ComponentQueue_Ext)\\b(\\()?(\\w+)?(\\))?(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Component",
+              "match": "(?i)^\\s*(Component|ComponentDb|ComponentQueue|Component_Ext|ComponentDb_Ext|ComponentQueue_Ext)\\b(\\()?(\\w+)?(\\))?(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Component without parameters",
+              "match": "(?i)^\\s*(Component|ComponentDb|ComponentQueue|Component_Ext|ComponentDb_Ext|ComponentQueue_Ext)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Deployment Node",
+              "match": "(?i)^\\s*(Deployment_Node|Node|Node_L|Node_R)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            }
+          ],
+          "end": "(^|\\G)(?=\\s*[`:~]{3,}\\s*$)"
+        },
+        {
+          "comment": "C4 Container Diagram",
+          "begin": "^\\s*(C4Container)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.mermaid"
+            }
+          },
+          "patterns": [
+            {
+              "match": "\\%%.*",
+              "name": "comment"
+            },
+            {
+              "comment": "title",
+              "match": "(?i)^\\s*(title)\\s+(\\s*[\"\\(\\)$&%\\^/#.,?!;:*+=<>\\'\\\\\\-\\w\\s]*)",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "string"
+                }
+              }
+            },
+            {
+              "comment": "Person with parameters",
+              "match": "(?i)^\\s*(Person|Person_Ext)\\b(\\()?(\\w+)(\\))?(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Person without parameters",
+              "match": "(?i)^\\s*(Person|Person_Ext)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "System with parameters",
+              "match": "(?i)^\\s*(System|System_Ext|SystemDb|SystemDb_Ext|SystemQueue|SystemQueue_Ext)\\b(\\()?(\\w+)(\\))?(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "System without parameters",
+              "match": "(?i)^\\s*(System|System_Ext|SystemDb|SystemDb_Ext|SystemQueue|SystemQueue_Ext)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Container",
+              "match": "(?i)^\\s*(Container|Container_Ext|ContainerDb|ContainerDb_Ext|ContainerQueue|ContainerQueue_Ext)\\b(\\()?(\\w+)?(\\))?(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "10": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "11": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Container without parameters",
+              "match": "(?i)^\\s*(Container|Container_Ext|ContainerDb|ContainerDb_Ext|ContainerQueue|ContainerQueue_Ext)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Rel with parameters",
+              "match": "(?i)^\\s*(Rel|BiRel|Rel_U|Rel_D|Rel_L|Rel_R|Rel_Up|Rel_Down|Rel_Left|Rel_Right)\\b(\\()?\\s*(\\w+)?\\s*(\\))?(,\\s*)(\\w+)(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.section.group.begin.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.section.group.end.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "variable"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "10": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "11": {
+                  "name": "punctuation.section.group.end.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Rel without parameters",
+              "match": "(?i)^\\s*(Rel|BiRel|Rel_U|Rel_D|Rel_L|Rel_R|Rel_Up|Rel_Down|Rel_Left|Rel_Right)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Boundary with parameters",
+              "match": "(?i)^\\s*(Boundary|Enterprise_Boundary|System_Boundary|Container_Boundary)\\b(\\()?\\s*(\\w+)?\\s*(\\))?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "10": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "11": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Boundary without parameters",
+              "match": "(?i)^\\s*(Boundary|Enterprise_Boundary|System_Boundary|Container_Boundary)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "LAYOUT keywords",
+              "match": "(?i)^\\s*(LAYOUT_TOP_DOWN|LAYOUT_LEFT_RIGHT|LAYOUT_LANDSCAPE|LAYOUT_WITH_LEGEND|SHOW_LEGEND|HIDE_STEREOTYPE)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "UpdateElementStyle",
+              "match": "(?i)^\\s*(UpdateElementStyle)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "UpdateRelStyle",
+              "match": "(?i)^\\s*(UpdateRelStyle)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "AddElementTag",
+              "match": "(?i)^\\s*(Deployment_Node|Node|Node_L|Node_R)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            }
+          ],
+          "end": "(^|\\G)(?=\\s*[`:~]{3,}\\s*$)"
+        },
+        {
+          "comment": "C4 Deployment Diagram",
+          "begin": "^\\s*(C4Deployment)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.mermaid"
+            }
+          },
+          "patterns": [
+            {
+              "match": "\\%%.*",
+              "name": "comment"
+            },
+            {
+              "comment": "title",
+              "match": "(?i)^\\s*(title)\\s+(\\s*[\"\\(\\)$&%\\^/#.,?!;:*+=<>\\'\\\\\\-\\w\\s]*)",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "string"
+                }
+              }
+            },
+            {
+              "comment": "Person with parameters",
+              "match": "(?i)^\\s*(Person|Person_Ext)\\b(\\()?(\\w+)(\\))?(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Person without parameters",
+              "match": "(?i)^\\s*(Person|Person_Ext)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "System with parameters",
+              "match": "(?i)^\\s*(System|System_Ext|SystemDb|SystemDb_Ext|SystemQueue|SystemQueue_Ext)\\b(\\()?(\\w+)(\\))?(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "System without parameters",
+              "match": "(?i)^\\s*(System|System_Ext|SystemDb|SystemDb_Ext|SystemQueue|SystemQueue_Ext)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Rel with parameters",
+              "match": "(?i)^\\s*(Rel|BiRel|Rel_U|Rel_D|Rel_L|Rel_R|Rel_Up|Rel_Down|Rel_Left|Rel_Right)\\b(\\()?\\s*(\\w+)?\\s*(\\))?(,\\s*)(\\w+)(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.section.group.begin.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.section.group.end.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "variable"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "10": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "11": {
+                  "name": "punctuation.section.group.end.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Rel without parameters",
+              "match": "(?i)^\\s*(Rel|BiRel|Rel_U|Rel_D|Rel_L|Rel_R|Rel_Up|Rel_Down|Rel_Left|Rel_Right)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Boundary with parameters",
+              "match": "(?i)^\\s*(Boundary|Enterprise_Boundary|System_Boundary)\\b(\\()?\\s*(\\w+)?\\s*(\\))?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "10": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "11": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Boundary without parameters",
+              "match": "(?i)^\\s*(Boundary|Enterprise_Boundary|System_Boundary)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "LAYOUT keywords",
+              "match": "(?i)^\\s*(LAYOUT_TOP_DOWN|LAYOUT_LEFT_RIGHT|LAYOUT_LANDSCAPE|LAYOUT_WITH_LEGEND|SHOW_LEGEND|HIDE_STEREOTYPE)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "UpdateElementStyle",
+              "match": "(?i)^\\s*(UpdateElementStyle)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "UpdateRelStyle",
+              "match": "(?i)^\\s*(UpdateRelStyle)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "AddElementTag",
+              "match": "(?i)^\\s*(AddElementTag|AddRelTag|AddBoundaryTag|AddPersonTag|AddSystemTag)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            }
+          ],
+          "end": "(^|\\G)(?=\\s*[`:~]{3,}\\s*$)"
+        },
+        {
+          "comment": "C4 Dynamic Diagram",
+          "begin": "^\\s*(C4Dynamic)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.mermaid"
+            }
+          },
+          "patterns": [
+            {
+              "match": "\\%%.*",
+              "name": "comment"
+            },
+            {
+              "comment": "title",
+              "match": "(?i)^\\s*(title)\\s+(\\s*[\"\\(\\)$&%\\^/#.,?!;:*+=<>\\'\\\\\\-\\w\\s]*)",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "string"
+                }
+              }
+            },
+            {
+              "comment": "Person with parameters",
+              "match": "(?i)^\\s*(Person|Person_Ext)\\b(\\()?(\\w+)(\\))?(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Person without parameters",
+              "match": "(?i)^\\s*(Person|Person_Ext)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "System with parameters",
+              "match": "(?i)^\\s*(System|System_Ext|SystemDb|SystemDb_Ext|SystemQueue|SystemQueue_Ext)\\b(\\()?(\\w+)(\\))?(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "System without parameters",
+              "match": "(?i)^\\s*(System|System_Ext|SystemDb|SystemDb_Ext|SystemQueue|SystemQueue_Ext)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Rel with parameters",
+              "match": "(?i)^\\s*(Rel|BiRel|Rel_U|Rel_D|Rel_L|Rel_R|Rel_Up|Rel_Down|Rel_Left|Rel_Right)\\b(\\()?\\s*(\\w+)?\\s*(\\))?(,\\s*)(\\w+)(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.section.group.begin.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.section.group.end.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "variable"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "10": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "11": {
+                  "name": "punctuation.section.group.end.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Rel without parameters",
+              "match": "(?i)^\\s*(Rel|BiRel|Rel_U|Rel_D|Rel_L|Rel_R|Rel_Up|Rel_Down|Rel_Left|Rel_Right)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "RelIndex with parameters",
+              "match": "(?i)^\\s*(RelIndex)\\b(\\()?(\\d+)(\\))?(,\\s*)(\\w+)(,\\s*)(\\w+)(,\\s*)(\"(?:[^\"\\\\]|\\\\.)*\")(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "constant.numeric.mermaid"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "variable"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "variable"
+                },
+                "9": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "10": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "11": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "12": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "13": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "RelIndex without parameters",
+              "match": "(?i)^\\s*(RelIndex)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Boundary with parameters",
+              "match": "(?i)^\\s*(Boundary|Enterprise_Boundary|System_Boundary)\\b(\\()?\\s*(\\w+)?\\s*(\\))?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(,\\s*)?(\"(?:[^\"\\\\]|\\\\.)*\")?(\\))?",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "3": {
+                  "name": "variable"
+                },
+                "4": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                },
+                "5": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "6": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "7": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "8": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "9": {
+                  "name": "punctuation.separator.comma.mermaid"
+                },
+                "10": {
+                  "name": "string.quoted.double.mermaid"
+                },
+                "11": {
+                  "name": "punctuation.parenthesis.close.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "Boundary without parameters",
+              "match": "(?i)^\\s*(Boundary|Enterprise_Boundary|System_Boundary)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "LAYOUT keywords",
+              "match": "(?i)^\\s*(LAYOUT_TOP_DOWN|LAYOUT_LEFT_RIGHT|LAYOUT_LANDSCAPE|LAYOUT_WITH_LEGEND|SHOW_LEGEND|HIDE_STEREOTYPE)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "UpdateElementStyle",
+              "match": "(?i)^\\s*(UpdateElementStyle)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "UpdateRelStyle",
+              "match": "(?i)^\\s*(UpdateRelStyle)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "AddElementTag",
+              "match": "(?i)^\\s*(AddElementTag|AddRelTag|AddBoundaryTag|AddPersonTag|AddSystemTag)\\b",
+              "captures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            }
+          ],
+          "end": "(^|\\G)(?=\\s*[`:~]{3,}\\s*$)"
+        },
+        {
           "comment": "Class Diagram",
           "begin": "^\\s*(classDiagram)",
           "beginCaptures": {

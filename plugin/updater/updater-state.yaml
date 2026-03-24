@@ -236,6 +236,40 @@ extensions:
         file-extensions:
         - .tab
         - .tsv
+  d:
+    github:
+      repo: Pure-D/code-d
+      ref: master
+      commit: 3a0825ccea623103a7027f4c1c23e5a3c38434d9
+    languages:
+      d:
+        label: D
+        scope-name: source.d
+        file-extensions:
+        - .d
+        - .di
+      d-injection:
+        label: d-injection
+        scope-name: markdown.d.codeblock
+        inject-to:
+        - text.html.markdown
+      diet:
+        label: Diet
+        scope-name: source.diet
+        upstream-url: https://github.com/davidrios/jade-tmbundle/commit/7c1304aa5a0d916a93fd296d3dd994219ecdc90f
+        file-extensions:
+        - .dt
+      dml:
+        label: DlangUI Markup Language
+        scope-name: source.dml
+        file-extensions:
+        - .dml
+      dscript:
+        label: arsd.DScript
+        scope-name: source.dscript
+        file-extensions:
+        - .ds
+        - .dscript
   d2:
     github:
       repo: terrastruct/d2-vscode

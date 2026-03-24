@@ -207,6 +207,14 @@ sources:
         content-base-type: extra-syntax-highlighting.csv
         content-describer: de.sebthom.eclipse.extra_syntax_highlighting.CsvDelimiterDescriber$Space
 
+  d:
+    type: vscode-extension
+    github:
+      repo: Pure-D/code-d
+    languages:
+      sdl:
+        ignored: true
+
   dot:
     type: custom
     github:

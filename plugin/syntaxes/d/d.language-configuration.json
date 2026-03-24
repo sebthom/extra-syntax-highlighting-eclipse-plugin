@@ -1,0 +1,89 @@
+{
+	"comments": {
+		"blockComment": ["/*", "*/"],
+		"lineComment": "//"
+	},
+	"brackets": [
+		["(", ")"],
+		["{", "}"],
+		["[", "]"]
+	],
+	"autoClosingPairs": [
+		["{", "}"],
+		["[", "]"],
+		["(", ")"],
+		{
+			"open": "`",
+			"close": "`",
+			"notIn": ["string"]
+		},
+		{
+			"open": "\"",
+			"close": "\"",
+			"notIn": ["string"]
+		},
+		{
+			"open": "'",
+			"close": "'",
+			"notIn": ["string"]
+		}
+	],
+	"surroundingPairs": [
+		["{", "}"],
+		["[", "]"],
+		["(", ")"],
+		["'", "'"],
+		["\"", "\""],
+		["`", "`"]
+	],
+	"folding": {
+		"markers": {
+			"start": "^\\s*//\\s*dfmt\\s*off",
+			"end": "^\\s*//\\s*dfmt\\s*on"
+		}
+	},
+	"onEnterRules": [
+		{
+			"beforeText": "^\\s*\\/\\*\\*(?!\\/)([^\\*]|\\*(?!\\/))*$",
+			"afterText": "^\\s*\\*\/$",
+			"action": { "indent": "indentOutdent", "appendText": " * " }
+		},
+		{
+			"beforeText": "^\\s*\\/\\*\\*(?!\\/)([^\\*]|\\*(?!\\/))*$",
+			"action": { "indent": "none", "appendText": " * " }
+		},
+		{
+			"beforeText": "^(\\t|(\\ \\ ))*\\ \\*(\\ ([^\\*]|\\*(?!\\/))*)?$",
+			"action": { "indent": "none", "appendText": "* " }
+		},
+		{
+			"beforeText": "^\\s*\\/\\+\\+(?!\\/)([^\\+]|\\+(?!\\/))*$",
+			"afterText": "^\\s+\\+\/$",
+			"action": { "indent": "indentOutdent", "appendText": " + " }
+		},
+		{
+			"beforeText": "^\\s*\\/\\+\\+(?!\\/)([^\\+]|\\+(?!\\/))*$",
+			"action": { "indent": "none", "appendText": " + " }
+		},
+		{
+			"beforeText": "^(\\t|(\\ \\ ))*\\ \\+(\\ ([^\\+]|\\+(?!\\/))*)?$",
+			"action": { "indent": "none", "appendText": "+ " }
+		},
+		{
+			"beforeText": "(?<!\\\\|\\w:)\/\/\/\\s*\\S",
+			"afterText": "^(?!\\s*$).+",
+			"action": {
+				"indent": "none",
+				"appendText": "/// "
+			}
+		},
+		{
+			"beforeText": "(?<!\\\\|\\w:)\/\/(?!\\/)\\s*\\S",
+			"afterText": "^(?!\\s*$).+",
+			"action": {
+				"indent": "none",
+				"appendText": "// "
+			}
+		}
+	]
+}

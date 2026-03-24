@@ -30,6 +30,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. CodeQL - https://codeql.github.com/
 1. Crystal (`*.cr`) - https://crystal-lang.org/
 1. CSV (`*.cvs`) / TSV (`*.tab*`, `*.tsv*`)
+1. D - https://dlang.org/
 1. D2 - https://d2lang.com/
 1. Eclipse External null Annotations (`*.eea`) - https://github.com/eclipse-jdt/eclipse.jdt.core/wiki/Null-Analysis-External-Annotations#file-format
 1. EditorConfig - https://editorconfig.org
@@ -123,6 +124,7 @@ To install the plugin into an existing Eclipse installation do:
 | Amber <img src="plugin/syntaxes/amber/amber.icon.png" width=16/> | file-extensions="ab, amber" | [main@amber-lang/amber-vsc](https://github.com/amber-lang/amber-vsc/tree/c0ebd53e075698fa62efffd492a41b27bff1c227/)
 | ANTLR <img src="plugin/syntaxes/antlr4/icon.png" width=16/> | file-extensions="g, g4" | [master@mike-lischke/vscode-antlr4](https://github.com/mike-lischke/vscode-antlr4/tree/8408f1d50c59bc81f52795525ad41a6b50787316/)
 | Apache HTTP Config <img src="plugin/syntaxes/apache-http/icon.png" width=16/> | file-extensions="conf, htaccess, htgroups, htpasswd" | [master@mrmlnc/vscode-apache](https://github.com/mrmlnc/vscode-apache/tree/0585b0bb3d390fc541aa27cfcfb83b3204156be3/)
+| arsd.DScript <img src="plugin/syntaxes/d/icon.png" width=16/> | file-extensions="ds, dscript" | [master@Pure-D/code-d](https://github.com/Pure-D/code-d/tree/3a0825ccea623103a7027f4c1c23e5a3c38434d9/)
 | Astro <img src="plugin/syntaxes/astro/astro.icon.png" width=16/> | file-extensions="astro" | [main@withastro/language-tools](https://github.com/withastro/language-tools/tree/b4bcb4fc02cd960936a5faee6c9cc0ad94fc4c05/packages/vscode)
 | Ballerina | file-extensions="bal" | [master@ballerina-platform/ballerina-grammar](https://github.com/ballerina-platform/ballerina-grammar/tree/9c5d63039c9b257e508470da94a59d29a3c69d72/syntaxes)
 | bazelrc <img src="plugin/syntaxes/bazel/icon.png" width=16/> | file-extensions="bazelrc"<br />file-names=".bazelrc, bazel.rc" | [master@bazelbuild/vscode-bazel](https://github.com/bazelbuild/vscode-bazel/tree/19b4f57f6d86a46447e3915f94a1fbfe7518485b/)
@@ -133,7 +135,10 @@ To install the plugin into an existing Eclipse installation do:
 | Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="cr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/9d85621bd72b76fb5f4c81dd8357a3e6e834f7ce/) [[upstream]](https://github.com/Microsoft/vscode/blob/3f1f36333d3453f67a36b6bfb1206e9159e9c4f0/extensions/ruby/syntaxes/ruby.tmLanguage.json)
 | Crystal Slang <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="slang" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/9d85621bd72b76fb5f4c81dd8357a3e6e834f7ce/)
 | CSV <img src="plugin/syntaxes/csv/icon.png" width=16/> | file-extensions="csv" | [master@mechatroner/vscode_rainbow_csv](https://github.com/mechatroner/vscode_rainbow_csv/tree/82f1b82272e567d6e1736fce845f94eccef6d211/)
+| D <img src="plugin/syntaxes/d/icon.png" width=16/> | file-extensions="d, di" | [master@Pure-D/code-d](https://github.com/Pure-D/code-d/tree/3a0825ccea623103a7027f4c1c23e5a3c38434d9/)
 | d2 <img src="plugin/syntaxes/d2/d2.icon.png" width=16/> | file-extensions="d2" | [master@terrastruct/d2-vscode](https://github.com/terrastruct/d2-vscode/tree/88d9716009f9b8d65bfd6dea96064c94a5cf275f/)
+| Diet <img src="plugin/syntaxes/d/icon.png" width=16/> | file-extensions="dt" | [master@Pure-D/code-d](https://github.com/Pure-D/code-d/tree/3a0825ccea623103a7027f4c1c23e5a3c38434d9/) [[upstream]](https://github.com/davidrios/jade-tmbundle/commit/7c1304aa5a0d916a93fd296d3dd994219ecdc90f)
+| DlangUI Markup Language <img src="plugin/syntaxes/d/icon.png" width=16/> | file-extensions="dml" | [master@Pure-D/code-d](https://github.com/Pure-D/code-d/tree/3a0825ccea623103a7027f4c1c23e5a3c38434d9/)
 | EditorConfig <img src="plugin/syntaxes/editorconfig/icon.png" width=16/> | file-extensions="editorconfig" | [main@editorconfig/editorconfig-vscode](https://github.com/editorconfig/editorconfig-vscode/tree/e32b46f6e0a1ee53059675ed00e7513d7b096feb/)
 | Elm <img src="plugin/syntaxes/elm/icon.png" width=16/> | file-extensions="elm" | [main@elm-tooling/elm-language-client-vscode](https://github.com/elm-tooling/elm-language-client-vscode/tree/cc3a7c463a7af57639ee91d4717be1723a936156/)
 | Embedded Crystal <img src="plugin/syntaxes/crystal/icon.png" width=16/> | file-extensions="ecr" | [master@crystal-lang-tools/vscode-crystal-lang](https://github.com/crystal-lang-tools/vscode-crystal-lang/tree/9d85621bd72b76fb5f4c81dd8357a3e6e834f7ce/)

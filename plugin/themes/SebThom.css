@@ -1,0 +1,125 @@
+/*
+https://macromates.com/manual/en/language_grammars#naming_conventions
+https://www.sublimetext.com/docs/scope_naming.html
+*/
+
+.editor { background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); }
+.editor.lineHighlight { background-color:  rgb(232,242,254,1); }
+.editor.selection { color: rgb(255, 255, 255)}
+
+.comment { color: rgb(0, 128, 64); }
+.comment.block.javadoc { color: rgb(63,95,191); }
+.keyword.other.documentation.javadoc.java { color: rgb(127,159,191); font-weight: bold;}
+
+.string { color: rgb(0, 128, 255); }
+.string.regexp { color: rgb(211, 1, 2); }
+
+.markup.heading, /* markdown: # ## ### header */
+.constant.character, /* backslash escaped chars, e.g. \t \n in strings */
+.constant.language.dart, /* true, false, null */
+.constant.language.java, /* true, false, null */
+.variable.language.dart, /* this, super */
+.variable.language.this.java, /* this */
+.variable.language.java, /* super */
+.variable.language.hx, /* super, this */
+.storage.type.class.php, /* class */
+.storage.type.class.hx, /* class, enum, typedef */
+.storage.type.function.hx, /* function */
+.storage.type.primitive.dart, /* void, var */
+.storage.type.primitive.java, /* void, boolean */
+.storage.modifier, /* public, final, class */
+.keyword.control, /* if, for*/
+.keyword.declaration, /* Dart/Rust/Svelte */
+.keyword.reserved, /* const, goto */
+.keyword.operator.instanceof, /* java instanceof */
+.keyword.other /* import */ {
+  color: rgb(0, 64, 128); font-weight: bold;
+}
+
+.storage.type.annotation /* @ annotations */ {
+  color: rgb(64, 64, 64); font-weight: bold;
+}
+
+.markup.md.entity.name.code.function, /* markdown: ```<language> */
+.storage.modifier.record.java, /* java: record */
+.storage.type.local.java, /* java: var */
+.storage.type.variable.hx /* haxe: var, final */ {
+  color: rgb(127, 0, 58); font-weight: bold;
+}
+
+.php.meta.class.body.function.support.constructor,
+.php.meta.class.entity.name.body.function,
+.java.meta.class.identifier.entity.name.body.function.method,
+.string.other.strong.md,/* markdown: ** */
+.string.other.emphasis.md, /* markdown: * _ */
+.keyword.other.new, /* php: new */
+.keyword.control.new.dart,/* dart: new */
+.keyword.return /* php: return */ {
+  color: rgb(255, 128, 0); font-weight: bold;
+}
+
+.punctuation.definition.tag, /* haxe: conditional compilation #if #end */
+.meta.preprocessor { color: rgb(128, 0, 255) }
+
+.variable.other.definition.java { color: rgb(0, 0, 192) }
+.constant { color: rgb(0, 0, 192); font-style: italic}
+
+/* name of method parameters and in dart variable references in strings */
+.variable.parameter { color:rgb(128, 0, 0)}
+
+.markup.heading.setext { color: rgb(38, 139, 210); }
+
+.markup.md.other.code.fenced.raw,
+.markup.quote /* markdown: >*/{
+ color: rgb(111, 111, 111); font-style: italic;
+}
+.markup.list { color: rgb(181, 137, 0); }
+.markup.inline.raw { color: rgb(42, 161, 152); }
+
+/* reset colors to black */
+.constant.numeric,
+.storage.modifier.package, /* package <package_name> */
+.storage.modifier.import /* import <type_name> */ {color: rgb(0, 0, 0);}
+
+/*.entity.name.class { color: rgb(38, 139, 210); }
+.entity.name.type.class { color: rgb(38, 139, 210); }*/
+
+
+/* e.g. java.meta.package.storage.modifier.invalid.deprecated.package_name_not_lowercase */
+.invalid { background-color: rgb(255,150,150); }
+
+/* diff/patch */
+.meta.header.diff { color: rgb(128, 0, 255); }
+.markup.inserted { color: rgb(0, 128, 0); }
+.markup.deleted  { color: rgb(196, 0, 0); }
+
+/*
+.entity.name.class { color: rgb(38, 139, 210); }
+.entity.name.type.class { color: rgb(38, 139, 210); }
+.entity.name.function { color: rgb(38, 139, 210); }
+.punctuation.definition.variable { color: rgb(133, 153, 0); }
+.punctuation.section.embedded.begin { color: rgb(211, 1, 2); }
+.punctuation.section.embedded.end { color: rgb(211, 1, 2); }
+.support.function.construct { color: rgb(211, 1, 2); }
+.constant.other { color: rgb(203, 75, 22); }
+.entity.other.inherited-class {  }
+.entity.name.tag { color: rgb(38, 139, 210); }
+.punctuation.definition.tag.begin { color: rgb(147, 161, 161); }
+.punctuation.definition.tag.end { color: rgb(147, 161, 161); }
+.entity.other.attribute-name { color: rgb(147, 161, 161); } // css attribute names
+.support.function { color: rgb(38, 139, 210); }
+.punctuation.separator.continuation { color: rgb(211, 1, 2); }
+.support.constant {  }
+.support.type { color: rgb(133, 153, 0); }
+.support.class { color: rgb(133, 153, 0); }
+.support.type.exception { color: rgb(203, 75, 22); }
+.support.other.variable {  }
+
+.markup.quote { color: rgb(133, 153, 0); }
+.markup.list { color: rgb(181, 137, 0); }
+.markup.bold { color: rgb(211, 54, 130); }
+.markup.italic { color: rgb(211, 54, 130); }
+.markup.inline.raw { color: rgb(42, 161, 152); }
+.markup.heading { color: rgb(38, 139, 210); }
+.markup.heading.setext { color: rgb(38, 139, 210); }
+*/

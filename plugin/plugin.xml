@@ -569,6 +569,107 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- d/d: D -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.d" name="D" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="d,di" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.d" path="syntaxes/d/d.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.d" contentTypeId="extra-syntax-highlighting.d" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.d" path="syntaxes/d/d.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.d" icon="syntaxes/d/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="D Example" path="syntaxes/d/d.example.d" scopeName="source.d" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- d/d-injection: d-injection -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.d-injection" name="d-injection" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-names="PREVENT_FILE_ASSOCIATION_INHERITANCE" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.d.codeblock" path="syntaxes/d/d-injection.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="markdown.d.codeblock" contentTypeId="extra-syntax-highlighting.d-injection" />
+    <injection scopeName="markdown.d.codeblock" injectTo="text.html.markdown" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.d-injection" icon="syntaxes/d/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- d/diet: Diet -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.diet" name="Diet" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="dt" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.diet" path="syntaxes/d/diet.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.diet" contentTypeId="extra-syntax-highlighting.diet" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.diet" path="syntaxes/d/diet.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.diet" icon="syntaxes/d/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- d/dml: DlangUI Markup Language -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.dml" name="DlangUI Markup Language" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="dml" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.dml" path="syntaxes/d/dml.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.dml" contentTypeId="extra-syntax-highlighting.dml" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.dml" path="syntaxes/d/dml.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.dml" icon="syntaxes/d/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- d/dscript: arsd.DScript -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.dscript" name="arsd.DScript" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="ds,dscript" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.dscript" path="syntaxes/d/dscript.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.dscript" contentTypeId="extra-syntax-highlighting.dscript" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.dscript" path="syntaxes/d/dscript.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.dscript" icon="syntaxes/d/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
   <!-- d2/d2: d2 -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

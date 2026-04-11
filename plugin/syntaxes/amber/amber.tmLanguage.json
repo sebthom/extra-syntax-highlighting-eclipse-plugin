@@ -39,7 +39,7 @@
 			},
 			{
 				"name": "keyword.control.amber",
-				"match": "\\b(if|loop|for|ref|return|fun|else|then|break|continue|and|or|not|let|const|import|from|pub|main|echo|cd|exit|mv|as|in|fail|failed|succeeded|exited|status|silent|nameof|len|lines|is|unsafe|trust|sudo|while)\\b"
+				"match": "\\b(if|loop|for|ref|return|fun|else|then|break|continue|and|or|not|let|const|import|from|pub|main|echo|cd|exit|mv|as|in|fail|failed|succeeded|exited|status|silent|nameof|len|lines|is|unsafe|trust|sudo|while|await|clear|disown|lock|pid|pwd|sleep|suppress|test|touch|cp)\\b"
 			},
 			{
 				"match": "^#\\[.*\\]$",
@@ -50,7 +50,11 @@
 				"name": "constant.language.boolean.amber"
 			},
 			{
-				"match": "\\b(Text|Num|Int|Bool|Null)\\b",
+				"match": "\\b(Text|Num|Int|Bool|Null)(\\|(Text|Num|Int|Bool|Null))*\\b",
+				"name": "support.type.amber"
+			},
+			{
+				"match": "\\[\\s*(Text|Num|Int|Bool|Null)(\\|(Text|Num|Int|Bool|Null))*\\s*\\]",
 				"name": "support.type.amber"
 			},
 			{
@@ -67,7 +71,7 @@
 			},
 			{
 				"name" : "keyword.operator.amber",
-				"match" : "(\\+|\\-|\\^|\\*|\\=|\\||\\%|!|>|<|[.]{2}|\\?)"
+				"match" : "(\\+|\\-|\\^|\\*|\\=|\\||\\%|!|>|<|<=|>=|[.]{2}|\\.\\.=|\\?)"
 			},
 			{
 				"name" : "comment.block",

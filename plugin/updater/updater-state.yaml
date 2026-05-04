@@ -83,7 +83,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 79dbfa4f081c2ecace9ab8af59075a70b55f4998
+      commit: 759d20811c11bc6441279d9f542d9c3f034f93dc
     languages:
       bazelrc:
         label: bazelrc
@@ -125,7 +125,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: ad0a4ea8a4cf6ae8a7d622316a34fe1d70fc83da
+      commit: f8dd4d85bf23ba8aaed88470f1b7be46365b0c23
     languages:
       carbon:
         label: Carbon
@@ -137,7 +137,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 07835f6fe5fcee39885ac7c256bfc09f608626bd
+      commit: 548f4b5a18fcd5f5350fccb5e9f765c5d06e085a
     languages:
       cobol:
         label: COBOL
@@ -150,8 +150,8 @@ extensions:
         - .cpy
         file-patterns:
         - '**/broadcommfd.cobol-language-support/*/copybooks/**'
-      ndvr-cobol:
-        label: NDVR-COBOL
+      endevor-print-cobol:
+        label: Endevor Print COBOL
         scope-name: source.ndvr.cobol
         file-extensions:
         - .cbl.prnt
@@ -172,7 +172,7 @@ extensions:
     github:
       repo: github/vscode-codeql
       ref: main
-      commit: 77e9dd1c4b24cb8ad0c6e0498afa98dd39557072
+      commit: daff5607c7390f68bf4c6b8aff0e4ae47fab7536
     languages:
       ql:
         label: CodeQL
@@ -448,7 +448,7 @@ extensions:
     github:
       repo: GeForceLegend/vscode-glsl
       ref: master
-      commit: da57fa1415d5b77191ee8566f2b4b6cd9dbb3572
+      commit: d9adb612cbb0dd3aefb8859e4084bee4872beac4
     languages:
       glsl:
         label: OpenGL Shading Language
@@ -488,7 +488,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 7979bf5418ed702cc086a4857a583e625d09bf7e
+      commit: b771e7a0997d093b5123f70b2924ca6b5b0320c8
     languages:
       graphql:
         label: GraphQL
@@ -509,6 +509,7 @@ extensions:
       - source.vue
       - text.html.derivative
       - text.html.markdown
+      - text.html.vue
     - scope-name: inline.graphql.markdown.codeblock
       inject-to:
       - text.html.derivative
@@ -576,7 +577,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: main
-      commit: fb251cf005df8f265edb7d140e8d5283e2e3cc4b
+      commit: ca98cc14244497556ef01657917565119a5be52a
     languages:
       helm:
         label: helm-template
@@ -1100,7 +1101,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 2c2c4a191dda5cd6b3c9fabeb962a1a045725678
+      commit: 75b10f1525e088197d4a0fef158560420dd4a38f
     languages:
       ocaml:
         label: OCaml
@@ -1155,7 +1156,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 8bcda891f6ab2adfdc7d2b9a8106814b401adfcf
+      commit: c2eed7d50f1b0d6b83c204c4164fed28c32d59ca
     languages:
       odin:
         label: odin
@@ -1221,7 +1222,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: cd19ff92b12f703271c46232cc8ddd799efc0c98
+      commit: 5e3695dc3f0f5fa7ce9a114330883ed12eabee02
     languages:
       prisma:
         label: Prisma
@@ -1253,7 +1254,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 901cda65d51579dbb9f455fdd8e09add04395a44
+      commit: e4e643cf76cce06cb469b1b6e15fa6322ce0087f
     languages:
       ring:
         label: Ring
@@ -1278,7 +1279,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 5be821d5a5a92b614ec1dbd06f34ac19c6a9fe8f
+      commit: d99bb3406beff720c84a90419a1f4faedf5da936
     languages:
       svelte:
         label: Svelte

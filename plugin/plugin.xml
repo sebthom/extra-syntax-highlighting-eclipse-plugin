@@ -309,19 +309,19 @@
   </extension>
 
   <!-- ======================================== -->
-  <!-- cobol/ndvr-cobol: NDVR-COBOL -->
+  <!-- cobol/endevor-print-cobol: Endevor Print COBOL -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">
-    <content-type id="extra-syntax-highlighting.ndvr-cobol" name="NDVR-COBOL" base-type="extra-syntax-highlighting.basetype" priority="normal"
+    <content-type id="extra-syntax-highlighting.endevor-print-cobol" name="Endevor Print COBOL" base-type="extra-syntax-highlighting.basetype" priority="normal"
                   file-patterns="*.cbl.prnt,*.cob.prnt,*.cobol.prnt,*.copy.prnt,*.cpy.prnt" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.ndvr.cobol" path="syntaxes/cobol/ndvr-cobol.tmLanguage.json" />
-    <scopeNameContentTypeBinding scopeName="source.ndvr.cobol" contentTypeId="extra-syntax-highlighting.ndvr-cobol" />
+    <grammar scopeName="source.ndvr.cobol" path="syntaxes/cobol/endevor-print-cobol.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.ndvr.cobol" contentTypeId="extra-syntax-highlighting.endevor-print-cobol" />
   </extension>
 
   <extension point="org.eclipse.ui.genericeditor.icons">
-    <icon contentType="extra-syntax-highlighting.ndvr-cobol" icon="syntaxes/cobol/icon.png"/>
+    <icon contentType="extra-syntax-highlighting.endevor-print-cobol" icon="syntaxes/cobol/icon.png"/>
   </extension>
 
   <!-- ======================================== -->
@@ -1072,6 +1072,7 @@
     <injection scopeName="inline.graphql" injectTo="source.vue" />
     <injection scopeName="inline.graphql" injectTo="text.html.derivative" />
     <injection scopeName="inline.graphql" injectTo="text.html.markdown" />
+    <injection scopeName="inline.graphql" injectTo="text.html.vue" />
     <grammar scopeName="inline.graphql.markdown.codeblock" path="syntaxes/graphql/inline.graphql.markdown.codeblock.tmLanguage.json" />
     <injection scopeName="inline.graphql.markdown.codeblock" injectTo="text.html.derivative" />
     <injection scopeName="inline.graphql.markdown.codeblock" injectTo="text.html.markdown" />

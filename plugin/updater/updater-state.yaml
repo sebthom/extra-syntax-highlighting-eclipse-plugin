@@ -1310,6 +1310,36 @@ extensions:
     - scope-name: svelte.pug.tags
       inject-to:
       - source.svelte
+  systemd:
+    github:
+      repo: bearmini/vscode-systemd-unit-file
+      ref: master
+      commit: 0dfc69cea5716b2be482842d34a5011416b56d9a
+    languages:
+      systemd-unit-file:
+        label: systemd unit file
+        scope-name: source.systemdUnitFile
+        file-extensions:
+        - .automount
+        - .build
+        - .container
+        - .device
+        - .kube
+        - .link
+        - .mount
+        - .netdev
+        - .network
+        - .path
+        - .pod
+        - .scope
+        - .service
+        - .slice
+        - .snapshot
+        - .socket
+        - .swap
+        - .target
+        - .timer
+        - .volume
   toml:
     github:
       repo: juggernautjp/less-toml

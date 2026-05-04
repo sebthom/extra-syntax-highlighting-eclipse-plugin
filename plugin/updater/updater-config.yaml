@@ -625,6 +625,11 @@ sources:
       source.css.postcss:
         grammar: ./syntaxes/postcss.src.yaml
 
+  systemd:
+    type: vscode-extension
+    github:
+      repo: bearmini/vscode-systemd-unit-file
+
   toml:
     type: vscode-extension
     github:

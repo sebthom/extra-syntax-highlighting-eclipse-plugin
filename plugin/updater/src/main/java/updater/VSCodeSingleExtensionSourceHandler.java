@@ -6,8 +6,8 @@
  */
 package updater;
 
-import static updater.utils.Log.logInfo;
-import static updater.utils.ObjectMappers.JSON;
+import static updater.utils.Log.*;
+import static updater.utils.ObjectMappers.*;
 import static updater.utils.Validation.*;
 
 import java.io.IOException;
@@ -18,6 +18,8 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 import javax.imageio.ImageIO;
+
+import com.fasterxml.jackson.databind.JsonNode;
 
 import net.coobird.thumbnailator.Thumbnails;
 import updater.Updater.Config;
@@ -39,6 +41,50 @@ class VSCodeSingleExtensionSourceHandler extends AbstractSourceHandler<Config.VS
          final Path targetSyntaxDir, final ExtensionState state) {
       super(sourceId, source, sourceRepoDir, targetSyntaxDir);
       this.state = state;
+   }
+
+   private void collectFileExtensionsFromConfigurationDefaults(final JsonNode configuration, final String langId,
+         final TreeSet<String> fileExtensions) {
+      if (configuration == null || configuration.isNull())
+         return;
+
+      if (configuration.isArray()) {
+         for (final JsonNode configurationSection : configuration) {
+            collectFileExtensionsFromConfigurationDefaults(configurationSection, langId, fileExtensions);
+         }
+         return;
+      }
+
+      if (!configuration.isObject())
+         return;
+
+      final JsonNode properties = configuration.get("properties");
+      if (properties == null || !properties.isObject())
+         return;
+
+      final JsonNode defaultExtensions = properties.path(langId + ".enabledExtensions").path("default");
+      if (!defaultExtensions.isArray())
+         return;
+
+      for (final JsonNode extension : defaultExtensions) {
+         if (extension.isTextual()) {
+            fileExtensions.add(extension.textValue());
+         }
+      }
+   }
+
+   /**
+    * Prefer the standard language declaration, for example <code>contributes.languages[0].extensions</code>.
+    * Some extensions make file associations user-configurable instead, so fall back to a language-specific configuration default such as
+    * <code>contributes.configuration.properties["systemd-unit-file.enabledExtensions"].default</code>.
+    */
+   private TreeSet<String> getFileExtensions(final VsCodeExtensionPackageJson pkgJson, final Contributions.Language langCfg) {
+      if (!isEmpty(langCfg.fileExtensions()))
+         return new TreeSet<>(langCfg.fileExtensions());
+
+      final var fileExtensions = new TreeSet<String>();
+      collectFileExtensionsFromConfigurationDefaults(pkgJson.contributes().configuration(), langCfg.id(), fileExtensions);
+      return fileExtensions.isEmpty() ? null : fileExtensions;
    }
 
    @Override
@@ -172,7 +218,7 @@ class VSCodeSingleExtensionSourceHandler extends AbstractSourceHandler<Config.VS
                : grammarCfg == null || grammarCfg.injectTo() == null ? null : new TreeSet<>(grammarCfg.injectTo());
          langState.fileExtensions = !isEmpty(langOverrides.fileExtensions) //
                ? new TreeSet<>(langOverrides.fileExtensions) //
-               : langCfg.fileExtensions() == null ? null : new TreeSet<>(langCfg.fileExtensions());
+               : getFileExtensions(pkgJson, langCfg);
          langState.fileNames = !isEmpty(langOverrides.fileNames) //
                ? new TreeSet<>(langOverrides.fileNames) //
                : langCfg.fileNames() == null ? null : new TreeSet<>(langCfg.fileNames());

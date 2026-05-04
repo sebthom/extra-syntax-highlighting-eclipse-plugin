@@ -74,6 +74,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. Reason (`*.re`) - https://reasonml.github.io/
 1. Roc (`*.roc`) - https://www.roc-lang.org/
 1. Svelte - https://svelte.dev/
+1. Systemd Unit Files (`*.service`) - https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html
 1. TOML - https://toml.io/en/
 1. Twig Templates (`*.twig`) - https://twig.symfony.com/
 1. Wing - https://www.winglang.io/
@@ -214,6 +215,7 @@ To install the plugin into an existing Eclipse installation do:
 | Roc <img src="plugin/syntaxes/roc/roc.icon.png" width=16/> | file-extensions="roc" | [main@ivan-demchenko/roc-vscode-unofficial](https://github.com/ivan-demchenko/roc-vscode-unofficial/tree/5913f7e83572b157df5115833f0d10bdfd773d9c/)
 | Starlark <img src="plugin/syntaxes/bazel/icon.png" width=16/> | file-extensions="BUILD, WORKSPACE, bazel, bzl, bzlmod, sky, star"<br />file-names="BUILD, WORKSPACE" | [master@bazelbuild/vscode-bazel](https://github.com/bazelbuild/vscode-bazel/tree/79dbfa4f081c2ecace9ab8af59075a70b55f4998/)
 | Svelte <img src="plugin/syntaxes/svelte/icon.png" width=16/> | file-extensions="svelte" | [master@sveltejs/language-tools](https://github.com/sveltejs/language-tools/tree/5be821d5a5a92b614ec1dbd06f34ac19c6a9fe8f/packages/svelte-vscode)
+| systemd unit file | file-extensions="automount, build, container, device, kube, link, mount, netdev, network, path, pod, scope, service, slice, snapshot, socket, swap, target, timer, volume" | [master@bearmini/vscode-systemd-unit-file](https://github.com/bearmini/vscode-systemd-unit-file/tree/0dfc69cea5716b2be482842d34a5011416b56d9a/)
 | TOML Config File <img src="plugin/syntaxes/toml/icon.png" width=16/> | file-extensions="toml"<br />file-names="Cargo.lock, Pipfile, pdm.lock" | [master@juggernautjp/less-toml](https://github.com/juggernautjp/less-toml/tree/13eb891232e98c4a9c595bf8c657893c84edf3a9/) [[upstream]](https://github.com/textmate/toml.tmbundle/commit/e82b64c1e86396220786846201e9aa3f0a2d9ca2)
 | TSV <img src="plugin/syntaxes/csv/icon.png" width=16/> | file-extensions="tab, tsv" | [master@mechatroner/vscode_rainbow_csv](https://github.com/mechatroner/vscode_rainbow_csv/tree/82f1b82272e567d6e1736fce845f94eccef6d211/)
 | Twig <img src="plugin/syntaxes/twig/icon.png" width=16/> | file-extensions="peb, twig" | [main@rholdos/vscode-twig-language-support](https://github.com/rholdos/vscode-twig-language-support/tree/f1e9a1722c91d3f3b3c548386861fd01bfdbeb3b/)

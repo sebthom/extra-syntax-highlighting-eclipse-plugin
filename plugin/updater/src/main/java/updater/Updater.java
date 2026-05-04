@@ -6,9 +6,9 @@
  */
 package updater;
 
-import static updater.utils.Git.gitSparseCheckout;
+import static updater.utils.Git.*;
 import static updater.utils.Log.*;
-import static updater.utils.ObjectMappers.YAML;
+import static updater.utils.ObjectMappers.*;
 import static updater.utils.Strings.*;
 import static updater.utils.Sys.*;
 import static updater.utils.Validation.*;
@@ -35,6 +35,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.core.JacksonException;
+import com.fasterxml.jackson.databind.JsonNode;
 
 import updater.Updater.Config.Source;
 import updater.Updater.State.ExtensionState;
@@ -194,7 +195,8 @@ public class Updater {
 
       record Contributions( //
             @JsonProperty(required = true) List<Grammar> grammars, //
-            @JsonProperty(required = true) List<Language> languages) {
+            @JsonProperty(required = true) List<Language> languages, //
+            JsonNode configuration) {
 
          record Grammar( //
                String language, //

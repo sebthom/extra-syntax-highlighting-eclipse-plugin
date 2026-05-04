@@ -2542,6 +2542,26 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- systemd/systemd-unit-file: systemd unit file -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.systemd-unit-file" name="systemd unit file" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="automount,build,container,device,kube,link,mount,netdev,network,path,pod,scope,service,slice,snapshot,socket,swap,target,timer,volume" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.systemdUnitFile" path="syntaxes/systemd/systemd-unit-file.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.systemdUnitFile" contentTypeId="extra-syntax-highlighting.systemd-unit-file" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.systemd-unit-file" path="syntaxes/systemd/systemd-unit-file.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="systemd unit file Example" path="syntaxes/systemd/systemd-unit-file.example.service" scopeName="source.systemdUnitFile" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- toml/toml: TOML Config File -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

@@ -1,13 +1,12 @@
-# Local work folder that is not checked in
-_LOCAL/
+# Local work folders that is not checked in
+_*/
+
+.*
+!.dockerignore
+!.editorconfig
+!.git*
 
 # Eclipse
-.apt_generated/
-.checkstyle
-.classpath
-.factorypath
-.project
-.pydevproject
 **/.settings/*
 !**/.settings/org.eclipse.jdt.core.prefs
 bin/
@@ -21,7 +20,6 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
-.mvn/timing.properties
 
 # IntelliJ
 /.idea
@@ -31,12 +29,6 @@ buildNumber.properties
 
 # NetBeans
 nb-configuration.xml
-
-# Visual Studio Code
-/.vscode
-
-# OSX
-.DS_Store
 
 # Vim
 *.swo

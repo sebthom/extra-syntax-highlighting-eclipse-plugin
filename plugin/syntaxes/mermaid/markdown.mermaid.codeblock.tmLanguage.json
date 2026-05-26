@@ -1342,154 +1342,447 @@
               "name": "comment"
             },
             {
-              "comment": "(class name) (\"multiplicity relationship\")? (relationship) (\"multiplicity relationship\")? (class name) :? (labelText)?",
-              "match": "(?i)([\\w-]+)\\s(\"(?:\\d+|\\*|0..\\d+|1..\\d+|1..\\*)\")?\\s?(--o|--\\*|\\<--|--\\>|<\\.\\.|\\.\\.\\>|\\<\\|\\.\\.|\\.\\.\\|\\>|\\<\\|--|--\\|>|--\\*|--|\\.\\.|\\*--|o--)\\s(\"(?:\\d+|\\*|0..\\d+|1..\\d+|1..\\*)\")?\\s?([\\w-]+)\\s?(:)?\\s(.*)$",
+              "comment": "note for (class) \"note text\" (single line)",
+              "match": "(?i)^\\s*(note)\\s+(for)\\s+(?:(`)([^`]+)(`)|([\\w.-]+))\\s+(\"[^\"]*\")\\s*$",
               "captures": {
                 "1": {
-                  "name": "entity.name.type.class.mermaid"
+                  "name": "keyword.control.mermaid"
                 },
                 "2": {
                   "name": "keyword.control.mermaid"
                 },
                 "3": {
-                  "name": "keyword.control.mermaid"
+                  "name": "punctuation.definition.string.begin.mermaid"
                 },
                 "4": {
-                  "name": "keyword.control.mermaid"
+                  "name": "entity.name.type.class.mermaid"
                 },
                 "5": {
+                  "name": "punctuation.definition.string.end.mermaid"
+                },
+                "6": {
                   "name": "entity.name.type.class.mermaid"
+                },
+                "7": {
+                  "name": "string.quoted.double.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "namespace block",
+              "begin": "(?i)^\\s*(namespace)\\s+([\\w.-]+)\\s*(\\{)",
+              "beginCaptures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                },
+                "2": {
+                  "name": "variable.other.namespace.mermaid"
+                },
+                "3": {
+                  "name": "keyword.control.mermaid"
+                }
+              },
+              "patterns": [
+                {
+                  "match": "\\%%.*",
+                  "name": "comment"
+                },
+                {
+                  "comment": "class (class name) ~?(generic type)?~? ({)",
+                  "begin": "(?i)(class)\\s+(?:(`)([^`]+)(`)|([\\w.-]+)(~)?([\\w.-]+)?(~)?)\\s*(\\{)",
+                  "beginCaptures": {
+                    "1": {
+                      "name": "keyword.control.mermaid"
+                    },
+                    "2": {
+                      "name": "punctuation.definition.string.begin.mermaid"
+                    },
+                    "3": {
+                      "name": "entity.name.type.class.mermaid"
+                    },
+                    "4": {
+                      "name": "punctuation.definition.string.end.mermaid"
+                    },
+                    "5": {
+                      "name": "entity.name.type.class.mermaid"
+                    },
+                    "6": {
+                      "name": "punctuation.definition.typeparameters.begin.mermaid"
+                    },
+                    "7": {
+                      "name": "storage.type.mermaid"
+                    },
+                    "8": {
+                      "name": "punctuation.definition.typeparameters.end.mermaid"
+                    },
+                    "9": {
+                      "name": "keyword.control.mermaid"
+                    }
+                  },
+                  "patterns": [
+                    {
+                      "match": "\\%%.*",
+                      "name": "comment"
+                    },
+                    {
+                      "comment": "(visibility)?(function)( (function param/generic param)? )(classifier)? (return/generic return)?$",
+                      "begin": "(?i)\\s([\\+~#-])?([\\w.-]+)(\\()",
+                      "beginCaptures": {
+                        "1": {
+                          "name": "keyword.control.mermaid"
+                        },
+                        "2": {
+                          "name": "entity.name.function.mermaid"
+                        },
+                        "3": {
+                          "name": "punctuation.parenthesis.open.mermaid"
+                        }
+                      },
+                      "patterns": [
+                        {
+                          "comment": "(TBD)",
+                          "match": "(?i)\\s*,?\\s*([\\w.-]+)?(~)?([\\w.-]+)?(~)?\\s?([\\w.-]+)?",
+                          "captures": {
+                            "1": {
+                              "name": "storage.type.mermaid"
+                            },
+                            "2": {
+                              "name": "punctuation.definition.typeparameters.begin.mermaid"
+                            },
+                            "3": {
+                              "name": "storage.type.mermaid"
+                            },
+                            "4": {
+                              "name": "punctuation.definition.typeparameters.end.mermaid"
+                            },
+                            "5": {
+                              "name": "entity.name.variable.parameter.mermaid"
+                            }
+                          }
+                        }
+                      ],
+                      "end": "(?i)(\\))([*\\$]{0,2})\\s?([\\w.-]+)?(~)?([\\w.-]+)?(~)?$",
+                      "endCaptures": {
+                        "1": {
+                          "name": "punctuation.parenthesis.closed.mermaid"
+                        },
+                        "2": {
+                          "name": "keyword.control.mermaid"
+                        },
+                        "3": {
+                          "name": "storage.type.mermaid"
+                        },
+                        "4": {
+                          "name": "punctuation.definition.typeparameters.begin.mermaid"
+                        },
+                        "5": {
+                          "name": "storage.type.mermaid"
+                        },
+                        "6": {
+                          "name": "punctuation.definition.typeparameters.end.mermaid"
+                        }
+                      }
+                    },
+                    {
+                      "comment": "map~a,b~ member line",
+                      "match": "(?i)^\\s*(map)(~)([^,~]+)(,)([^~]+)(~)\\s*$",
+                      "captures": {
+                        "1": {
+                          "name": "keyword.control.map.mermaid"
+                        },
+                        "2": {
+                          "name": "punctuation.definition.generic.begin.mermaid"
+                        },
+                        "3": {
+                          "name": "support.type.primitive.mermaid"
+                        },
+                        "4": {
+                          "name": "punctuation.separator.comma.mermaid"
+                        },
+                        "5": {
+                          "name": "support.type.primitive.mermaid"
+                        },
+                        "6": {
+                          "name": "punctuation.definition.generic.end.mermaid"
+                        }
+                      }
+                    },
+                    {
+                      "comment": "Go-style field line",
+                      "match": "(?i)\\s([\\+~#-])?\\s*((?:\\[\\]\\*|\\[\\]|\\*|\\*?\\*?)(?:[\\w.]+(?:\\.[\\w.]+)*)(?:\\[\\])?)\\s+([\\w.]+)\\s*$",
+                      "captures": {
+                        "1": {
+                          "name": "keyword.control.mermaid"
+                        },
+                        "2": {
+                          "name": "storage.type.mermaid"
+                        },
+                        "3": {
+                          "name": "entity.name.variable.field.mermaid"
+                        }
+                      }
+                    },
+                    {
+                      "comment": "(visibility)?(datatype/generic data type) (attribute name)$",
+                      "match": "(?i)\\s([\\+~#-])?([\\w.-]+)(~)?([\\w.-]+)?(~)?\\s([\\w.-]+)?$",
+                      "captures": {
+                        "1": {
+                          "name": "keyword.control.mermaid"
+                        },
+                        "2": {
+                          "name": "storage.type.mermaid"
+                        },
+                        "3": {
+                          "name": "punctuation.definition.typeparameters.begin.mermaid"
+                        },
+                        "4": {
+                          "name": "storage.type.mermaid"
+                        },
+                        "5": {
+                          "name": "punctuation.definition.typeparameters.end.mermaid"
+                        },
+                        "6": {
+                          "name": "entity.name.variable.field.mermaid"
+                        }
+                      }
+                    },
+                    {
+                      "comment": "<<(Annotation)>> (class name)",
+                      "match": "(?i)(<<)([\\w-]+)(>>)\\s?([\\w.-]+)?",
+                      "captures": {
+                        "1": {
+                          "name": "punctuation.definition.stereotype.begin.mermaid"
+                        },
+                        "2": {
+                          "name": "entity.name.tag.stereotype.mermaid"
+                        },
+                        "3": {
+                          "name": "punctuation.definition.stereotype.end.mermaid"
+                        },
+                        "4": {
+                          "name": "entity.name.type.class.mermaid"
+                        }
+                      }
+                    }
+                  ],
+                  "end": "(})",
+                  "endCaptures": {
+                    "1": {
+                      "name": "keyword.control.mermaid"
+                    }
+                  }
+                }
+              ],
+              "end": "(?i)^\\s*(\\})",
+              "endCaptures": {
+                "1": {
+                  "name": "keyword.control.mermaid"
+                }
+              }
+            },
+            {
+              "comment": "(class name) (\"multiplicity relationship\")? (relationship) (\"multiplicity relationship\")? (class name) :? (labelText)?",
+              "match": "(?i)(?:(`)([^`]+)(`)|([\\w.-]+))\\s*(\"(?:\\d+|\\*|0..\\d+|1..\\d+|1..\\*)\")?\\s*(--o|--\\*|\\<--|--\\>|<\\.\\.|\\.\\.\\>|\\<\\|\\.\\.|\\.\\.\\|\\>|\\<\\|--|--\\|>|--\\*|--|\\.\\.|\\*--|o--)\\s*(\"(?:\\d+|\\*|0..\\d+|1..\\d+|1..\\*)\")?\\s*(?:(`)([^`]+)(`)|([\\w.-]+))\\s*(:)?\\s*(.*)$",
+              "captures": {
+                "1": {
+                  "name": "punctuation.definition.string.begin.mermaid"
+                },
+                "2": {
+                  "name": "entity.name.type.class.mermaid"
+                },
+                "3": {
+                  "name": "punctuation.definition.string.end.mermaid"
+                },
+                "4": {
+                  "name": "entity.name.type.class.mermaid"
+                },
+                "5": {
+                  "name": "keyword.control.mermaid"
                 },
                 "6": {
                   "name": "keyword.control.mermaid"
                 },
                 "7": {
+                  "name": "keyword.control.mermaid"
+                },
+                "8": {
+                  "name": "punctuation.definition.string.begin.mermaid"
+                },
+                "9": {
+                  "name": "entity.name.type.class.mermaid"
+                },
+                "10": {
+                  "name": "punctuation.definition.string.end.mermaid"
+                },
+                "11": {
+                  "name": "entity.name.type.class.mermaid"
+                },
+                "12": {
+                  "name": "keyword.control.mermaid"
+                },
+                "13": {
                   "name": "string"
                 }
               }
             },
             {
               "comment": "(class name) : (visibility)?(function)( (function param/generic param)? )(classifier)? (return/generic return)?$",
-              "match": "(?i)([\\w-]+)\\s?(:)\\s([\\+~#-])?([\\w-]+)(\\()([\\w-]+)?(~)?([\\w-]+)?(~)?\\s?([\\w-]+)?(\\))([*\\$]{0,2})\\s?([\\w-]+)?(~)?([\\w-]+)?(~)?$",
+              "match": "(?i)(?:(`)([^`]+)(`)|([\\w.-]+))\\s?(:)\\s([\\+~#-])?([\\w.-]+)(\\()([\\w.-]+)?(~)?([\\w.-]+)?(~)?\\s?([\\w.-]+)?(\\))([*\\$]{0,2})\\s?([\\w.-]+)?(~)?([\\w.-]+)?(~)?$",
               "captures": {
                 "1": {
-                  "name": "entity.name.type.class.mermaid"
+                  "name": "punctuation.definition.string.begin.mermaid"
                 },
                 "2": {
-                  "name": "keyword.control.mermaid"
+                  "name": "entity.name.type.class.mermaid"
                 },
                 "3": {
-                  "name": "keyword.control.mermaid"
+                  "name": "punctuation.definition.string.end.mermaid"
                 },
                 "4": {
-                  "name": "entity.name.function.mermaid"
+                  "name": "entity.name.type.class.mermaid"
                 },
                 "5": {
-                  "name": "punctuation.parenthesis.open.mermaid"
-                },
-                "6": {
-                  "name": "storage.type.mermaid"
-                },
-                "7": {
-                  "name": "punctuation.definition.typeparameters.begin.mermaid"
-                },
-                "8": {
-                  "name": "storage.type.mermaid"
-                },
-                "9": {
-                  "name": "punctuation.definition.typeparameters.end.mermaid"
-                },
-                "10": {
-                  "name": "entity.name.variable.parameter.mermaid"
-                },
-                "11": {
-                  "name": "punctuation.parenthesis.closed.mermaid"
-                },
-                "12": {
                   "name": "keyword.control.mermaid"
                 },
-                "13": {
+                "6": {
+                  "name": "keyword.control.mermaid"
+                },
+                "7": {
+                  "name": "entity.name.function.mermaid"
+                },
+                "8": {
+                  "name": "punctuation.parenthesis.open.mermaid"
+                },
+                "9": {
                   "name": "storage.type.mermaid"
                 },
-                "14": {
+                "10": {
                   "name": "punctuation.definition.typeparameters.begin.mermaid"
                 },
-                "15": {
+                "11": {
                   "name": "storage.type.mermaid"
                 },
+                "12": {
+                  "name": "punctuation.definition.typeparameters.end.mermaid"
+                },
+                "13": {
+                  "name": "entity.name.variable.parameter.mermaid"
+                },
+                "14": {
+                  "name": "punctuation.parenthesis.closed.mermaid"
+                },
+                "15": {
+                  "name": "keyword.control.mermaid"
+                },
                 "16": {
+                  "name": "storage.type.mermaid"
+                },
+                "17": {
+                  "name": "punctuation.definition.typeparameters.begin.mermaid"
+                },
+                "18": {
+                  "name": "storage.type.mermaid"
+                },
+                "19": {
                   "name": "punctuation.definition.typeparameters.end.mermaid"
                 }
               }
             },
             {
               "comment": "(class name) : (visibility)?(datatype/generic data type) (attribute name)$",
-              "match": "(?i)([\\w-]+)\\s?(:)\\s([\\+~#-])?([\\w-]+)(~)?([\\w-]+)?(~)?\\s([\\w-]+)?$",
+              "match": "(?i)(?:(`)([^`]+)(`)|([\\w.-]+))\\s?(:)\\s([\\+~#-])?([\\w.-]+)(~)?([\\w.-]+)?(~)?\\s([\\w.-]+)?$",
               "captures": {
                 "1": {
-                  "name": "entity.name.type.class.mermaid"
+                  "name": "punctuation.definition.string.begin.mermaid"
                 },
                 "2": {
-                  "name": "keyword.control.mermaid"
+                  "name": "entity.name.type.class.mermaid"
                 },
                 "3": {
-                  "name": "keyword.control.mermaid"
+                  "name": "punctuation.definition.string.end.mermaid"
                 },
                 "4": {
-                  "name": "storage.type.mermaid"
+                  "name": "entity.name.type.class.mermaid"
                 },
                 "5": {
-                  "name": "punctuation.definition.typeparameters.begin.mermaid"
+                  "name": "keyword.control.mermaid"
                 },
                 "6": {
-                  "name": "storage.type.mermaid"
+                  "name": "keyword.control.mermaid"
                 },
                 "7": {
-                  "name": "punctuation.definition.typeparameters.end.mermaid"
+                  "name": "storage.type.mermaid"
                 },
                 "8": {
+                  "name": "punctuation.definition.typeparameters.begin.mermaid"
+                },
+                "9": {
+                  "name": "storage.type.mermaid"
+                },
+                "10": {
+                  "name": "punctuation.definition.typeparameters.end.mermaid"
+                },
+                "11": {
                   "name": "entity.name.variable.field.mermaid"
                 }
               }
             },
             {
               "comment": "<<(Annotation)>> (class name)",
-              "match": "(?i)(<<)([\\w-]+)(>>)\\s?([\\w-]+)?",
+              "match": "(?i)(<<)([\\w-]+)(>>)\\s?(?:(`)([^`]+)(`)|([\\w.-]+))?",
               "captures": {
                 "1": {
-                  "name": "punctuation.definition.typeparameters.begin.mermaid"
+                  "name": "punctuation.definition.stereotype.begin.mermaid"
                 },
                 "2": {
-                  "name": "storage.type.mermaid"
+                  "name": "entity.name.tag.stereotype.mermaid"
                 },
                 "3": {
-                  "name": "punctuation.definition.typeparameters.end.mermaid"
+                  "name": "punctuation.definition.stereotype.end.mermaid"
                 },
                 "4": {
+                  "name": "punctuation.definition.string.begin.mermaid"
+                },
+                "5": {
+                  "name": "entity.name.type.class.mermaid"
+                },
+                "6": {
+                  "name": "punctuation.definition.string.end.mermaid"
+                },
+                "7": {
                   "name": "entity.name.type.class.mermaid"
                 }
               }
             },
             {
               "comment": "class (class name) ~?(generic type)?~? ({)",
-              "begin": "(?i)(class)\\s+([\\w-]+)(~)?([\\w-]+)?(~)?\\s?({)",
+              "begin": "(?i)(class)\\s+(?:(`)([^`]+)(`)|([\\w.-]+))(~)?([\\w.-]+)?(~)?\\s?({)",
               "beginCaptures": {
                 "1": {
                   "name": "keyword.control.mermaid"
                 },
                 "2": {
-                  "name": "entity.name.type.class.mermaid"
+                  "name": "punctuation.definition.string.begin.mermaid"
                 },
                 "3": {
-                  "name": "punctuation.definition.typeparameters.begin.mermaid"
+                  "name": "entity.name.type.class.mermaid"
                 },
                 "4": {
-                  "name": "storage.type.mermaid"
+                  "name": "punctuation.definition.string.end.mermaid"
                 },
                 "5": {
-                  "name": "punctuation.definition.typeparameters.end.mermaid"
+                  "name": "entity.name.type.class.mermaid"
                 },
                 "6": {
+                  "name": "punctuation.definition.typeparameters.begin.mermaid"
+                },
+                "7": {
+                  "name": "storage.type.mermaid"
+                },
+                "8": {
+                  "name": "punctuation.definition.typeparameters.end.mermaid"
+                },
+                "9": {
                   "name": "keyword.control.mermaid"
                 }
               },
@@ -1500,7 +1793,7 @@
                 },
                 {
                   "comment": "(visibility)?(function)( (function param/generic param)? )(classifier)? (return/generic return)?$",
-                  "begin": "(?i)\\s([\\+~#-])?([\\w-]+)(\\()",
+                  "begin": "(?i)\\s([\\+~#-])?([\\w.-]+)(\\()",
                   "beginCaptures": {
                     "1": {
                       "name": "keyword.control.mermaid"
@@ -1515,7 +1808,7 @@
                   "patterns": [
                     {
                       "comment": "(TBD)",
-                      "match": "(?i)\\s*,?\\s*([\\w-]+)?(~)?([\\w-]+)?(~)?\\s?([\\w-]+)?",
+                      "match": "(?i)\\s*,?\\s*([\\w.-]+)?(~)?([\\w.-]+)?(~)?\\s?([\\w.-]+)?",
                       "captures": {
                         "1": {
                           "name": "storage.type.mermaid"
@@ -1535,7 +1828,7 @@
                       }
                     }
                   ],
-                  "end": "(?i)(\\))([*\\$]{0,2})\\s?([\\w-]+)?(~)?([\\w-]+)?(~)?$",
+                  "end": "(?i)(\\))([*\\$]{0,2})\\s?([\\w.-]+)?(~)?([\\w.-]+)?(~)?$",
                   "endCaptures": {
                     "1": {
                       "name": "punctuation.parenthesis.closed.mermaid"
@@ -1558,8 +1851,47 @@
                   }
                 },
                 {
+                  "comment": "map~a,b~ member line",
+                  "match": "(?i)^\\s*(map)(~)([^,~]+)(,)([^~]+)(~)\\s*$",
+                  "captures": {
+                    "1": {
+                      "name": "keyword.control.map.mermaid"
+                    },
+                    "2": {
+                      "name": "punctuation.definition.generic.begin.mermaid"
+                    },
+                    "3": {
+                      "name": "support.type.primitive.mermaid"
+                    },
+                    "4": {
+                      "name": "punctuation.separator.comma.mermaid"
+                    },
+                    "5": {
+                      "name": "support.type.primitive.mermaid"
+                    },
+                    "6": {
+                      "name": "punctuation.definition.generic.end.mermaid"
+                    }
+                  }
+                },
+                {
+                  "comment": "Go-style field line",
+                  "match": "(?i)\\s([\\+~#-])?\\s*((?:\\[\\]\\*|\\[\\]|\\*|\\*?\\*?)(?:[\\w.]+(?:\\.[\\w.]+)*)(?:\\[\\])?)\\s+([\\w.]+)\\s*$",
+                  "captures": {
+                    "1": {
+                      "name": "keyword.control.mermaid"
+                    },
+                    "2": {
+                      "name": "storage.type.mermaid"
+                    },
+                    "3": {
+                      "name": "entity.name.variable.field.mermaid"
+                    }
+                  }
+                },
+                {
                   "comment": "(visibility)?(datatype/generic data type) (attribute name)$",
-                  "match": "(?i)\\s([\\+~#-])?([\\w-]+)(~)?([\\w-]+)?(~)?\\s([\\w-]+)?$",
+                  "match": "(?i)\\s([\\+~#-])?([\\w.-]+)(~)?([\\w.-]+)?(~)?\\s([\\w.-]+)?$",
                   "captures": {
                     "1": {
                       "name": "keyword.control.mermaid"
@@ -1583,16 +1915,16 @@
                 },
                 {
                   "comment": "<<(Annotation)>> (class name)",
-                  "match": "(?i)(<<)([\\w-]+)(>>)\\s?([\\w-]+)?",
+                  "match": "(?i)(<<)([\\w-]+)(>>)\\s?([\\w.-]+)?",
                   "captures": {
                     "1": {
-                      "name": "punctuation.definition.typeparameters.begin.mermaid"
+                      "name": "punctuation.definition.stereotype.begin.mermaid"
                     },
                     "2": {
-                      "name": "storage.type.mermaid"
+                      "name": "entity.name.tag.stereotype.mermaid"
                     },
                     "3": {
-                      "name": "punctuation.definition.typeparameters.end.mermaid"
+                      "name": "punctuation.definition.stereotype.end.mermaid"
                     },
                     "4": {
                       "name": "entity.name.type.class.mermaid"
@@ -1609,21 +1941,30 @@
             },
             {
               "comment": "class (class name) ~?(generic type)?~?",
-              "match": "(?i)(class)\\s+([\\w-]+)(~)?([\\w-]+)?(~)?",
+              "match": "(?i)(class)\\s+(?:(`)([^`]+)(`)|([\\w.-]+))(~)?([\\w.-]+)?(~)?",
               "captures": {
                 "1": {
                   "name": "keyword.control.mermaid"
                 },
                 "2": {
-                  "name": "entity.name.type.class.mermaid"
+                  "name": "punctuation.definition.string.begin.mermaid"
                 },
                 "3": {
-                  "name": "punctuation.definition.typeparameters.begin.mermaid"
+                  "name": "entity.name.type.class.mermaid"
                 },
                 "4": {
-                  "name": "storage.type.mermaid"
+                  "name": "punctuation.definition.string.end.mermaid"
                 },
                 "5": {
+                  "name": "entity.name.type.class.mermaid"
+                },
+                "6": {
+                  "name": "punctuation.definition.typeparameters.begin.mermaid"
+                },
+                "7": {
+                  "name": "storage.type.mermaid"
+                },
+                "8": {
                   "name": "punctuation.definition.typeparameters.end.mermaid"
                 }
               }

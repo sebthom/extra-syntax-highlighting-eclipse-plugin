@@ -83,7 +83,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: b2e384480217ad7cd7d5023b5307c53ed85bb307
+      commit: 572c0e893706ce566a243f22007c790f3cffd0bf
     languages:
       bazelrc:
         label: bazelrc
@@ -125,7 +125,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 58b135235c1b08c84afe3fdbd665f70c3985e1f3
+      commit: c684183ed81ad4a995c007b9f9271eef04973b24
     languages:
       carbon:
         label: Carbon
@@ -137,7 +137,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: a45578bab58823567ff516ab6d1d4b5f57d8a2cb
+      commit: ac0035c4fb74e8c4886d13a9c49aecc93e3f9601
     languages:
       cobol:
         label: COBOL
@@ -172,7 +172,7 @@ extensions:
     github:
       repo: github/vscode-codeql
       ref: main
-      commit: f6de54e601bd50ef71a09e720448dc9f3f701153
+      commit: d0eb2ef2ae7776959d00eac32c419a37cc4671ef
     languages:
       ql:
         label: CodeQL
@@ -433,7 +433,7 @@ extensions:
     github:
       repo: gleam-lang/vscode-gleam
       ref: main
-      commit: 9f28a4a0bffaccadf74f56ab72310187cd3ff6e2
+      commit: 2302e796fccd953896d8d895d7e89237ea248c97
     languages:
       gleam:
         label: Gleam
@@ -488,7 +488,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 7aefde86dbd23948939853ca9f9d2f066bc35b8f
+      commit: d8d6dad09d2577a3dc8f50ea015f04e194d3ef25
     languages:
       graphql:
         label: GraphQL
@@ -577,7 +577,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: main
-      commit: cf19b5b1743367050697646ae39ed9960bb568ae
+      commit: 875eeae119d0f6699983d10acfaa6ed84e02027e
     languages:
       helm:
         label: helm-template
@@ -1072,7 +1072,7 @@ extensions:
     github:
       repo: edheltzel/better-nunjucks-for-visual-studio-code
       ref: main
-      commit: 83bfc919563c30f8eeb1548f983e143adad29781
+      commit: 5fdd2daf18d3472629c6430d80d16863c72ce566
     languages:
       nunjucks-html:
         label: Nunjucks HTML
@@ -1101,7 +1101,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: e0e61705efb046efc7cc505cffff06ecdd285ff9
+      commit: f367caca43d2f791082a948d1f7e6dd756c49ed9
     languages:
       ocaml:
         label: OCaml
@@ -1156,7 +1156,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 2ca5136b3b16b490c765c73dec4e2420405c8876
+      commit: c9d74f3068e0b53f4d192f90352898375e0bb0ff
     languages:
       odin:
         label: odin
@@ -1254,7 +1254,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 502fe7b487c2fae58cf56c982bedbf4044e2e462
+      commit: 6cab427fbfb01d9078c4d4190adbaae6dea94055
     languages:
       ring:
         label: Ring
@@ -1279,7 +1279,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 86fafb1f42ab87aeda282c9457fd44303a75f45c
+      commit: 459d031b4fafd558fc015e1cb37826aa691f2fa3
     languages:
       svelte:
         label: Svelte

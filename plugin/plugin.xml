@@ -272,7 +272,7 @@
                   file-extensions="carbon" />
   </extension>
   <extension point="org.eclipse.tm4e.registry.grammars">
-    <grammar scopeName="source.carbon" path="syntaxes/carbon/carbon.tmLanguage.json" />
+    <grammar scopeName="source.carbon" path="syntaxes/carbon/carbon.tmLanguage.plist" />
     <scopeNameContentTypeBinding scopeName="source.carbon" contentTypeId="extra-syntax-highlighting.carbon" />
   </extension>
 

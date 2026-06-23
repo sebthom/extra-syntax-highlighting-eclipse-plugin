@@ -125,7 +125,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: c684183ed81ad4a995c007b9f9271eef04973b24
+      commit: b8aa0ee164d6b97af6a342c6d80c55d602df179d
     languages:
       carbon:
         label: Carbon

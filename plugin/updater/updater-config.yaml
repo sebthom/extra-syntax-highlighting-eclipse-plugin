@@ -159,7 +159,7 @@ sources:
       carbon:
         label: Carbon
         scope-name: source.carbon
-        grammar: textmate/Syntaxes/carbon.tmLanguage.json
+        grammar: textmate/Syntaxes/carbon.tmLanguage
         langcfg: vscode/language-configuration.json
         file-extensions:
         - .carbon

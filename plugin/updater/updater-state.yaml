@@ -137,7 +137,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: ac0035c4fb74e8c4886d13a9c49aecc93e3f9601
+      commit: dce654e98a6954d048b87058b1a2efec2a0b317f
     languages:
       cobol:
         label: COBOL
@@ -172,7 +172,7 @@ extensions:
     github:
       repo: github/vscode-codeql
       ref: main
-      commit: d0eb2ef2ae7776959d00eac32c419a37cc4671ef
+      commit: 472d1ee24922a7aaca5e18ddde98aeee4a6a39a1
     languages:
       ql:
         label: CodeQL
@@ -433,7 +433,7 @@ extensions:
     github:
       repo: gleam-lang/vscode-gleam
       ref: main
-      commit: 2302e796fccd953896d8d895d7e89237ea248c97
+      commit: 1aa610135f1b3f3835109b3ccf0985a12445fba1
     languages:
       gleam:
         label: Gleam
@@ -577,7 +577,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: main
-      commit: 875eeae119d0f6699983d10acfaa6ed84e02027e
+      commit: cf2b2ed3f20d8586159b6a4c9fc07021be83a859
     languages:
       helm:
         label: helm-template
@@ -1101,7 +1101,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: f367caca43d2f791082a948d1f7e6dd756c49ed9
+      commit: d23f133bf34a3786d4fa491471299d7ed5672eeb
     languages:
       ocaml:
         label: OCaml
@@ -1156,7 +1156,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: c9d74f3068e0b53f4d192f90352898375e0bb0ff
+      commit: 8b1c17f78a89936f248a0dd0c12d56bfa004cae6
     languages:
       odin:
         label: odin
@@ -1279,7 +1279,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 459d031b4fafd558fc015e1cb37826aa691f2fa3
+      commit: fbb12913ceab9dd3d33de531e0fbdbe432bc8e6b
     languages:
       svelte:
         label: Svelte

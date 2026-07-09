@@ -83,7 +83,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 572c0e893706ce566a243f22007c790f3cffd0bf
+      commit: 6518f01fd1d401d0af9be2d355b3d1e68ba4efac
     languages:
       bazelrc:
         label: bazelrc
@@ -125,7 +125,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: b8aa0ee164d6b97af6a342c6d80c55d602df179d
+      commit: 06e31437b9cd5a001412639999b05f3a6b13dcbc
     languages:
       carbon:
         label: Carbon
@@ -137,7 +137,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: dce654e98a6954d048b87058b1a2efec2a0b317f
+      commit: 485a0a5baa61bffb80c17749ccd4f32ece3fad8e
     languages:
       cobol:
         label: COBOL
@@ -172,7 +172,7 @@ extensions:
     github:
       repo: github/vscode-codeql
       ref: main
-      commit: 472d1ee24922a7aaca5e18ddde98aeee4a6a39a1
+      commit: 1b45199b1de69e8ad06586cc4d4f605e2656fa70
     languages:
       ql:
         label: CodeQL
@@ -316,7 +316,7 @@ extensions:
     github:
       repo: elm-tooling/elm-language-client-vscode
       ref: main
-      commit: 4f164dc831a1a378a9958b2b230463316067606a
+      commit: b93da298fdd8f0ca620f47f7dee3665dfb037fab
     languages:
       elm:
         label: Elm
@@ -488,7 +488,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: d8d6dad09d2577a3dc8f50ea015f04e194d3ef25
+      commit: bd73a95154021981d40294a76b24e3266b3a7287
     languages:
       graphql:
         label: GraphQL
@@ -544,7 +544,7 @@ extensions:
     github:
       repo: vshaxe/haxe-TmLanguage
       ref: master
-      commit: 6fbbbf958448f877a8d524a589e3280514c950e6
+      commit: c1d8b9ba24c3454c0bf779c58edc7b580f7acc4a
     languages:
       haxe:
         label: Haxe
@@ -577,7 +577,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: main
-      commit: cf2b2ed3f20d8586159b6a4c9fc07021be83a859
+      commit: 8620e8a16f36c3ea41b6992cafa3c732d888fbdb
     languages:
       helm:
         label: helm-template
@@ -1086,7 +1086,7 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: bb6a4dd02d472f39fd893ba48e7ca9b3aada7c4e
+      commit: 36b10195fb6ceb5ebe23627e7631821a8dca8417
     languages:
       nushell:
         label: nushell
@@ -1101,7 +1101,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: d23f133bf34a3786d4fa491471299d7ed5672eeb
+      commit: 6fec2b9b608b4106bb00f524d5d0c1b76ddd0281
     languages:
       ocaml:
         label: OCaml
@@ -1156,7 +1156,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 8b1c17f78a89936f248a0dd0c12d56bfa004cae6
+      commit: 327ca69fc2b16acd39f1b8a8c9f3792cbbba0eb6
     languages:
       odin:
         label: odin
@@ -1254,7 +1254,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 6cab427fbfb01d9078c4d4190adbaae6dea94055
+      commit: 506d0a9943a64c72f7b971e28fc237244041cc1c
     languages:
       ring:
         label: Ring
@@ -1279,7 +1279,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: fbb12913ceab9dd3d33de531e0fbdbe432bc8e6b
+      commit: d6536401ce7d367c94d0710e24255a6728d3c0ed
     languages:
       svelte:
         label: Svelte

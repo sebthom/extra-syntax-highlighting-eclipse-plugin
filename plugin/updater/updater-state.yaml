@@ -125,7 +125,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 06e31437b9cd5a001412639999b05f3a6b13dcbc
+      commit: 5c544f7c2fa7b25bdfb845c49f26344205e41bcb
     languages:
       carbon:
         label: Carbon
@@ -172,7 +172,7 @@ extensions:
     github:
       repo: github/vscode-codeql
       ref: main
-      commit: 1b45199b1de69e8ad06586cc4d4f605e2656fa70
+      commit: cb12678826d935f4f2b3e73eacd55ffde494f4cf
     languages:
       ql:
         label: CodeQL
@@ -488,7 +488,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: bd73a95154021981d40294a76b24e3266b3a7287
+      commit: 277cddad169962a580b0aa71e08f5ea3a29ffd01
     languages:
       graphql:
         label: GraphQL
@@ -577,7 +577,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: main
-      commit: 8620e8a16f36c3ea41b6992cafa3c732d888fbdb
+      commit: e184e6ea0af8c2e86a0c22071b9415e10e14849b
     languages:
       helm:
         label: helm-template
@@ -1101,7 +1101,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 6fec2b9b608b4106bb00f524d5d0c1b76ddd0281
+      commit: c48a624c5c142a0ba3811256ce832b8e7bec2af4
     languages:
       ocaml:
         label: OCaml
@@ -1156,7 +1156,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 327ca69fc2b16acd39f1b8a8c9f3792cbbba0eb6
+      commit: 8451bdda6197518df8d2626ab51280ddc219d552
     languages:
       odin:
         label: odin
@@ -1254,7 +1254,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 506d0a9943a64c72f7b971e28fc237244041cc1c
+      commit: 9ebb8d5a4d76fa74b94d53b50eaeff28363fde53
     languages:
       ring:
         label: Ring
@@ -1279,7 +1279,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: d6536401ce7d367c94d0710e24255a6728d3c0ed
+      commit: 84d54a142ebf1f29d24a7e64237310f57aa07312
     languages:
       svelte:
         label: Svelte

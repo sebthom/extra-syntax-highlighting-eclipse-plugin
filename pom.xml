@@ -92,27 +92,6 @@
             </plugin>
 
             <plugin>
-               <groupId>org.codehaus.gmavenplus</groupId>
-               <artifactId>gmavenplus-plugin</artifactId>
-               <dependencies>
-                  <!--
-                     workaround since Tycho 5 where for some unknown reason the Maven build aborts with
-                        org.apache.maven.lifecycle.LifecycleExecutionException:
-                        Failed to execute goal org.codehaus.gmavenplus:gmavenplus-plugin:4.2.1:execute (groovy.script.onValidate@validate) on project de.sebthom.eclipse.extra_syntax_highlighting.parent:
-                        Error occurred while calling a method on a Groovy class from classpath.
-                        Caused by: InvocationTargetException: startup failed:
-                        General error during conversion: Error grabbing Grapes - [download failed: commons-codec#commons-codec;1.19.0!commons-codec.jar]
-                        at groovy.grape.GrapeIvy.getDependencies(GrapeIvy.groovy:487)
-                  -->
-                  <dependency>
-                    <groupId>commons-codec</groupId>
-                    <artifactId>commons-codec</artifactId>
-                    <version>1.19.0</version>
-                  </dependency>
-               </dependencies>
-            </plugin>
-
-            <plugin>
                <groupId>org.eclipse.tycho</groupId>
                <artifactId>tycho-bnd-plugin</artifactId>
                <version>${tycho.version}</version>

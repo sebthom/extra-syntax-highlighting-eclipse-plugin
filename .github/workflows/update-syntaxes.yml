@@ -78,7 +78,17 @@ jobs:
 
         bash plugin/updater/run.sh
 
-        updates=$(git status --porcelain plugin/syntaxes | { grep -v LICENSE.txt || test $? = 1; })
+        git add -A -- \
+          plugin/updater/updater-state.yaml \
+          plugin/syntaxes \
+          plugin/plugin.xml \
+          README.md
+
+        updates=$(git diff --cached --name-status -- \
+          plugin/updater/updater-state.yaml \
+          plugin/syntaxes \
+          plugin/plugin.xml \
+          README.md)
         if [[ -z $updates ]]; then
           echo "updates=" >> "$GITHUB_OUTPUT"
         else

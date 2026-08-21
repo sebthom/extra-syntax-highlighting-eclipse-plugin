@@ -100,6 +100,19 @@ jobs:
         fi
 
 
+    # PR workflows triggered through GITHUB_TOKEN require manual approval, so use a GitHub App token instead:
+    # https://github.blog/changelog/2026-06-11-bot-created-pull-requests-can-run-workflows-if-approved/
+    - name: Generate PR Updater App Token
+      id: pr-updater-app-token
+      uses: actions/create-github-app-token@v3  # https://github.com/actions/create-github-app-token
+      if: steps.update_syntaxes.outputs.updates
+      with:
+        app-id: ${{ vars.PR_UPDATER_APP_ID }}
+        private-key: ${{ secrets.PR_UPDATER_APP_PRIVATE_KEY }}
+        permission-contents: write
+        permission-pull-requests: write
+
+
     - name: Create PR
       id: create-pr
       uses: peter-evans/create-pull-request@v8  # https://github.com/peter-evans/create-pull-request
@@ -117,4 +130,4 @@ jobs:
           README.md
         branch: dependencies/syntaxes
         delete-branch: true
-        token: ${{ github.token }}
+        token: ${{ steps.pr-updater-app-token.outputs.token }}

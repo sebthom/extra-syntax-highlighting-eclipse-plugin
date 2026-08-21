@@ -84,19 +84,22 @@ jobs:
           plugin/plugin.xml \
           README.md
 
-        updates=$(git diff --cached --name-status -- \
-          plugin/updater/updater-state.yaml \
-          plugin/syntaxes \
-          plugin/plugin.xml \
-          README.md)
-        if [[ -z $updates ]]; then
-          echo "updates=" >> "$GITHUB_OUTPUT"
-        else
+        # Only syntax changes trigger a PR; related generated metadata is included when one is created.
+        if ! git diff --cached --quiet -- plugin/syntaxes; then
+          # Syntax changes exist: prepare the PR output
+          updates=$(git diff --cached --name-status -- \
+            plugin/updater/updater-state.yaml \
+            plugin/syntaxes \
+            plugin/plugin.xml \
+            README.md)
           # https://github.com/orgs/community/discussions/26288#discussioncomment-3876281
           delimiter="$(openssl rand -hex 8)"
           echo "updates<<${delimiter}" >> "${GITHUB_OUTPUT}"
           echo "${updates}" >> "${GITHUB_OUTPUT}"
           echo "${delimiter}" >> "${GITHUB_OUTPUT}"
+        else
+          # No syntax changes: skip PR creation
+          echo "updates=" >> "$GITHUB_OUTPUT"
         fi
 
 

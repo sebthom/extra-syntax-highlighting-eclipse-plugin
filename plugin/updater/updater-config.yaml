@@ -243,6 +243,10 @@ sources:
     type: vscode-extension
     github:
       repo: elm-tooling/elm-language-client-vscode
+      # The server submodule currently contains nested gitlinks without matching .gitmodules entries.
+      # Recursive checkout therefore fails with "fatal: No url found for submodule path".
+      # It is unrelated to the syntax files, so skip all submodules.
+      submodules: false
 
   er:
     type: vscode-extension

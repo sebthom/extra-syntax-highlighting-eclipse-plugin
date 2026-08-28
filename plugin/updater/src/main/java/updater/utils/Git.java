@@ -20,6 +20,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import updater.utils.Log.WithToString;
 
 /**
+ * Provides the Git checkout models and shallow sparse-checkout operations used by the syntax updater.
+ *
  * @author Sebastian Thomschke
  */
 public abstract class Git {
@@ -44,6 +46,9 @@ public abstract class Git {
 
       /** branch or tag */
       public String ref;
+
+      /** whether to recursively checkout submodules */
+      public @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) boolean submodules = true;
    }
 
    public static class GitCheckoutState extends GitCheckoutConfig {
@@ -122,8 +127,10 @@ public abstract class Git {
          }
          execVerbose(localPath, "git", gitPullArgs.toArray(String[]::new));
 
-         // checkout potential git modules
-         execVerbose(localPath, "git", "submodule", "update", "--init", "--recursive");
+         if (gitCheckoutCfg.submodules) {
+            // checkout potential git modules
+            execVerbose(localPath, "git", "submodule", "update", "--init", "--recursive");
+         }
 
          final var commitHash = execSilent(localPath, "git", "rev-parse", "HEAD");
          return new GitCheckoutState(gitCheckoutCfg.repo, gitCheckoutCfg.path, ref, commitHash.get(0));

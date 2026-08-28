@@ -1,0 +1,185 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Pikchr",
+  "scopeName": "source.pikchr",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#objects"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#attributes"
+    },
+    {
+      "include": "#directions"
+    },
+    {
+      "include": "#positioning"
+    },
+    {
+      "include": "#colors"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#compass-points"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.pikchr",
+          "match": "#.*$"
+        },
+        {
+          "name": "comment.block.pikchr",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.pikchr",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.pikchr",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "objects": {
+      "patterns": [
+        {
+          "name": "entity.name.type.object.pikchr",
+          "match": "\\b(box|circle|ellipse|oval|cylinder|file|arrow|line|arc|spline|move|dot|text)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.pikchr",
+          "match": "\\b(define|print|assert|if|then|else)\\b"
+        },
+        {
+          "name": "keyword.other.pikchr",
+          "match": "\\b(same|as|previous|last|first|until|even|with|thickness|of|the|way|between|and|vertex|chop)\\b"
+        }
+      ]
+    },
+    "attributes": {
+      "patterns": [
+        {
+          "name": "support.type.attribute.pikchr",
+          "match": "\\b(color|colour|fill|fillcolor|thickness|radius|diameter|width|height|wid|ht|rad|diam|at|from|to|go|heading|close|cw|ccw)\\b"
+        },
+        {
+          "name": "support.type.style.pikchr",
+          "match": "\\b(solid|dashed|dotted|invisible|invis|behind|fit)\\b"
+        },
+        {
+          "name": "support.type.arrow.pikchr",
+          "match": "\\b(->|<-|<->)\\b"
+        }
+      ]
+    },
+    "directions": {
+      "patterns": [
+        {
+          "name": "constant.language.direction.pikchr",
+          "match": "\\b(right|left|up|down|above|below|north|south|east|west)\\b"
+        }
+      ]
+    },
+    "positioning": {
+      "patterns": [
+        {
+          "name": "keyword.control.positioning.pikchr",
+          "match": "\\b(at|from|to|with|then|go|heading|by)\\b"
+        }
+      ]
+    },
+    "colors": {
+      "patterns": [
+        {
+          "name": "constant.other.color.named.pikchr",
+          "match": "\\b(black|white|red|green|blue|cyan|magenta|yellow|gray|grey|orange|purple|pink|brown|navy|maroon|lime|olive|aqua|teal|fuchsia|silver|gold)\\b"
+        },
+        {
+          "name": "constant.other.color.hex.pikchr",
+          "match": "#[0-9a-fA-F]{6}\\b"
+        },
+        {
+          "name": "constant.other.color.rgb.pikchr",
+          "match": "rgb\\([^)]+\\)"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.pikchr",
+          "match": "\\b([0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?)(in|cm|mm|pt|pc|px|%)?\\b"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.pikchr",
+          "match": "\\$[a-zA-Z_][a-zA-Z0-9_]*"
+        },
+        {
+          "name": "variable.language.pikchr",
+          "match": "\\b[A-Z][A-Z0-9_]*\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.arithmetic.pikchr",
+          "match": "[+\\-*/%]"
+        },
+        {
+          "name": "keyword.operator.comparison.pikchr",
+          "match": "(==|!=|<=|>=|<|>)"
+        },
+        {
+          "name": "keyword.operator.logical.pikchr",
+          "match": "(&&|\\|\\||!)"
+        }
+      ]
+    },
+    "compass-points": {
+      "patterns": [
+        {
+          "name": "variable.other.compass.pikchr",
+          "match": "\\.(n|s|e|w|ne|nw|se|sw|north|south|east|west|top|bottom|left|right|start|end|center|c)\\b"
+        }
+      ]
+    }
+  }
+}

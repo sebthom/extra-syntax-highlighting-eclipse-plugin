@@ -1,0 +1,113 @@
+/* Block comments can span multiple lines.
+   They are useful for longer explanations. */
+
+# Variables, units, arithmetic, functions, and assignment operators.
+scale = 0.75
+$gap = 0.25in
+$stroke = 1.5px
+boxwid = 0.75in
+boxht = 0.42in
+linewid *= 0.9
+$gap += 1mm
+$gap -= 1mm
+$stroke *= 1
+$stroke /= 1
+$computed = max(0.15in, sqrt(0.04)) + abs(-0.01)
+
+# Macros can accept up to nine textual parameters.
+define feature_arrow {
+  arrow from $1 to $2 chop -> $3 above
+}
+
+# Block objects, labels, dimensions, named colors, and hexadecimal colors.
+Objects: [
+  right
+  Box: box "rounded \"box\"" bold fit rad 6px fill 0xe8f1ff color navy thick
+  move right $gap
+  Circle: circle "circle" diameter 0.48in fill lightblue
+  move right $gap
+  Ellipse: ellipse "ellipse" width 1in height 0.45in dashed color teal
+  move right $gap
+  Oval: oval "oval" wid 0.8in ht 0.45in dotted color purple
+  move right $gap
+  Cylinder: cylinder "cylinder" fill 0xfff2cc
+  move right $gap
+  File: file "file" fill white
+  move right $gap
+  Diamond: diamond "diamond" fill gold
+]
+text "Block objects and text styles" big bold at 0.35in above Objects.n
+text "Escapes: \"quote\" and \\ backslash" small monospace at 0.22in below Objects.s
+
+# Lines, arrows, splines, arcs, arrowheads, continuations, and path segments.
+Paths: [
+  right
+  Point: dot "dot" above color red
+  Line: line right 0.75in "line" above solid
+  Arrow: arrow right 0.8in "arrow" above ->
+  Spline: spline from 0.25in right of Arrow.end \
+    go right 0.15in then 0.25in heading 30 \
+    then 0.3in heading -30 then right 0.15in <->
+  text "spline" small below at Spline
+  ArcCw: arc cw from 0.35in right of Spline.end
+  text "arc cw" small below at ArcCw
+  ArcCcw: arc ccw from 0.35in right of ArcCw.end
+  text "arc ccw" small below at ArcCcw
+  arrow dashed <-> from 0.22in below Line.start right 0.75in "dashed" below
+  line dotted <- from 0.22in below Arrow.start right 0.8in "dotted" below
+] with .n at 0.75in below Objects.s
+
+# Relative positions, anchors, interpolation, and multi-segment paths.
+Layout: [
+  Base: box "anchors" fill 0xddeeff
+  Target: circle "position" with .w at 0.55in right of Base.e
+  Midpoint: dot color magenta at 1/2 way between Base.e and Target.w
+  text ".nw" small above at Base.nw
+  dot color red at Base.nw
+  arrow from Base.e to Target.w chop ->
+  arrow from Base.s down 0.4in \
+    then right until even with Target \
+    then to Target.s ->
+] with .n at 0.65in below Paths.s
+
+# Stroke styles, copying attributes, visibility, and drawing order.
+Styles: [
+  right
+  Template: box "thin" thin color red fill 0xffdddd
+  move right $gap
+  box "thick" thick color green fill 0xddffdd
+  move right $gap
+  box "dashed" dashed color blue fill white
+  move right $gap
+  box "dotted" dotted color purple
+  move right $gap
+  box "same as" same as Template fill gold
+  Hidden: box "invisible" invisible
+] with .n at 0.65in below Layout.s
+Backdrop: box width Styles.width+0.2in height Styles.height+0.2in \
+  at Styles.center behind Styles fill 0xf7f7f7 thin color gray
+
+# Containers, macros, symbolic labels, and object references.
+Flow: [
+  right
+  Client: oval "Client" fit fill cyan
+  Service: box "Service" fit at 1.5in right of Client fill 0xddeeff
+  Store: cylinder "Store" at 1.5in right of Service fill 0xffeecc
+  feature_arrow(Client.e, Service.w, "request")
+  feature_arrow(Service.e, Store.w, "query")
+  arrow dashed from Store.s down 0.35in \
+    then left until even with Client \
+    then to Client.s -> "response" below
+  assert(1 + 2 == 3)
+] with .n at 0.65in below Backdrop.s
+
+# Direction statements and semicolon-separated statements.
+Directions: [
+  right; box "right"
+  down; box "down"
+  left; box "left"
+  up; box "up"
+] with .n at 0.65in below Flow.s
+
+# Debug statements are valid Pikchr even though print adds text before the SVG.
+print "Rendered object width: ", Objects.width

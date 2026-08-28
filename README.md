@@ -69,6 +69,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. Odin - https://odin-lang.org/
 1. Pascal (`*.pas`) - https://en.wikipedia.org/wiki/Pascal_(programming_language)
 1. PlantUML (`*.pu`) - https://plantuml.com/
+1. Pikchr (`*.pikchr`) - https://pikchr.org/
 1. Pony (`*.pony`) - https://www.ponylang.io/
 1. Prisma - https://www.prisma.io/
 1. Reason (`*.re`) - https://reasonml.github.io/
@@ -207,6 +208,7 @@ To install the plugin into an existing Eclipse installation do:
 | opam <img src="plugin/syntaxes/ocaml/icon.png" width=16/> | file-extensions="opam, opam.locked, opam.template"<br />file-names="opam" | [master@ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform/tree/ee4774f60d608e92f0adacf6d75757c97d35f03a/)
 | OpenGL Shading Language <img src="plugin/syntaxes/glsl/icon.png" width=16/> | file-extensions="comp, csh, frag, fs, fsh, fshader, geom, glsl, gs, gsh, gshader, mesh, rahit, rcall, rchit, rgen, rint, rmiss, task, tesc, tese, vert, vs, vsh, vshader" | [master@GeForceLegend/vscode-glsl](https://github.com/GeForceLegend/vscode-glsl/tree/d9adb612cbb0dd3aefb8859e4084bee4872beac4/)
 | Pascal | file-extensions="dfm, dpk, dpr, fmx, lfm, lpr, p, pas" | [master@textmate/pascal.tmbundle](https://github.com/textmate/pascal.tmbundle/tree/3b11b782368065e55acce0423f385722771d28b0/Syntaxes)
+| Pikchr | file-extensions="pikchr" | [main@claylo/pikchr-tmlanguage](https://github.com/claylo/pikchr-tmlanguage/tree/bce08face62f3ed9ff28063a30c18fb6f6564b51/)
 | PlantUML <img src="plugin/syntaxes/plantuml/icon.png" width=16/> | file-extensions="iuml, plantuml, pu, puml, wsd" | [master@qjebbs/vscode-plantuml](https://github.com/qjebbs/vscode-plantuml/tree/7bc1758ed73dc269f5721d78c6c6c01f461d7cb0/)
 | Pony | file-extensions="pony" | [main@chalcolith/eohippus](https://github.com/chalcolith/eohippus/tree/de8031c34fbde4b124e4f0f34fa3fd84c4795bac/eohippus-vscode)
 | Prisma <img src="plugin/syntaxes/prisma/prisma.icon.png" width=16/> | file-extensions="prisma" | [main@prisma/language-tools](https://github.com/prisma/language-tools/tree/9c8f5b88cd7ac0502e76933cb4244c2ed198d3af/packages/vscode)

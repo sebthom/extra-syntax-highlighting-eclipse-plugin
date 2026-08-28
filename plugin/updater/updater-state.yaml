@@ -1186,6 +1186,17 @@ extensions:
         - .lpr
         - .p
         - .pas
+  pikchr:
+    github:
+      repo: claylo/pikchr-tmlanguage
+      ref: main
+      commit: bce08face62f3ed9ff28063a30c18fb6f6564b51
+    languages:
+      pikchr:
+        label: Pikchr
+        scope-name: source.pikchr
+        file-extensions:
+        - .pikchr
   plantuml:
     github:
       repo: qjebbs/vscode-plantuml

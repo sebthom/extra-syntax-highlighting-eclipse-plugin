@@ -576,6 +576,20 @@ sources:
       plantuml:
         grammar: syntaxes/plantuml.yaml-tmLanguage
 
+  pikchr:
+    # type: vscode-extension #TODO package.json misses 'contributes/grammars' secion
+    type: custom
+    github:
+      repo: claylo/pikchr-tmlanguage
+    languages:
+      pikchr:
+        label: Pikchr
+        scope-name: source.pikchr
+        grammar: pikchr.tmLanguage.json
+        langcfg: language-configuration.json
+        file-extensions:
+        - .pikchr
+
   pony:
     type: custom
     # type: vscode-extension #TODO package.json misses 'contributes/grammars' secion

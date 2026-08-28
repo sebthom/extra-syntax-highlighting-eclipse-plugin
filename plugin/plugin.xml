@@ -2350,6 +2350,26 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- pikchr/pikchr: Pikchr -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.pikchr" name="Pikchr" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="pikchr" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.pikchr" path="syntaxes/pikchr/pikchr.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.pikchr" contentTypeId="extra-syntax-highlighting.pikchr" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.pikchr" path="syntaxes/pikchr/pikchr.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Pikchr Example" path="syntaxes/pikchr/pikchr.example.pikchr" scopeName="source.pikchr" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- plantuml/plantuml: PlantUML -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

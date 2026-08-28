@@ -10,20 +10,20 @@ targets:
   syntaxes-dir: ../syntaxes
 
 sources:
-  # entry format for none-vscode-extension repo:
-  #   <source-id>:  # used for the download path at grammars/<source-id>/...
+  # Entry format for a repository that is not a VS Code extension:
+  #   <source-id>:  # Used as the download directory under syntaxes-dir (grammars/<source-id>/...)
   #     type: custom
   #     github:  # REQUIRED
   #       repo: <repo-name>             # REQUIRED
   #       path: <folderpath_in_repo>    # optional
   #       ref:  <branch_name>|<tag>     # optional
-  #     license-download: <true|false>  # optional. defaults to true
+  #     license-download: <true|false>  # optional; defaults to true
   #     languages:  # REQUIRED
-  #       <language-id>:  # REQUIRED, id of then language to register
+  #       <language-id>:  # REQUIRED; ID of the language to register
   #         label:        # REQUIRED
-  #         scope-name:   # REQUIRED, textmate grammar scope name
+  #         scope-name:   # REQUIRED; TextMate grammar scope name
   #         grammar: <filepath_in_repo|url>  # REQUIRED
-  #         update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+  #         update: <true|false>             # optional; defaults to true; if false, don't download grammar updates.
   #         langcfg: <filepath_in_repo|url>  # optional
   #         example: <filepath_in_repo|url>  # optional
   #         file-extensions: []              # optional
@@ -34,24 +34,24 @@ sources:
   #     inline-grammars: # optional
   #       <scope-name>:
   #         grammar: <filepath_in_repo>      # REQUIRED
-  #         update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+  #         update: <true|false>             # optional; defaults to true; if false, don't download grammar updates.
 
-  # entry format for repo with single VSCode extension:
-  # <source-id>:  # used for the download path at grammars/<source-id>/...
+  # Entry format for a repository with a single VS Code extension:
+  #   <source-id>:  # Used as the download directory under syntaxes-dir.
   #     type: vscode-extension
   #     github:  # REQUIRED
   #       repo: <repo-name>             # REQUIRED
   #       path: <folderpath_in_repo>    # optional
   #       ref:  <branch_name>|<tag>     # optional
-  #     build: []                       # optional. a list of commands to be executed in the checked out directory
-  #     license-download: <true|false>  # optional. defaults to true
+  #     build: []                       # optional; commands to run in the checked-out directory
+  #     license-download: <true|false>  # optional; defaults to true
   #     languages:  # optional
-  #       <language-id>:       # existing id as defined in package.json to override values
-  #         ignored: <reason>  # optional. if set, this language is ignored
+  #       <language-id>:       # ID declared in package.json; nested values override the manifest
+  #         ignored: <reason>  # optional; if set, this language is ignored
   #         label:             # optional
   #         scope-name:        # optional
   #         grammar: <filepath_in_repo|url>  # optional
-  #         update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+  #         update: <true|false>             # optional; defaults to true; if false, don't download grammar updates
   #         langcfg: <filepath_in_repo|url>  # optional
   #         example: <filepath_in_repo|url>  # optional
   #         file-extensions: []              # optional
@@ -60,30 +60,30 @@ sources:
   #         content-base-type: <name> # optional
   #         content-describer: <ITextContentDescriber class name> # optional
   #     inline-grammars: # optional
-  #       <scope-name>:   # existing scope-name as defined in package.json to override values
-  #         ignored: <reason>                # optional. if set, this language is ignored
+  #       <scope-name>:   # Scope name declared in package.json; nested values override the manifest
+  #         ignored: <reason>                # optional; if set, this grammar is ignored
   #         grammar: <filepath_in_repo>      # optional
-  #         update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+  #         update: <true|false>             # optional; defaults to true; if false, don't download grammar updates
 
-  # entry format for repo with multiple VSCode extensions:
-  # <source-id>:
+  # Entry format for a repository with multiple VS Code extensions:
+  #   <source-id>:
   #     type: vscode-extensions
   #     github:  # REQUIRED
   #       repo: <repo-name>             # REQUIRED
   #       path: <folderpath_in_repo>    # optional
   #       ref:  <branch_name>|<tag>     # optional
-  #     license-download: <true|false>  # optional. defaults to true
-  #     include-all-by-default: <true|false> # optional, specifies if all extensions shall be installed or only the explicitly listed once. defaults to true
+  #     license-download: <true|false>  # optional; defaults to true
+  #     include-all-by-default: <true|false> # optional; defaults to false; if false, only explicitly listed extensions are installed
   #     extensions:  # optional
-  #       <exension-id>:  # name as defined in package.json, used for the download path at grammars/<exension-id>/...
-  #         ignored: <reason>  # optional. if set, this extension is ignored
+  #       <extension-id>:  # Name declared in package.json; used as the download directory under syntaxes-dir
+  #         ignored: <reason>  # optional; if set, this extension is ignored
   #         languages:         # optional
-  #           <language-id>:       # existing id as defined in package.json to override values
-  #             ignored: <reason>  # optional. if set, this language is ignored
+  #           <language-id>:       # ID declared in package.json; nested values override the manifest
+  #             ignored: <reason>  # optional; if set, this language is ignored
   #             label:             # optional
   #             scope-name:        # optional
   #             grammar: <filepath_in_repo|url>  # optional
-  #             update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+  #             update: <true|false>             # optional; defaults to true; if false, don't download grammar updates
   #             langcfg: <filepath_in_repo|url>  # optional
   #             example: <filepath_in_repo|url>  # optional
   #             file-extensions: []              # optional
@@ -92,10 +92,10 @@ sources:
   #             content-base-type: <name> # optional
   #             content-describer: <ITextContentDescriber class name> # optional
   #         inline-grammars: # optional
-  #           <scope-name>:   # existing scope-name as defined in package.json to override values
-  #             ignored: <reason>                # optional. if set, this language is ignored
+  #           <scope-name>:   # Scope name declared in package.json; nested values override the manifest
+  #             ignored: <reason>                # optional; if set, this grammar is ignored
   #             grammar: <filepath_in_repo>      # optional
-  #             update: <true|false>             # optional. if false, don't download grammar updates. defaults to true
+  #             update: <true|false>             # optional; defaults to true; if false, don't download grammar updates
 
   amber:
     type: vscode-extension

@@ -5,12 +5,6 @@ Thank you for your interest in contributing to this project! We strive to make t
 Please take a moment to review the guidelines below.
 
 
-## Code of Conduct
-
-Please review and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) in all your interactions with the project.
-This helps us maintain a positive and respectful environment for everyone involved.
-
-
 ## Issues
 
 We use GitHub issues to track bugs and feature requests. Please ensure your description is clear and has sufficient instructions to be able to reproduce the issue.

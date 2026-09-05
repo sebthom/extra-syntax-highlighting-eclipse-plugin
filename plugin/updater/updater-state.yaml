@@ -125,7 +125,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 3e64670122b14a4f315d9c02ea5b90cb7e37af59
+      commit: 386327ed4c799b3a028fe620c54dfa18da917706
     languages:
       carbon:
         label: Carbon
@@ -137,7 +137,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 1e73a053d579e58eba4a521d82f1d116cfe280c7
+      commit: 96818ab80d8f3bbe47e61669d557220c3377b938
     languages:
       cobol:
         label: COBOL
@@ -172,7 +172,7 @@ extensions:
     github:
       repo: github/vscode-codeql
       ref: main
-      commit: e882725a9c02c98274ad6c72da80272b4072dff1
+      commit: 50dca45e10d26978c8b26a2e09dacbb0d6de14f8
     languages:
       ql:
         label: CodeQL
@@ -184,7 +184,7 @@ extensions:
     github:
       repo: crystal-lang-tools/vscode-crystal-lang
       ref: master
-      commit: 84df54030478ea0aeff5338cba989e6f58c5501a
+      commit: 8a555428a06ae5c878a786176a1d6747daaf0c27
     languages:
       crystal:
         label: Crystal
@@ -433,7 +433,7 @@ extensions:
     github:
       repo: gleam-lang/vscode-gleam
       ref: main
-      commit: bba72d3cb189f1c1cf5c731dd2036c74d9d6e341
+      commit: d4aba74efde443f85939be5b2bc0c2f2aa3511a2
     languages:
       gleam:
         label: Gleam
@@ -488,7 +488,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: bffd89e964c5c37b061d200491f7aa3b4ce1086c
+      commit: fd32cea3e191eb6eb41b785e157403308d787b12
     languages:
       graphql:
         label: GraphQL
@@ -555,7 +555,7 @@ extensions:
     github:
       repo: hashicorp/syntax
       ref: main
-      commit: 8e177d01f3580e66a78a58c4526330392850332b
+      commit: 16375ff2107c4d12551b1637bf17b371cf9ac103
     languages:
       hcl:
         label: HCL Config File
@@ -1156,7 +1156,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: 41a611cfcef8c0703002c01ecf433aaefd083107
+      commit: 8a347aa84a6f42aee3b102a3c051baa5465f560a
     languages:
       odin:
         label: odin
@@ -1233,7 +1233,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: 480ccd713a6a6e64830f8c7a1bb51b6892f322d7
+      commit: 3c526c3ca6f6fbe869230130a21836f62776a774
     languages:
       prisma:
         label: Prisma
@@ -1265,7 +1265,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: eacc1b20d042974ed6d45ed8ca3b9ebb73e67af2
+      commit: bc82b912ddc07a8d42140d5b6b0f9c39de8f93ab
     languages:
       ring:
         label: Ring
@@ -1290,7 +1290,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: 092af3826bada5cd591b0efccc39eed970169465
+      commit: 2cfcc15b4c44dfc1128432e20ca663fe20bdd12e
     languages:
       svelte:
         label: Svelte
@@ -1389,7 +1389,7 @@ extensions:
       repo: winglang/wing
       path: packages/vscode-wing
       ref: main
-      commit: a1788c60e29cb5166d1e2ac67c35e71b5610253d
+      commit: f07bcd1ce517323e95094ba69c37532e3793cc24
     languages:
       wing:
         label: Wing

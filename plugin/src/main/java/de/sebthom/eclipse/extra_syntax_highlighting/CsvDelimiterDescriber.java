@@ -15,6 +15,7 @@ import java.nio.charset.StandardCharsets;
 import org.eclipse.core.runtime.QualifiedName;
 import org.eclipse.core.runtime.content.IContentDescription;
 import org.eclipse.core.runtime.content.ITextContentDescriber;
+import org.eclipse.jdt.annotation.Nullable;
 
 /**
  * Abstract base: subclasses just override {@link #delimiter()}.
@@ -81,7 +82,7 @@ public abstract class CsvDelimiterDescriber implements ITextContentDescriber {
    }
 
    @Override
-   public int describe(final InputStream in, final IContentDescription desc) throws IOException {
+   public int describe(final InputStream in, final @Nullable IContentDescription desc) throws IOException {
       in.mark(SAMPLE_SIZE);
       final byte[] bytesRead = in.readNBytes(SAMPLE_SIZE);
       in.reset();
@@ -100,7 +101,7 @@ public abstract class CsvDelimiterDescriber implements ITextContentDescriber {
    }
 
    @Override
-   public int describe(final Reader reader, final IContentDescription desc) throws IOException {
+   public int describe(final Reader reader, final @Nullable IContentDescription desc) throws IOException {
       reader.mark(SAMPLE_SIZE);
       final char[] buff = new char[SAMPLE_SIZE];
       final int charsRead = reader.read(buff);

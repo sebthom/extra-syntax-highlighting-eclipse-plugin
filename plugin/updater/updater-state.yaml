@@ -83,7 +83,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 290d9c7d3df1ac0c659c8b7da81b3465de0d2ab3
+      commit: c91b47dc73cde7a80e32e1846c6f33298c0a35fa
     languages:
       bazelrc:
         label: bazelrc
@@ -125,7 +125,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 76e7fc5900e16147a60f4932f475f500b2d32668
+      commit: 5d442a5b0af5940b46a6e90b95fdd390cdcb4e06
     languages:
       carbon:
         label: Carbon
@@ -137,7 +137,7 @@ extensions:
       repo: eclipse-che4z/che-che4z-lsp-for-cobol
       path: clients/cobol-lsp-vscode-extension
       ref: development
-      commit: 7124b1f0cd9e78795ad5fe206172d9ab68e99dc2
+      commit: 2bac488b85dd1574b6ffe0524870a963695b04b4
     languages:
       cobol:
         label: COBOL
@@ -172,7 +172,7 @@ extensions:
     github:
       repo: github/vscode-codeql
       ref: main
-      commit: 1240f4c6ee889b069babd1f1f669fe34493f98f2
+      commit: f90cb50289846e36319edeff7d859726f0f98d91
     languages:
       ql:
         label: CodeQL
@@ -316,7 +316,7 @@ extensions:
     github:
       repo: elm-tooling/elm-language-client-vscode
       ref: main
-      commit: 756a8b4ada827cd7fcc9507e23523ad79d3335b4
+      commit: 3e5c74feb0a1866b9f660a14215fa88ee2cf298d
     languages:
       elm:
         label: Elm
@@ -488,7 +488,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: bc13647b79aef0237abd048d7cf041482cab9604
+      commit: accb4c7902c2771f2e991916ca8d67fe0a2605c6
     languages:
       graphql:
         label: GraphQL
@@ -577,7 +577,7 @@ extensions:
     github:
       repo: vscode-kubernetes-tools/vscode-kubernetes-tools
       ref: main
-      commit: 91cea740f1326c952ba5687ddf67c1a0fa80f56a
+      commit: c9d38bf24cc3634b67703179cc3840631c503be5
     languages:
       helm:
         label: helm-template
@@ -1018,7 +1018,7 @@ extensions:
       repo: mdx-js/mdx-analyzer
       path: packages/vscode-mdx
       ref: main
-      commit: c56a13d565c98cafcc28411332822caa445123cf
+      commit: 9eb1d0abd65d2b539d17d23d87ba774f6c4cb4d2
     languages:
       mdx:
         label: MDX
@@ -1086,7 +1086,7 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: dd6145171b0e51963f1e3b0f92ade7e9ddfd1628
+      commit: 7d4a73285807e2b554ea0ebd839478ac83943306
     languages:
       nushell:
         label: nushell
@@ -1101,7 +1101,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: 067093773efa0add0a5a4bc4ba3d57b8680bb6bf
+      commit: 71aa5bc671bd5685a3f7d0faeb9dafe9d3666de5
     languages:
       ocaml:
         label: OCaml
@@ -1156,7 +1156,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: f6166da1684bc2ff1be9b2a25eed0619ccc99869
+      commit: f3cddf5215e8c5363d2085c747a39cfece431087
     languages:
       odin:
         label: odin
@@ -1233,7 +1233,7 @@ extensions:
       repo: prisma/language-tools
       path: packages/vscode
       ref: main
-      commit: aa6c95d5c19dbd8eab74817f36fa809d1d0596dc
+      commit: 4c5c3d7d8e6187775b4b4d634e7eb87b56a777c3
     languages:
       prisma:
         label: Prisma
@@ -1265,7 +1265,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 735fca1db3662f92c6516ffaf12d78578baff058
+      commit: 55b83d6795dcc66e249cd20b3b647f07df69eeb1
     languages:
       ring:
         label: Ring
@@ -1290,7 +1290,7 @@ extensions:
       repo: sveltejs/language-tools
       path: packages/svelte-vscode
       ref: master
-      commit: f03e56672ed174e7042334a3237fe8569cfbf8f1
+      commit: af7c6a505a8aa631f5ca7794f41163e46cb0bc33
     languages:
       svelte:
         label: Svelte
@@ -1389,7 +1389,7 @@ extensions:
       repo: winglang/wing
       path: packages/vscode-wing
       ref: main
-      commit: 840733394c1ee6cc4f9978c29277e0964d5fbe7e
+      commit: bedcb175ec26bff18ce80ce3f11221bd6f6da43f
     languages:
       wing:
         label: Wing

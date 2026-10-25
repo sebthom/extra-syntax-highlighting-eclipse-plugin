@@ -83,7 +83,7 @@ extensions:
     github:
       repo: bazelbuild/vscode-bazel
       ref: master
-      commit: 2ba1f70fea7ee90685c35e3e0e776a53fb5664b4
+      commit: 95942343222a245cf895e270c1aeea48448e1ce7
     languages:
       bazelrc:
         label: bazelrc
@@ -125,7 +125,7 @@ extensions:
       repo: carbon-language/carbon-lang
       path: utils
       ref: trunk
-      commit: 503f09037d8a84ce8b9b89010e7564a97cd80bbd
+      commit: 8fdc8ebc3774664ea0127a901ada663a4eb20275
     languages:
       carbon:
         label: Carbon
@@ -172,7 +172,7 @@ extensions:
     github:
       repo: github/vscode-codeql
       ref: main
-      commit: 3ac74297f67856154e81f3b4fabfe18953c1bf86
+      commit: 05e0d2c4e2a01c77f7bd8ffdffeb8218901cd993
     languages:
       ql:
         label: CodeQL
@@ -184,7 +184,7 @@ extensions:
     github:
       repo: crystal-lang-tools/vscode-crystal-lang
       ref: master
-      commit: cf8e1a8482875739c60aaeaa550c09b8dd7d3f28
+      commit: 72e5b22724a9eaa4fc201a415c3eaeebefe5cd77
     languages:
       crystal:
         label: Crystal
@@ -433,7 +433,7 @@ extensions:
     github:
       repo: gleam-lang/vscode-gleam
       ref: main
-      commit: d6ce8c4358c278245e913b99a281d118637c9399
+      commit: 9e8c2b4a28adc44ac05d53ab93d4d0abc38752e9
     languages:
       gleam:
         label: Gleam
@@ -488,7 +488,7 @@ extensions:
       repo: graphql/graphiql
       path: packages/vscode-graphql-syntax
       ref: main
-      commit: 3ffe57f21dd4be2d60406d145119c5cc1bc87037
+      commit: 9d977651ecd1ac7e33c1e94668afc89c8d114d3d
     languages:
       graphql:
         label: GraphQL
@@ -967,7 +967,7 @@ extensions:
       repo: marconi/mako-tmbundle
       path: Syntaxes
       ref: master
-      commit: 45037e4e98f0c215b55b194d303811d43b85407c
+      commit: ad1e1f45d5335de80750981f8068521c957108ca
     languages:
       mako:
         label: Mako Template
@@ -978,7 +978,7 @@ extensions:
     github:
       repo: markdoc/language-server
       ref: main
-      commit: 9fbd09bb5304e5c22587432c00b3d6aa363a297e
+      commit: 0ab473e13cc26369687b97c1321f51c5573be476
     languages:
       markdoc:
         label: Markdoc
@@ -1086,7 +1086,7 @@ extensions:
     github:
       repo: nushell/vscode-nushell-lang
       ref: main
-      commit: 7d4a73285807e2b554ea0ebd839478ac83943306
+      commit: ffd0e93105a9bad1303583a43f47eae7d0e34dab
     languages:
       nushell:
         label: nushell
@@ -1101,7 +1101,7 @@ extensions:
     github:
       repo: ocamllabs/vscode-ocaml-platform
       ref: master
-      commit: d65bd115159325ca720cd482ec3c52eb31754421
+      commit: bc9d5f2e8b662c3e962f32f53a31b42a8b65ccaf
     languages:
       ocaml:
         label: OCaml
@@ -1156,7 +1156,7 @@ extensions:
       repo: DanielGavin/ols
       path: editors/vscode
       ref: master
-      commit: ae85feb27b6e26e14fd7593a36b11f48f693ed38
+      commit: d441cb7ef3a64a0fe654d5419f0c5758c99cd34e
     languages:
       odin:
         label: odin
@@ -1265,7 +1265,7 @@ extensions:
       repo: ring-lang/ring
       path: tools/editors/vscode/extension
       ref: master
-      commit: 5586417d98e58e0a144e8c57133fef4807ccae37
+      commit: 296c8e2cb8043f73b05c29a7c0459da5851b6a9d
     languages:
       ring:
         label: Ring

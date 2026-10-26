@@ -361,6 +361,47 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- common-lisp/commonlisp: Common Lisp -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.commonlisp" name="Common Lisp" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="asd,asdf,cl,l,lisp,lsp" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="source.commonlisp" path="syntaxes/common-lisp/commonlisp.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="source.commonlisp" contentTypeId="extra-syntax-highlighting.commonlisp" />
+  </extension>
+
+  <extension point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+    <languageConfiguration contentTypeId="extra-syntax-highlighting.commonlisp" path="syntaxes/common-lisp/commonlisp.language-configuration.json" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.commonlisp" icon="syntaxes/common-lisp/commonlisp.icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Common Lisp Example" path="syntaxes/common-lisp/commonlisp.example.lisp" scopeName="source.commonlisp" />
+  </extension>
+
+  <!-- ======================================== -->
+  <!-- common-lisp/commonlisp-injection: commonlisp-inj -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.commonlisp-injection" name="commonlisp-inj" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-names="PREVENT_FILE_ASSOCIATION_INHERITANCE" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="markdown.commonlisp.codeblock" path="syntaxes/common-lisp/commonlisp-injection.tmLanguage.json" />
+    <scopeNameContentTypeBinding scopeName="markdown.commonlisp.codeblock" contentTypeId="extra-syntax-highlighting.commonlisp-injection" />
+    <injection scopeName="markdown.commonlisp.codeblock" injectTo="text.html.markdown" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.commonlisp-injection" icon="syntaxes/common-lisp/icon.png"/>
+  </extension>
+
+  <!-- ======================================== -->
   <!-- crystal/crystal: Crystal -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

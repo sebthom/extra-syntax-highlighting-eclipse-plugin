@@ -187,6 +187,11 @@ sources:
         - .ql
         - .qll
 
+  common-lisp:
+    type: vscode-extension
+    github:
+      repo: qingpeng9802/vscode-common-lisp
+
   crystal:
     type: vscode-extension
     github:

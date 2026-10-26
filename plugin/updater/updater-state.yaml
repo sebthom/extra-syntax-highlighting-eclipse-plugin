@@ -180,6 +180,27 @@ extensions:
         file-extensions:
         - .ql
         - .qll
+  common-lisp:
+    github:
+      repo: qingpeng9802/vscode-common-lisp
+      ref: master
+      commit: ad508f15ae8dd0070e6ec9397908499012551e7b
+    languages:
+      commonlisp:
+        label: Common Lisp
+        scope-name: source.commonlisp
+        file-extensions:
+        - .asd
+        - .asdf
+        - .cl
+        - .l
+        - .lisp
+        - .lsp
+      commonlisp-injection:
+        label: commonlisp-inj
+        scope-name: markdown.commonlisp.codeblock
+        inject-to:
+        - text.html.markdown
   crystal:
     github:
       repo: crystal-lang-tools/vscode-crystal-lang

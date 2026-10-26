@@ -412,6 +412,11 @@ sources:
         file-extensions:
         - .ldif
 
+  log:
+    type: vscode-extension
+    github:
+      repo: emilast/vscode-logfile-highlighter
+
   mako:
     type: custom
     github:

@@ -1,0 +1,63 @@
+2026-10-26 09:00:00.000 TRACE   Example.App.Bootstrap - Starting diagnostic session; attempt=1 active=true
+2026-10-26 09:00:00.012 DEBUG   Example.App.Configuration - Loading config from "C:\\ProgramData\\ExampleApp\\settings.json"
+2026-10-26 09:00:00.019 INFO    Example.App.Configuration - Environment='staging' region="eu-central-1" enabled=true
+2026-10-26 09:00:00.043 INFORMATION Example.App.Bootstrap - Build 2.14.7, processId=4321, retries=0, ratio=0.75
+2026-10-26 09:00:00.084 WARN    Example.App.Configuration - Optional setting 'cache.ttl' is null; defaulting to 300
+2026-10-26 09:00:00.100 WARNING Example.App.Security - Certificate expires in 14 days, fingerprint='43:A4:19:A5:AF:C0'
+2026-10-26 09:00:00.130 ERROR   Example.App.Network - Initial connection failed; retrying in 500 ms
+2026-10-26 09:00:00.150 FAIL    Example.App.Network - Health check failed for https://api.example.com/health?verbose=true
+2026-10-26 09:00:00.173 FAILURE Example.App.Health - Status=unhealthy; httpStatus=503
+2026-10-26 09:00:01.001 INFO    Example.App.Network - Connected to https://api.example.com:8443/v1/users; latency=31.5 ms
+2026-10-26 09:00:01.030 DEBUG   Example.App.Network - RequestId=859A4209-A82D-4CA1-8468-C2606A3501EE CorrelationId=3f71d9b6-2c4e-4d5f-80ae-7df98590ab21
+2026-10-26 09:00:01.063 TRACE   Example.App.Protocol - Headers: Content-Type="application/json" X-Retry="false" payloadSize=1024
+2026-10-26 09:00:01.105 INFO    Example.App.Auth - Login succeeded for user 'alice' on client 43-A4-19-A5-AF-C0
+2026-10-26 09:00:01.210 DEBUG   Example.App.Auth - IPv6=fde8:e767:269c:0:9425:3477:7c8f:7f1a password=null authenticated=true
+2026-10-26 09:00:01.430 INFO    Example.App.Orders - Order created: orderId=10001 amount=129.99 currency="EUR"
+2026-10-26 09:00:01.482 WARN    Example.App.Inventory - Stock low for sku='WIDGET-42': remaining=3 threshold=5
+2026-10-26 09:00:01.510 ERROR   Example.App.Payments - Payment authorization rejected; code=402 approved=false
+2026-10-26 09:00:01.511 ERROR   Example.App.Payments - System.ArgumentNullException: Value cannot be null. (Parameter 'paymentToken')
+   at Example.App.Payments.PaymentService.Authorize(String paymentToken) in C:\src\Example\PaymentService.cs:line 87
+   at Example.App.Api.PaymentController.PostPayment(PaymentRequest request) in C:\src\Example\PaymentController.cs:line 43
+   at System.Threading.Tasks.Task.Execute()
+2026-10-26 09:00:02.125 DEBUG   Example.App.Database - Query took 91 ms; rows=42 maxRows=1000
+2026-10-26 09:00:02.430 INFO    Example.App.Database - Transaction committed; transactionId=761e17f7-0c77-4bee-9517-10a46d280311
+2026-10-26 09:00:03.000 TRACE   Example.App.Worker - Progress 10% (1/10 tasks)
+2026-10-26 09:00:04.000 TRACE   Example.App.Worker - Progress 25% (2/10 tasks)
+2026-10-26 09:00:05.000 TRACE   Example.App.Worker - Progress 50% (5/10 tasks)
+2026-10-26 09:00:06.000 TRACE   Example.App.Worker - Progress 75% (8/10 tasks)
+2026-10-26 09:00:07.000 INFO    Example.App.Worker - Progress 100% (10/10 tasks); elapsed=4.000s
+2026-10-26 09:00:08.127 ERROR   Example.App.Api - System.Net.Http.HttpRequestException: Response status code does not indicate success: 502 (Bad Gateway).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at Example.App.Api.ExternalClient.FetchAsync() in C:\src\Example\ExternalClient.cs:line 109
+   at Example.App.Worker.SyncWorker.RunAsync() in C:\src\Example\SyncWorker.cs:line 57
+2026-10-26 09:00:08.300 WARN    Example.App.Api - Backoff scheduled: delay=1.25 seconds; attempt=2
+2026-10-26 09:00:10.050 INFO    Example.App.Api - Retry successful; returned 200 OK
+2026-10-26 09:00:11.000 DEBUG   Example.App.Serialization - Data: {"id":42,"ok":true,"error":null,"name":"sample","tags":["a","b"]}
+2026-10-26 09:00:11.200 DEBUG   Example.App.Serialization - XML: <event status="ok" count="42">complete</event>
+2026-10-26 09:00:12.030 ERROR   Example.App.Validation - System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowFormatException[TChar](ReadOnlySpan`1 value)
+   at Example.App.Validation.Parser.ParseInt32(String input)
+2026-10-26 09:00:12.650 WARNING Example.App.Disk - Disk usage 91%; free space 2.5 GB
+2026-10-26 09:00:13.100 INFO    Example.App.Network - Listening on http://localhost:8080/status
+2026-10-26 09:00:14.200 INFO    Example.App.Shutdown - Shutdown requested by operator='admin'; graceful=true
+2026-10-26 09:00:15.000 INFO    Example.App.Shutdown - Session complete; exitCode=0
+
+# Alternate date/time formats supported by the extension (examples)
+2015-12-09 INFO    Legacy.App - ISO date only
+2015-12-09 09:29 DEBUG   Legacy.App - ISO date and minute
+2015-12-09 09:29:02.258 ERROR   Legacy.App - ISO timestamp with milliseconds
+12/09/2016 WARN    Legacy.App - US-style date
+12.09.2016 INFO    Legacy.App - Dot-separated date
+12-09-2016 TRACE   Legacy.App - Hyphen-separated date
+12-09-2015 09:29 DEBUG   Legacy.App - Date and minute
+12-09-2015 09:29:02,258 FAILURE Legacy.App - Comma-separated milliseconds
+
+# Extra lexical samples for highlighter inspection
+TRACE DEBUG INFO INFORMATION WARN WARNING ERROR FAIL FAILURE
+null true false 0 1 -42 234 3.14159 0.001
+"double quoted string" 'single quoted string' "escaped quote: \"hello\""
+859A4209-A82D-4CA1-8468-C2606A3501EE
+43:A4:19:A5:AF:C0 43-A4-19-A5-AF-C0
+fde8:e767:269c:0:9425:3477:7c8f:7f1a
+System.ArgumentNullException System.Net.Http.HttpRequestException HttpException
+Example.App.Services.UserService https://example.org/docs/errors?id=123

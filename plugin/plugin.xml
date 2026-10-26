@@ -1969,6 +1969,26 @@
   </extension>
 
   <!-- ======================================== -->
+  <!-- log/log: Log File -->
+  <!-- ======================================== -->
+  <extension point="org.eclipse.core.contenttype.contentTypes">
+    <content-type id="extra-syntax-highlighting.log" name="Log File" base-type="extra-syntax-highlighting.basetype" priority="normal"
+                  file-extensions="log" />
+  </extension>
+  <extension point="org.eclipse.tm4e.registry.grammars">
+    <grammar scopeName="text.log" path="syntaxes/log/log.tmLanguage.plist" />
+    <scopeNameContentTypeBinding scopeName="text.log" contentTypeId="extra-syntax-highlighting.log" />
+  </extension>
+
+  <extension point="org.eclipse.ui.genericeditor.icons">
+    <icon contentType="extra-syntax-highlighting.log" icon="syntaxes/log/icon.png"/>
+  </extension>
+
+  <extension point="org.eclipse.tm4e.ui.snippets">
+    <snippet name="Log File Example" path="syntaxes/log/log.example.log" scopeName="text.log" />
+  </extension>
+
+  <!-- ======================================== -->
   <!-- mako/mako: Mako Template -->
   <!-- ======================================== -->
   <extension point="org.eclipse.core.contenttype.contentTypes">

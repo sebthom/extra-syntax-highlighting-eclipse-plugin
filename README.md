@@ -192,6 +192,7 @@ To install the plugin into an existing Eclipse installation do:
 | JTE Templates <img src="plugin/syntaxes/jte/icon.png" width=16/> | file-extensions="jte, kte" | [main@maj2c/jte-template-syntax-highlight](https://github.com/maj2c/jte-template-syntax-highlight/tree/0b1242fdccb25bc9f72fccef48c51b01d9ac354d/)
 | Kotlin <img src="plugin/syntaxes/kotlin/icon.png" width=16/> | file-extensions="kt, kts" | [main@fwcd/vscode-kotlin](https://github.com/fwcd/vscode-kotlin/tree/4a7c1538754828c1d22a8bee8ff3400045b4352a/)
 | LDIF File | file-extensions="ldif" | [master@FlashSystems/LDIF-Syntax](https://github.com/FlashSystems/LDIF-Syntax/tree/f00c21eb1cc5fe5966cf6ef158e854a65449a9fa/)
+| Log File <img src="plugin/syntaxes/log/icon.png" width=16/> | file-extensions="log" | [master@emilast/vscode-logfile-highlighter](https://github.com/emilast/vscode-logfile-highlighter/tree/f888f2ae6be71f27e2fd57b614182b11672c7059/)
 | Mako Template | file-extensions="mako" | [master@marconi/mako-tmbundle](https://github.com/marconi/mako-tmbundle/tree/ad1e1f45d5335de80750981f8068521c957108ca/Syntaxes)
 | Markdoc <img src="plugin/syntaxes/markdoc/icon.png" width=16/> | file-extensions="markdoc, markdoc.md, mdoc" | [main@markdoc/language-server](https://github.com/markdoc/language-server/tree/0ab473e13cc26369687b97c1321f51c5573be476/)
 | Markdown | file-extensions="livemd, markdown, md, mdown, mdwn, mkd, mkdn, mkdown, ronn, scd, workbook" | [main@wooorm/markdown-tm-language](https://github.com/wooorm/markdown-tm-language/tree/c78b1e5df644d24fa76716bbe26f4b48a6fc1610/)

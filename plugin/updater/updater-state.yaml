@@ -983,6 +983,17 @@ extensions:
         scope-name: text.ldif
         file-extensions:
         - .ldif
+  log:
+    github:
+      repo: emilast/vscode-logfile-highlighter
+      ref: master
+      commit: f888f2ae6be71f27e2fd57b614182b11672c7059
+    languages:
+      log:
+        label: Log File
+        scope-name: text.log
+        file-extensions:
+        - .log
   mako:
     github:
       repo: marconi/mako-tmbundle

@@ -27,6 +27,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. Carbon - https://carbon-lang.dev
 1. COBOL - https://en.wikipedia.org/wiki/COBOL
 1. CodeQL - https://codeql.github.com/
+1. Common Lisp - https://lisp-lang.org/
 1. Crystal (`*.cr`) - https://crystal-lang.org/
 1. CSV (`*.cvs`) / TSV (`*.tab*`, `*.tsv*`)
 1. D - https://dlang.org/
@@ -56,6 +57,7 @@ This [EclipseⓇ](https://eclipse.org) plug-in adds syntax highlighting support 
 1. jte: Java Template Engine (`*.jte`) - https://jte.gg/
 1. Kotlin - https://kotlinlang.org/
 1. LDIF - https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format
+1. Log Files
 1. Mako Templates (`*.mako`) - https://www.makotemplates.org/
 1. Markdoc (`*.markdoc`) - https://markdoc.dev/
 1. Markdown (`*.md`) - https://daringfireball.net/projects/markdown/

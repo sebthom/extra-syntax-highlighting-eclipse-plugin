@@ -1,0 +1,4 @@
+#Mon Oct 26 00:34:44 UTC 2026
+artifact.repository.factory.order=artifacts.xml.xz,artifacts.xml,\!
+metadata.repository.factory.order=content.xml.xz,content.xml,\!
+version=1
